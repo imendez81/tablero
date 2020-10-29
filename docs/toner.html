@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSYS</title>
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-home"></i>
+          <span>Inicio</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading -->
+      <!-- <div class="sidebar-heading">
+        Interface
+      </div> -->
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-moving fa-2x"></i>
+          <span>Salidas-Stock 2020</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Tóners</a>
+            <a class="collapse-item" href="alcohol.html">Alcohol en Gel</a>
+            <a class="collapse-item" href="barbijo.html">Barbijos</a>
+            <a class="collapse-item" href="boli.html">Bolígrafos</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-fw fa-wrench"></i>
+          <span>Utilities</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Custom Utilities:</h6>
+            <a class="collapse-item" href="utilities-color.html">Colors</a>
+            <a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-animation.html">Animations</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a>
+          </div>
+        </div>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Heading 
+      <div class="sidebar-heading">
+        Enlaces
+      </div>-->
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+          <i class="fas fa-fw fa-folder"></i>
+          <span>Pages</span>
+        </a>
+        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <div class="collapse-divider"></div>
+            <h6 class="collapse-header">Other Pages:</h6>
+            <a class="collapse-item" href="404.html">404 Page</a>
+            <a class="collapse-item" href="blank.html">Blank Page</a>
+          </div>
+        </div>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="calendario.html">
+            <i class="far fa-calendar-alt"></i>
+          <span>Calendario <br> 2do Semestre</span></a>
+      </li>
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Listado <br> Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa <br> Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+   <!-- Content Wrapper -->
+   <div id="content-wrapper" class="d-flex flex-column">
+
+    <!-- Main Content -->
+    <div id="content">
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid mt-3">
+
+        <!-- Page Heading -->
+        
+          <h1 class="h3 mb-4 text-gray-800 text-center">Stock y Salidas de Depósito - <strong>Tóners</strong></h1>
+
+        <div class="row">
+
+      <!-- Content Row -->
+
+          <!-- Area Chart -->
+          <div class="col-xl-6 col-lg-6">
+            <div class="card shadow mb-4 border-left-secondary">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-secondary"><span class="text-primary"></span> TÓNER RICOH 4500 - MAT. 2078</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="chart-area">
+                  <canvas id="myAreaChart2078"></canvas>
+                </div>
+              </div>
+                <div class="col mr-2 mb-4"><h6>Total Salidas de Depósito (Año 2020):</h6>
+                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">199 unidades</div>
+                </div>
+            </div>
+          </div>
+          
+          <!-- Area Chart -->
+          <div class="col-xl-6 col-lg-6">
+            <div class="card shadow mb-4 border-left-danger">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-danger"><span class="text-primary"></span> TÓNER LEXMARK TD652DN - MAT. 296</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart296"></canvas>
+                </div>
+              </div>
+              <div class="col mr-2 mb-4"><h6>Total Salidas de Depósito (Año 2020):</h6>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">2.804 unidades</div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Area Chart -->
+          <div class="col-xl-6 col-lg-6">
+            <div class="card shadow mb-4 border-left-primary">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-primary"> TÓNER BROTHER HL - MAT. 337</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart337"></canvas>
+                </div>
+              </div>
+              <div class="col mr-2 mb-4"><h6>Total Salidas de Depósito (Año 2020):</h6>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">54 unidades</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Area Chart -->
+          <div class="col-xl-6 col-lg-6">
+            <div class="card shadow mb-4 border-left-success">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-success"><span class="text-primary"></span> TÓNER HP LASER JET 3005 - MAT. 290</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="card-body">
+                <div class="chart-area">
+                    <canvas id="myAreaChart290"></canvas>
+                </div>
+              </div>
+              <div class="col mr-2 mb-4"><h6>Total Salidas de Depósito (Año 2020):</h6>
+                <div class="h5 mb-0 font-weight-bold text-gray-800">28 unidades</div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Copyright &copy; Coordinación de Monitoreo y Seguimiento de Gestión - 2020</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="login.html">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-torta.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+  <script>
+// Area Chart Tóner Ricoh 4500 - Mat. 2078
+        var ctx = document.getElementById("myAreaChart2078");
+        var myLineChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+                    datasets: [{
+                    label: "Stock",
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(78, 115, 223, 0.05)",
+                    borderColor: "rgba(78, 115, 223, 1)",
+                    pointRadius: 3,
+                    pointBackgroundColor: "rgba(78, 115, 223, 1)",
+                    pointBorderColor: "rgba(78, 115, 223, 1)",
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+                    pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    data: [291, 246, 223, 183, 183, 183, 177, 157, 129, 119],
+                    },{
+                    label: "Salidas",
+                    lineTension: 0.1,
+                    backgroundColor: "rgba(255, 0, 93, 0.05)",
+                    borderColor: "rgba(255, 0, 93, 1)",
+                    pointRadius: 3,
+                    pointBackgroundColor: "rgba(255, 0, 93, 1)",
+                    pointBorderColor: "rgba(255, 0, 93, 1)",
+                    pointHoverRadius: 3,
+                    pointHoverBackgroundColor: "rgba(255, 0, 93, 1)",
+                    pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+                    pointHitRadius: 10,
+                    pointBorderWidth: 2,
+                    data: [45, 23, 40, 0, 0, 6, 20, 28, 10, 27],
+                    }],
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    layout: {
+                    padding: {
+                        left: 10,
+                        right: 25,
+                        top: 25,
+                        bottom: 0
+                    }
+                    },
+                    scales: {
+                    xAxes: [{
+                        time: {
+                        unit: 'date'
+                        },
+                        gridLines: {
+                        display: false,
+                        drawBorder: false
+                        },
+                        ticks: {
+                        maxTicksLimit: 7
+                        }
+                    }],
+                    yAxes: [{
+                        ticks: {
+                        maxTicksLimit: 5,
+                        padding: 10,
+                        // Include a dollar sign in the ticks
+                        callback: function(value, index, values) {
+                            return '' + number_format(value);
+                        }
+                        },
+                        gridLines: {
+                        color: "rgb(234, 236, 244)",
+                        zeroLineColor: "rgb(234, 236, 244)",
+                        drawBorder: false,
+                        borderDash: [2],
+                        zeroLineBorderDash: [2]
+                        }
+                    }],
+                    },
+                    legend: {
+                    display: true, position: 'bottom'
+                    },
+                    tooltips: {
+                    backgroundColor: "rgb(255,255,255)",
+                    bodyFontColor: "#858796",
+                    titleMarginBottom: 10,
+                    titleFontColor: '#6e707e',
+                    titleFontSize: 14,
+                    borderColor: '#dddfeb',
+                    borderWidth: 1,
+                    xPadding: 15,
+                    yPadding: 15,
+                    displayColors: false,
+                    intersect: false,
+                    mode: 'index',
+                    caretPadding: 10,
+                    callbacks: {
+                        label: function(tooltipItem, chart) {
+                        var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                        return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                        }
+                    }
+                    }
+                }
+                });
+                
+// Area Chart Tóner Brother HL - Mat. 337
+        var ctx = document.getElementById("myAreaChart337");
+        var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            datasets: [{
+            label: "Stock",
+            lineTension: 0.1,
+            backgroundColor: "rgba(78, 115, 223, 0.05)",
+            borderColor: "rgba(78, 115, 223, 1)",
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)",
+            pointHoverRadius: 3,
+            pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10,
+            pointBorderWidth: 2,
+            data: [381, 381, 377, 361, 346, 346, 342, 335, 328, 327],
+            },{
+            label: "Salidas",
+            lineTension: 0.1,
+            backgroundColor: "rgba(255, 0, 93, 0.05)",
+            borderColor: "rgba(255, 0, 93, 1)",
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointBorderColor: "rgba(255, 0, 93, 1)",
+            pointHoverRadius: 3,
+            pointHoverBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+            pointHitRadius: 10,
+            pointBorderWidth: 2,
+            data: [0, 4, 16, 15, 0, 4, 7, 7, 1, 0],
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 7
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom'
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+
+// Area Chart Tóner HP Laser Jet 3005 - Mat. 290
+        var ctx = document.getElementById("myAreaChart290");
+        var myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            datasets: [{
+            label: "Stock",
+            lineTension: 0.1,
+            backgroundColor: "rgba(78, 115, 223, 0.05)",
+            borderColor: "rgba(78, 115, 223, 1)",
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)",
+            pointHoverRadius: 3,
+            pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10,
+            pointBorderWidth: 2,
+            data: [1467, 1457, 1453, 1449, 1449, 1445, 1445, 1445, 1445, 1440],
+            },{
+            label: "Salidas",
+            lineTension: 0.1,
+            backgroundColor: "rgba(255, 0, 93, 0.05)",
+            borderColor: "rgba(255, 0, 93, 1)",
+            pointRadius: 3,
+            pointBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointBorderColor: "rgba(255, 0, 93, 1)",
+            pointHoverRadius: 3,
+            pointHoverBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+            pointHitRadius: 10,
+            pointBorderWidth: 2,
+            data: [10, 4, 4, 0, 4, 0, 0, 0, 5, 1],
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 7
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom'
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+  
+// Area Chart Tóner LEXMARK - Mat. 296
+        var ctx = document.getElementById("myAreaChart296");
+        var myLineChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"],
+            datasets: [{
+              label: "Stock",
+              lineTension: 0.1,
+              backgroundColor: "rgba(78, 115, 223, 0.05)",
+              borderColor: "rgba(78, 115, 223, 1)",
+              pointRadius: 3,
+              pointBackgroundColor: "rgba(78, 115, 223, 1)",
+              pointBorderColor: "rgba(78, 115, 223, 1)",
+              pointHoverRadius: 3,
+              pointHoverBackgroundColor: "rgba(78, 115, 223, 1)",
+              pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+              pointHitRadius: 10,
+              pointBorderWidth: 2,
+              data: [2776, 2143, 1648, 1164, 1126, 1118, 996, 710, 417, 193],
+            },{
+              label: "Salidas",
+              lineTension: 0.1,
+              backgroundColor: "rgba(255, 0, 93, 0.05)",
+              borderColor: "rgba(255, 0, 93, 1)",
+              pointRadius: 3,
+              pointBackgroundColor: "rgba(255, 0, 93, 1)",
+              pointBorderColor: "rgba(255, 0, 93, 1)",
+              pointHoverRadius: 3,
+              pointHoverBackgroundColor: "rgba(255, 0, 93, 1)",
+              pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+              pointHitRadius: 10,
+              pointBorderWidth: 2,
+              data: [664, 495, 484, 38, 8, 122, 286, 293, 227, 187],
+            }],
+          },
+          options: {
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'date'
+                },
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 7
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  maxTicksLimit: 5,
+                  padding: 10,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return '' + number_format(value);
+                  }
+                },
+                gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: true, position: 'bottom',
+            },
+            tooltips: {
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              intersect: false,
+              mode: 'index',
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+              }
+            }
+          }
+        });
+
+ </script>
+
+</body>
+
+</html>
