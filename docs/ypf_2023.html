@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <!-- Exportar a Excel -->
+  <script src="./js/descTabla/xlsx.full.min.js"></script>
+  <script src="./js/descTabla/FileSaver.min.js"></script>
+  <script src="./js/descTabla/tableexport.min.js"></script>
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        </li>
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i style="font-size: large;" class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-4 text-gray-800 text-center"><strong>Consumos de Combustible - 2023</strong> - Vehículos ANSES</h1>
+
+          <div class="row">
+
+   
+             <!-- Area Chart -->
+             <div class="col-12 col-xl-6">
+               <div class="card shadow mb-4 border-left-primary">
+                 <!-- Card Header - Dropdown -->
+                 <div class="card-header py-3 d-flex flex-row align-items-center">
+                   <h6 class="m-0 font-weight-bold text-dark"> CONSUMO MENSUAL en<strong> Litros</strong> - Totales</h6>
+                 </div>
+                 <!-- Card Body -->
+                 <div class="" style="padding-right: 25px;">
+                   <div class="chart-area">
+                       <canvas id="myAreaChartTotalYPF_2023"></canvas>
+                   </div>
+                 </div>
+                 <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: </h6>
+                  </a> -->
+                    <!-- Card Content - Collapse -->
+                    <div class="" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row" class="text-dark">2023</th>
+                              <td class="font-weight-bold text-dark">708.800</td>
+                              <td class="font-weight-bold text-dark">59.067</td>
+                            </tr>
+                            <tr>
+                              <th scope="row" class="text-dark">2022</th>
+                              <td class="font-weight-bold text-dark">786.871</td>
+                              <td class="font-weight-bold text-dark">65.573</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+               </div>
+             </div>
+
+           <!-- Area Chart -->
+           <div class="col-12 col-xl-6 mt-5">
+            <div class="card shadow mb-4 border-left-primary">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-dark"> CONSUMO MENSUAL en<strong> Litros</strong> - Áreas Centrales / Jefaturas Regionales</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="" style="padding-right: 25px;">
+                <div class="chart-area">
+                    <canvas id="myAreaChartAACCYPF_2023"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-1"></div>
+
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-10 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">CONSUMOS POR DEPENDENCIA - <strong>ÁREAS CENTRALES</strong> - Litros</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th>DEPENDENCIA</th><th>ENERO</th><th>FEBRERO</th><th>MARZO</th><th>ABRIL</th><th>MAYO</th><th>JUNIO</th><th>JULIO</th><th>AGOSTO</th><th>SEPTIEMBRE</th><th>OCTUBRE</th><th>NOVIEMBRE</th><th>DICIEMBRE</th></tr></thead>
+                        
+                        <tbody>
+                          <tr><td class="text-left">DIR GRAL DE ANÁLISIS Y LIQ DE SENT JUD</td><td>56,41</td><td>158,94</td><td>153,65</td><td>205,98</td><td>156,64</td><td>157,50</td><td>153,96</td><td>155,42</td><td>159,54</td><td>128,60</td><td>156,15</td><td>138,41</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE CONTROL DEL FGS</td><td>623,34</td><td>674,78</td><td>419,60</td><td>100,57</td><td>151,04</td><td>156,37</td><td>157,88</td><td>102,58</td><td>238,21</td><td>217,74</td><td>244,40</td><td>0,00</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE INF E INN TECNOLOGICA</td><td>452,26</td><td>570,03</td><td>455,94</td><td>514,64</td><td>744,36</td><td>842,53</td><td>932,65</td><td>434,92</td><td>1.056,17</td><td>898,29</td><td>345,90</td><td>485,37</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE INVERSIONES</td><td>103,93</td><td>103,46</td><td>104,46</td><td>100,07</td><td>101,07</td><td>0,00</td><td>54,29</td><td>92,29</td><td>103,80</td><td>151,38</td><td>102,84</td><td>100,49</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE MONITOREO DE GEST DE PREST</td><td>53,91</td><td>259,67</td><td>354,34</td><td>555,67</td><td>588,71</td><td>346,21</td><td>198,44</td><td>812,53</td><td>259,63</td><td>451,90</td><td>287,47</td><td>158,86</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE OPERACIONES</td><td>13.411,81</td><td>10.429,83</td><td>16.347,32</td><td>13.814,91</td><td>18.742,98</td><td>15.120,79</td><td>16.024,15</td><td>12.865,17</td><td>12.844,87</td><td>11.954,76</td><td>10.909,49</td><td>4.008,25</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE PLANEAMIENTO</td><td>246,66</td><td>289,23</td><td>475,02</td><td>428,12</td><td>628,47</td><td>256,42</td><td>524,46</td><td>349,83</td><td>499,55</td><td>507,84</td><td>436,45</td><td>271,22</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE PRENSA</td><td>1.214,92</td><td>860,26</td><td>850,45</td><td>493,51</td><td>1.203,03</td><td>1.585,98</td><td>1.230,19</td><td>592,51</td><td>895,76</td><td>382,70</td><td>629,81</td><td>478,59</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE PREST CENTRALIZADAS</td><td>2.039,62</td><td>1.885,13</td><td>2.679,80</td><td>1.924,35</td><td>2.767,70</td><td>1.942,47</td><td>2.142,62</td><td>2.060,92</td><td>1.503,10</td><td>2.618,78</td><td>1.569,75</td><td>450,91</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE PREST DESCENTRALIZADAS</td><td>9.359,43</td><td>10.315,13</td><td>11.929,94</td><td>7.940,87</td><td>10.543,00</td><td>9.402,19</td><td>11.149,48</td><td>8.734,74</td><td>8.496,17</td><td>7.611,48</td><td>7.627,06</td><td>3.924,63</td></tr>
+                          <tr><td class="text-left">DIR GRAL DE PROY DE NIÑEZ,ADOL,JUV Y GEN</td><td>233,05</td><td>381,56</td><td>607,26</td><td>272,77</td><td>540,02</td><td>47,30</td><td>169,57</td><td>466,02</td><td>225,62</td><td>92,94</td><td>0,00</td><td>51,82</td></tr>
+                          <tr><td class="text-left">DIR GRAL REL INST Y CON LA COMU</td><td>545,11</td><td>702,38</td><td>1.178,00</td><td>629,97</td><td>896,63</td><td>1.020,32</td><td>844,33</td><td>414,80</td><td>695,38</td><td>785,58</td><td>443,95</td><td>0,00</td></tr>
+                          <tr><td class="text-left">DIRECCION EJECUTIVA</td><td>588,90</td><td>881,09</td><td>1.672,93</td><td>1.212,59</td><td>1.792,27</td><td>1.432,72</td><td>974,81</td><td>1.294,95</td><td>1.068,88</td><td>440,84</td><td>1.008,31</td><td>269,89</td></tr>
+                          <tr><td class="text-left">SD EJ DE ADMINISTRACION</td><td>529,60</td><td>468,09</td><td>733,84</td><td>312,13</td><td>545,66</td><td>402,03</td><td>385,05</td><td>493,41</td><td>332,70</td><td>432,73</td><td>382,10</td><td>89,05</td></tr>
+                          <tr><td class="text-left">SD EJ DE PRESTACIONES</td><td>0,00</td><td>107,97</td><td>89,12</td><td>109,40</td><td>55,25</td><td>107,38</td><td>105,90</td><td>357,41</td><td>104,61</td><td>152,53</td><td>106,63</td><td>0,00</td></tr>
+                          <tr><td class="text-left">SECRETARIA GENERAL</td><td>261,60</td><td>402,35</td><td>504,71</td><td>1.370,42</td><td>1.821,73</td><td>1.499,24</td><td>1.658,88</td><td>1.304,14</td><td>1.659,89</td><td>1.334,30</td><td>1.393,38</td><td>496,96</td></tr>
+                          <tr><td class="text-left">SECRETARIA LEGAL Y TECNICA</td><td>130,45</td><td>247,36</td><td>321,65</td><td>372,91</td><td>419,73</td><td>330,03</td><td>436,96</td><td>250,26</td><td>203,74</td><td>217,66</td><td>188,65</td><td>55,56</td></tr>
+                          <tr><td class="text-left">UNIDAD DE AUDITORÍA INTERNA</td><td>241,95</td><td>93,98</td><td>148,01</td><td>89,96</td><td>143,50</td><td>188,69</td><td>146,09</td><td>134,83</td><td>159,51</td><td>161,63</td><td>138,96</td><td>0,00</td></tr>
+                          <tr class="table-info"><td class="font-weight-bold text-dark">TOTAL POR MES</td><td class="font-weight-bold text-dark">30.092,95</td><td class="font-weight-bold text-dark">28.831,24</td><td class="font-weight-bold text-dark">39.026,04</td><td class="font-weight-bold text-dark">30.448,84</td><td class="font-weight-bold text-dark">41.841,79</td><td class="font-weight-bold text-dark">34.838,17</td><td class="font-weight-bold text-dark">37.289,71</td><td class="font-weight-bold text-dark">30.916,73</td><td class="font-weight-bold text-dark">30.507,14</td><td class="font-weight-bold text-dark">28.541,68</td><td class="font-weight-bold text-dark">25.971,29</td><td class="font-weight-bold text-dark">10.980,01</td></tr>
+                          <tr class="table-warning"><td class="font-weight-bold text-dark">ACUMULADO AÑO</td><td class="font-weight-bold text-dark" colspan="12">369.285,59</td></tr>
+                          <tr class="table-secondary"><td class="font-weight-bold text-dark">PROMEDIO MENSUAL</td><td class="font-weight-bold text-dark" colspan="12">30.773,80</td></tr>
+                        </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+        
+
+          <div class="col-12 col-xl-1"></div>
+          <div class="col-12 col-xl-1"></div>
+
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-10 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">CONSUMOS POR DEPENDENCIA - <strong>JEFATURAS REGIONALES</strong> - Litros</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th>DEPENDENCIA</th><th>ENERO</th><th>FEBRERO</th><th>MARZO</th><th>ABRIL</th><th>MAYO</th><th>JUNIO</th><th>JULIO</th><th>AGOSTO</th><th>SEPTIEMBRE</th><th>OCTUBRE</th><th>NOVIEMBRE</th><th>DICIEMBRE</th></tr></thead>
+                        
+                        <tbody>
+                          <tr><td class="text-left">JR BONAERENSE I</td><td>442,06</td><td>482,97</td><td>911,59</td><td>574,85</td><td>989,92</td><td>765,23</td><td>646,48</td><td>256,30</td><td>489,88</td><td>515,26</td><td>739,07</td><td>82,18</td></tr>
+                          <tr><td class="text-left">JR BONAERENSE II</td><td>353,50</td><td>789,51</td><td>769,86</td><td>295,31</td><td>983,09</td><td>507,75</td><td>566,50</td><td>933,52</td><td>540,90</td><td>584,32</td><td>644,89</td><td>166,19</td></tr>
+                          <tr><td class="text-left">JR BONAERENSE III</td><td>1.405,57</td><td>1.235,78</td><td>1.511,70</td><td>1.092,49</td><td>1.686,06</td><td>1.382,11</td><td>1.356,77</td><td>864,73</td><td>1.357,06</td><td>943,35</td><td>1.343,59</td><td>472,27</td></tr>
+                          <tr><td class="text-left">JR BONAERENSE IV</td><td>1.212,41</td><td>1.058,39</td><td>1.634,78</td><td>1.089,09</td><td>1.710,15</td><td>1.374,22</td><td>1.266,04</td><td>1.267,19</td><td>1.165,19</td><td>990,12</td><td>1.184,46</td><td>911,77</td></tr>
+                          <tr><td class="text-left">JR BONAERENSE V</td><td>356,21</td><td>195,27</td><td>578,83</td><td>442,18</td><td>716,88</td><td>429,23</td><td>530,34</td><td>354,97</td><td>275,78</td><td>196,45</td><td>342,48</td><td>185,37</td></tr>
+                          <tr><td class="text-left">JR BONAERENSE VI</td><td>208,78</td><td>273,15</td><td>255,42</td><td>355,30</td><td>812,54</td><td>672,41</td><td>517,04</td><td>499,09</td><td>477,62</td><td>382,32</td><td>338,42</td><td>22,41</td></tr>
+                          <tr><td class="text-left">JR BONAERENSE VII</td><td>290,72</td><td>400,74</td><td>964,15</td><td>320,12</td><td>435,33</td><td>453,98</td><td>410,75</td><td>310,11</td><td>467,64</td><td>295,00</td><td>385,07</td><td>209,01</td></tr>
+                          <tr><td class="text-left">JR CAPITAL FEDERAL</td><td>81,16</td><td>124,09</td><td>235,05</td><td>152,90</td><td>232,45</td><td>200,92</td><td>210,29</td><td>227,25</td><td>198,73</td><td>209,43</td><td>187,11</td><td>135,66</td></tr>
+                          <tr><td class="text-left">JR CENTRO</td><td>1.627,64</td><td>2.082,02</td><td>2.956,08</td><td>2.514,85</td><td>3.490,02</td><td>2.033,64</td><td>2.455,85</td><td>2.256,54</td><td>2.551,20</td><td>1.775,62</td><td>1.893,03</td><td>724,47</td></tr>
+                          <tr><td class="text-left">JR CONURBANO I</td><td>705,13</td><td>789,90</td><td>935,32</td><td>842,45</td><td>1.571,06</td><td>1.109,79</td><td>902,48</td><td>639,21</td><td>805,03</td><td>960,70</td><td>949,53</td><td>493,17</td></tr>
+                          <tr><td class="text-left">JR CONURBANO II</td><td>426,48</td><td>501,19</td><td>798,83</td><td>540,69</td><td>761,84</td><td>730,79</td><td>563,54</td><td>731,85</td><td>670,76</td><td>600,19</td><td>579,82</td><td>496,10</td></tr>
+                          <tr><td class="text-left">JR CONURBANO III</td><td>1.067,59</td><td>778,07</td><td>1.381,84</td><td>1.281,76</td><td>1.764,33</td><td>2.040,49</td><td>1.356,36</td><td>990,65</td><td>1.494,57</td><td>992,80</td><td>1.197,76</td><td>302,22</td></tr>
+                          <tr><td class="text-left">JR CONURBANO IV</td><td>659,11</td><td>399,04</td><td>826,09</td><td>661,33</td><td>929,59</td><td>693,31</td><td>657,09</td><td>742,09</td><td>849,99</td><td>690,96</td><td>713,99</td><td>333,24</td></tr>
+                          <tr><td class="text-left">JR CUYO</td><td>874,12</td><td>1.857,78</td><td>2.405,93</td><td>3.643,72</td><td>3.692,10</td><td>2.204,39</td><td>2.989,92</td><td>3.030,63</td><td>2.026,50</td><td>1.724,56</td><td>2.092,14</td><td>391,92</td></tr>
+                          <tr><td class="text-left">JR LITORAL</td><td>1.388,52</td><td>1.844,06</td><td>3.224,62</td><td>2.922,13</td><td>3.599,12</td><td>2.731,28</td><td>2.026,22</td><td>2.391,23</td><td>2.525,63</td><td>2.302,21</td><td>2.073,72</td><td>844,77</td></tr>
+                          <tr><td class="text-left">JR NORESTE</td><td>1.649,60</td><td>3.182,41</td><td>5.771,01</td><td>3.770,67</td><td>5.931,19</td><td>3.604,58</td><td>4.197,01</td><td>3.780,85</td><td>3.426,24</td><td>3.345,63</td><td>3.011,75</td><td>793,91</td></tr>
+                          <tr><td class="text-left">JR NOROESTE</td><td>1.686,60</td><td>1.882,18</td><td>2.558,83</td><td>2.914,89</td><td>3.350,72</td><td>2.838,83</td><td>2.452,09</td><td>3.473,68</td><td>3.292,28</td><td>2.439,11</td><td>2.941,97</td><td>1.191,30</td></tr>
+                          <tr><td class="text-left">JR NORTE</td><td>2.009,43</td><td>1.358,13</td><td>3.309,69</td><td>2.252,38</td><td>2.703,38</td><td>2.185,53</td><td>2.163,14</td><td>1.847,22</td><td>2.318,90</td><td>2.214,82</td><td>2.083,10</td><td>746,74</td></tr>
+                          <tr><td class="text-left">JR SUR I</td><td>1.920,13</td><td>2.184,00</td><td>3.601,28</td><td>3.903,95</td><td>3.503,26</td><td>3.191,78</td><td>2.796,79</td><td>2.232,07</td><td>3.084,33</td><td>2.889,28</td><td>2.578,75</td><td>676,15</td></tr>
+                          <tr><td class="text-left">JR SUR II</td><td>2.392,68</td><td>2.255,43</td><td>4.450,81</td><td>2.731,31</td><td>3.388,19</td><td>2.208,43</td><td>971,78</td><td>1.532,72</td><td>2.080,23</td><td>1.948,84</td><td>1.744,70</td><td>387,12</td></tr>
+                          <tr class="table-info"><td class="font-weight-bold text-dark">TOTAL POR MES</td><td class="font-weight-bold text-dark">20.757,43</td><td class="font-weight-bold text-dark">23.674,11</td><td class="font-weight-bold text-dark">39.081,72</td><td class="font-weight-bold text-dark">32.302,37</td><td class="font-weight-bold text-dark">42.251,22</td><td class="font-weight-bold text-dark">31.358,69</td><td class="font-weight-bold text-dark">29.036,48</td><td class="font-weight-bold text-dark">28.361,90</td><td class="font-weight-bold text-dark">30.098,46</td><td class="font-weight-bold text-dark">26.000,97</td><td class="font-weight-bold text-dark">27.025,35</td><td class="font-weight-bold text-dark">9.565,97</td></tr>
+                          <tr class="table-warning"><td class="font-weight-bold text-dark">ACUMULADO AÑO</td><td class="font-weight-bold text-dark" colspan="12">339.514,67</td></tr>
+                          <tr class="table-secondary"><td class="font-weight-bold text-dark">PROMEDIO MENSUAL</td><td class="font-weight-bold text-dark" colspan="12">28.292,89</td></tr>
+                        </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-10" style="display: none;">
+            <div class="card shadow mb-4 border-left-primary">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-dark"> CONSUMO MENSUAL - <strong>JEFATURAS REGIONALES</strong></h6>
+              </div>
+              <!-- Card Body -->
+              <div class="">
+                <div class="chart-area">
+                    <canvas id="myAreaChartJJRRYPF_2022"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-torta.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- Exportar a Excel -->
+  <!-- <script src="./js/descTabla/script.js"></script> -->
+
+  <!-- dataTable -->
+  <script>
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+  </script>
+
+  <script>
+    // CONSUMO COMBUSTIBLE - AACC y JJRR
+    var ctxAACCYPF = document.getElementById("myAreaChartAACCYPF_2023");
+    var dataAACCYPF = [30093, 28831, 39026, 30449, 41842, 34838, 37290, 30916, 30507, 28542, 25971, 10980];
+    var dataJJRRYPF = [20757, 23674, 39082, 32302, 42251, 31359, 29036, 28362, 30098, 26001, 27025, 9566];
+    var myLineChart = new Chart(ctxAACCYPF, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [{
+            label: "AC", lineTension: 0.1, backgroundColor: "rgba(252, 3, 3, 0.05)", borderColor: "rgba(252, 3, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 3, 3, 1)",
+            pointBorderColor: "rgba(252, 3, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 3, 3, 1)", pointHoverBorderColor: "rgba252, 3, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataAACCYPF,
+            },{
+            label: "JR", lineTension: 0.1, backgroundColor: "rgba(10, 145, 0, 0.05)", borderColor: "rgba(10, 145, 0, 1)", pointRadius: 3, pointBackgroundColor: "rgba(10, 145, 0, 1)",
+            pointBorderColor: "rgba(10, 145, 0, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(10, 145, 0, 1)", pointHoverBorderColor: "rgba10, 145, 0, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataJJRRYPF,
+            }
+          ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10, 
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(parseInt(value, 10));
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom'
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });        
+  </script>
+
+<script>
+    // CONSUMO COMBUSTIBLE - Total Por Mes
+    var ctxTotalYPF = document.getElementById("myAreaChartTotalYPF_2023");
+    var dataTotalYPF = [50850, 52505, 78108, 62751, 84093, 66197, 66326, 59279, 60606, 54543, 52997, 20546];
+    var myLineChart = new Chart(ctxTotalYPF, {
+  type: 'line',
+  data: {
+      labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+      datasets: [
+      {
+      label: "2023", lineTension: 0.1, backgroundColor: "rgba(67, 133, 240, 0.05)", borderColor: "rgba(67, 133, 240, 1)", pointRadius: 3, pointBackgroundColor: "rgba(67, 133, 240, 1)", pointBorderColor: "rgba(67, 133, 240, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(67, 133, 240, 1)", pointHoverBorderColor: "rgba(67, 133, 240, 1)", pointHitRadius: 10, pointBorderWidth: 2,
+      data: dataTotalYPF,
+      },
+      {
+      label: "2022", lineTension: 0.1, backgroundColor: "rgba(225, 229, 235, 0.05)", borderColor: "rgba(225, 229, 235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(225, 229, 235, 1)",
+      pointBorderColor: "rgba(225, 229, 235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(225, 229, 235, 1)", pointHoverBorderColor: "225, 229, 235, 1)",
+      pointHitRadius: 10, pointBorderWidth: 2,
+      data: [44129, 69085, 71352, 64586, 61474, 63857, 67887, 70233, 70865, 71823, 72988, 58592],
+      }
+    ],
+  },
+  options: {
+      maintainAspectRatio: false,
+      layout: {
+      padding: {
+          left: 10,
+          right: 25,
+          top: 25,
+          bottom: 0
+      }
+      },
+      scales: {
+      xAxes: [{
+          time: {
+          unit: 'date'
+          },
+          gridLines: {
+          display: false,
+          drawBorder: false
+          },
+          ticks: {
+          maxTicksLimit: 12
+          }
+      }],
+      yAxes: [{
+          ticks: {
+          maxTicksLimit: 5,
+          padding: 10,
+          // Include a dollar sign in the ticks
+          callback: function(value, index, values) {
+              return '' + number_format(parseInt(value, 10));
+          }
+          },
+          gridLines: {
+          color: "rgb(234, 236, 244)",
+          zeroLineColor: "rgb(234, 236, 244)",
+          drawBorder: false,
+          borderDash: [2],
+          zeroLineBorderDash: [2]
+          }
+      }],
+      },
+      legend: {
+      display: true, position: 'bottom'
+      },
+      tooltips: {
+      backgroundColor: "rgb(255,255,255)",
+      bodyFontColor: "#858796",
+      titleMarginBottom: 10,
+      titleFontColor: '#6e707e',
+      titleFontSize: 14,
+      borderColor: '#dddfeb',
+      borderWidth: 1,
+      xPadding: 15,
+      yPadding: 15,
+      displayColors: false,
+      intersect: false,
+      mode: 'index',
+      caretPadding: 10,
+      callbacks: {
+          label: function(tooltipItem, chart) {
+          var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+          return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+          }
+      }
+      }
+  }
+  });        
+</script>
+
+
+</body>
+
+</html>

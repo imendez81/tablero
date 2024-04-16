@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+</head>
+
+<body  id="page-top" class="sidebar-toggled">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        </li>
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item active">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i style="font-size: large;" class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-2 text-gray-800 text-center"><span class="font-weight-bold text-gray-800">YPF BOXES </span></h1>
+
+          <div class="row">
+          
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4 col-xl-6">
+            <div class="card-header py-3">
+              <h3 class="m-0 font-weight-bold text-primary">AMBA</h3>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-sm table-bordered table-hover text-center display" id="datatable_2" width="100%" cellspacing="0">
+
+                <thead style="background-color: #0481CB;">
+                    <tr style="color: white;" class="text-center"><th>ESTACIÓN DE SERVICIO</th><th>DIRECCIÓN</th><th>CP</th><th>LOCALIDAD</th><th>PROVINCIA</th></tr>
+                </thead>
+
+                <tbody>
+                    <tr><td class="text-left">OPESSA RICHIERI EZEIZA</td><td>AV.TTEGRAL.RICCHIERI 3300</td><td>1770</td><td>ALDO BONZI</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA RICHIERI CAPITAL</td><td>AV.TTEGRAL.RICCHIERI 3625</td><td>1770</td><td>ALDO BONZI</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (AVELLANEDA)</td><td>BELGRANO 791</td><td>1870</td><td>AVELLANEDA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA AVELLANEDA VIAS</td><td>AV YRIGOYEN Y LOLA MORA S/N</td><td>1870</td><td>AVELLANEDA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA BELLA VISTA</td><td>AV.G.CAMPOS Y SDOR.MORON S/N</td><td>1661</td><td>BELLA VISTA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (BERISSO PUENTE ROMA)</td><td>LA PORTADA2 Y BARADERO156 S/N</td><td>1923</td><td>BERISSO</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (BERISSO)</td><td>CALLE 122 Y 60 S/N</td><td>1923</td><td>BERISSO</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (BERNAL)</td><td>SAN MARTIN Y ZAPIOLA S/N</td><td>1876</td><td>BERNAL</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA DON TORCUATO)</td><td>RUTA 202 Y AV DEL TRABAJO 11,2</td><td>1611</td><td>DON TORCUATO</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA FLORENCIO VARELA</td><td>AV.CALCHAQUI Y AV.DEL TRA 5877</td><td>1888</td><td>FCIO.VARELA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (PACHECO)</td><td>RUTA 197 Y SARMIENTO S/N</td><td>1617</td><td>GRAL.PACHECO</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA ITUZAINGO</td><td>INT CARLOS RATTI Y MONROE S/N</td><td>1714</td><td>ITUZAINGO</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (EL CRUCE)</td><td>CRUCE RUTAS 8 Y 197 S/N</td><td>1665</td><td>JOSE C.PAZ</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (LA PLATA 7 Y 32)</td><td>CALLE 32 Y AVDA.7 S/N</td><td>1900</td><td>LA PLATA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (LANUS)</td><td>H. YRIGOYEN 3732</td><td>1824</td><td>LANUS OESTE</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA LOMAS DE ZAMORA)</td><td>AVDA. YRIGOYEN Y RIVERA S/N</td><td>1832</td><td>LOMAS DE ZAMORA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (TURDERA)</td><td>ANT. ARGENTINA Y FRÍAS S/N</td><td>1832</td><td>LOMAS DE ZAMORA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (AUSOL CAMPANA ESTE)</td><td>R. PANAMER.RAMAL CAMPANA 36,5</td><td>1613</td><td>LOS POLVORINES</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (AUSOL CAMPANA OESTE)</td><td>R.PANAMER.RAMAL CAMPANA 36,5</td><td>1613</td><td>LOS POLVORINES</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (MORON)</td><td>TOMÁS GUIDO 479</td><td>1708</td><td>MORON</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (LA LUCILA)</td><td>AVDA. LIBERTADOR 3402</td><td>1636</td><td>OLIVOS</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA PILAR)</td><td>RUTA NAC. 8 25</td><td>1629</td><td>PILAR</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (AUSOL PILAR NORTE)</td><td>DEL SOL RAMAL PILAR 36,5</td><td>1629</td><td>PILAR</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (JUMBO PILAR)</td><td>LAS MAGNOLIAS Y R.PANAMER S/N</td><td>1629</td><td>PILAR</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (AUSOL PILAR SUR)</td><td>DEL SOL RAMAL PILAR 36,5</td><td>1629</td><td>PILAR</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (JUMBO QUILMES)</td><td>AV. CALCHAQUI 3900</td><td>1878</td><td>QUILMES</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (CALCHAQUI)</td><td>AV.CALCHAQUI Y R.LOPEZ S/N</td><td>1879</td><td>QUILMES OESTE</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA HIPODROMO</td><td>BERNABE MARQUEZ 1195</td><td>1642</td><td>SAN ISIDRO</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (PERDRIEL)</td><td>PERDRIEL Y 25 DE MAYO S/N</td><td>1650</td><td>SAN MARTIN</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA SAN MIGUEL</td><td>RUTA 8 ESQ. MITRE S/N</td><td>1663</td><td>SAN MIGUEL</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA TIGRE</td><td>AVDA. CAZÓN Y CHACABUCO 997</td><td>1648</td><td>TIGRE</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA NORDELTA</td><td>DE LOS LAGOS 330</td><td>1648</td><td>TIGRE</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (VICENTE LOPEZ)</td><td>MAIPU 760</td><td>1638</td><td>VICENTE LOPEZ</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (UGARTE- ATGE I)</td><td>UGARTE Y PANAMERICANA S/N</td><td>1638</td><td>VICENTE LOPEZ</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (MELO)</td><td>AVDA. LIBERTADOR Y MELO S/N</td><td>1638</td><td>VICENTE LOPEZ</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (SAN FERNANDO)</td><td>LIBERTADOR Y QUINTANA S/N</td><td>1644</td><td>VICTORIA</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (ZARATE)</td><td>RUTA NAC. 12 Y ACCESO S/N</td><td>2800</td><td>ZARATE</td><td>BUENOS AIRES</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA VELEZ SARSFIELD)</td><td>VALEZ SARSFIELD Y TOLL S/N°</td><td>1281</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA CABILDO</td><td>AVENIDA CABILDO 4108</td><td>1429</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA AUTODROMO)</td><td>ROCA Y ESCALADA S/N</td><td>1439</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA CABALLITO)</td><td>AVDA. GAONA 1204</td><td>1416</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (ACA ONCE)</td><td>AVENIDA RIVADAVÍA 3341</td><td>1203</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (DORREGO)</td><td>AVDA.CORDOBA Y DORREGO S/N</td><td>1414</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (ECHEVERRIA)</td><td>F. ALCORTA Y ECHEVERRíA S/N</td><td>1426</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (WALL MART CONSTITUYENTES)</td><td>AV.DE LOS CONSTITUYENTES 6070</td><td>1414</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (OLIVERA)</td><td>AVDA.DIRECTORIO Y OLIVERA S/N°</td><td>1407</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (YATAY)</td><td>DIAZ VELEZ Y YATAY S/N</td><td>1200</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (PRINGLES)</td><td>AVDA CORDOBA Y PRINGLES S/N</td><td>1000</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (NICARAGUA)</td><td>AVDA. JUAN B. JUSTO 1215</td><td>1414</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                    <tr><td class="text-left">OPESSA (AZURDUY)</td><td>CABILDO Y JUANA AZURDUY S/N</td><td>1000</td><td>CAPITAL FEDERAL</td><td>CAPITAL FEDERAL</td></tr>
+                </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="card shadow mb-4 col-xl-6">
+            <div class="card-header py-3">
+                <h3 class="m-0 font-weight-bold text-primary">LOCALIZACIÓN TALLERES YPF-BOXES</h3>
+            </div>
+            <div class="text-center mb-4">
+                <iframe src="https://www.google.com/maps/d/embed?mid=1ncfyjxtc1S7PrWAB3LbcYqw44Bjz66l1" width="95%" height="680"></iframe>
+            </div>
+          </div>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4 col-12 col-xl-6">
+                <div class="card-header py-3">
+                <h3 class="m-0 font-weight-bold text-primary">INTERIOR</h3>
+                </div>
+                <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-sm table-bordered table-hover text-center display" id="dataTable" width="100%" cellspacing="0">
+
+                    <thead style="background-color: #0481CB;">
+                        <tr style="color: white;" class="text-center"><th>ESTACIÓN DE SERVICIO</th><th>DIRECCIÓN</th><th>CP</th><th>LOCALIDAD</th><th>PROVINCIA</th></tr>
+                    </thead>
+
+                    <tbody>
+                        <tr><td class="text-left">OPESSA (BAHIA BLANCA)</td><td>VIEYTES Y COLON S/N</td><td>8000</td><td>BAHIA BLANCA</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (PARCHAPE)</td><td>PARCHAPE Y FALUCHO S/N</td><td>8000</td><td>BAHIA BLANCA</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (GENERAL VILLEGAS)</td><td>RUTA 188 Y 33 S/N</td><td>6230</td><td>GRAL.VILLEGAS</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA JUNIN)</td><td>SAAVEDRA Y LEBENSHON S/N</td><td>6000</td><td>JUNIN</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (ALBERTI)</td><td>ALBERTI 2128</td><td>7600</td><td>MAR DEL PLATA</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (CARLOS TEJEDOR)</td><td>CONSTITUCION Y C.TEJEDOR S/N°</td><td>7600</td><td>MAR DEL PLATA</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (PINAMAR)</td><td>JUPITER Y JASON S/N°</td><td>7167</td><td>PINAMAR</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (SAN NICOLAS)</td><td>GRAL. SAVIO Y POMBO S/N</td><td>2900</td><td>SAN NICOLAS</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (TANDIL II)</td><td>AVELLANEDA ESQ BOLIVAR 999</td><td>7000</td><td>TANDIL</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA LAVALLE)</td><td>LAVALLE Y COLON S/N</td><td>7500</td><td>TRES ARROYOS</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (VILLA GESELL)</td><td>BUENOS AIRES Y BOULEVARD 0</td><td>7165</td><td>VILLA GESELL</td><td>BUENOS AIRES</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA RESISTENCIA)</td><td>AV.9 DE JULIO Y BV.ITALIA S/N</td><td>3500</td><td>RESISTENCIA</td><td>CHACO</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA COMODORO RIVADAVIA)</td><td>ALVEAR Y DORREGO S/N</td><td>9000</td><td>COMOD.RIVADAVIA</td><td>CHUBUT</td></tr>
+                        <tr><td class="text-left">OPESSA CORDOBA ARGUELLO</td><td>AV RECTA MARTINOLI 5981</td><td>5147</td><td>ARGUELLO</td><td>CORDOBA</td></tr>
+                        <tr><td class="text-left">OPESSA CORDOBA PLANAS</td><td>AV RAFAEL NUÑEZ Y PLANAS 4014</td><td>5009</td><td>CORDOBA</td><td>CORDOBA</td></tr>
+                        <tr><td class="text-left">OPESSA (CORDOBA LA FRANCE)</td><td>MONS. CABRERA Y CARDEÑOSA 3691</td><td>5000</td><td>CORDOBA</td><td>CORDOBA</td></tr>
+                        <tr><td class="text-left">OPESSA RAFAEL NUÑEZ</td><td>AV.R.NUNEZ ESQ ECHENIQUE S/N</td><td>5000</td><td>CORDOBA</td><td>CORDOBA</td></tr>
+                        <tr><td class="text-left">OPESSA VILLA ALLENDE</td><td>GOICOECHEA 1169</td><td>5105</td><td>VILLA ALLENDE</td><td>CORDOBA</td></tr>
+                        <tr><td class="text-left">OPESSA (PASO DE LOS LIBRES)</td><td>RUTA PCIAL.126 9</td><td>3230</td><td>P.D.L.LIBRES</td><td>CORRIENTES</td></tr>
+                        <tr><td class="text-left">OPESSA GALARZA</td><td>GALARZA Y 9 DE JULIO S/N</td><td>3260</td><td>CONC.DEL URUGUAY</td><td>ENTRE RIOS</td></tr>
+                        <tr><td class="text-left">OPESSA (SAN ANTONIO)</td><td>CATAMARCA 90</td><td>3200</td><td>CONCORDIA</td><td>ENTRE RIOS</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA PARANA)</td><td>BUENOS AIRES 333</td><td>3100</td><td>PARANA</td><td>ENTRE RIOS</td></tr>
+                        <tr><td class="text-left">OPESSA (ALMAFUERTE)</td><td>ALMAFUERTE Y AYACUCHO S/N</td><td>3100</td><td>PARANA</td><td>ENTRE RIOS</td></tr>
+                        <tr><td class="text-left">OPESSA JUJUY</td><td>GÜEMES Y LAMADRID 999</td><td>4600</td><td>S.S.DE JUJUY</td><td>JUJUY</td></tr>
+                        <tr><td class="text-left">OPESSA LA RIOJA</td><td>AV RIV Y BEN DE LA VEGA S/N</td><td>5300</td><td>LA RIOJA</td><td>LA RIOJA</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA MENDOZA)</td><td>AV.SAN MARTIN Y AMIGORENA S/N</td><td>5500</td><td>MENDOZA</td><td>MENDOZA</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA SAN RAFAEL)</td><td>H.IRIGOYEN Y 9 DE JULIO S/N</td><td>5600</td><td>SAN RAFAEL</td><td>MENDOZA</td></tr>
+                        <tr><td class="text-left">OPESSA (SHOPPING MENDOZA)</td><td>ACCESO ESTE Y AVELLANEDA S/N</td><td>5521</td><td>VILLA NUEVA</td><td>MENDOZA</td></tr>
+                        <tr><td class="text-left">OPESSA (PUERTO IGUAZU)</td><td>RUTA NAC.12 Y ACC.PTE.INT 1639</td><td>3370</td><td>IGUAZU</td><td>MISIONES</td></tr>
+                        <tr><td class="text-left">OPESSA POSADAS FATIMA</td><td>RUTA 12 - KM 9 S/N</td><td>3300</td><td>POSADAS</td><td>MISIONES</td></tr>
+                        <tr><td class="text-left">OPESSA SAN MARTIN DE LOS ANDES</td><td>AV KOESSLER Y CURRUHUINCA 0</td><td>8370</td><td>SAN MARTIN DE LOS ANDES</td><td>NEUQUEN</td></tr>
+                        <tr><td class="text-left">OPESSA GRAL ROCA</td><td>AVDA.ROCA Y BOLIVIA S/N</td><td>8332</td><td>GRAL.ROCA</td><td>RIO NEGRO</td></tr>
+                        <tr><td class="text-left">OPESSA (SALTA)</td><td>N/A</td><td>4400</td><td>SALTA</td><td>SALTA</td></tr>
+                        <tr><td class="text-left">OPESSA SAN JUAN</td><td>RIVADAVIA Y RAWSON S/N</td><td>5400</td><td>SAN JUAN</td><td>SAN JUAN</td></tr>
+                        <tr><td class="text-left">OPESSA (SAN JUAN)</td><td>RAWSON Y 9 DE JULIO S/N</td><td>5400</td><td>SAN JUAN</td><td>SAN JUAN</td></tr>
+                        <tr><td class="text-left">OPESSA (RAFAELA)</td><td>BV.ROCHA Y ARENALES S/N</td><td>2300</td><td>RAFAELA</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA (ACA RECONQUISTA)</td><td>BVDR. H. YRIGOYEN Y DIEZ S/N</td><td>3560</td><td>RECONQUISTA</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA ROSARIO URQUIZA</td><td>MITRE Y URQUIZA S/N</td><td>2000</td><td>ROSARIO</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA MARUL</td><td>BV.RONDEAU ESQ,MARULL S/N</td><td>2000</td><td>ROSARIO</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA ACA OROÑO</td><td>OROÑO Y TRES DE FEBRERO S/N</td><td>2000</td><td>ROSARIO</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA (OVIDIO LAGOS)</td><td>CALLE 27 DE FEBRERO 2801</td><td>2000</td><td>ROSARIO</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA (VENADO TUERTO)</td><td>RUTA 8 ESQ. H. YRIGOYEN S/N</td><td>2600</td><td>VENADO TUERTO</td><td>SANTA FE</td></tr>
+                        <tr><td class="text-left">OPESSA (MATE DE LUNA II)</td><td>AV.MATE DE LUNA Y COLON S/N</td><td>4000</td><td>S.M.TUCUMAN</td><td>TUCUMAN</td></tr>
+                        <tr><td class="text-left">OPESSA (MATE DE LUNA I)</td><td>AV.MATE DE LUNA Y EJ.NORT S/N</td><td>4000</td><td>S.M.TUCUMAN</td><td>TUCUMAN</td></tr>
+                        <tr><td class="text-left">OPESSA (TUCUMAN)</td><td>B.ARAOZ Y W.POSSE S/N</td><td>4000</td><td>S.M.TUCUMAN</td><td>TUCUMAN</td></tr>
+                        <tr><td class="text-left">OPESSA TUCUMAN BULNES</td><td>AV BELGRANO Y BULNES S/N</td><td>4000</td><td>S.M.TUCUMAN</td><td>TUCUMAN</td></tr>
+                    </tbody>
+
+                    </table>
+                </div>
+                </div>
+            </div>
+
+            <div class="card shadow mb-4 col-12 col-xl-6">
+                <div class="card-header py-3">
+                    <h3 class="m-0 font-weight-bold text-primary">LOCALIZACIÓN TALLERES YPF-BOXES</h3>
+                </div>
+                <div class="text-center mb-4">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1yhy5KnIReVkFfXxd55-G8EUN2D1xjqvp" width="95%" height="680"></iframe>
+                </div>
+              </div>
+
+        </div>
+
+    </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- dataTable -->
+  <script>
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+  </script>
+
+  <script>
+    $('#datatable_2').dataTable( {
+    "order": [[0, 'desc']],
+    "pageLength": 20
+    },
+    );
+  </script>
+
+  <script>
+    $('#dataTable').dataTable( {
+    "order": [[0, 'desc']],
+    "pageLength": 20
+    },
+    );
+  </script>
+
+</body>
+
+</html>

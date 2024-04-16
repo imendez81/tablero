@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <!-- Exportar a Excel -->
+  <script src="./js/descTabla/xlsx.full.min.js"></script>
+  <script src="./js/descTabla/FileSaver.min.js"></script>
+  <script src="./js/descTabla/tableexport.min.js"></script>
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        </li>
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i style="font-size: large;" class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-4 text-gray-800 text-center"><strong>Saldos</strong> - Combustible / Lubricantes</h1>
+
+          <div class="row">
+
+
+          <div class="col-12 col-xl-1"></div>
+          <!-- <div class="col-12 col-xl-1"></div> -->
+
+          <!-- Area Table -->
+          <div class="col-12 col-xl-10 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">SALDOS DISPONIBLES<strong></strong></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                      <table class="table table-bordered table-hover text-center table-sm display" id="dataTable1" width="100%" cellspacing="0">
+  
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th style="vertical-align: middle" class="text-center">N° OC / PROVEEDOR</th><th style="vertical-align: middle" class="text-center">DESC OC</th><th style="vertical-align: middle" class="text-center">EXPEDIENTE</th><th style="vertical-align: middle">CONTRATADO</th><th class="text-center" style="vertical-align: middle; color: white!important;">DEVENGADO</th><th class="text-center" style="vertical-align: middle; color: white!important;">SALDO DISP</th><th class="text-center" style="vertical-align: middle; width: 3%;">CANT CONTRATADA</th><th class="text-center" style="vertical-align: middle; width: 3%;">CANT FACTURADA</th><th class="text-center" style="vertical-align: middle; width: 3%; color: white!important;">CANT ENTRADA</th></tr></thead>
+    
+                        <tbody>
+                          <tr><td>7120000645 / YPF SA</td><td>SERVICIO DE CARGA - COMBUSTIBLE</td><td>024-99-815189570-682</td><td>$ 547.286.094,68</td><td>$ 368.838.661,92</td><td>$ 201.049.883,28<div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" style="width: 37%;"></div></div></td><td>547.286.094,68</td><td>368.838.661,92</td><td>377.209.124,69</td></tr>
+                          <tr><td>7120000645 / YPF SA</td><td>SERVICIO DE CARGA - LUBRICANTES</td><td>024-99-815189570-682</td><td>$ 20.198.228,25</td><td>$ 15.956.431,14</td><td>$ 5.306.878,26<div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" style="width: 26%;"></div></div></td><td>20.198.228,25</td><td>15.956.431,14</td><td>16.265.966,19</td></tr>
+                        </tbody>
+   
+   
+                      </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-1"></div>
+          <div class="col-12 col-xl-1"></div>
+          <div class="col-12 col-xl-1"></div>
+          <div class="col-12 col-xl-1"></div>
+
+          <!-- Area Table -->
+          <div class="col-12 col-xl-4 mb-4" style="display: none;">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">SERVICIO DE CARGA - <strong>TARJETA COMBUSTIBLE</strong></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th>PERIODO</th><th>IMPORTE</th><th>FECHA CONT</th><th>ESTADO</th></tr></thead>
+                        
+                        <tbody>
+                          <tr><td>AGO-22</td><td> $ 24.886.375,08 </td><td>SEP-22</td><td> Pagado </td></tr>
+                          <tr><td>SEP-22</td><td> $ 13.924.589,21 </td><td>OCT-22</td><td> Pagado </td></tr>
+                          <tr><td>OCT-22</td><td> $ 15.176.994,46 </td><td>NOV-22</td><td> Pagado </td></tr>
+                          <tr><td>NOV-22</td><td> $ 16.652.074,52 </td><td>DIC-22</td><td> Pagado </td></tr>
+                          <tr><td>DIC-22</td><td> $ 13.974.421,00 </td><td>ENE-23</td><td> Pagado </td></tr>
+                          <tr><td>ENE-23</td><td> $ 12.477.222,38 </td><td>FEB-23</td><td> Pagado </td></tr>
+                          <tr><td>FEB-23</td><td> $ 13.998.826,40 </td><td>MAR-23</td><td> Pagado </td></tr>
+                          <tr><td>MAR-23</td><td> $ 21.044.348,49 </td><td>ABR-23</td><td> Pagado </td></tr>
+                          <tr><td>ABR-23</td><td> $ 17.735.450,20 </td><td>MAY-23</td><td> Pagado </td></tr>
+                          <tr><td>MAY-23</td><td> $ 19.624.745,96 </td><td>JUN-23</td><td> Pagado </td></tr>
+                          <tr><td>JUN-23</td><td> $ 20.085.650,38 </td><td>JUL-23</td><td> Pagado </td></tr>
+                          <tr><td>JUL-23</td><td> $ 21.405.678,28 </td><td>AGO-23</td><td> Pagado </td></tr>
+                          <tr><td>AGO-23</td><td> $ 20.987.272,39 </td><td>SEP-23</td><td> Pagado </td></tr>
+                          <tr><td>SEP-23</td><td> $ 23.182.633,09 </td><td>OCT-23</td><td> Pagado </td></tr>
+                          <tr><td>OCT-23</td><td> $ 29.248.708,87 </td><td>NOV-23</td><td> Pagado </td></tr>
+                          <tr><td>NOV-23</td><td class="text-danger font-weight-bold"> $ 29.248.708,870 </td><td>&nbsp;</td><td class="text-danger font-weight-bold"> $ 20.878.246,10 </td></tr>
+                          <tr><td>DIC-23</td><td class="text-danger font-weight-bold"> $ 13.038.234,14 </td><td>&nbsp;</td><td class="text-danger font-weight-bold"> Pend Pago </td></tr>
+                          <tr><td>ENE-24</td><td> $ 36.091.814,90 </td><td>ENE-24</td><td> Pagado </td></tr>
+                          <tr><td>FEB-24</td><td> $ 16.054.088,93 </td><td>FEB-24</td><td> Pagado </td></tr>
+                          <tr><td>MAR-24</td><td class="text-danger font-weight-bold"> $ 17.103.797,88 </td><td></td><td class="text-danger font-weight-bold"> Pend Pagado </td></tr>
+                          <tr class="table-info"><td class="font-weight-bold text-dark" colspan="2">TOTAL</td><td class="font-weight-bold text-dark" colspan="2"> $ 328.180.431,77 </td></td></tr>
+                          <tr class="table-success"><td class="font-weight-bold text-dark" colspan="2">PAGADO</td><td class="font-weight-bold text-dark" colspan="2"> $ 284.404.990,71 </td></td></tr>
+                          <!-- <tr class="table-danger"><td class="font-weight-bold text-dark" colspan="2">PENDIENTE DE PAGO</td><td class="font-weight-bold text-dark" colspan="2"> $ 36.091.814,90 </td></tr> -->
+                        </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+          
+          <!-- <div class="col-12 col-xl-1"></div> -->
+
+          <!-- Area Table -->
+          <div class="col-12 col-xl-4 mb-4" style="display: none;">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">SERVICIO DE CARGA - <strong>TARJETA LUBRICANTES</strong></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th>PERIODO</th><th>IMPORTE</th><th>FECHA CONT</th><th>ESTADO</th></tr></thead>
+                        
+                        <tbody>
+                          <tr><td>SEP-22</td><td> $ 439.469,64 </td><td>OCT-22</td><td> Pagado </td></tr>
+                          <tr><td>OCT-22</td><td> $ 225.336,54 </td><td>NOV-22</td><td> Pagado </td></tr>
+                          <tr><td>NOV-22</td><td> $ 316.530,40 </td><td>DIC-22</td><td> Pagado </td></tr>
+                          <tr><td>DIC-22</td><td> $ 330.704,28 </td><td>ENE-23</td><td> Pagado </td></tr>
+                          <tr><td>ENE-23</td><td> $ 257.645,20 </td><td>FEB-23</td><td> Pagado </td></tr>
+                          <tr><td>FEB-23</td><td> $ 339.554,90 </td><td>MAR-23</td><td> Pagado </td></tr>
+                          <tr><td>MAR-23</td><td> $ 708.255,49 </td><td>ABR-23</td><td> Pagado </td></tr>
+                          <tr><td>ABR-23</td><td> $ 1.049.788,84 </td><td>MAY-23</td><td> Pagado </td></tr>
+                          <tr><td>MAY-23</td><td> $ 1.365.487,94 </td><td>JUN-23</td><td> Pagado </td></tr>
+                          <tr><td>JUN-23</td><td> $ 1.016.102,09 </td><td>JUL-23</td><td> Pagado </td></tr>
+                          <tr><td>JUL-23</td><td> $ 1.215.523,23 </td><td>AGO-23</td><td> Pagado </td></tr>
+                          <tr><td>AGO-23</td><td> $ 817.400,49 </td><td>SEP-23</td><td> Pagado </td></tr>
+                          <tr><td>SEP-23</td><td> $ 1.311.683,97 </td><td>OCT-23</td><td> Pagado </td></tr>
+                          <tr><td>OCT-23</td><td> $ 1.649.207,97 </td><td>NOV-23</td><td> Pagado </td></tr>
+                          <tr><td>NOV-23</td><td class="text-danger font-weight-bold"> $ 1.649.207,97 </td><td>&nbsp;</td><td class="text-danger font-weight-bold"> Pend Pago </td></tr>
+                          <tr><td>DIC-23</td><td class="text-danger font-weight-bold"> $ 616.635,29 </td><td>&nbsp;</td><td class="text-danger font-weight-bold"> Pend Pago </td></tr>
+                          <tr><td>ENE-24</td><td> $ 2.247.087,76 </td><td>ENE-24</td><td> Pagado </td></tr>
+                          <tr><td>FEB-24</td><td> $ 437.886,620 </td><td>FEB-24</td><td> Pagado </td></tr>
+                          <tr class="table-info"><td class="font-weight-bold text-dark" colspan="2">TOTAL</td><td class="font-weight-bold text-dark" colspan="2"> $ 13.289.778,74 </td></tr>
+                          <tr class="table-success"><td class="font-weight-bold text-dark" colspan="2">PAGADO</td><td class="font-weight-bold text-dark" colspan="2"> $ 11.042.690,98 </td></tr>
+                          <!-- <tr class="table-danger"><td class="font-weight-bold text-dark" colspan="2">PENDIENTE DE DPAGO</td><td class="font-weight-bold text-dark" colspan="2"> $ 2.247.087,76 </td></tr> -->
+                        </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+             
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-6" style="display: none;">
+            <div class="card shadow mb-4 border-left-primary">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-dark"> CONSUMO MENSUAL en<strong> Litros</strong> - Totales</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="" style="padding-right: 25px;">
+                <div class="chart-area">
+                    <canvas id="myAreaChartTotalYPF_2023"></canvas>
+                </div>
+              </div>
+              <div class="card shadow mb-0">
+              <!-- Card Header - Accordion -->
+              <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: </h6>
+              </a> -->
+                <!-- Card Content - Collapse -->
+                <div class="" id="collapseCard">
+                  <div class="card-body pt-1 pb-1">
+                    <table class="table table-sm table-bordered">
+                      <thead class="thead-dark">
+                        <tr>
+                          <th scope="col" class="text-center align-middle">Año</th>
+                          <th scope="col" class="text-center align-middle">Total Año</th>
+                          <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                        </tr>
+                      </thead>
+                      <tbody style="text-align: center;">
+                        <tr>
+                          <th scope="row" class="text-dark">2023</th>
+                          <td class="font-weight-bold text-dark">708.800</td>
+                          <td class="font-weight-bold text-dark">59.067</td>
+                        </tr>
+                        <tr>
+                          <th scope="row" class="text-dark">2022</th>
+                          <td class="font-weight-bold text-dark">786.871</td>
+                          <td class="font-weight-bold text-dark">65.573</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+
+           <!-- Area Chart -->
+           <div class="col-12 col-xl-6 mt-5" style="display: none;">
+            <div class="card shadow mb-4 border-left-primary">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-dark"> CONSUMO MENSUAL en<strong> Litros</strong> - Áreas Centrales / Jefaturas Regionales</h6>
+              </div>
+              <!-- Card Body -->
+              <div class="" style="padding-right: 25px;">
+                <div class="chart-area">
+                    <canvas id="myAreaChartAACCYPF_2023"></canvas>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-torta.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/datatables-demo.js"></script>
+
+  <!-- Exportar a Excel -->
+  <!-- <script src="./js/descTabla/script.js"></script> -->
+
+  <!-- dataTable -->
+  <script>
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+  </script>
+
+    <script>
+  $('#dataTable1').dataTable( {
+      // dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+      // buttons: ['copy', 'excel'],
+      columnDefs: [
+      // {
+      //     targets: 3,
+      //     render: $.fn.dataTable.render.number('.', '')
+      // },
+      { targets: [0, 1, 2], className:'text-left font-weight-bold dt-head-center' },
+      { targets: [3], className:'text-right font-weight-bold' },
+      { targets: [4], className:'text-right text-danger font-weight-bold' },
+      // { targets: [4, 8], className:'text-right text-danger' },
+      { targets: [5], className:'text-right font-weight-bold text-success' }
+      ],
+    "order": [[1, 'asc']],
+    "pageLength": 15,
+    // "language": {
+    //       "zeroRecords": "No se encontraron coincidencias.",
+    //       "paginate": {
+    //           "first": "Primera",
+    //           "last": "Última ",
+    //           "next": "  >>",
+    //           "previous": "<<  "                   
+    //       },
+    //       "sLengthMenu": "Mostrar de a _MENU_ resultados",
+    //       "emptyTable": "No hay datos disponibles en la tabla.",
+    //       "search": "Buscar... ",
+    //       "info": "Mostrando _START_ a _END_ (de _TOTAL_ resultados)",
+    //       "infoEmpty": "Mostrando 0 de 0 resultados",
+    //       "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+    //   }
+    }
+   );
+  </script>
+
+
+</body>
+
+</html>

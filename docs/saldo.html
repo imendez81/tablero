@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+
+  <!-- Favicons -->
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+  
+
+  <!-- Google Charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA #37bbed
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item active">
+        <a class="nav-link" href="saldo.html">
+          <i style="font-size: large;" class="fas fa-file-invoice-dollar"></i>
+        <span>Saldos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+          <i class="far fa-check-circle"></i>
+          <span>Recepciones</span>
+        </a>
+        <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+            <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+            <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+          </div>
+        </div>
+      </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item"> -->
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        <!-- </li> -->
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          
+          <h1 class="h1 mb-4 text-gray-800 text-center"> <strong style="padding-right: 17.5rem !important;">SALDOS</strong></h1>
+
+        <div class="row">
+
+                      <script>
+                        const FechaActual = "16/04/2024 09:25:00"
+                      </script>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4 col-12 col-xl-12">
+              <div class="card-header py-3">
+                  <h6 class="m-0 text-dark">Actualizado al <span class="font-weight-bold text-primary pr-0" style="border: none;" disabled="true" type="text" id="ActualizadoSaldo"></span></h6>
+              </div>
+              <div class="card-body">
+                  <div class="table-responsive">
+        
+        <!-- Botón para popover -->
+        
+        <div class="col-11" popover id="1120012392">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable" width="100%" cellspacing="0">
+
+            <style type="text/css">
+              .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+                color: white !important;
+                border: 1px solid #36729b;
+                background-color: #00aced;
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, 00aced));
+                background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+                background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+                background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+                background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+                background: #00aced;
+            }
+            .dataTables_wrapper .dataTables_paginate .paginate_button {
+                box-sizing: border-box;
+                display: inline-block;
+                min-width: 1.5em;
+                padding: 0.5em 1em;
+                margin-left: 2px;
+                text-align: center;
+                text-decoration: none !important;
+                cursor: pointer;
+                cursor: hand;
+                color: #00aced !important;
+                border: 1px solid transparent;
+                border-radius: 2px;
+            }
+            .dt-buttons {
+              margin-left: 20px;
+            }
+            button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+                color: #fff;
+                background-color: #00aced;
+                border-color: #00aced;
+            }
+            table.dataTable.no-footer {
+                border-bottom: 1px solid #ddd6d6;
+            }
+            .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+                color: #898181;
+            }
+            table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+                right: 0.5em;
+                content: "";
+            }
+            table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+                right: 0.5em;
+                content: "";
+            }
+            </style>
+            <style type="text/css">
+              .dataTable tbody tr td{
+              vertical-align: middle!important;
+                padding: 4px 5px;
+              }
+              [popover] {
+                position: fixed;
+                inset: 0;
+                width: fit-content;
+                height: fit-content;
+                margin: auto;
+                border: solid;
+                padding: 0.25em;
+                overflow: auto;
+                color: CanvasText;
+                background-color: Canvas;
+              }
+              /* :popover-open {
+                width: 1200px;
+                height: 500px;
+                position: absolute;
+                inset: unset;
+                bottom: 5px;
+                right: 5px;
+                margin: 0;
+              } */
+            </style>
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012392 / RUTATLANTICA SA</td><td class="text-left">SERV. TRANSP DE PERSONAS - RENG 1 SEDAN c/chofer 0 a 400km</td><td class="text-right">$ 547.500,00</td><td class="text-right">$ 474.500,00</td><td class="text-right text-success">$ 73.000,00</td><td>15</td><td>13</td><td>13</td><td>2</td><td class="text-right">$ 36.500,00</td></tr>
+                <tr><td>1120012392 / RUTATLANTICA SA</td><td class="text-left">SERV. TRANSP DE PERSONAS - RENG 2 SEDAN c/chofer 401 a 1.000km</td><td class="text-right">$ 1.350.000,00</td><td class="text-right">$ 270.000,00</td><td class="text-right text-success">$ 1.080.000,00</td><td>15</td><td>3</td><td>3</td><td>12</td><td class="text-right">$ 90.000,00</td></tr>
+                <tr><td>1120012392 / RUTATLANTICA SA</td><td class="text-left">SERV. TRANSP DE PERSONAS - RENG 3 MINIBUS c/chofer 0 a 400km</td><td class="text-right">$ 2.530.000,00</td><td class="text-right">$ 2.530.000,00</td><td class="text-right text-success">$ 0,00</td><td>55</td><td>55</td><td>55</td><td>0</td><td class="text-right">$ 46.000,00</td></tr>
+                <tr><td>1120012392 / RUTATLANTICA SA</td><td class="text-left">SERV. TRANSP DE PERSONAS - RENG 4 MINIBUS c/chofer 401 a 1.000km</td><td class="text-right">$ 5.940.000,00</td><td class="text-right">$ 0,00</td><td class="text-right text-success">$ 5.940.000,00</td><td>55</td><td>0</td><td>0</td><td>55</td><td class="text-right">$ 108.000,00</td></tr>
+                <tr><td>1120012392 / RUTATLANTICA SA</td><td class="text-left">SERV. TRANSP DE PERSONAS - RENG 5 BUS c/chofer 0 a 400km</td><td class="text-right">$ 2.560.000,00</td><td class="text-right">$ 2.560.000,00</td><td class="text-right text-success">$ 0,00</td><td>40</td><td>40</td><td>40</td><td>0</td><td class="text-right">$ 64.000,00</td></tr>
+                <tr><td>1120012392 / RUTATLANTICA SA</td><td class="text-left">SERV. TRANSP DE PERSONAS - RENG 6 BUS c/chofer 401 a 1.000km</td><td class="text-right">$ 6.400.000,00</td><td class="text-right">$ 3.680.000,00</td><td class="text-right text-success">$ 2.720.000,00</td><td>40</td><td>23</td><td>24</td><td>16</td><td>$ 160.000,00</td></tr>
+               </tbody>
+                
+          </table>
+        </div>
+
+        <div class="col-11" popover id="1120012408">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable2" width="100%" cellspacing="0">
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 1</td><td class="text-right">$ 1.695.000,00</td><td class="text-right">$ 1.694.661,00</td><td class="text-right text-success">$ 339,00</td><td>10.000</td><td>9.998</td><td>9.998</td><td>2</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 2</td><td class="text-right">$ 847.500,00</td><td class="text-right">$ 345.780,00</td><td class="text-right text-success">$ 501.720,00</td><td>5.000</td><td>2.040</td><td>2.040</td><td>2.960</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 3</td><td class="text-right">$ 339.000,00</td><td class="text-right">$ 152.041,50</td><td class="text-right text-success">$ 186.958,50</td><td>2.000</td><td>897</td><td>897</td><td>1.103</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 4</td><td class="text-right">$ 1.017.000,00</td><td class="text-right">$ 391.375,50</td><td class="text-right text-success">$ 625.624,50</td><td>6.000</td><td>2.309</td><td>2.309</td><td>3.691</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 5</td><td class="text-right">$ 339.000,00</td><td class="text-right">$ 153.906,00</td><td class="text-right text-success">$ 185.094,00</td><td>2.000</td><td>908</td><td>908</td><td>1.092</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 6</td><td class="text-right">$ 339.000,00</td><td class="text-right">$ 157.804,50</td><td class="text-right text-success">$ 181.195,50</td><td>2.000</td><td>931</td><td>931</td><td>1.069</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 7</td><td class="text-right">$ 847.500,00</td><td class="text-right">$ 383.578,50</td><td class="text-right text-success">$ 463.921,50</td><td>5.000</td><td>2.263</td><td>2.263</td><td>2.737</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 8</td><td class="text-right">$ 508.500,00</td><td class="text-right">$ 180.517,50</td><td class="text-right text-success">$ 327.982,50</td><td>3.000</td><td>1.065</td><td>1.065</td><td>1.935</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 9</td><td class="text-right">$ 508.500,00</td><td class="text-right">$ 197.298,00</td><td class="text-right text-success">$ 311.202,00</td><td>3.000</td><td>1.164</td><td>1.164</td><td>1.836</td><td class="text-right">$ 169,50</td></tr>
+                <tr><td>1120012408 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 10</td><td class="text-right">$ 101.700,00</td><td class="text-right">$ 26.442,00</td><td class="text-right text-success">$ 75.258,00</td><td>600</td><td>156</td><td>156</td><td>444</td><td class="text-right">$ 169,50</td></tr>
+               </tbody>
+                
+          </table>
+        </div>
+
+        <div class="col-11" popover id="1120012591">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable3" width="100%" cellspacing="0">
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 1</td><td class="text-right">$ 1.483.150,00</td><td class="text-right">$ 1.483.150,00</td><td class="text-right text-success">$ 0,00</td><td>5.000</td><td>5.000</td><td>5.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 2</td><td class="text-right">$ 593.260,00</td><td class="text-right">$ 593.260,00</td><td class="text-right text-success">$ 0,00</td><td>2.000</td><td>2.000</td><td>2.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 3</td><td class="text-right">$ 1.779.780,00</td><td class="text-right">$ 1.779.780,00</td><td class="text-right text-success">$ 0,00</td><td>6.000</td><td>6.000</td><td>6.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 4</td><td class="text-right">$ 593.260,00</td><td class="text-right">$ 593.260,00</td><td class="text-right text-success">$ 0,00</td><td>2.000</td><td>2.000</td><td>2.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 5</td><td class="text-right">$ 593.260,00</td><td class="text-right">$ 593.260,00</td><td class="text-right text-success">$ 0,00</td><td>2.000</td><td>2.000</td><td>2.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 6</td><td class="text-right">$ 1.483.150,00</td><td class="text-right">$ 1.483.150,00</td><td class="text-right text-success">$ 0,00</td><td>5.000</td><td>5.000</td><td>5.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 7</td><td class="text-right">$ 889.890,00</td><td class="text-right">$ 889.890,00</td><td class="text-right text-success">$ 0,00</td><td>3.000</td><td>3.000</td><td>3.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 8</td><td class="text-right">$ 889.890,00</td><td class="text-right">$ 889.890,00</td><td class="text-right text-success">$ 0,00</td><td>3.000</td><td>3.000</td><td>3.000</td><td>0</td><td class="text-right">$ 296,63</td></tr>
+                <tr><td>1120012591 / H2O SA</td><td class="text-left">BOTELLON PLAS 20lts AGUA - RENG 9</td><td class="text-right">$ 177.978,00</td><td class="text-right">$ 159.290,31</td><td class="text-right text-success">$ 18.687,69</td><td>600</td><td>537</td><td>537</td><td>63</td><td class="text-right">$ 296,63</td></tr>
+              </tbody>
+                
+          </table>
+        </div>
+
+        <div class="col-11" popover id="1120012807">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable4" width="100%" cellspacing="0">
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 1</td><td class="text-right">$60.390.000,00</td><td class="text-right">$58.795.000,00</td><td class="text-right text-success">$1.595.000,00</td><td>2.196</td><td>2.138</td><td>2.138</td><td>58</td><td class="text-right">$27.500,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 2</td><td class="text-right">$67.089.000,00</td><td class="text-right">$66.382.800,00</td><td class="text-right text-success">$706.200,00</td><td>570</td><td>564</td><td>564</td><td>6</td><td class="text-right">$117.700,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 3</td><td class="text-right">$74.085.000,00</td><td class="text-right">$65.945.000,00</td><td class="text-right text-success">$8.140.000,00</td><td>2.694</td><td>2.398</td><td>2.398</td><td>296</td><td class="text-right">$27.500,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 4</td><td class="text-right">$63.558.000,00</td><td class="text-right">$63.558.000,00</td><td class="text-right text-success">$0,00</td><td>540</td><td>540</td><td>540</td><td>0</td><td class="text-right">$117.700,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 5</td><td class="text-right">$32.319.000,00</td><td class="text-right">$18.427.500,00</td><td class="text-right text-success">$13.891.500,00</td><td>114</td><td>65</td><td>65</td><td>49</td><td class="text-right">$283.500,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 6</td><td class="text-right">$5.562.000,00</td><td class="text-right">$3.244.500,00</td><td class="text-right text-success">$2.317.500,00</td><td>12</td><td>7</td><td>7</td><td>5</td><td class="text-right">$463.500,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 7</td><td class="text-right">$24.396.000,00</td><td class="text-right">$24.396.000,00</td><td class="text-right text-success">$0,00</td><td>12</td><td>12</td><td>12</td><td>0</td><td class="text-right">$2.033.000,00</td></tr>
+                <tr><td>1120012807 / TNGROUP SA</td><td class="text-left">ALQUILER SISTEMA MULT - RENG 8</td><td class="text-right">$18.600.000,00</td><td class="text-right">$11.052.461,00</td><td class="text-right text-success">$7.547.539,00</td><td>1.200.000</td><td>713.062</td><td>713.062</td><td>486.938</td><td class="text-right">$15,50</td></tr>
+              </tbody>
+                
+          </table>
+        </div>
+
+        <div class="col-11" popover id="1120012869">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable5" width="100%" cellspacing="0">
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 1</td><td class="text-right">$1.996.500,00</td><td class="text-right">$520.300,00</td><td class="text-right text-success">$1.476.200,00</td><td>165</td><td>43</td><td>43</td><td>122</td><td class="text-right">$12.100,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 2</td><td class="text-right">$5.420.250,00</td><td class="text-right">$1.971.000,00</td><td class="text-right text-success">$3.449.250,00</td><td>55</td><td>20</td><td>20</td><td>35</td><td class="text-right">$98.550,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 3</td><td class="text-right">$8.164.750,00</td><td class="text-right">$890.700,00</td><td class="text-right text-success">$7.274.050,00</td><td>55</td><td>6</td><td>6</td><td>49</td><td class="text-right">$148.450,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 4</td><td class="text-right">$5.211.250,00</td><td class="text-right">$473.750,00</td><td class="text-right text-success">$4.737.500,00</td><td>55</td><td>5</td><td>5</td><td>50</td><td class="text-right">$94.750,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 5</td><td class="text-right">$6.668.750,00</td><td class="text-right">$1.455.000,00</td><td class="text-right text-success">$5.213.750,00</td><td>55</td><td>12</td><td>12</td><td>43</td><td class="text-right">$121.250,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 6</td><td class="text-right">$563.750,00</td><td class="text-right">$0,00</td><td class="text-right text-success">$563.750,00</td><td>55</td><td>0</td><td>0</td><td>55</td><td class="text-right">$10.250,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 7</td><td class="text-right">$7.832.000,00</td><td class="text-right">$569.600,00</td><td class="text-right text-success">$7.262.400,00</td><td>55</td><td>4</td><td>4</td><td>51</td><td class="text-right">$142.400,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 8</td><td class="text-right">$2.058.100,00</td><td class="text-right">$37.420,00</td><td class="text-right text-success">$2.020.680,00</td><td>55</td><td>1</td><td>1</td><td>54</td><td class="text-right">$37.420,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 9</td><td class="text-right">$1.058.750,00</td><td class="text-right">$866.250,00</td><td class="text-right text-success">$192.500,00</td><td>55</td><td>45</td><td>45</td><td>10</td><td class="text-right">$19.250,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 10</td><td class="text-right">$209.400,00</td><td class="text-right">$69.800,00</td><td class="text-right text-success">$139.600,00</td><td>12</td><td>4</td><td>4</td><td>8</td><td class="text-right">$17.450,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 11</td><td class="text-right">$800.000,00</td><td class="text-right">$200.000,00</td><td class="text-right text-success">$600.000,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$200.000,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 12</td><td class="text-right">$670.800,00</td><td class="text-right">$167.700,00</td><td class="text-right text-success">$503.100,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$167.700,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 13</td><td class="text-right">$1.311.600,00</td><td class="text-right">$327.900,00</td><td class="text-right text-success">$983.700,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$327.900,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 14</td><td class="text-right">$2.060.000,00</td><td class="text-right">$515.000,00</td><td class="text-right text-success">$1.545.000,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$515.000,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 15</td><td class="text-right">$1.880.000,00</td><td class="text-right">$470.000,00</td><td class="text-right text-success">$1.410.000,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$470.000,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 16</td><td class="text-right">$672.000,00</td><td class="text-right">$168.000,00</td><td class="text-right text-success">$504.000,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$168.000,00</td></tr>
+                <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA</td><td class="text-left">MANT. Y REP. DE VEHICULOS - RENG 17</td><td class="text-right">$249.920,00</td><td class="text-right">$62.480,00</td><td class="text-right text-success">$187.440,00</td><td>4</td><td>1</td><td>1</td><td>3</td><td class="text-right">$62.480,00</td></tr>
+              </tbody>
+                
+          </table>
+        </div>
+
+        <div class="col-11" popover id="1120012988">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable6" width="100%" cellspacing="0">
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 1</td><td class="text-right">$24.781.700,00</td><td class="text-right">$24.129.050,00</td><td class="text-right text-success">$652.650,00</td><td>26.086</td><td>25.399</td><td>25.399</td><td>687</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 2</td><td class="text-right">$3.098.900,00</td><td class="text-right">$2.637.200,00</td><td class="text-right text-success">$461.700,00</td><td>3.262</td><td>2.776</td><td>2.776</td><td>486</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 3</td><td class="text-right">$1.312.900,00</td><td class="text-right">$1.116.250,00</td><td class="text-right text-success">$196.650,00</td><td>1.382</td><td>1.175</td><td>1.175</td><td>207</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 4</td><td class="text-right">$4.288.300,00</td><td class="text-right">$3.448.500,00</td><td class="text-right text-success">$839.800,00</td><td>4.514</td><td>3.630</td><td>3.630</td><td>884</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 5</td><td class="text-right">$1.381.300,00</td><td class="text-right">$1.254.000,00</td><td class="text-right text-success">$127.300,00</td><td>1.454</td><td>1.320</td><td>1.320</td><td>134</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 6</td><td class="text-right">$1.614.050,00</td><td class="text-right">$1.138.100,00</td><td class="text-right text-success">$475.950,00</td><td>1.699</td><td>1.198</td><td>1.198</td><td>501</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 7</td><td class="text-right">$3.385.800,00</td><td class="text-right">$2.867.100,00</td><td class="text-right text-success">$518.700,00</td><td>3.564</td><td>3.018</td><td>3.018</td><td>546</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 8</td><td class="text-right">$1.819.250,00</td><td class="text-right">$1.349.950,00</td><td class="text-right text-success">$469.300,00</td><td>1.915</td><td>1.421</td><td>1.421</td><td>494</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 9</td><td class="text-right">$1.860.100,00</td><td class="text-right">$1.381.300,00</td><td class="text-right text-success">$478.800,00</td><td>1.958</td><td>1.454</td><td>1.454</td><td>504</td><td class="text-right">$950</td></tr>
+                <tr><td>1120012988 / H2O SA</td><td>BOTELLON PLAS 20lts AGUA - RENG 10</td><td class="text-right">$314.450,00</td><td class="text-right">$227.050,00</td><td class="text-right text-success">$87.400,00</td><td>331</td><td>239</td><td>239</td><td>92</td><td class="text-right">$950</td></tr>
+               </tbody>
+                
+          </table>
+        </div>
+
+        <div class="col-11" popover id="1120012995">
+          <table class="table table-bordered table-hover text-center table-sm display" id="dataTable7" width="100%" cellspacing="0">
+
+              <thead style="background-color: #0481CB;">
+                  <tr style="color: white;" class="text-center align-middle"><th>N° OC / PROVEEDOR</th><th>DESC OC</th><th>CONTRATADO</th><th>DEVENGADO</th><th>SALDO DISP</th><th>CANT CONTRATADA</th><th>CANT FACTURADA</th><th>CANT ENTRADA</th><th>CANT A ENTREGAR</th><th>PRECIO UN.</th></tr>
+              </thead>
+
+              <tbody>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 1</td><td class="text-right">$ 32.587.500,00</td><td class="text-right">$ 29.617.500,00</td><td class="text-right text-success">$ 2.970.000,00</td><td>1.185</td><td>1.077</td><td>1.077</td><td>108</td><td class="text-right">$ 27.500,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 2</td><td class="text-right">$ 36.487.000,00</td><td class="text-right">$ 33.191.400,00</td><td class="text-right text-success">$ 3.295.600,00</td><td>310</td><td>282</td><td>282</td><td>28</td><td class="text-right">$ 117.700,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 3</td><td class="text-right">$ 36.300.000,00</td><td class="text-right">$ 33.000.000,00</td><td class="text-right text-success">$ 3.300.000,00</td><td>1.320</td><td>1.200</td><td>1.200</td><td>120</td><td class="text-right">$ 27.500,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 4</td><td class="text-right">$ 34.956.900,00</td><td class="text-right">$ 31.779.000,00</td><td class="text-right text-success">$ 3.177.900,00</td><td>297</td><td>270</td><td>270</td><td>27</td><td class="text-right">$ 117.700,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 5</td><td class="text-right">$ 10.489.500,00</td><td class="text-right">$ 9.355.500,00</td><td class="text-right text-success">$ 1.134.000,00</td><td>37</td><td>33</td><td>33</td><td>4</td><td class="text-right">$ 283.500,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 6</td><td class="text-right">$ 2.781.000,00</td><td class="text-right">$ 1.390.500,00</td><td class="text-right text-success">$ 1.390.500,00</td><td>6</td><td>3</td><td>3</td><td>3</td><td class="text-right">$ 463.500,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 7</td><td class="text-right">$ 12.198.000,00</td><td class="text-right">$ 12.198.000,00</td><td class="text-right text-success">$ 0,00</td><td>6</td><td>6</td><td>6</td><td>0</td><td class="text-right">$ 2.033.000,00</td></tr>
+                <tr><td>1120012995 / TNGROUP SA</td><td>ALQUILER SISTEMA MULT - RENG 8</td><td class="text-right">$ 15.499.984,50</td><td class="text-right">$ 1.127.160,00</td><td class="text-right text-success">$ 14.372.824,50</td><td>999.999</td><td>72.720</td><td>72.720</td><td>927.279</td><td class="text-right">$ 15,50</td></tr>
+               </tbody>
+                
+          </table>
+        </div>
+
+        <!-- Fin Botón para popover -->
+                   
+                      <table class="table table-bordered table-hover text-center table-sm display" id="dataTable1" width="100%" cellspacing="0">
+  
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th style="vertical-align: middle" class="text-center">N° OC / PROVEEDOR</th><th style="vertical-align: middle" class="text-center">DESC OC</th><th style="vertical-align: middle" class="text-center">EXPEDIENTE</th><th style="vertical-align: middle">CONTRATADO</th><th class="text-center" style="vertical-align: middle; color: white!important;">DEVENGADO</th><th class="text-center" style="vertical-align: middle; color: white!important;">SALDO DISP</th><th class="text-center" style="vertical-align: middle; width: 3%;">CANT CONTRATADA</th><th class="text-center" style="vertical-align: middle; width: 3%;">CANT FACTURADA</th><th class="text-center" style="vertical-align: middle; width: 3%; color: white!important;">CANT ENTRADA</th></tr></thead>
+    
+                        <tbody>
+                          <tr><td>1120012807 / TNGROUP SA - <button type="button" class="btn btn-link" popovertarget="1120012807">Ver Renglones</button></td><td>ALQUILER SISTEMA MULTIFUNCION</td><td>EX-2022-135071741--ANSES-DC#ANSES</td><td>$ 345.999.000,00</td><td>$ 311.801.261,00</td><td>$ 34.197.739,00 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div></div></td><td>1.206.138</td><td>718.786</td><td>718.786</td></tr>
+                          <tr><td>1120012995 / TNGROUP SA - <button type="button" class="btn btn-link" popovertarget="1120012995">Ver Renglones</button></td><td>ALQUILER SISTEMA MULTIFUNCION</td><td>EX-2023-100665558--ANSES-DC#ANSES</td><td>$ 181.299.884,50</td><td>$ 151.659.060,00</td><td>$ 29.640.824,50 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="16" aria-valuemin="0" aria-valuemax="100" style="width: 16%;"></div></div></td><td>1.003.160</td><td>75.591</td><td>75.591</td></tr>
+                          <tr><td>1120012408 / H2O SA - <button type="button" class="btn btn-link" popovertarget="1120012408">Ver Renglones</button></td><td>BOTELLON PLASTICO 20lts AGUA POTABLE</td><td>EX-2021-115728108--ANSES-DC#ANSES</td><td>$ 6.542.700,00</td><td>$ 3.683.404,50</td><td>$ 2.859.295,50 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="44" aria-valuemin="0" aria-valuemax="100" style="width: 44%;"></div></div></td><td>38.600</td><td>21.731</td><td>21.731</td></tr>
+                          <tr><td>1120012591 / H2O SA - <button type="button" class="btn btn-link" popovertarget="1120012591">Ver Renglones</button></td><td>BOTELLON PLASTICO 20lts AGUA POTABLE</td><td>EX-2022-48192085--ANSES-DC#ANSES</td><td>$ 8.483.618,00</td><td>$ 8.464.930,31</td><td>$ 18.687,69 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="1" aria-valuemin="0" aria-valuemax="100" style="width: 1%;"></div></div></td><td>28.600</td><td>28.537</td><td>28.537</td></tr>
+                          <tr><td>1120012988 / H2O SA - <button type="button" class="btn btn-link" popovertarget="1120012988">Ver Renglones</button></td><td>BOTELLON PLASTICO 20lts AGUA POTABLE</td><td>EX-2023-91616836--ANSES-DC#ANSES</td><td>$ 43.856.750,00</td><td>$ 39.548.500,00</td><td>$ 4.308.250,00 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;"></div></div></td><td>46.165 </td><td>41.630 </td><td>41.630 </td></tr>
+                          <tr><td>1120012869 / SOLUCIONES PARA FLOTAS SA - <button type="button" class="btn btn-link" popovertarget="1120012869">Ver Renglones</button></td><td>MANT. Y REP. DE VEHICULOS</td><td>EX-2022-117133121--ANSES-DC#ANSES</td><td>$ 46.827.820,00</td><td>$ 8.764.900,00</td><td>$ 38.062.920,00 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100" style="width: 81%;"></div></div></td><td>645</td><td>147</td><td>147</td></tr>
+                          <tr><td>1120012905 / OLEIROS SA</td><td>SERV. POSICIONAMIENTO SATELITAL</td><td>EX-2023-06194247--ANSES-DC#ANSES</td><td>$ 19.166.400,00</td><td>$ 8.972.271,00</td><td>$ 10.194.129,00<div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="53" aria-valuemin="0" aria-valuemax="100" style="width: 53%;"></div></div></td><td>4.800</td><td>2.247</td><td>2.247</td></tr>
+                          <tr><td>1120012392 / RUTATLANTICA SA - <button type="button" class="btn btn-link" popovertarget="1120012392">Ver Renglones</button></td><td>SERV. TRANSPORTE DE PERSONAS</td><td>EX-2021-60700316--ANSES-DC#ANSES</td><td>$ 19.327.500,00</td><td>$ 9.514.500,00</td><td>$ 9.813.000,00 <div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"></div></div></td><td>220</td><td>134</td><td>135</td></tr>
+                          <tr><td>7120000645 / YPF SA</td><td>SERVICIO DE CARGA - COMBUSTIBLE</td><td>024-99-815189570-682</td><td>$ 547.286.094,68</td><td>$ 368.838.661,92</td><td>$ 178.447.432,76<div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="37" aria-valuemin="0" aria-valuemax="100" style="width: 37%;"></div></div></td><td>547.286.094,68</td><td>368.838.661,92</td><td>377.209.124,69</td></tr>
+                          <tr><td>7120000645 / YPF SA</td><td>SERVICIO DE CARGA - LUBRICANTES</td><td>024-99-815189570-682</td><td>$ 20.198.228,25</td><td>$ 15.956.431,14</td><td>$ 5.306.878,26<div class="progress-bar-sm progress-bar-animated-alt progress"><div class="progress-bar bg-success" role="progressbar" aria-valuenow="26" aria-valuemin="0" aria-valuemax="100" style="width: 26%;"></div></div></td><td>20.198.228,25</td><td>15.956.431,14</td><td>16.265.966,19</td></tr>
+                        </tbody>
+   
+   
+                      </table>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span> Coordinación  Monitoreo y Seguimiento de Gestión - 2024</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Exportar a Excel DataTables CDN-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+  <!-- Graficos JS -->
+
+  <script>
+    document.getElementById("ActualizadoSaldo").innerHTML = FechaActual;  
+  </script>
+
+<script>
+  $('#dataTable1').dataTable( {
+      dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+      buttons: ['copy', 'excel'],
+      columnDefs: [
+      // {
+      //     targets: 3,
+      //     render: $.fn.dataTable.render.number('.', '')
+      // },
+      { targets: [0, 1, 2], className:'text-left font-weight-bold dt-head-center' },
+      { targets: [3], className:'text-right font-weight-bold' },
+      { targets: [4], className:'text-right text-danger font-weight-bold' },
+      // { targets: [4, 8], className:'text-right text-danger' },
+      { targets: [5], className:'text-right font-weight-bold text-success' }
+      ],
+    "order": [[1, 'asc']],
+    "pageLength": 15,
+    "language": {
+          "zeroRecords": "No se encontraron coincidencias.",
+          "paginate": {
+              "first": "Primera",
+              "last": "Última ",
+              "next": "  >>",
+              "previous": "<<  "                   
+          },
+          "sLengthMenu": "Mostrar de a _MENU_ resultados",
+          "emptyTable": "No hay datos disponibles en la tabla.",
+          "search": "Buscar... ",
+          "info": "Mostrando _START_ a _END_ (de _TOTAL_ resultados)",
+          "infoEmpty": "Mostrando 0 de 0 resultados",
+          "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+      }
+    }
+   );
+</script>
+
+</body>
+
+</html>

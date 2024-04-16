@@ -1,0 +1,1013 @@
+﻿<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="saldo.html">
+          <i class="fas fa-file-invoice-dollar"></i>
+        <span>Saldos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item"> -->
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        <!-- </li> -->
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item active">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item active">
+        <a class="nav-link" href="tables.html">
+          <i style="font-size: large;" class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-2 text-gray-800 text-center">Listado Oficinas ANSES</h1>
+
+          <div class="row">
+
+            <div class="col-12 col-xl-1"></div>
+          
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4 col-xl-10">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary"></h6>
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+
+                  <style type="text/css">
+                    .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+                      color: white !important;
+                      border: 1px solid #36729b;
+                      background-color: #00aced;
+                      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, 00aced));
+                      background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+                      background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+                      background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+                      background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+                      background: #00aced;
+                  }
+                  .dataTables_wrapper .dataTables_paginate .paginate_button {
+                      box-sizing: border-box;
+                      display: inline-block;
+                      min-width: 1.5em;
+                      padding: 0.5em 1em;
+                      margin-left: 2px;
+                      text-align: center;
+                      text-decoration: none !important;
+                      cursor: pointer;
+                      cursor: hand;
+                      color: #00aced !important;
+                      border: 1px solid transparent;
+                      border-radius: 2px;
+                  }
+                  .dt-buttons {
+                    margin-left: 20px;
+                  }
+                  button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+                      color: #fff;
+                      background-color: #00aced;
+                      border-color: #00aced;
+                  }
+                  table.dataTable.no-footer {
+                      border-bottom: 1px solid #ddd6d6;
+                  }
+                  .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+                      color: #898181;
+                  }
+                  table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+                      right: 0.5em;
+                      content: "";
+                  }
+                  table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+                      right: 0.5em;
+                      content: "";
+                  }
+                  </style>
+                  <style type="text/css">
+                    .dataTable tbody tr td{
+                    vertical-align: middle!important;
+                    }
+                  </style>
+
+
+            <thead style="background-color: #0481CB;">
+                <tr style="color: white;" class="text-center"><th class="align-middle">COD DEP</th><th class="align-middle">DEPENDENCIA</th><th class="align-middle">DIRECCION</th><th class="align-middle">REGIONAL</th></tr>
+            </thead>
+                
+                <tbody>
+                  <tr><td>P200360000</td><td>JEFATURA REGIONAL BONAERENSE I</td><td>PINTO GRAL 558 TANDIL - BUENOS AIRES - CP B7000GHL</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20035007L</td><td>OF COLONIA VELA</td><td>TANDIL 575 VELA - BUENOS AIRES - CP B7003AMD</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20035019M</td><td>OF GRAL BELGRANO</td><td>GUIDO 498 GENERAL BELGRANO - BUENOS AIRES - CP  B7223BIJ</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20035007N</td><td>OF GRAL GUIDO</td><td>ANSELMO CEPEDA 150 GENERAL GUIDO - BUENOS AIRES - CP B7118BWE</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20035007O</td><td>OF LAS FLORES</td><td>SAN MARTIN 614 LAS FLORES - BUENOS AIRES - CP 7200</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20032011O</td><td>OF LEZAMA</td><td>GRAL SAN MARTIN 215 LEZAMA - BUENOS AIRES - CP B7116BHC</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20035019N</td><td>OF PILA</td><td>CALLE 23 9 PILA - BUENOS AIRES - CP 7110</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20036004L</td><td>OF RANCHOS</td><td>DR HERNANDEZ CASTRO 2813 RANCHOS - BUENOS AIRES - CP B1987BCK</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P20035007P</td><td>OF RAUCH</td><td>ITALIA 197 RAUCH - BUENOS AIRES - CP 7203</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P200350190</td><td>UDAI AYACUCHO</td><td>GRAL GUEMES 664 AYACUCHO - BUENOS AIRES - CP B7150CHF</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P200320110</td><td>UDAI CHASCOMUS</td><td>LASTRA 264 CHASCOMUS - BUENOS AIRES - CP B7130FRP</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P200360040</td><td>UDAI SAN MIGUEL DEL MONTE</td><td>DR SANTIAGO PETRACCHI 640 SAN MIGUEL DEL MONTE - BUENOS AIRES - CP B7220DBL</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P200350070</td><td>UDAI TANDIL</td><td>CHACABUCO 507 TANDIL - BUENOS AIRES - CP B7000AKM</td><td>JR BONAERENSE I</td></tr>
+                  <tr><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>AV. INDEPENDENCIA 3154 MAR DEL PLATA - BUENOS AIRES - CP B7602BOD</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035028N</td><td>OF CASTELLI</td><td>RIVADAVIA 15 CASTELLI - BUENOS AIRES - CP B7114BYA</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P2003D003Q</td><td>OF SALLIQUELO</td><td>AV. 25 DE MAYO 202 SALLIQUELO - BUENOS AIRES - CP B6339ABP</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P20035028L</td><td>OF GRAL LAVALLE</td><td>ART DE LA SERNA 1192 P0 GENERAL LAVALLE - BUENOS AIRES - CP B7103ADH</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035015L</td><td>OF LOBERIA</td><td>GRAL SAN MARTIN 378 LOBERIA - BUENOS AIRES - CP B7635BAQ</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035026L</td><td>OF MAIPU (BS. AS.)</td><td>BELGRANO 899 MAIPU - BUENOS AIRES - CP B7160BHG</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035026M</td><td>OF MAR CHIQUITA</td><td>GRAL PAZ 540 CORONEL VIDAL - BUENOS AIRES - CP B7174AZL</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035029L</td><td>OF MAR DE AJO</td><td>JORGE NEWBERY 1485 MAR DE AJO - BUENOS AIRES - CP B7109DCC</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035002L</td><td>OF MIRAMAR</td><td>CALLE 17 1630 MIRAMAR - BUENOS AIRES - CP B7607FVV</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035015M</td><td>OF QUEQUEN</td><td>CALLE 554 916 QUEQUEN - BUENOS AIRES - CP 7631</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035015N</td><td>OF SAN CAYETANO</td><td>25 DE MAYO 237 SAN CAYETANO - BUENOS AIRES - CP B7521AFE</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035025L</td><td>OF SANTA CLARA</td><td>SELVA NEGRA 241 SANTA CLARA DEL MAR - BUENOS AIRES - CP B7609MGC</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P20035028M</td><td>OF TORDILLO</td><td>JUAN MANUEL DE ROSAS 137 TORDILLO - BUENOS AIRES - CP B7101XAB</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350140</td><td>UDAI BALCARCE</td><td>CALLE 16 650 BALCARCE - BUENOS AIRES - CP B7620BEN</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350220</td><td>UDAI BATAN</td><td>CALLE 149 1 BARRIO BATAN - BUENOS AIRES - CP 7601</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350280</td><td>UDAI DOLORES</td><td>TTE CNEL MANUEL RICO 47 DOLORES - BUENOS AIRES - CP B7100ABA</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350260</td><td>UDAI GRAL. MADARIAGA</td><td>GUERRERO MARTINEZ 1850 GENERAL MADARIAGA - BUENOS AIRES - CP B7163BOJ</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350010</td><td>UDAI MAR DEL PLATA</td><td>PEDRO LURO 4942 P1 MAR DEL PLATA - BUENOS AIRES - CP B7600GVX</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350240</td><td>UDAI MAR DEL PLATA CONSTITUCION</td><td>CONSTITUCION 6145 MAR DEL PLATA - BUENOS AIRES - CP B7605EYL</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350230</td><td>UDAI MAR DEL PLATA PUERTO</td><td>RONDEAU JOSE 670 MAR DEL PLATA - BUENOS AIRES - CP B7603BDN</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350020</td><td>UDAI MAR DEL PLATA SUR</td><td>INDEPENDENCIA 3151 MAR DEL PLATA - BUENOS AIRES - CP B7602BOD</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350300</td><td>UDAI MAR DEL PLATA OESTE</td><td>AV JUAN B JUSTO 6701 MAR DEL PLATA - BUENOS AIRES - CP 7604</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350150</td><td>UDAI NECOCHEA</td><td>CALLE 59 2940 NECOCHEA - BUENOS AIRES - CP B7630GZO</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350270</td><td>UDAI PINAMAR</td><td>JASON 773 PINAMAR - BUENOS AIRES - CP B7167ACM</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350290</td><td>UDAI SANTA TERESITA</td><td>CALLE 3 991 SANTA TERESITA - BUENOS AIRES - CP B7107BMS</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200350250</td><td>UDAI VILLA GESELL</td><td>CALLE 3 875 VILLA GESELL - BUENOS AIRES - CP B7165HCH</td><td>JR BONAERENSE II</td></tr>
+                  <tr><td>P200370000</td><td>JEFATURA REGIONAL BONAERENSE III</td><td>SOAREZ 102 P0 CHIVILCOY - BUENOS AIRES - CP B6620LRO</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20033020M</td><td>OF ALBERTI</td><td>DR JOSE E URIBURU 85 ALBERTI - BUENOS AIRES - CP B6634CRA</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20032021L</td><td>OF AMEGHINO</td><td>CALLE 5 405 ESQ 34 F. AMEGHINO - BUENOS AIRES - CP B6064BFJ</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20032012L</td><td>OF AMERICA (PDO. RIVADAVIA)</td><td>SARMIENTO 359 AMERICA - BUENOS AIRES - CP B6237CBG</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20032023M</td><td>OF ASCENSION</td><td>LIBERTAD 12 ESTACION ASCENSION - BUENOS AIRES - CP B6003XAB</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20033020L</td><td>OF BRAGADO</td><td>BERNARDINO RIVADAVIA 1976 BRAGADO - BUENOS AIRES - CP B6640BZN</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20037001L</td><td>OF CARLOS CASARES</td><td>9 DE JULIO 150 CARLOS CASARES - BUENOS AIRES - CP B6530CLO</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20037001M</td><td>OF CARLOS TEJEDOR</td><td>DR PIRANSOLA 130 CARLOS TEJEDOR - BUENOS AIRES - CP B6455AZD</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20032015L</td><td>OF GRAL. PINTO</td><td>DR A ALSINA 464 P0 GENERAL PINTO - BUENOS AIRES - CP B6050ACJ</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20037001N</td><td>OF HENDERSON</td><td>COLON 716 HENDERSON - BUENOS AIRES - CP B6465AND</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20032023O</td><td>OF LOS TOLDOS</td><td>SAN MARTIN 337 LOS TOLDOS - BUENOS AIRES - CP B6015AID</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P20032023N</td><td>OF VEDIA</td><td>ESTRADA 65 VEDIA - BUENOS AIRES - CP B6030AVA</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200370020</td><td>UDAI 9 DE JULIO</td><td>LIBERTAD 1102 9 DE JULIO - BUENOS AIRES - CP B6500EVY</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200320240</td><td>UDAI CHACABUCO (BS. AS.)</td><td>SARMIENTO 95 CHACABUCO - BUENOS AIRES - CP B6740BOA</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200330200</td><td>UDAI CHIVILCOY</td><td>BOLIVAR 79 CHIVILCOY - BUENOS AIRES - CP B6620HBA</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200320210</td><td>UDAI GRAL. VILLEGAS</td><td>PRES BERNARDINO RIVADAVIA 907 P0 GENERAL VILLEGAS - BUENOS AIRES - CP B6230CUM</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200320230</td><td>UDAI JUNIN (BS. AS.)</td><td>WINTER 84 JUNIN - BUENOS AIRES - CP B6000CSB</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200370030</td><td>UDAI JUNIN II</td><td>RIOJA 539 JUNIN - BUENOS AIRES - CP B6002FYK</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200320150</td><td>UDAI LINCOLN</td><td>SAN MARTIN 1273 P0 LINCOLN - BUENOS AIRES - CP B6070DOY</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200370010</td><td>UDAI PEHUAJO</td><td>GRAL SAN MARTIN 219 PEHUAJO - BUENOS AIRES - CP B6450GNC</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200320170</td><td>UDAI TRENQUE LAUQUEN</td><td>PRES GRAL J A ROCA 227 TRENQUE LAUQUEN - BUENOS AIRES - CP B6400EJC</td><td>JR BONAERENSE III</td></tr>
+                  <tr><td>P200380000</td><td>JEFATURA REGIONAL BONAERENSE IV</td><td>CALLE 29 817 P MERCEDES - BUENOS AIRES - CP B6600ABD</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P20038016M</td><td>OF DERQUI</td><td>SARMIENTO 1174 - PRESIDENTE DERQUI - BUENOS AIRES - CP B1635DLX</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P20038019L</td><td>OF GARIN</td><td>BOULEVARD PRESIDENTE PERON 225 - ESCOBAR - BUENOS AIRES - CP B1619DAC</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P20038008L</td><td>OF LAS HERAS (BS. AS.)</td><td>BELGRANO 174 GENERAL LAS HERAS - BUENOS AIRES - CP B1741AHD</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P20038005O</td><td>OF SUIPACHA</td><td>COMBATE DE SAN LORENZO 684 SUIPACHA - BUENOS AIRES - CP B6612ARN</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380180</td><td>UDAI CAMPANA</td><td>GRAL MITRE 1265 CAMPANA - BUENOS AIRES - CP B2804AQI</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380210</td><td>UDAI DEL VISO</td><td>JUAN RAMON GIMENEZ 1095 DEL VISO - BUENOS AIRES - CP B1669CYG</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380190</td><td>UDAI ESCOBAR</td><td>TAPIA DE CRUZ EUGENIA 1149 P1 BELEN DE ESCOBAR - BUENOS AIRES - CP B1625ABD</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380100</td><td>UDAI GRAL RODRIGUEZ</td><td>ALTE BROWN CENTRO 52 P1 GENERAL RODRIGUEZ - BUENOS AIRES - CP B1748KFB</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380170</td><td>UDAI JOSE C PAZ</td><td>PERON PRES J D 5098 P0 JOSE CLEMENTE PAZ - BUENOS AIRES - CP B1665KRP</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380020</td><td>UDAI LUJAN</td><td>BROWN ALTE GUILLERMO 244 LUJAN - BUENOS AIRES - CP B6700AJF</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380140</td><td>UDAI MALVINAS ARGENTINAS</td><td>ALTE FRANCISCO SEGUI 1702 GRAND BOURG - BUENOS AIRES - CP B1615CPV</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380050</td><td>UDAI MERCEDES (BS. AS.)</td><td>CALLE 29 817 P MERCEDES - BUENOS AIRES - CP B6600ABD</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380150</td><td>UDAI MORENO (BS. AS.)</td><td>ALCORTA 2438 MORENO - BUENOS AIRES - CP B1744HDZ</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380080</td><td>UDAI NAVARRO</td><td>CALLE 26 330 NAVARRO - BUENOS AIRES - CP 6605</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380160</td><td>UDAI PILAR</td><td>ESTANISLAO LOPEZ 780 PILAR - BUENOS AIRES - CP B1629GVN</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380200</td><td>UDAI TRUJUI</td><td>BERNARDO CAVERI 1415 TRUJUI - BUENOS AIRES - CP 1664</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P200380220</td><td>UDAI MARCOS PAZ</td><td>LIBERTAD 2099 MARCOS PAZ - BUENOS AIRES - CP B1727HFH</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P2003C0000</td><td>JEFATURA REGIONAL BONAERENSE V</td><td>NACION 649 SAN NICOLAS DE LOS ARROYOS - BUENOS AIRES - CP B2900AAM</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C002O</td><td>OF ARRECIFES</td><td>DR CARLOS MERLASSINO 141 ARRECIFES - BUENOS AIRES - CP 2740</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C005L</td><td>OF CAPITAN SARMIENTO</td><td>SAN MARTIN 137 CAPITAN SARMIENTO - BUENOS AIRES - CP B2752DEB</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C005M</td><td>OF CARMEN DE ARECO</td><td>M. MORENO 541 CARMEN DE ARECO - BUENOS AIRES - CP B6725BIE</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C002L</td><td>OF COLON</td><td>CALLE 29 898 COLON - BUENOS AIRES - CP B2720CKR</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0090</td><td>UDAI EXALTACION DE LA CRUZ</td><td>CASCO 666 EXALTACION DE LA CRUZ - BUENOS AIRES - CP B2812XAF</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C006L</td><td>OF LA EMILIA</td><td>DR ALBERTO GONZALEZ (ESQ E. FERREYRA) SAN NICOLAS DE LOS ARROYOS - BUENOS AIRES - CP B2901BBF</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C002M</td><td>OF ROJAS</td><td>MARIA UNZUE DE ALVEAR 469 ROJAS - BUENOS AIRES - CP B2705AWI</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C002N</td><td>OF SALTO</td><td>9 DE JULIO 110 SALTO - BUENOS AIRES - CP B2741BSD</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0010</td><td>UDAI BARADERO</td><td>T M DE ANCHORENA 1127 BARADERO - BUENOS AIRES - CP B2942DUK</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0020</td><td>UDAI PERGAMINO</td><td>SAN NICOLAS 623 PERGAMINO - BUENOS AIRES - CP B2700LAM</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0030</td><td>UDAI RAMALLO</td><td>SAN FRANCISCO JAVIER 1176 RAMALLO - BUENOS AIRES - CP B2915CDX</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0040</td><td>UDAI SAN ANDRES DE GILES</td><td>9 DE JULIO 907 SAN ANDRES DE GILES - BUENOS AIRES - CP B6720AES</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0050</td><td>UDAI SAN ANTONIO DE ARECO</td><td>MORENO 112 P1 SAN ANTONIO DE ARECO - BUENOS AIRES - CP B2760BWD</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0060</td><td>UDAI SAN NICOLAS</td><td>GARIBALDI 265 SAN NICOLAS DE LOS ARROYOS - BUENOS AIRES - CP B2900DOF</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0070</td><td>UDAI SAN PEDRO</td><td>BALCARCE 75 SAN PEDRO - BUENOS AIRES - CP B2930GBA</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003C0080</td><td>UDAI ZARATE</td><td>BROWN ALTE GUILLERMO 139 ZARATE - BUENOS AIRES - CP B2800ASC</td><td>JR BONAERENSE V</td></tr>
+                  <tr><td>P2003D0000</td><td>JEFATURA REGIONAL BONAERENSE VI</td><td>ALTE G BROWN 180 BAHIA BLANCA - BUENOS AIRES - CP B8000LQD</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D003L</td><td>OF CARHUE</td><td>CARLOS PELLEGRINI 966 CARHUE - BUENOS AIRES - CP B6430CSL</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D002L</td><td>OF CARMEN DE PATAGONES</td><td>GARIBALDI 311 CARMEN DE PATAGONES - BUENOS AIRES - CP B8504DZG</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D003M</td><td>OF CASBAS</td><td>ALEJANDRO CARIDE 68 P0 CASBAS - BUENOS AIRES - CP B6417AJN</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D003O</td><td>OF DAIREAUX</td><td>CARLOS PELLEGRINI 530 DAIREAUX - BUENOS AIRES - CP B6555ATL</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D002N</td><td>OF DARREGUEIRA</td><td>25 DE MAYO 28 DARREGUEIRA - BUENOS AIRES - CP B8183AAB</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D007L</td><td>OF GONZALES CHAVES</td><td>J ELICAGARAY 353 ADOLFO GONZALES CHAVES - BUENOS AIRES - CP B7513BUG</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D001N</td><td>OF GRAL. DANIEL CERRI</td><td>JUAN MARIA GUTIERREZ 379 GRAL DANIEL CERRI - BUENOS AIRES - CP B8105BMG</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D003P</td><td>OF GRAL. LAMADRID</td><td>GRAL SAN MARTIN 666 GENERAL LAMADRID - BUENOS AIRES - CP B7406AMN</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D001L</td><td>OF INGENIERO WHITE</td><td>GRAL MANUEL BELGRANO 3741 INGENIERO WHITE - BUENOS AIRES - CP B8103FIK</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D004L</td><td>OF LAPRIDA</td><td>RIVADAVIA 1301 LAPRIDA - BUENOS AIRES - CP B7414BUK</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D002P</td><td>OF MONTE HERMOSO</td><td>BAHIA BLANCA 354 MONTE HERMOSO - BUENOS AIRES - CP B8153CQQ</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D002M</td><td>OF PEDRO LURO</td><td>CALLE 32 254 PEDRO LURO - BUENOS AIRES - CP B8148BRF</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D003N</td><td>OF PIGUE</td><td>CIUDAD DE RODEZ 212 PIGUE - BUENOS AIRES - CP B8170ASF</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D002O</td><td>OF TORNQUIST</td><td>SARMIENTO 53 TORNQUIST - BUENOS AIRES - CP B8160ACS</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D001M</td><td>OF TRES LOMAS</td><td>J. B. ALBERDI 555, TRES LOMAS - BAHIA BLANCA - BUENOS AIRES - CP 6409</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0010</td><td>UDAI BAHIA BLANCA</td><td>ALTE G BROWN 180 BAHIA BLANCA - BUENOS AIRES - CP B8000LQD</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0020</td><td>UDAI BAHIA BLANCA II</td><td>COLON 279 BAHIA BLANCA - BUENOS AIRES - CP B8000FTC</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0080</td><td>UDAI BENITO JUAREZ</td><td>ZABALZA SANTANA 93 BENITO JUAREZ - BUENOS AIRES - CP B7020CVA</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0030</td><td>UDAI CNEL SUAREZ</td><td>RIVADAVIA 43 CORONEL SUAREZ - BUENOS AIRES - CP B7540EHA</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0050</td><td>UDAI CNEL DORREGO</td><td>SANTAGADA 914 CORONEL DORREGO - BUENOS AIRES - CP B8150CUJ</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0040</td><td>UDAI CNEL PRINGLES</td><td>BELGRANO DR MANUEL 604 CORONEL PRINGLES - BUENOS AIRES - CP B7530CZN</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0060</td><td>UDAI PUNTA ALTA</td><td>ROCA 526 PUNTA ALTA - BUENOS AIRES - CP B8109BYL</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003D0070</td><td>UDAI TRES ARROYOS</td><td>MORENO 443 TRES ARROYOS - BUENOS AIRES - CP B7500GHE</td><td>JR BONAERENSE VI</td></tr>
+                  <tr><td>P2003E0000</td><td>JEFATURA REGIONAL BONAERENSE VII</td><td>RIVADAVIA 2987 OLAVARRIA - BUENOS AIRES - CP B7400SRE</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E0050</td><td>UDAI 25 DE MAYO (BS. AS.)</td><td>CALLE 10 1145 25 DE MAYO - BUENOS AIRES - CP B6660ACW</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E004L</td><td>OF GRAL. ALVEAR (BS. AS.)</td><td>PTE J D PERON 1058 GENERAL ALVEAR - BUENOS AIRES - CP B7263BPX</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E003L</td><td>OF ROQUE PEREZ</td><td>AVELLANEDA 1217 ROQUE PEREZ - BUENOS AIRES - CP B7245EGC</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E001L</td><td>OF TAPALQUE</td><td>25 DE MAYO 590 TAPALQUE - BUENOS AIRES - CP B7303ABS</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E0010</td><td>UDAI AZUL</td><td>PTE J D PERON 425 P1 AZUL - BUENOS AIRES - CP B7300ILE</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E0040</td><td>UDAI BOLIVAR</td><td>ALVEAR 150 BOLIVAR - BUENOS AIRES - CP B6550AHD</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E0020</td><td>UDAI OLAVARRIA</td><td>RIVADAVIA 2987 OLAVARRIA - BUENOS AIRES - CP B7400SRE</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E005L</td><td>OF RIESTRA</td><td>BONGIANINO 175 NORBERTO DE LA RIESTRA - BUENOS AIRES - CP </td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P2003E0030</td><td>UDAI SALADILLO</td><td>DOMINGO F SARMIENTO 3047 SALADILLO - BUENOS AIRES - CP B7260ETE</td><td>JR BONAERENSE VII</td></tr>
+                  <tr><td>P200310000</td><td>JEFATURA REGIONAL CAPITAL FEDERAL</td><td>BALCARCE 610 P0 CABA - CAPITAL FEDERAL - CP C1064AAN</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P20031031L</td><td>OF CONSTITUCION</td><td>BRASIL 1128 CABA - CAPITAL FEDERAL - CP C1154AAS</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P20031028L</td><td>OF RETIRO</td><td>DR JOSE M RAMOS MEJIA 1350 CABA - CAPITAL FEDERAL - CP C1104AJN</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310310</td><td>UDAI BARRACAS</td><td>REGIMIENTO DE PATRICIOS 937 CABA - CAPITAL FEDERAL - CP C1265AEC</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310030</td><td>UDAI CENTRO</td><td>CORDOBA 1118 CABA - CAPITAL FEDERAL - CP C1055AAO</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310070</td><td>UDAI FLORES</td><td>PERON EVA 3799 CABA - CAPITAL FEDERAL - CP C1407HUB</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310410</td><td>UDAI FLORES II</td><td>BERNARDINO RIVADAVIA 7451 CABA - CAPITAL FEDERAL - CP C1406GME</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310290</td><td>UDAI FLORESTA</td><td>DR SATURNINO SEGUROLA 1129 CABA - CAPITAL FEDERAL - CP C1407ANW</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310040</td><td>UDAI LINIERS</td><td>GRAL PAZ 10658 CABA - CAPITAL FEDERAL - CP </td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310050</td><td>UDAI MONSERRAT</td><td>MEXICO 270 P1 CABA - CAPITAL FEDERAL - CP C1097AAF</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310060</td><td>UDAI PACIFICO</td><td>SANTA FE 5140 CABA - CAPITAL FEDERAL - CP C1425BIN</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310420</td><td>UDAI PADRE MUGICA</td><td>GALPON 2 (PLAYÓN BAJO AUTOPISTA) VILLA 31 CABA - CAPITAL FEDERAL - CP C1104CAA</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310400</td><td>UDAI PARQUE PATRICIOS</td><td>LA RIOJA 2079 CABA - CAPITAL FEDERAL - CP C1244ABQ</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310280</td><td>UDAI PLAZA DE MAYO</td><td>PASEO COLON 239 CABA - CAPITAL FEDERAL - CP C1063ACC</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310380</td><td>UDAI SAN CRISTOBAL</td><td>JUJUY 966 CABA - CAPITAL FEDERAL - CP C1229ABR</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310390</td><td>UDAI VILLA LUGANO</td><td>CNEL FRANCISCO SAYOS 5654 CABA - CAPITAL FEDERAL - CP C1439CAT</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200310020</td><td>UDAI VILLA URQUIZA</td><td>ALVAREZ THOMAS 2356 CABA - CAPITAL FEDERAL - CP C1431FON</td><td>JR CAPITAL</td></tr>
+                  <tr><td>P200410000</td><td>JEFATURA REGIONAL CENTRO</td><td>BERNARDINO RIVADAVIA 6 CORDOBA - CÓRDOBA - CP X5000IPB</td><td>JR CENTRO</td></tr>
+                  <tr><td>-</td><td>OF CIUDAD PARQUE</td><td>AV. LOS REARTES S/N CIUDAD PARQUE - CÓRDOBA - CP </td><td>JR CENTRO</td></tr>
+                  <tr><td>P20041019L</td><td>OF DEAN FUNES</td><td>HIPOLITO YRIGOYEN 389 DEAN FUNES - CÓRDOBA - CP X5200DUG</td><td>JR CENTRO</td></tr>
+                  <tr><td>P20041014L</td><td>OF HUINCA RENANCO</td><td>SUIPACHA 462 HUINCA RENANCO - CÓRDOBA - CP X6270CYJ</td><td>JR CENTRO</td></tr>
+                  <tr><td>P20041009L</td><td>OF LEONES</td><td>DR AMADEO BERTINI 634 LEONES - CÓRDOBA - CP X2594AFL</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410200</td><td>UDAI ALTA GRACIA</td><td>PRES. JUAN DOMINGO PERON 1997 ALTA GRACIA - CÓRDOBA - CP 5186</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410090</td><td>UDAI BELL VILLE</td><td>TUCUMAN 290 BELL VILLE - CÓRDOBA - CP X2550BIF</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410010</td><td>UDAI CORDOBA I</td><td>BERNARDINO RIVADAVIA 6 CORDOBA - CÓRDOBA - CP X5000IPB</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410190</td><td>UDAI CORDOBA II</td><td>DR NICOLAS AVELLANEDA 490 CORDOBA - CÓRDOBA - CP X5000LJJ</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410210</td><td>UDAI CORDOBA III</td><td>DE MAYO 1261 CORDOBA - CÓRDOBA - CP X5004EEO</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410150</td><td>UDAI COSQUIN</td><td>SAN LUIS 649 COSQUIN - CÓRDOBA - CP X5166FFC</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410040</td><td>UDAI CRUZ DEL EJE</td><td>GRAL SAN MARTIN 15 CRUZ DEL EJE - CÓRDOBA - CP X5280BWA</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410030</td><td>UDAI JESUS MARIA</td><td>ALMAFUERTE 151 JESUS MARIA - CÓRDOBA - CP X5220CZC</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410140</td><td>UDAI LABOULAYE</td><td>INDEPENDENCIA 678 LABOULAYE - CÓRDOBA - CP X6120ESG</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410020</td><td>UDAI RIO CUARTO</td><td>VELEZ SARSFIELD 515 RIO CUARTO - CÓRDOBA - CP X5800CMK</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410070</td><td>UDAI RIO TERCERO</td><td>MODESTO ACUÑA 317 RIO TERCERO - CÓRDOBA - CP X5850KMQ</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410080</td><td>UDAI SAN FRANCISCO</td><td>JOSE LUIS DE CABRERA 1250 SAN FRANCISCO - CÓRDOBA - CP X2400CXJ</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410170</td><td>UDAI VILLA CARLOS PAZ</td><td>9 DE JULIO 555 VILLA CARLOS PAZ - CÓRDOBA - CP X5152EYF</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410050</td><td>UDAI VILLA DOLORES</td><td>BELGRANO 1831 VILLA DOLORES - CÓRDOBA - CP X5870ACF</td><td>JR CENTRO</td></tr>
+                  <tr><td>-</td><td>OF BRINKMANN</td><td>PTE PERON 633 BRINKMANN - CÓRDOBA - CP </td><td>JR CENTRO</td></tr>
+                  <tr><td>P200410060</td><td>UDAI VILLA MARIA</td><td>HIPOLITO YRIGOYEN 211 VILLA MARIA - CÓRDOBA - CP X5900FMC</td><td>JR CENTRO</td></tr>
+                  <tr><td>P200330470</td><td>OF EL LIBERTADOR</td><td>AV. EVA PERON 9547 LIBERTADOR - BUENOS AIRES - CP B1657BHM </td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330000</td><td>JEFATURA REGIONAL CONURBANO I</td><td>YAPEYU 2041 GENERAL SAN MARTIN - BUENOS AIRES - CP B1650BHI</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330110</td><td>UDAI CASEROS (3 DE FEBRERO)</td><td>ALBERDI JUAN BAUTISTA 4839 CASEROS - BUENOS AIRES - CP B1678CLI</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330430</td><td>UDAI CIUDADELA</td><td>AV. MALDONADO 175 CIUDADELA - BUENOS AIRES - CP B1702AJC</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P20033030D</td><td>UDAI DON TORCUATO</td><td>COLECTORA OESTE 30.80 DON TORCUATO - BUENOS AIRES - CP B1618ERB</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330410</td><td>UDAI EL PALOMAR</td><td>GRAL J DE MADARIAGA 501 EL PALOMAR - BUENOS AIRES - CP B1685GRA</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330460</td><td>UDAI LIBERTAD</td><td>BELLA VISTA 4600 MERLO - BUENOS AIRES - CP B1716EKU</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330130</td><td>UDAI HURLINGHAM</td><td>GRAL PEDRO DIAZ 999 HURLINGHAM - BUENOS AIRES - CP B1686IPC</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330260</td><td>UDAI ITUZAINGO</td><td>CNEL PABLO ZUFRIATEGUI 756 P1 ITUZAINGO - BUENOS AIRES - CP B1714GDJ</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330420</td><td>UDAI JOSE LEON SUAREZ</td><td>ROLDAN 2884 JOSE LEON SUAREZ - BUENOS AIRES - CP B1655AAH</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330060</td><td>UDAI MERLO (BS. AS.)</td><td>SARANDI 672 P0 MERLO - BUENOS AIRES - CP B1722EQJ</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330040</td><td>UDAI MORON</td><td>LARRALDE CRISOLOGO 514 MORON - BUENOS AIRES - CP B1708EMB</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330050</td><td>UDAI MUNRO</td><td>GERVASIO MENDEZ 3175 P1 MUNRO - BUENOS AIRES - CP B1605CMO</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330100</td><td>UDAI SAN FERNANDO</td><td>SIMON DE IRIONDO 1310 VICTORIA - BUENOS AIRES - CP B1644BMB</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330020</td><td>UDAI SAN ISIDRO</td><td>CENTENARIO 811 SAN ISIDRO - BUENOS AIRES - CP B1642CAJ</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330450</td><td>UDAI BOULOGNE</td><td>AV. ROLON 2163 BOULOGNE - BUENOS AIRES - CP B1609HVB</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330010</td><td>UDAI SAN MARTIN</td><td>CALLE 77 N 2048 SAN MARTIN - BUENOS AIRES - CP B1650OHL</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330030</td><td>UDAI SAN MIGUEL</td><td>PTE D F SARMIENTO 1957 SAN MIGUEL - BUENOS AIRES - CP B1663GFQ</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330070</td><td>UDAI TIGRE</td><td>HIPOLITO YRIGOYEN 576 GENERAL PACHECO - BUENOS AIRES - CP B1617FRS</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330400</td><td>UDAI VILLA BOSCH</td><td>SANTOS VEGA 7245 VILLA BOSCH - BUENOS AIRES - CP B1682AJE</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200330440</td><td>UDAI WILLIAM MORRIS</td><td>CAÑUELAS NORTE 3240 - WILLIAM MORRIS - BUENOS AIRES - CP B1681BZC</td><td>JR CONURBANO I</td></tr>
+                  <tr><td>P200320000</td><td>JEFATURA REGIONAL CONURBANO II</td><td>CALLE 45 671 LA PLATA - BUENOS AIRES - CP B1900AEA</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P20032002L</td><td>OF MAGDALENA</td><td>CHACABUCO 775 MAGDALENA - BUENOS AIRES - CP B1913APO</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P20032001M</td><td>OF VERONICA</td><td>CALLE 30 1604 VERONICA - BUENOS AIRES - CP 1917</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320180</td><td>UDAI BERISSO</td><td>MONTEVIDEO (ESQ NUEVA YORK) 110 P2 BERISSO - BUENOS AIRES - CP B1923HPW</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320430</td><td>UDAI CITY BELL</td><td>CENTENARIO 2493 MANUEL B GONNET - BUENOS AIRES - CP B1897KHC</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320460</td><td>UDAI CNEL BRANDSEN</td><td>MITRE 265 CORONEL BRANDSEN - BUENOS AIRES - CP B1980AEC</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320190</td><td>UDAI ENSENADA</td><td>LA MERCED 183 ENSENADA - BUENOS AIRES - CP B1925BSA</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320010</td><td>UDAI LA PLATA I</td><td>CALLE 9 1279 LA PLATA - BUENOS AIRES - CP B1900DLM</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320020</td><td>UDAI LA PLATA II</td><td>PLAZA JUAN JOSE PASO 170 LA PLATA - BUENOS AIRES - CP B1900UFK</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P200320350</td><td>UDAI LOS HORNOS</td><td>CALLE 143 1647 LA PLATA - BUENOS AIRES - CP B1910BIC</td><td>JR CONURBANO II</td></tr>
+                  <tr><td>P2003A0000</td><td>JEFATURA REGIONAL CONURBANO III</td><td>DARDO ROCHA 501 BERNAL - BUENOS AIRES - CP 1876</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0010</td><td>UDAI AVELLANEDA</td><td>FRENCH 58 P1 AVELLANEDA - BUENOS AIRES - CP B1870BXB</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0120</td><td>UDAI BERAZATEGUI</td><td>CALLE 148 750 BERAZATEGUI - BUENOS AIRES - CP B1880DRP</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0060</td><td>UDAI BERNAL</td><td>DARDO ROCHA 501 BERNAL OESTE - BUENOS AIRES - CP B1876AUK</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0130</td><td>UDAI BOSQUES</td><td>LUJAN 1071 FLORENCIO VARELA - BUENOS AIRES - CP B1889HYC</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0180</td><td>UDAI BURZACO</td><td>HIPOLITO YRIGOYEN 14926 BURZACO - BUENOS AIRES - CP B1852ELZ</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0140</td><td>UDAI FLORENCIO VARELA</td><td>SAN MARTIN GRAL JOSE DE 3380 FLORENCIO VARELA - BUENOS AIRES - CP B1888DEN</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0030</td><td>UDAI LANUS</td><td>PTE HIPOLITO YRIGOYEN 5060 P0 LANUS - BUENOS AIRES - CP B1824ABT</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0080</td><td>UDAI LOMAS DE ZAMORA</td><td>PTE HIPOLITO YRIGOYEN 7550 BANFIELD - BUENOS AIRES - CP B1828CGT</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0190</td><td>UDAI VILLA FIORITO</td><td>TERMINAL LA NORIA - LOMAS DE ZAMORA - CP 1814</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0100</td><td>UDAI LONGCHAMPS</td><td>DIEHL CARLOS J 1765 LONGCHAMPS - BUENOS AIRES - CP B1854CGE</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0040</td><td>UDAI MONTE CHINGOLO</td><td>EVA PERON 4559, E/ CHILAVERT Y CHORROARIN, LANÚS - BUENOS AIRES - CP 1824</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0150</td><td>UDAI PRESIDENTE PERON</td><td>JAURETCHE 1047 GUERNICA - BUENOS AIRES - CP 1862</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0050</td><td>UDAI QUILMES</td><td>HIPOLITO YRIGOYEN 420 QUILMES - BUENOS AIRES - CP B1878FNJ</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A010L</td><td>UDAI RAFAEL CALZADA</td><td>GUEMES 1551 ALTE. BROWN - BUENOS AIRES - CP B1847EZA</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0070</td><td>UDAI SAN FRANCISCO SOLANO</td><td>CALLE 842 2447 SAN FRANCISCO SOLANO - BUENOS AIRES - CP B1881DQP</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0160</td><td>UDAI ALEJANDRO KORN</td><td>PTE J D PERON 4550 P2 ALEJANDRO KORN - BUENOS AIRES - CP B1864EWO</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0210</td><td>UDAI SAN VICENTE</td><td>SARMIENTO 812 SAN VICENTE - BUENOS AIRES - CP B1865FTR</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0220</td><td>OF DOCK SUD</td><td>ING LUIS A HUERGO 1374 DOCK SUD - BUENOS AIRES - CP B1871CKS</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0090</td><td>UDAI TURDERA</td><td>PTE HIPOLITO YRIGOYEN 11585 TURDERA - BUENOS AIRES - CP B1833BKE</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0200</td><td>UDAI EZPELETA</td><td>AV. REPÚBLICA DE FRANCIA 1461 EZPELETA - BUENOS AIRES - CP 1882</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0170</td><td>UDAI VILLA ALBERTINA</td><td>BAYONA 40 BANFIELD - BUENOS AIRES - CP B1827GMB</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003A0020</td><td>UDAI WILDE</td><td>ONZARI FABIAN 501 WILDE - BUENOS AIRES - CP B1875EJF</td><td>JR CONURBANO III</td></tr>
+                  <tr><td>P2003B0000</td><td>JEFATURA REGIONAL CONURBANO IV</td><td>RIVADAVIA 14752 RAMOS MEJIA - BUENOS AIRES - CP B1704ESS</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0150</td><td>UDAI GONZALEZ CATAN</td><td>BDIER GRAL JUAN MANUEL DE ROSAS 17798 GONZALEZ CATAN - BUENOS AIRES - CP B1758HSS</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0170</td><td>UDAI GONZALEZ CATAN II</td><td>J.M.ROSAS (RUTA 31) 17798, EDIF  MUNICIP LA MATANZA GONZALEZ CATAN - BUENOS AIRES - CP B1758HSS</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0130</td><td>OF LOBOS</td><td>NECOCHEA 244 LOBOS - BUENOS AIRES - CP B7240HJF</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B001L</td><td>OF RAMOS MEJIA</td><td>RIVADAVIA 13518 RAMOS MEJIA - BUENOS AIRES - CP B1704ERT</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0110</td><td>UDAI CAÑUELAS</td><td>DEL CARMEN 690 CAÑUELAS - BUENOS AIRES - CP B1814FCM</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0120</td><td>UDAI EZEIZA</td><td>ESTEBAN ECHEVARRIA 62 EZEIZA - BUENOS AIRES - CP B1804CCQ</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0160</td><td>OF SPEGAZZINI</td><td>PASTEUR 45 SPEGAZZINI - BUENOS AIRES - CP </td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0070</td><td>UDAI ISIDRO CASANOVA</td><td>MADRID 3204 ISIDRO CASANOVA - BUENOS AIRES - CP B1765IWZ</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0050</td><td>UDAI LA TABLADA</td><td>INTE E J CROVARA 2283 TABLADA - BUENOS AIRES - CP B1766CBE</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0040</td><td>UDAI LAFERRERE</td><td>OLMOS 2685 GREGORIO DE LAFERRERE - BUENOS AIRES - CP B1757NJS</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0080</td><td>UDAI MERCADO CENTRAL</td><td>AV CIRCUNVALACION (ESQ CALLE DEL FRUTO) 1 TAPIALES - BUENOS AIRES - CP B1771BPA</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0100</td><td>UDAI MONTE GRANDE</td><td>ENRIQUE SANTAMARINA 137 MONTE GRANDE - BUENOS AIRES - CP B1842JOC</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0140</td><td>UDAI CIUDAD EVITA</td><td>EL GUAICURU 1193 CIUDAD EVITA - BUENOS AIRES - CP B1778GRQ</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0060</td><td>UDAI RAFAEL CASTILLO</td><td>MENDEZ DE ANDES 1663 RAFAEL CASTILLO - BUENOS AIRES - CP B1755CVG</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0010</td><td>UDAI RAMOS MEJIA</td><td>RIVADAVIA 14752 RAMOS MEJIA - BUENOS AIRES - CP B1704ESS</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0030</td><td>UDAI SAN JUSTO (BS. AS.)</td><td>ILLIA DR ARTURO HUMBERTO 2456 SAN JUSTO - BUENOS AIRES - CP B1754IUN</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P2003B0090</td><td>UDAI VIRREY DEL PINO</td><td>BDIER GRAL J M DE ROSAS 20554 VIRREY DEL PINO - BUENOS AIRES - CP B1763ABU</td><td>JR CONURBANO IV</td></tr>
+                  <tr><td>P200420000</td><td>JEFATURA REGIONAL CUYO</td><td>SAN LORENZO 16 MENDOZA - MENDOZA - CP M5500GFB</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042005O</td><td>OF BICENTENARIO</td><td>BARTOLOME MITRE OESTE 58 SAN JUAN - SAN JUAN - CP J5402CXB</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042005Q</td><td>OF CALINGASTA</td><td>AV. LAS HERAS S/N (CASI PTE. ROCA) DISTRITO BARREAL BARREAL - SAN JUAN - CP J5405AFA</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042005R</td><td>OF CAUCETE</td><td>TERMINAL DE ÓMNIBUS, RUTA PROVINCIAL 270, CAUCETE - SAN JUAN - CP J5442DKA</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042005N</td><td>OF CHIMBAS</td><td>25 DE MAYO ESTE 1187 CHIMBAS - SAN JUAN - CP J5413BKW</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042002M</td><td>OF GENERAL ALVEAR</td><td>FLORENTINO AMEGHINO 74 GENERAL ALVEAR - MENDOZA - CP M5620AZB</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042005L</td><td>OF JACHAL</td><td>JUAN DE ETCHEGARAY 242 - JACHAL - SAN JUAN - CP J5460BDF</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042006M</td><td>OF LA PUNTA</td><td>AV. SERRANA S/N - LA PUNTA - SAN LUIS - CP D5710</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042007M</td><td>OF NUEVA GALIA</td><td>SAN MARTIN 103 ESQ BELGRANO - NUEVA GALIA - SAN LUIS - CP </td><td>JR CUYO</td></tr>
+                  <tr><td>P20042006N</td><td>OF QUINES</td><td>25 DE MAYO 636 - QUINES - SAN LUIS - CP </td><td>JR CUYO</td></tr>
+                  <tr><td>P20042003M</td><td>OF LAS CATITAS</td><td>EMILIO CIVIT 104 - LAS CATITAS - MENDOZA - CP M5594ANP</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042010L</td><td>OF LAVALLE (MENDOZA)</td><td>JUAN DOMINGO PERON 75 - LAVALLE VILLA TULUMAYA - MENDOZA - CP 5533</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042003N</td><td>OF LA PAZ (MENDOZA)</td><td>SARMIENTO 153 - LA PAZ - MENDOZA - CP </td><td>JR CUYO</td></tr>
+                  <tr><td>P20042003L</td><td>OF RIVADAVIA</td><td>JOSE MANUEL ESTRADA 752 RIVADAVIA - MENDOZA - CP M5577CVP</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042009L</td><td>OF TUPUNGATO</td><td>ALTE G BROWN 190 TUPUNGATO - MENDOZA - CP M5561AGD</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042002N</td><td>OF VILLA ATUEL</td><td>9 DE JULIO (ESQ SAN MARTIN) 2 VILLA ATUEL - MENDOZA - CP M5622ABB</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042007L</td><td>OF VILLA DE MERLO</td><td>TISSERA 157 - MERLO - SAN LUIS - CP 5881</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420040</td><td>UDAI GODOY CRUZ</td><td>GRAL SAN MARTIN SUR 23 - GODOY CRUZ - MENDOZA - CP M5501ACA</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420120</td><td>UDAI GUAYMALLEN</td><td>DR TOMAS GODOY CRUZ 1533 - VILLA NUEVA DE GUAYMALLEN - MENDOZA - CP M5521DKC</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420100</td><td>UDAI LAS HERAS (REG. CUYO)</td><td>BERNARDINO RIVADAVIA 687 - LAS HERAS - MENDOZA - CP M5540DVC</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420110</td><td>UDAI MAIPU (REG. CUYO)</td><td>ESPAÑA 71 MAIPU - MENDOZA - CP M5515ADA</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042011L</td><td>OF PROCREAR MAIPU</td><td>EL PLANCHON CERRO 13 MAIPU - MENDOZA - CP 5515</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420130</td><td>UDAI MALARGÜE</td><td>TTE CNEL S TORRES E 225 MALARGUE - MENDOZA - CP M5613EEE</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420010</td><td>UDAI MENDOZA</td><td>EUSEBIO BLANCO 450 MENDOZA - MENDOZA - CP M5500GQJ</td><td>JR CUYO</td></tr>
+                  <tr><td>P20042010M</td><td>UDAI USPALLATA</td><td>RUTA 7 S/N PB USPALLATA - MENDOZA - CP M5545</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420080</td><td>UDAI RAWSON</td><td>REPUBLICA DEL LIBANO OESTE 557 BARRIO RAWSON - SAN JUAN - CP J5425XAB</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420050</td><td>UDAI SAN JUAN</td><td>TUCUMAN NORTE 18 SAN JUAN - SAN JUAN - CP J5400EKB</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420140</td><td>UDAI LUJAN DE CUYO</td><td>SAN MARTÍN SUR 327 LUJÁN DE CUYO - MENDOZA - CP </td><td>JR CUYO</td></tr>
+                  <tr><td>P200420060</td><td>UDAI SAN LUIS</td><td>LAS HERAS 1026 SAN LUIS - SAN LUIS - CP D7502AXS</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420030</td><td>UDAI SAN MARTIN (MENDOZA)</td><td>L N ALEM 383 LIBERTADOR GRAL SAN MARTIN - MENDOZA - CP M5570FIG</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420020</td><td>UDAI SAN RAFAEL</td><td>B MITRE 406 SAN RAFAEL - MENDOZA - CP M5600GJR</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420090</td><td>UDAI VALLE DE UCO</td><td>HIPOLITO YRIGOYEN 898 DIQUE DEL VALLE DE UCO - MENDOZA - CP M5560XAE</td><td>JR CUYO</td></tr>
+                  <tr><td>P200420070</td><td>UDAI VILLA MERCEDES</td><td>TUCUMAN 577 VILLA MERCEDES - SAN LUIS - CP D5732IBK</td><td>JR CUYO</td></tr>
+                  <tr><td>P200430000</td><td>JEFATURA REGIONAL LITORAL</td><td>TUCUMAN 2683 SANTA FE - SANTA FÉ - CP S3000CAE</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043002L</td><td>OF CASILDA</td><td>EJD, BV. LISANDRO DE LA TORRE 2167 CASILDA - SANTA FÉ - CP S2170DQC</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043004L</td><td>OF CERES</td><td>VICENTE L CASARES 98 CERES - SANTA FÉ - CP S2340AYN</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430240</td><td>UDAI SAN JAVIER</td><td>9 DE JULIO 1760 SAN JAVIER - SANTA FÉ - CP 3005</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043011L</td><td>OF CHAJARI</td><td>URQUIZA 1298 CHAJARI - ENTRE RIOS - CP E3228EZP</td><td>JR LITORAL</td></tr>
+                  <tr><td>-</td><td>OF SAN SALVADOR</td><td>DON FELICIANO 156 SAN SALVADOR - ENTRE RIOS - CP </td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043015L</td><td>OF ESPERANZA (SANTA FE)</td><td>GDOR DOMINGO CRESPO 1938 ESPERANZA - SANTA FÉ - CP S3080FBH</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20044001L</td><td>OF PUERTO GRAL SAN MARTIN (SANTA FE)</td><td>NERBUTTI Y RIO PARANA PTO GRAL SAN MARTIN - Santa Fe - CP 2202</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043007L</td><td>OF FIRMAT</td><td>SANTA FE 1595 FIRMAT - SANTA FÉ - CP S2630AYK</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043001N</td><td>OF GALVEZ</td><td>DR LISANDRO DE LA TORRE 234 GALVEZ - SANTA FÉ - CP S2252GJO</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043003L</td><td>OF GRANADERO BAIGORRIA</td><td>SAN MARTIN 2281 GRANADERO BAIGORRIA - SANTA FÉ - CP S2152EDJ</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043009L</td><td>OF LA PAZ</td><td>3 DE FEBRERO 1100 LA PAZ - ENTRE RIOS - CP E3190AAL</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043006L</td><td>OF LAS PAREJAS</td><td>CALLE 19 N 940, LAS PAREJAS, DTO. BELGRANO, SANTA FE - CP 2505</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043001L</td><td>OF SAN JUSTO-SANTA FE</td><td>SANTA FE 2364 SAN JUSTO - SANTA FÉ - CP S3040EHH</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043001O</td><td>OF SANTO TOME (SANTA FE)</td><td>7 DE MARZO 2277 SANTO TOME - SANTA FÉ - CP S3016ARL</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043008L</td><td>OF TOSTADO</td><td>HIPOLITO YRIGOYEN 1055 TOSTADO - SANTA FÉ - CP S3060BAB</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043008M</td><td>OF VERA</td><td>25 DE MAYO 1728 VERA - SANTA FÉ - CP S3550ADD</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043010L</td><td>OF VICTORIA</td><td>CNEL TOMAS DE ROCAMORA 42 VICTORIA - ENTRE RIOS - CP E3153EOB</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043021L</td><td>OF VILLAGUAY</td><td>LEOPOLDO HERRERA 905 VILLAGUAY - ENTRE RIOS - CP E3240AQJ</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430060</td><td>UDAI CAÑADA DE GOMEZ</td><td>DR MARIANO MORENO 148 CAÑADA DE GOMEZ - SANTA FÉ - CP S2500FGC</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430130</td><td>UDAI CONCEPCION DEL URUGUAY</td><td>ESPAÑA 51 CONCEPCION DEL URUGUAY - ENTRE RIOS - CP E3264CPC</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430110</td><td>UDAI CONCORDIA</td><td>PTE HIPOLITO YRIGOYEN 487 CONCORDIA - ENTRE RIOS - CP E3200AQI</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430210</td><td>UDAI CONCORDIA II</td><td>BUENOS AIRES 240 CONCORDIA - ENTRE RIOS - CP E3200EBF</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430100</td><td>UDAI GUALEGUAY</td><td>SEGUNDO GIANELLO 200 GUALEGUAY - ENTRE RIOS - CP E2840FVD</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430120</td><td>UDAI GUALEGUAYCHU</td><td>SAN MARTIN 1024 GUALEGUAYCHU - ENTRE RIOS - CP E2822AED</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430090</td><td>UDAI PARANA</td><td>ESPAÑA 319 PARANA - ENTRE RIOS - CP E3100HHG</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430200</td><td>UDAI PARANA II</td><td>GRAL FRANCISCO RAMIREZ 1671 PARANA - ENTRE RIOS - CP E3100IQB</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430040</td><td>UDAI RAFAELA</td><td>GUILLERMO LEHMANN 539 RAFAELA - SANTA FÉ - CP S2300GSF</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430080</td><td>UDAI RECONQUISTA</td><td>HABEGGER 754 RECONQUISTA - SANTA FÉ - CP S3560DLP</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430020</td><td>UDAI ROSARIO</td><td>RIOJA 1120 P5 ROSARIO - SANTA FÉ - CP S2000AYP</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430220</td><td>UDAI ROSARIO IV</td><td>MENDOZA 948 P1 ROSARIO - SANTA FÉ - CP S2000BHT</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430030</td><td>UDAI ROSARIO NORTE</td><td>JUAN B ALBERDI BIS 651 ROSARIO - SANTA FÉ - CP S2013EOB</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430170</td><td>UDAI ROSARIO OESTE</td><td>PROVINCIAS UNIDAS BIS 571 ROSARIO - SANTA FÉ - CP S2007HIE</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430050</td><td>UDAI RUFINO</td><td>ESPAÑA 455 RUFINO - SANTA FÉ - CP S6100CDJ</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430140</td><td>UDAI SAN JORGE</td><td>ALBERDI 1155 SAN JORGE - SANTA FÉ - CP S2452AJH</td><td>JR LITORAL</td></tr>
+                  <tr><td>P20043001O</td><td>UDAI SANTA FE</td><td>GRAL SAN MARTIN 2533 SANTA FE - SANTA FÉ - CP S3000FSC</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430150</td><td>UDAI SANTA FE II</td><td>DR FACUNDO DE ZUVIRIA 6568 SANTA FE - SANTA FÉ - CP S3004LSZ</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430070</td><td>UDAI VENADO TUERTO</td><td>25 DE MAYO 1088 VENADO TUERTO - SANTA FÉ - CP S2600CYV</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430190</td><td>UDAI VILLA CAÑAS</td><td>CALLE 50 692 VILLA CAÑAS - SANTA FÉ - CP S2607AQG</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430230</td><td>UDAI SAN JOSE FELICIANO</td><td>SAN MARTIN 240 SAN JOSE FELICIANO - ENTRE RÍOS - CP 3187</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430160</td><td>UDAI VILLA CONSTITUCION</td><td>SALTA 255 VILLA CONSTITUCION - SANTA FÉ - CP S2919DWE</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430180</td><td>UDAI VILLA GOBERNADOR GALVEZ</td><td>SAN MARTIN 1654 VILLA GOBERNADOR GALVEZ - SANTA FÉ - CP S2124KDQ</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200440000</td><td>JEFATURA REGIONAL NORESTE</td><td>CATAMARCA 134 RESISTENCIA - CHACO - CP H3500AOD</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044001N</td><td>OF BARRANQUERAS</td><td>LEANDRO ALEM Y JUAN LESTANI - BARRIO NUEVO AMANECER - BARRANQUERAS - CHACO - CP </td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044009O</td><td>OF JARDIN AMERICA</td><td>AV LIBERTAD 532 JARDIN AMERICA - MISIONES - CP N3328</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20046001Q</td><td>OF SAUJIL</td><td>PERON 765 SAUJIL - CATAMARCA - CP 5321</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046001R</td><td>OF ICAÑO</td><td>1 DE MAYO 1 ICAÑO DTO LA PAZ - CATAMARCA - CP 5265</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20043011N</td><td>OF FEDERAL</td><td>GUEMES Y ALMTE BROWN FEDERAL - ENTRE RIOS - CP E3180BWZ</td><td>JR LITORAL</td></tr>
+                  <tr><td>P200430250</td><td>UDAI VILLA OCAMPO</td><td>ANGEL TIBALO 1404 VILLA OCAMPO - SANTA FE - CP 3580</td><td>JR LITORAL</td></tr>
+                  <tr><td>-</td><td>UDAI APOLINARIO SARAVIA</td><td>PJE PEIROTTI 70 SALTA - SALTA - CP </td><td>JR NORTE</td></tr>
+                  <tr><td>-</td><td>OF SANTA VICTORIA ESTE</td><td> SALTA - SALTA - CP </td><td>JR NORTE</td></tr>
+                  <tr><td>P20045002M</td><td>OF BELLA VISTA</td><td>ALEM 140 BELLA VISTA - TUCUMAN - CP 4168</td><td>JR NORTE</td></tr>
+                  <tr><td>P20044009N</td><td>OF CMTE ANDRESITO</td><td>TIERRA DEL FUEGO 1 - CMTE ANDRESITO - MISIONES - CP 3364</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200450140</td><td>UDAI TUCUMAN II</td><td>MUÑECAS 353 TUCUMAN - TUCUMAN - CP T4000</td><td>JR NORTE</td></tr>
+                  <tr><td>P20048004Q</td><td>OF CMTE LUIS PIEDRA BUENA</td><td>SARMIENTO Y AV GREG IBAÑEZ LOCAL 2 PIEDRA BUENA - SANTA CRUZ - CP 9303</td><td>JR SUR II</td></tr>
+                  <tr><td>P200380230</td><td>UDAI CUARTEL V</td><td>DARWIN PASSAPONTI 5201/5209 - BUENOS AIRES - CP 1740</td><td>JR BONAERENSE IV</td></tr>
+                  <tr><td>P20047004N</td><td>OF SIERRA GRANDE</td><td>PEDRO GIACHINO 230 - SIERRA GRANDE - RIO NEGRO - CP 8532</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470150</td><td>OF CINCO SALTOS</td><td>SAN LORENZO 565 CINCO SALTOS - RIO NEGRO - CP </td><td>JR SUR I</td></tr>
+                  <tr><td>P20044009L</td><td>OF BERNARDO DE IRIGOYEN</td><td>RUTA NAC 14, TERM DE ÓMNIBUS, LOCAL 25/26 B. DE IRIGOYEN - MISIONES - CP N3366AFA</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044002M</td><td>OF CHARATA</td><td>DR MARIANO MORENO 474 CHARATA - CHACO - CP H3730DXJ</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044010M</td><td>OF CLORINDA</td><td>12 DE OCTUBRE 888 CLORINDA - FORMOSA - CP P3610AAR</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044001M</td><td>OF FONTANA</td><td>MORENO 4520 FONTANA - CHACO - CP H3514ESB</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044012L</td><td>OF FUERTE ESPERANZA</td><td>NESTOR KIRCHNER E/ AV. 23 DE SEP Y FELIPE GALLARDO - FUERTE ESPERANZA - CHACO - CP H3705</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044001L</td><td>OF GRAL JOSE DE SAN MARTIN</td><td>AV. ALTE. BROWN, ESQUINA BELGRANO GENERAL JOSE DE SAN MARTIN - CHACO - CP H3509GXA</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044003M</td><td>OF GOBERNADOR VIRASORO</td><td>MOCITO ACUÑA 62 GDOR ING V VIRASORO - CORRIENTES - CP 3342</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044009M</td><td>OF IGUAZU</td><td>MISIONES 249 PUERTO IGUAZU - MISIONES - CP N3370FBC</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044010N</td><td>OF INGENIERO JUAREZ</td><td>DEGUEN 560 - ING GUILLERMO N JUAREZ - FORMOSA - CP 3636</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044003N</td><td>OF ITUZAINGO (PCIA. CTES.)</td><td>3 DE ABRIL 1571 - ITUZAINGO - CORRIENTES - CP W3302AAK</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044002N</td><td>OF LAS BREÑAS</td><td>MERCANTE 892 LAS BREÑAS - CHACO - CP H3724AIL</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044011L</td><td>OF GRAL PINEDO</td><td>CALLE 8 E/ 25 Y 27 - GRAL PINEDO - CHACO - CP 3700</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044010L</td><td>OF LAS LOMITAS</td><td>MATIENZO 455 LAS LOMITAS - FORMOSA - CP P3630BKJ</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044006M</td><td>OF MERCEDES (CURUZU CUATIA)</td><td>PLACIDO MARTINEZ 1260 MERCEDES - CORRIENTES - CP W3470DPX</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044006L</td><td>OF PASO DE LOS LIBRES</td><td>GRAL MADARIAGA 1190 - PASO DE LOS LIBRES - CORRIENTES - CP W3230AEX</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044008L</td><td>OF SAN VICENTE</td><td>GABINO TEJEDA 235 SAN VICENTE - MISIONES - CP N3356ALC</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044003L</td><td>OF SANTO TOME</td><td>AVENIDA PERKINS HIDALGO 242 - SANTO TOME - CORRIENTES - CP W3340BHO</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044002P</td><td>OF TACO POZO</td><td>GRAL GUEMES Y ATE BROWN - TACO POZO - CHACO - CP H3714</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440030</td><td>UDAI CORRIENTES</td><td>ARMENIA 3850 CORRIENTES - CORRIENTES - CP W3402ABW</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044004L</td><td>OF ESQUINA</td><td>SAN MARTIN Y GENARO REBECHI TERMINAL DE ONNIBUS ESQUINA - CORRIENTES - CP W3196</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440060</td><td>UDAI CURUZU CUATIA</td><td>BERON DE ASTRADA OESTE 961 - CURUZU CUATIA - CORRIENTES - CP W3460ASK</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440090</td><td>UDAI ELDORADO</td><td>LA COLINA 1567 ELDORADO - MISIONES - CP N3380FWG</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440100</td><td>UDAI FORMOSA</td><td>GUTNISKY 2538 FORMOSA - FORMOSA - CP P3600AYZ</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440040</td><td>UDAI GOYA</td><td>MAESTRO JOSE EUSEBIO GOMEZ 698 - GOYA - CORRIENTES - CP W3450FZN</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440120</td><td>UDAI JUAN JOSE CASTELLI</td><td>AV PTE PERON 470 - JUAN JOSE CASTELLI - CHACO - CP H3705XBG</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440050</td><td>UDAI MONTE CASEROS</td><td>COLON 1640 MONTE CASEROS - CORRIENTES - CP W3220BFH</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440080</td><td>UDAI OBERA</td><td>DE LAS AMERICAS 1475 OBERA - MISIONES - CP N3365ABB</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440070</td><td>UDAI POSADAS</td><td>3 DE FEBRERO 1940 POSADAS - MISIONES - CP N3300KWP</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440010</td><td>UDAI RESISTENCIA</td><td>MARCELO T. DE ALVEAR 399 - RESISTENCIA - CHACO - CP H3500AVI</td><td>JR NORESTE</td></tr>
+                  <tr><td>P20044001O</td><td>OF MACHAGAI</td><td>RECONQUISTA Y LAS HERAS - MACHAGAI - CHACO - CP </td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440020</td><td>UDAI ROQUE SAENZ PEÑA</td><td>9 DE JULIO 342 ROQUE SÁENZ PEÑA - CHACO - CP 3700</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200440110</td><td>UDAI VILLA ANGELA</td><td>B MITRE 264 VILLA ANGELA - CHACO - CP H3540ACF</td><td>JR NORESTE</td></tr>
+                  <tr><td>P200460000</td><td>JEFATURA REGIONAL NOROESTE</td><td>RIVADAVIA 979 - SAN FDO DEL VALLE DE CATAMARCA - CATAMARCA - CP K4700BIQ</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046012Q</td><td>OF AIMOGASTA</td><td>9 DE JULIO ESQ. SAN MARTÍN - AIMOGASTA - LA RIOJA - CP F5310AFB</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046001P</td><td>OF ANDALGALA</td><td>DR MAX SCHMIDT ANDALGALA - CATAMARCA - CP 4740</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046001M</td><td>OF BELEN</td><td>CNEL DAZA 71 BELEN - CATAMARCA - CP K4750BHA</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046012O</td><td>OF CHAMICAL</td><td>LONGVILLE Y CASTROBARROS CHAMICAL - LA RIOJA - CP F5380BIB</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046012P</td><td>OF CHEPES</td><td>9 DE JULIO 1 CHEPES - LA RIOJA - CP 5470</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046010P</td><td>OF LA BANDA</td><td>REP DEL LIBANO 285 LA BANDA - SANTIAGO DEL ESTERO - CP G4300CJC</td><td>JR NOROESTE</td></tr>
+                  <tr><td>-</td><td>OF EL MOJON</td><td>AV SAN MARTIN S/N EL MOJON - SANTIAGO DEL ESTERO - CP </td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046010O</td><td>OF MONTE QUEMADO</td><td>CABILDO 148 MONTE QUEMADO - SANTIAGO DEL ESTERO - CP G3714AUD</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046010M</td><td>OF OJO DE AGUA</td><td>J D PERON Y DR. JOSE GOROSTIAGA - OJO DE AGUA - SGO DEL ESTERO - CP G5250XAG</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046011L</td><td>OF QUIMILI</td><td>RIVADAVIA NORTE 149 QUIMILI - SANTIAGO DEL ESTERO - CP G3740AAD</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046010L</td><td>OF RIO HONDO</td><td>LAPRIDA 113 TERMAS DE RIO HONDO - SANTIAGO DEL ESTERO - CP G4220DPC</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046001L</td><td>OF SANTA MARIA</td><td>PTE D F SARMIENTO 135 SANTA MARIA - CATAMARCA - CP K4011BOC</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046010Q</td><td>OF SUNCHO CORRAL</td><td>9 DE JULIO Y BARTOLOMÉ MITRE SUNCHO CORRAL - SANTIAGO DEL ESTERO - CP G4350AJA</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046001N</td><td>OF VALLE VIEJO</td><td>AV. PTE CASTILLO 800 ROTONDA MONUMENTO DEL ABORIGEN - VALLE VIEJO - CATAMARCA - CP 4707</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460110</td><td>UDAI AÑATUYA</td><td>CHACABUCO 256 AÑATUYA - SANTIAGO DEL ESTERO - CP G3760BKE</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460010</td><td>UDAI CATAMARCA</td><td>SAN MARTIN 201 SAN FDO DEL VALLE DE CATAMARCA - CATAMARCA - CP K4700BOE</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460160</td><td>UDAI CHILECITO</td><td>25 DE MAYO 230 CHILECITO - LA RIOJA - CP F5360DEF</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460180</td><td>UDAI FRIAS</td><td>RIVADAVIA 416 FRIAS - SANTIAGO DEL ESTERO - CP G4230DLJ</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460120</td><td>UDAI LA RIOJA</td><td>DR PELAGIO B LUNA 545 LA RIOJA - LA RIOJA - CP F5300EBK</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460190</td><td>UDAI LA RIOJA II</td><td>FAVALORO ESQ AV DEL BICENTENARIO LA RIOJA - LA RIOJA - CP 5300</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P20046016L</td><td>UDAI VILLA UNION</td><td>AV GRAL PERON 1 VILLA UNION - LA RIOJA - CP 5350</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460100</td><td>UDAI SANTIAGO DEL ESTERO</td><td>25 DE MAYO 28 SANTIAGO DEL ESTERO - SANTIAGO DEL ESTERO - CP G4200AWB</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200460090</td><td>UDAI TINOGASTA</td><td>J.D. PERON 475 TINOGASTA - CATAMARCA - CP 5350</td><td>JR NOROESTE</td></tr>
+                  <tr><td>P200450000</td><td>JEFATURA REGIONAL NORTE</td><td>JUJUY 43 SALTA - SALTA - CP A4404FDA</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045007O</td><td>OF ABRA PAMPA</td><td>GDOR EUGENIO TELLO 49 ABRA PAMPA - JUJUY - CP Y4640BAA</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045010L</td><td>OF CACHI</td><td>AV. GENERAL MARTÍN DE GUEMES, E/ R. DE LOS LLANOS Y B. ZORRILLA, CACHI - SALTA - CP A4417ARN</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045009L</td><td>OF CAFAYATE</td><td>NUESTRA SEÑORA DEL ROSARIO 9 CAFAYATE - SALTA - CP A4427AZA</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045009M</td><td>OF EL CARRIL</td><td>GRAL GUEMES 960 EL CARRIL - SALTA - CP A4421BJE</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045010M</td><td>OF GUEMES</td><td>ALBERDI 58 GENERAL GUEMES - SALTA - CP A4430DAB</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045007P</td><td>OF HUMAHUACA</td><td>BUENOS AIRES 630 HUMAHUACA - JUJUY - CP Y4630BCN</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045005M</td><td>OF JOAQUIN V. GONZALEZ</td><td>PTE HIPOLITO YRIGOYEN 442 JOAQUIN V GONZALEZ - SALTA - CP A4448AUJ</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045007L</td><td>OF LA QUIACA</td><td>RIVADAVIA S/N (EDIFICIO MUNICIPAL) LA QUIACA - JUJUY - CP Y4650CPC</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045007N</td><td>OF LIBERTADOR GRAL. SAN MARTIN</td><td>INDEPENDENCIA 272 LIB GRAL SAN MARTIN - JUJUY - CP Y4512HKD</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045002L</td><td>OF LULES</td><td>ALTE G BROWN 106 LULES - TUCUMÁN - CP T4128AOD</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045003L</td><td>OF MONTEROS</td><td>MARCO ALURRALDE 187 MONTEROS - TUCUMÁN - CP T4142EBJ</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045007R</td><td>OF MONTERRICO</td><td>9 DE JULIO ESQ 23 DE JULIO MONTERRICO - JUJUY - CP Y4608AHF</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045005L</td><td>OF ROSARIO DE LA FRONTERA</td><td>PJE HEROES ARGENTINOS 74 ROSARIO DE LA FRONTERA - SALTA - CP A4190CJF</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045010N</td><td>OF ROSARIO DE LERMA</td><td>BERNARDO DE IRIGOYEN 114 ROSARIO DE LERMA - SALTA - CP A4405AQD</td><td>JR NORTE</td></tr>
+                  <tr><td>P20045006L</td><td>OF TARTAGAL</td><td>ALBERDI 399 TARTAGAL - SALTA - CP A4560AQD</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450030</td><td>UDAI CONCEPCION</td><td>24 DE SEPTIEMBRE 1308 CONCEPCION - TUCUMÁN - CP T4146ABF</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450070</td><td>UDAI JUJUY</td><td>INDEPENDENCIA 291 SAN SALVADOR DE JUJUY - JUJUY - CP Y4600AFE</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450120</td><td>UDAI JUJUY II</td><td>INDEPENDENCIA 291 SAN SALVADOR DE JUJUY - JUJUY - CP Y4600AFE</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450050</td><td>UDAI METAN</td><td>GRAL GUEMES 202 METAN - SALTA - CP A4440BNF</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450060</td><td>UDAI ORAN</td><td>VICENTE LOPEZ Y PLANES 360 SAN RAMON DE LA NUEVA ORAN - SALTA - CP A4530DKQ</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450100</td><td>UDAI SALTA NORTE</td><td>JUJUY 43 SALTA - SALTA - CP A4404FDA</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450090</td><td>UDAI SALTA SUR</td><td>ZABALA 194 SALTA - SALTA - CP A4402FYS</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450110</td><td>UDAI SAN PEDRO DE JUJUY</td><td>GDOR EUGENIO TELLO 290 SAN PEDRO - JUJUY - CP Y4500EUF</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450020</td><td>UDAI TUCUMAN</td><td>CORDOBA 498 SAN MIGUEL DE TUCUMAN - TUCUMÁN - CP T4000IKH</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450130</td><td>UDAI FAMAILLA</td><td>AV LAVALLE 339 FAMAILLA - TUCUMÁN - CP T4132BIG</td><td>JR NORTE</td></tr>
+                  <tr><td>P200450080</td><td>UDAI YERBA BUENA</td><td>ACONQUIJA 889 YERBA BUENA - TUCUMÁN - CP T4107CDI</td><td>JR NORTE</td></tr>
+                  <tr><td>P200470000</td><td>JEFATURA REGIONAL SUR I</td><td>CORDOBA 65 NEUQUEN - NEUQUEN - CP Q8300BLA</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047005O</td><td>OF 25 DE MAYO (LA PAMPA)</td><td>EDUARDO CASTEX 45 - 25 DE MAYO - LA PAMPA - CP L8201AMB</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047001P</td><td>OF CENTENARIO</td><td>CHUBUT 326 CENTENARIO - NEUQUEN - CP Q8309CIH</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047008L</td><td>OF CHOS MALAL</td><td>GENERAL PAZ 257 CHOS MALAL - NEUQUEN - CP Q8353</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047008M</td><td>OF CUTRAL CO</td><td>L N ALEM 393 CUTRAL CO - NEUQUEN - CP Q8322AMG</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047005N</td><td>OF GENERAL ACHA</td><td>AVELLANEDA 530 GENERAL ACHA - LA PAMPA - CP L8200AEL</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047005L</td><td>OF GUATRACHE</td><td>GRAL SIMON BOLIVAR 267 GUATRACHE - LA PAMPA - CP L6311CAB</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047003O</td><td>OF ING. JACOBACCI</td><td>MARTIN CORONADO 635 INGENIERO JACOBACCI - RIO NEGRO - CP R8418BMM</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047006L</td><td>OF INGENIERO LUIGGI</td><td>TUCUMAN 260 INGENIERO LUIGGI - LA PAMPA - CP L6205BQC</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047006M</td><td>OF INTENDENTE ALVEAR</td><td>DIAGONAL AMEGHINO 77 INTENDENTE ALVEAR - LA PAMPA - CP L6221AIQ</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047001O</td><td>OF RINCON DE LOS SAUCES</td><td>PTE HIPOLITO YRIGOYEN 161 RINCON DE LOS SAUCES - NEUQUEN - CP Q8319COC</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047014M</td><td>OF ALUMINE</td><td>CRISTIAN JOUBERT y JULIO AYOSO ALUMINE - NEUQUEN - CP 8345</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047004O</td><td>OF CONESA</td><td>HIPOLITO YRIGOYEN 500 CONESA - RIO NEGRO - CP 8503</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047009L</td><td>OF RIO COLORADO</td><td>GRAL SAN MARTIN 679 RIO COLORADO - RIO NEGRO - CP R8138ANH</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047004M</td><td>OF SAN ANTONIO OESTE</td><td>AUT CLUB ARGENTINO 2355 SAN ANTONIO OESTE - RIO NEGRO - CP R8520AIK</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047005M</td><td>OF VICTORICA</td><td>CALLE 16 916 VICTORICA - LA PAMPA - CP 6319</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047005Q</td><td>OF SANTA ISABEL</td><td>MARIANO MORENO 145 SANTA ISABEL - LA PAMPA - CP 6323</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047005P</td><td>OF CATRILO</td><td>ALEM 545 CATRILO - LA PAMPA - CP 6330</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047014L</td><td>OF VILLA LA ANGOSTURA</td><td>TOPA TOPA 381 VILLA LA ANGOSTURA - NEUQUEN - CP Q8407BVD</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470090</td><td>UDAI CHOELE CHOEL</td><td>PRES N AVELLANEDA 360 CHOELE CHOEL - RIO NEGRO - CP R8360DSH</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470070</td><td>UDAI CIPOLLETTI</td><td>ESMERALDA 1017 CIPOLLETTI - RIO NEGRO - CP R8324ETC</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470110</td><td>UDAI EL BOLSON</td><td>DR JUAN JOSE PASO 419 EL BOLSON - RIO NEGRO - CP R8430FJI</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470060</td><td>UDAI GENERAL PICO</td><td>CALLE 2 826 GENERAL PICO - LA PAMPA - CP L6360CPT</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470020</td><td>UDAI GENERAL ROCA</td><td>LA PAMPA 1444 GENERAL ROCA - RIO NEGRO - CP R8332FKD</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470010</td><td>UDAI NEUQUEN</td><td>CORDOBA 65 NEUQUEN - NEUQUEN - CP Q8300BLA</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470120</td><td>UDAI NEUQUEN OESTE</td><td>COLLON CURA 576 - NEUQUEN - CP Q8304LDT</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470030</td><td>UDAI SAN CARLOS DE BARILOCHE</td><td>DR JOHN O CONNOR 467 P2 BARILOCHE - RIO NEGRO - CP R8400HEC</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470140</td><td>UDAI SAN MARTIN DE LOS ANDES</td><td>GDOR RUDECINDO ROCA 869 SAN MARTIN DE LOS ANDES - NEUQUEN - CP Q8370EDO</td><td>JR SUR I</td></tr>
+                  <tr><td>P20047014N</td><td>UDAI JUNIN DE LOS ANDES</td><td>O´HIGGINS 712 JUNÍN DE LOS ANDES - NEUQUEN - CP 8371</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470050</td><td>UDAI SANTA ROSA</td><td>DOMINGO F SARMIENTO 318 SANTA ROSA - LA PAMPA - CP L6300ALH</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470040</td><td>UDAI VIEDMA</td><td>ALVARO BARROS 475 VIEDMA - RIO NEGRO - CP R8500FFI</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470100</td><td>UDAI VILLA REGINA</td><td>RIVADAVIA 261 VILLA REGINA - RIO NEGRO - CP R8336ERC</td><td>JR SUR I</td></tr>
+                  <tr><td>P200470080</td><td>UDAI ZAPALA</td><td>MARTIN ETCHELUZ 869 ZAPALA - NEUQUEN - CP Q8340AUQ</td><td>JR SUR I</td></tr>
+                  <tr><td>P200480000</td><td>JEFATURA REGIONAL SUR II</td><td>CMTE LUIS PIEDRA BUENA 368 RIO GALLEGOS - SANTA CRUZ - CP Z9400FAQ</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048004N</td><td>OF EL CALAFATE</td><td>TOMAS ESPORA 175 EL CALAFATE - SANTA CRUZ - CP Z9405BWC</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048002P</td><td>OF PERITO MORENO</td><td>YRIGOYEN e/ 20 DE NOV y CJ FUCHS parcela 4 PERITO MORENO - SANTA CRUZ - CP 9040</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048003M</td><td>OF EL MAITEN</td><td>AV. SAN MARTÍN 1300, EL MAITÉN - CHUBUT - CP U9210CFR</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048004P</td><td>OF GOBERNADOR GREGORES</td><td>AURORA TICO 46, GOB GREGORES - SANTA CRUZ - CP 9311</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048002N</td><td>OF LAS HERAS</td><td>SAN MARTIN 219 LAS HERAS - SANTA CRUZ - CP Z9017DKE</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048002O</td><td>OF LOS ANTIGUOS</td><td>11 DE JULIO S/N LOS ANTIGUOS - SANTA CRUZ - CP Z9041ABP</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048002L</td><td>OF PICO TRUNCADO</td><td>VELEZ SARSFIELD 601 PICO TRUNCADO - SANTA CRUZ - CP Z9015COO</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048002M</td><td>OF PUERTO DESEADO</td><td>PUEYRREDON 297 PUERTO DESEADO - SANTA CRUZ - CP Z9050DVH</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048004O</td><td>OF PUERTO SANTA CRUZ</td><td>TUCUMAN 561 PUERTO SANTA CRUZ - SANTA CRUZ - CP Z9300BNK</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480090</td><td>OF RAWSON (CHUBUT)</td><td>B MITRE 787 RAWSON - CHUBUT - CP U9103AMG</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048004M</td><td>OF RIO TURBIO</td><td>DE LOS MINEROS 631 RIO TURBIO - SANTA CRUZ - CP Z9407AOG</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048004L</td><td>OF SAN JULIAN</td><td>GRAL SAN MARTIN 433 PUERTO SAN JULIAN - SANTA CRUZ - CP Z9310CCE</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048003L</td><td>OF TREVELIN</td><td>JOHN DANIEL EVANS 170 TREVELIN - CHUBUT - CP U9203BDD</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480020</td><td>UDAI CALETA OLIVIA</td><td>JOSE HERNANDEZ 1533 CALETA OLIVIA - SANTA CRUZ - CP Z9011BYE</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480010</td><td>UDAI COMODORO RIVADAVIA</td><td>SAN MARTIN 1543 COMODORO RIVADAVIA - CHUBUT - CP U9000AJE</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480030</td><td>UDAI ESQUEL</td><td>9 DE JULIO 740 ESQUEL - CHUBUT - CP U9200AEP</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480050</td><td>UDAI PUERTO MADRYN</td><td>HIPOLITO YRIGOYEN 567 PUERTO MADRYN - CHUBUT - CP U9120JKF</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048005L</td><td>OF PUERTO MADRYN</td><td>AV. ROCA 3053 PUERTO MADRYN - CHUBUT - CP U9120</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480040</td><td>UDAI RIO GALLEGOS</td><td>VELEZ SARSFIELD 419 RIO GALLEGOS - SANTA CRUZ - CP Z9400BIH</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480070</td><td>UDAI RIO GRANDE</td><td>TOMAS ESPORA 501 RIO GRANDE - TIERRA DEL FUEGO - CP V9420BGA</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048007M</td><td>OF RIO GRANDE II</td><td>20 DE JUNIO 657/683 RIO GRANDE - TIERRA DEL FUEGO - CP 9420</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480060</td><td>UDAI TRELEW</td><td>CARLOS PELLEGRINI 461 TRELEW - CHUBUT - CP U9100HQI</td><td>JR SUR II</td></tr>
+                  <tr><td>P20048001L</td><td>OF SARMIENTO (CHUBUT)</td><td>URUGUAY 365 SARMIENTO - CHUBUT - CP 9020</td><td>JR SUR II</td></tr>
+                  <tr><td>P200480080</td><td>UDAI USHUAIA</td><td>BDIER J M DE ROSAS 126 USHUAIA - TIERRA DEL FUEGO - CP V9410DAD</td><td>JR SUR II</td></tr>
+                </tbody>
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <!-- <script src="vendor/datatables/jquery.dataTables.min.js"></script> -->
+  <!-- <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script> -->
+
+  <!-- Page level custom scripts -->
+  <!-- <script src="js/demo/datatables-demo.js"></script> -->
+
+    <!-- Exportar a Excel DataTables CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+  <!-- <script>
+    $('#dataTable').dataTable( {
+    "order": [[0, 'asc']],
+    "pageLength": 17
+    },
+     );
+ </script> -->
+
+<script>
+  $(document).ready(function() {
+    $('#dataTable').DataTable( {
+    dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+    buttons: [ 'copy', 'excel', 'pdf'],
+    columnDefs: [
+              { targets: 3, className: 'text-center' }
+            ],
+      //"scrollCollapse": true,
+        "paging": true,
+      //"info": false,
+      // "lengthMenu": [[5,10,50,100,-1], [5,10,50,100,"Todo"]],
+    "pageLength": 17,
+      "language": {
+          "zeroRecords": "No se encontraron coincidencias.",
+          "paginate": {
+              "first": "Primera",
+              "last": "Última ",
+              "next": "  >>",
+              "previous": "<<  "                   
+          },
+          "sLengthMenu": "Mostrar de a _MENU_ resultados",
+          "emptyTable": "No hay datos disponibles en la tabla.",
+          "search": "Buscar... ",
+          "info": "Mostrando _START_ a _END_ (de _TOTAL_ resultados)",
+          "infoEmpty": "Mostrando 0 de 0 resultados",
+          "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+      },
+      "order": [[3, 'asc']],
+      } );
+  } );
+</script>
+
+</body>
+
+</html>

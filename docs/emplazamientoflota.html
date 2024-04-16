@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        </li>
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i style="font-size: large;" class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-2 text-gray-800 text-center">Listado de Flota ANSES - Emplazamientos</h1>
+          
+          <!-- DataTales Example -->
+          <div class="card shadow mb-4">
+            <div class="card-header py-3">
+              <h6 class="m-0 font-weight-bold text-primary mb-1">Actualizado al 07/02/2024</h6>
+              <div class="card shadow mb-0">
+                <!-- Card Header - Accordion -->
+                <!-- <a href="#collapseCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                  <h6 class="m-0 font-weight-bold text-gray-800">Descargar</h6>
+                </a> -->
+                <!-- Card Content - Collapse -->
+                <!-- <div class="collapse" id="collapseCard">
+                  <div class="card-body pt-1 pb-1">
+                    <div class="input-group-text" id="btnGroupAddon">Seleccionar "Mostrar de a 1,000" para descargar la tabla completa.</div>
+                    <button type="button" class="btn btn-outline-secondary mt-2" id="btnExportar">Exportar a Excel</button>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+            
+            <div class="card-body">
+              <div class="table-responsive">
+                <style type="text/css">
+                  .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+                    color: white !important;
+                    border: 1px solid #36729b;
+                    background-color: #00aced;
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, 00aced));
+                    background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+                    background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+                    background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+                    background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+                    background: #00aced;
+                    vertical-align: middle;
+                }
+                .dataTables_wrapper .dataTables_paginate .paginate_button {
+                    box-sizing: border-box;
+                    display: inline-block;
+                    min-width: 1.5em;
+                    padding: 0.5em 1em;
+                    margin-left: 2px;
+                    text-align: center;
+                    text-decoration: none !important;
+                    cursor: pointer;
+                    cursor: hand;
+                    color: #00aced !important;
+                    border: 1px solid transparent;
+                    border-radius: 2px;
+                }
+                .dt-buttons {
+                    margin-left: 20px;
+                  }
+                button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+                    color: #fff;
+                    background-color: #00aced;
+                    border-color: #00aced;
+                }
+                table.dataTable.no-footer {
+                    border-bottom: 1px solid #ddd6d6;
+                }
+                .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+                    color: #898181;
+                }
+                .dataTable tbody tr td{
+                  vertical-align: middle!important;
+                }
+                table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+                      right: 0.5em;
+                      content: "";
+                  }
+                  table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+                      right: 0.5em;
+                      content: "";
+                  }
+                </style> 
+                
+                <!-- <style type="text/css">
+                  .dataTable tbody tr td{
+                    vertical-align: middle!important;
+                  }
+                </style> -->
+                <table class="table table-hover table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+                    <thead style="background-color: #0481CB;">
+                        <tr style="color: white;" class="text-center"><th class="align-middle">Equipo</th><th class="align-middle">Status usuario</th><th class="align-middle">Dominio</th><th class="align-middle text-center">Fabricante</th><th class="align-middle text-center">Tipo Vehículo</th><th class="align-middle">Modelo</th><th class="align-middle">Centro</th><th class="align-middle">Cod Dep</th><th class="align-middle text-center">Dependencia asignado</th><th class="align-middle text-center">Dependencia Superior</th><th class="align-middle text-center">Resp Patrimonial</th></tr>
+                    </thead>
+
+                    <!-- <tbody>
+                      <tr><td id="btn10001953">10001953</td><td>RODA</td><td>AC284LH</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORDINACIÓN LOGÍSTICA</td><td>DIR GRAL DE OPERACIONES</td><td>GASTON HERNAN MARQUEZ</td></tr>
+                      <tr><td id="btn10001954">10001954</td><td>RODA</td><td>AC284LJ</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORDINACIÓN LOGÍSTICA</td><td>DIR GRAL DE OPERACIONES</td><td>GASTON HERNAN MARQUEZ</td></tr>
+                      <tr><td id="btn10001955">10001955</td><td>CDTO</td><td>AC284LA</td><td>MERCEDES BENZ - SPRINTER 515 CDI</td><td>MIDIBUS</td><td>2018</td><td>A001</td><td>H205000000</td><td>DIR PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>GASTON HERNAN MARQUEZ</td></tr>
+                      <tr><td id="btn10001956">10001956</td><td>RODA</td><td>AC284KY</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORDINACIÓN LOGÍSTICA</td><td>DIR GRAL DE OPERACIONES</td><td>GASTON HERNAN MARQUEZ</td></tr>
+                      <tr><td id="btn10235458">10235458</td><td>RODA</td><td>AF055ZF</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>-</td></tr>
+                      <tr><td id="btn10248239">10248239</td><td>CDTO</td><td>AF668EQ</td><td>RENAULT</td><td>FURGON</td><td>2022</td><td>A005</td><td>P200460010</td><td>UDAI CATAMARCA</td><td>JR NOROESTE</td><td>-</td></tr>
+                      <tr><td id="btn10248240">10248240</td><td>CDTO</td><td>AF668ER</td><td>RENAULT</td><td>FURGON</td><td>2022</td><td>A005</td><td>P200460010</td><td>UDAI CATAMARCA</td><td>JR NOROESTE</td><td>-</td></tr>
+                    </tbody> -->
+
+                    <tbody>
+                      <tr><td id="btn10001696">10001696</td><td>RODA</td><td>AC823SH</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H004000000</td><td>DIR DE CONTRATACIONES</td><td>DIR GRAL DE OPERACIONES</td><td>CRISTIAN IGNACIO FRONTIER</td></tr>
+                      <tr><td id="btn10001053">10001053</td><td>RODA</td><td>FRZ401</td><td>FORD - RANGER DC 4X4 XL PLUS 3.0LD</td><td>PICK-UP</td><td>2006</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001130">10001130</td><td>RODA</td><td>HRJ245</td><td>VOLKSWAGEN - PASSAT V6 FSI 4 MOTION</td><td>SEDAN 4 PTAS</td><td>2008</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001263">10001263</td><td>RODA</td><td>JAT827</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001265">10001265</td><td>RODA</td><td>JCV353</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001270">10001270</td><td>RODA</td><td>JDG404</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001283">10001283</td><td>RODA</td><td>JDG403</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001305">10001305</td><td>RODA</td><td>JHS172</td><td>MERCEDES BENZ - 710 CON CAJA</td><td>CHASIS C/CABINA</td><td>2010</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001306">10001306</td><td>RODA</td><td>JHS173</td><td>MERCEDES BENZ - 710 CON CAJA</td><td>CHASIS C/CABINA</td><td>2010</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001329">10001329</td><td>RODA</td><td>JJL570</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2011</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001332">10001332</td><td>RODA</td><td>LIL399</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001375">10001375</td><td>RODA</td><td>NES079</td><td>FORD - RANGER2 DC 4X4 XLS 3.2L D</td><td>PICK-UP</td><td>2013</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001417">10001417</td><td>RODA</td><td>NIE277</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001624">10001624</td><td>RODA</td><td>AC106BV</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001634">10001634</td><td>RODA</td><td>AC106BL</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001666">10001666</td><td>RODA</td><td>AC106AK</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001740">10001740</td><td>RODA</td><td>AC823TZ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001756">10001756</td><td>RODA</td><td>AC769LD</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001794">10001794</td><td>RODA</td><td>AC934VY</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001808">10001808</td><td>RODA</td><td>AC284KX</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001871">10001871</td><td>RODA</td><td>AC106EA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001938">10001938</td><td>RODA</td><td>AC295XB</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001952">10001952</td><td>RODA</td><td>AC284LC</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001960">10001960</td><td>RODA</td><td>AC769LN</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001271">10001271</td><td>RODA</td><td>JCV355</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10002012">10002012</td><td>RODA</td><td>AB619KV</td><td>CHEVROLET - S10 2.8</td><td>PICK-UP CABINA DOBLE</td><td>2017</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10207823">10207823</td><td>RODA</td><td>AD738CE</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2019</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>OLINDA KARINA TRANGONI FOUINE</td></tr>
+                      <tr><td id="btn10001340">10001340</td><td>RODA</td><td>LBX404</td><td>MERCEDES BENZ - SPRINTER 413</td><td>FURGON</td><td>2012</td><td>A001</td><td>H900200010</td><td>COORD. DEPOSITO GENERAL</td><td>DIR GRAL DE OPERACIONES</td><td>FABIAN OSCAR GUERRA</td></tr>
+                      <tr><td id="btn10000879">10000879</td><td>RODA</td><td>LGE583</td><td>RENAULT - KANGOO AUTHENTIC 1.6</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001159">10001159</td><td>RODA</td><td>HYS598</td><td>VOLKSWAGEN - BORA TDI</td><td>SEDAN 4 PTAS</td><td>2009</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001211">10001211</td><td>RODA</td><td>JCV338</td><td>FORD - RANGER DC 4X4 XLT 3.0L D</td><td>PICK-UP</td><td>2010</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001264">10001264</td><td>RODA</td><td>JAT829</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>CHICOTE JUAN MANUEL</td></tr>
+                      <tr><td id="btn10001266">10001266</td><td>RODA</td><td>JBD311</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001267">10001267</td><td>RODA</td><td>JBD310</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001284">10001284</td><td>RODA</td><td>JDG402</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001335">10001335</td><td>RODA</td><td>LIL396</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001341">10001341</td><td>RODA</td><td>LBX405</td><td>MERCEDES BENZ - SPRINTER 413</td><td>FURGON</td><td>2012</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001342">10001342</td><td>RODA</td><td>LBX406</td><td>MERCEDES BENZ - SPRINTER 413</td><td>FURGON</td><td>2012</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001369">10001369</td><td>RODA</td><td>NFQ822</td><td>MERCEDES BENZ - SPRINTER 415 CDI-C 3665 TE</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001386">10001386</td><td>RODA</td><td>NES062</td><td>FORD - RANGER2 DC 4X4 XLS 3.2L D</td><td>PICK-UP</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001404">10001404</td><td>RODA</td><td>NFQ784</td><td>FORD - RANGER2 DC 4X4 XLS 3.2L D</td><td>PICK-UP</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001412">10001412</td><td>RODA</td><td>NFQ788</td><td>FORD - RANGER2 DC 4X4 XLS 3.2L D</td><td>PICK-UP</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001418">10001418</td><td>RODA</td><td>NIE273</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001419">10001419</td><td>RODA</td><td>NIE272</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001421">10001421</td><td>RODA</td><td>NIE271</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001425">10001425</td><td>RODA</td><td>NIE281</td><td>MERCEDES BENZ - DK-SPRINTER 515</td><td>MIDIBUS</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001622">10001622</td><td>RODA</td><td>AC106CV</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001652">10001652</td><td>RODA</td><td>AC106AE</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001796">10001796</td><td>RODA</td><td>AC823SG</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001798">10001798</td><td>RODA</td><td>AC284PZ</td><td>CITROEN - JUMPER 435 L2H1 HDI 130 MT6</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001800">10001800</td><td>RODA</td><td>AC284QA</td><td>CITROEN - JUMPER 435 L2H1 HDI 130 MT6</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001804">10001804</td><td>RODA</td><td>AC284PX</td><td>CITROEN - JUMPER 435 L2H1 HDI 130 MT6</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001916">10001916</td><td>RODA</td><td>AC295WO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001940">10001940</td><td>RODA</td><td>AC284LD</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001941">10001941</td><td>RODA</td><td>AC284KZ</td><td>MERCEDES BENZ - SPRINTER 415 DCI</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001942">10001942</td><td>RODA</td><td>AC284KW</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001950">10001950</td><td>RODA</td><td>AC284LB</td><td>MERCEDES BENZ - SPRINTER 515 CD</td><td>MIDIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001953">10001953</td><td>RODA</td><td>AC284LH</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001954">10001954</td><td>RODA</td><td>AC284LJ</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001956">10001956</td><td>RODA</td><td>AC284KY</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>MINIBUS</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10002011">10002011</td><td>RODA</td><td>AB665LA</td><td>CHEVROLET - S10 2.8</td><td>PICK-UP CABINA DOBLE</td><td>2017</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10002013">10002013</td><td>RODA</td><td>AB665LB</td><td>CHEVROLET - S10 2.8</td><td>PICK-UP CABINA DOBLE</td><td>2017</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>SILVIO DAMIAN DA SILVA</td></tr>
+                      <tr><td id="btn10001584">10001584</td><td>RODA</td><td>AC106BW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200450070</td><td>UDAI JUJUY</td><td>JR NORTE</td><td>ADRIAN RUBEN MENDIETA</td></tr>
+                      <tr><td id="btn10001968">10001968</td><td>RODA</td><td>AC769LW</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450070</td><td>UDAI JUJUY</td><td>JR NORTE</td><td>ADRIAN RUBEN MENDIETA</td></tr>
+                      <tr><td id="btn10001989">10001989</td><td>RODA</td><td>AC769LM</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420100</td><td>UDAI LAS HERAS (REG. CUYO)</td><td>JR CUYO</td><td>ADRIANA ELIZABETH CANO</td></tr>
+                      <tr><td id="btn10001268">10001268</td><td>RODA</td><td>JAT828</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>A010000000</td><td>UNIDAD DE AUDITORIA INTERNA</td><td>DIRECCION EJECUTIVA</td><td>RODOLFO MARTIN PELLEGRINI</td></tr>
+                      <tr><td id="btn10001708">10001708</td><td>RODA</td><td>AC823SF</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440000</td><td>JEFATURA REGIONAL NORESTE</td><td>JR NORESTE</td><td>AGUSTIN ALEMAN</td></tr>
+                      <tr><td id="btn10001965">10001965</td><td>RODA</td><td>AC823SZ</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440000</td><td>JEFATURA REGIONAL NORESTE</td><td>JR NORESTE</td><td>AGUSTIN ALEMAN</td></tr>
+                      <tr><td id="btn10235459">10235459</td><td>RODA</td><td>AF055ZS</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200440000</td><td>JEFATURA REGIONAL NORESTE</td><td>JR NORESTE</td><td>AGUSTIN ALEMAN</td></tr>
+                      <tr><td id="btn10235457">10235457</td><td>RODA</td><td>AF055ZV</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200440100</td><td>JEFATURA REGIONAL NORESTE</td><td>JR NORESTE</td><td>AGUSTIN ALEMAN</td></tr>
+                      <tr><td id="btn10001556">10001556</td><td>RODA</td><td>AC106BH</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320000</td><td>JEFATURA REGIONAL CONURBANO II</td><td>JR CONURBANO II</td><td>ALFREDO PASCUAL VILANOVA</td></tr>
+                      <tr><td id="btn10001670">10001670</td><td>RODA</td><td>AC934VN</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200320000</td><td>JEFATURA REGIONAL CONURBANO II</td><td>JR CONURBANO II</td><td>ALFREDO PASCUAL VILANOVA</td></tr>
+                      <tr><td id="btn10001520">10001520</td><td>RODA</td><td>AC105ZV</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200310000</td><td>JEFATURA REGIONAL CAPITAL FEDERAL</td><td>JR CAPITAL FEDERAL</td><td>ANA CLARA SILVA COMAS</td></tr>
+                      <tr><td id="btn10001628">10001628</td><td>RODA</td><td>AC106AW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200310000</td><td>JEFATURA REGIONAL CAPITAL FEDERAL</td><td>JR CAPITAL FEDERAL</td><td>ANA CLARA SILVA COMAS</td></tr>
+                      <tr><td id="btn10001582">10001582</td><td>RODA</td><td>AC106BR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200450110</td><td>UDAI SAN PEDRO DE JUJUY</td><td>JR NORTE</td><td>ANA CRISTINA MEDINA</td></tr>
+                      <tr><td id="btn10001786">10001786</td><td>RODA</td><td>AC934UV</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420060</td><td>UDAI SAN LUIS</td><td>JR CUYO</td><td>ANA KARINA COSTAMAGNA</td></tr>
+                      <tr><td id="btn10001903">10001903</td><td>RODA</td><td>AC295WT</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003D0000</td><td>JR BONAERENSE VI</td><td>JR BONAERENSE VI</td><td>ANABEL IRUPE BUSTOS ARNST</td></tr>
+                      <tr><td id="btn10001608">10001608</td><td>RODA</td><td>AC106CB</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003E0040</td><td>UDAI BOLIVAR</td><td>JR BONAERENSE VII</td><td>ANALIA ESCUDERO</td></tr>
+                      <tr><td id="btn10001534">10001534</td><td>RODA</td><td>AC106DU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330110</td><td>UDAI 3 DE FEBRERO</td><td>JR CONURBANO I</td><td>ANALIA VANESA RAGO</td></tr>
+                      <tr><td id="btn10001526">10001526</td><td>RODA</td><td>AC106AY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330130</td><td>UDAI HURLINGHAM</td><td>JR CONURBANO I</td><td>ANDREA VERONICA MARZANO</td></tr>
+                      <tr><td id="btn10001700">10001700</td><td>RODA</td><td>AC823SD</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410060</td><td>UDAI VILLA MARIA</td><td>JR CENTRO</td><td>ANDRES LUIS PERASSI</td></tr>
+                      <tr><td id="btn10001867">10001867</td><td>RODA</td><td>AC106AN</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003D0080</td><td>UDAI BENITO JUAREZ</td><td>JR BONAERENSE VI</td><td>ANGEL ANDRES MARINI</td></tr>
+                      <tr><td id="btn10001901">10001901</td><td>RODA</td><td>AC106AJ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0010</td><td>UDAI RAMOS MEJIA</td><td>JR CONURBANO IV</td><td>ARIEL ANIBAL TOTINO</td></tr>
+                      <tr><td id="btn10001888">10001888</td><td>RODA</td><td>AC106DM</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330260</td><td>UDAI ITUZAINGO</td><td>JR CONURBANO I</td><td>BERGOGLIO JOSE IGNACIO</td></tr>
+                      <tr><td id="btn10001859">10001859</td><td>RODA</td><td>AC106EY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P20047004M</td><td>OFICINA SAN ANTONIO OESTE</td><td>JR SUR I</td><td>BRUNO LEANDRO BRAVO</td></tr>
+                      <tr><td id="btn10001895">10001895</td><td>RODA</td><td>AC106DK</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330030</td><td>UDAI SAN MIGUEL</td><td>JR CONURBANO I</td><td>BRUNO SABINO BASCHETTI</td></tr>
+                      <tr><td id="btn10001893">10001893</td><td>RODA</td><td>AC106AH</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0070</td><td>UDAI SAN FRANCISCO SOLANO</td><td>JR CONURBANO III</td><td>CARLA FLORENCIA HERNANDEZ</td></tr>
+                      <tr><td id="btn10001662">10001662</td><td>RODA</td><td>AC106AF</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0010</td><td>UDAI BARADERO</td><td>JR BONAERENSE V</td><td>CARLA JIMENA BARROS</td></tr>
+                      <tr><td id="btn10001654">10001654</td><td>RODA</td><td>AC105ZR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380000</td><td>JEFATURA REGIONAL BONAERENSE IV</td><td>JR BONAERENSE IV</td><td>CARLOS ALBERTO GARRO</td></tr>
+                      <tr><td id="btn10001698">10001698</td><td>RODA</td><td>AC823SJ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200380000</td><td>JEFATURA REGIONAL BONAERENSE IV</td><td>JR BONAERENSE IV</td><td>CARLOS ALBERTO GARRO</td></tr>
+                      <tr><td id="btn10001998">10001998</td><td>RODA</td><td>AC769LR</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470080</td><td>UDAI ZAPALA</td><td>JR SUR I</td><td>CARLOS ALBERTO PINO</td></tr>
+                      <tr><td id="btn10221843">10221843</td><td>RODA</td><td>AF055ZA</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200420000</td><td>JEFATURA REGIONAL CUYO</td><td>JR CUYO</td><td>CARLOS EMILIO GALLO</td></tr>
+                      <tr><td id="btn10221844">10221844</td><td>RODA</td><td>AF055ZB</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200420000</td><td>JEFATURA REGIONAL CUYO</td><td>JR CUYO</td><td>CARLOS EMILIO GALLO</td></tr>
+                      <tr><td id="btn10001762">10001762</td><td>RODA</td><td>AC934UN</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430200</td><td>UDAI PARANA II</td><td>JR LITORAL</td><td>CARLOS HORACIO SILVA</td></tr>
+                      <tr><td id="btn10001334">10001334</td><td>RODA</td><td>LIL400</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>H100000000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>MARIANO MOISES UMINSKY</td></tr>
+                      <tr><td id="btn10001676">10001676</td><td>RODA</td><td>AC934VF</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420050</td><td>UDAI SAN JUAN</td><td>JR CUYO</td><td>CARLOS MARCELO MARTIN</td></tr>
+                      <tr><td id="btn10001874">10001874</td><td>RODA</td><td>AC106AS</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320170</td><td>UDAI TRENQUE LAUQUEN</td><td>JR BONAERENSE III</td><td>CARLOS TOMAS VICENTE</td></tr>
+                      <tr><td id="btn10001564">10001564</td><td>RODA</td><td>AC106EQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380180</td><td>UDAI CAMPANA</td><td>JR BONAERENSE IV</td><td>CAROLINA ANDREA CHEVERRY</td></tr>
+                      <tr><td id="btn10001672">10001672</td><td>RODA</td><td>AC823TV</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470050</td><td>UDAI SANTA ROSA</td><td>JR SUR I</td><td>CECILIA MARIA AURORA CORZO</td></tr>
+                      <tr><td id="btn10001910">10001910</td><td>RODA</td><td>AC106EV</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200470050</td><td>UDAI SANTA ROSA</td><td>JR SUR I</td><td>CECILIA MARIA AURORA CORZO</td></tr>
+                      <tr><td id="btn10213117">10213117</td><td>RODA</td><td>AF034FS</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A005</td><td>P200470050</td><td>UDAI SANTA ROSA</td><td>JR SUR I</td><td>CECILIA MARIA AURORA CORZO</td></tr>
+                      <tr><td id="btn10001550">10001550</td><td>RODA</td><td>AC106AU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0020</td><td>UDAI PERGAMINO</td><td>JR BONAERENSE V</td><td>CECILIA SAGASETA</td></tr>
+                      <tr><td id="btn10001684">10001684</td><td>RODA</td><td>AC823UE</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440030</td><td>UDAI CORRIENTES</td><td>JR NORESTE</td><td>CHRISTIAN ALEJANDRO ZULLI</td></tr>
+                      <tr><td id="btn10001886">10001886</td><td>RODA</td><td>AC106AB</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380200</td><td>UDAI TRUJUI</td><td>JR BONAERENSE IV</td><td>CINTIA SOLEDAD GONZALEZ</td></tr>
+                      <tr><td id="btn10001929">10001929</td><td>RODA</td><td>AC295XD</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350150</td><td>UDAI NECOCHEA</td><td>JR BONAERENSE II</td><td>CLAUDIA ALEJANDRA GONZALEZ</td></tr>
+                      <tr><td id="btn10001638">10001638</td><td>RODA</td><td>AC106CY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H109000000</td><td>DIR DE TELECOMUNICACIONES Y SERVICIOS A USUARIOS</td><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>GERMAN LEONARDO GARCIA</td></tr>
+                      <tr><td id="btn10001650">10001650</td><td>RODA</td><td>AC105ZT</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H109000000</td><td>DIR DE TELECOMUNICACIONES Y SERVICIOS A USUARIOS</td><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>GERMAN LEONARDO GARCIA</td></tr>
+                      <tr><td id="btn10001330">10001330</td><td>RODA</td><td>JJL571</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2011</td><td>A001</td><td>H111000000</td><td>DIR. GESTION Y SOPORTE DE SIST. DE LIQUIDACION DE PRESTACIONES</td><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>NORA ALICIA VALIDO</td></tr>
+                      <tr><td id="btn10001896">10001896</td><td>RODA</td><td>AC105ZY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430130</td><td>UDAI CONCEPCION DEL URUGUAY</td><td>JR LITORAL</td><td>CLAUDIA MABEL VANDENBOSSCH</td></tr>
+                      <tr><td id="btn10001964">10001964</td><td>RODA</td><td>AC769LU</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470080</td><td>UDAI ZAPALA</td><td>JR SUR I</td><td>CLAUDIO ALEJANDRO GUTIERREZ</td></tr>
+                      <tr><td id="btn10001610">10001610</td><td>RODA</td><td>AC106CT</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200420040</td><td>UDAI GODOY CRUZ</td><td>JR CUYO</td><td>CLAUDIO DARIO SANCHEZ</td></tr>
+                      <tr><td id="btn10213260">10213260</td><td>RODA</td><td>AF034IX</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A005</td><td>P200470000</td><td>JEFATURA REGIONAL SUR I</td><td>JR SUR I</td><td>CRISTIAN DAMIAN STRANO</td></tr>
+                      <tr><td id="btn10002000">10002000</td><td>RODA</td><td>AC823UK</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470030</td><td>UDAI SAN CARLOS DE BARILOCHE</td><td>JR SUR I</td><td>CRISTIAN DAMIAN STRANO</td></tr>
+                      <tr><td id="btn10001658">10001658</td><td>RODA</td><td>AC106AG</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H205000000</td><td>DIR GRAL PLANEAMIENTO</td><td>DIR GRAL PLANEAMIENTO</td><td>MATIAS JULIAN BELLIARD</td></tr>
+                      <tr><td id="btn10001282">10001282</td><td>RODA</td><td>JCV354</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2010</td><td>A001</td><td>H500000000</td><td>DIR GRAL RECURSOS HUMANOS</td><td>DIR GRAL DE RECURSOS HUMANOS</td><td>MARIA MARCELA JARVIS</td></tr>
+                      <tr><td id="btn10001057">10001057</td><td>RODA</td><td>FRZ403</td><td>FORD - RANGER DC 4X4 XL PLUS 3.0LD</td><td>PICK-UP</td><td>2006</td><td>A001</td><td>H900000000</td><td>COORDINACION DEPOSITO GENERAL</td><td>DIR GRAL DE OPERACIONES</td><td>JORGE CRISTIAN PANADEIROS</td></tr>
+                      <tr><td id="btn10001774">10001774</td><td>RODA</td><td>AC934VG</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410090</td><td>UDAI BELL VILLE</td><td>JR CENTRO</td><td>DAMIAN JESUS RINAUDO</td></tr>
+                      <tr><td id="btn10001915">10001915</td><td>RODA</td><td>AC295YD</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200320190</td><td>UDAI ENSENADA</td><td>JR CONURBANO II</td><td>DANIEL ALFREDO MAGGI</td></tr>
+                      <tr><td id="btn10001999">10001999</td><td>RODA</td><td>AC823TB</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420130</td><td>UDAI MALARGÜE</td><td>JR CUYO</td><td>DANIEL ENRIQUE VON ZEDTWITZ</td></tr>
+                      <tr><td id="btn10001890">10001890</td><td>RODA</td><td>AC106EP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0120</td><td>UDAI EZEIZA</td><td>JR CONURBANO IV</td><td>DEBORA ANABEL ALTAMIRANO</td></tr>
+                      <tr><td id="btn10001686">10001686</td><td>RODA</td><td>AC934UX</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420030</td><td>UDAI SAN MARTIN (MENDOZA)</td><td>JR CUYO</td><td>DERLI HORACIO G. PEREZ</td></tr>
+                      <tr><td id="btn10001560">10001560</td><td>RODA</td><td>AC106ES</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330000</td><td>JEFATURA REGIONAL CONURBANO I</td><td>JR CONURBANO I</td><td>DIEGO ALEJANDRO YBARROLA</td></tr>
+                      <tr><td id="btn10001616">10001616</td><td>RODA</td><td>AC106BG</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330000</td><td>JEFATURA REGIONAL CONURBANO I</td><td>JR CONURBANO I</td><td>DIEGO ALEJANDRO YBARROLA</td></tr>
+                      <tr><td id="btn10001970">10001970</td><td>RODA</td><td>AC769LL</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450000</td><td>JEFATURA REGIONAL NORTE</td><td>JR NORTE</td><td>DIEGO ANTONIO LIZARRAGA</td></tr>
+                      <tr><td id="btn10001592">10001592</td><td>RODA</td><td>AC106EE</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380170</td><td>UDAI JOSE C. PAZ</td><td>JR BONAERENSE IV</td><td>DIEGO VICTOR RIVERO</td></tr>
+                      <tr><td id="btn10001554">10001554</td><td>RODA</td><td>AC106AV</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330200</td><td>UDAI CHIVILCOY</td><td>JR BONAERENSE III</td><td>EMMANUEL MIGUELISSI</td></tr>
+                      <tr><td id="btn10001734">10001734</td><td>RODA</td><td>AC934UE</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460010</td><td>UDAI CATAMARCA</td><td>JR NOROESTE</td><td>ENZO DANIEL CARRIZO</td></tr>
+                      <tr><td id="btn10001722">10001722</td><td>RODA</td><td>AC934VW</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410070</td><td>UDAI RIO TERCERO</td><td>JR CENTRO</td><td>ERICA GABRIELA VALENTINI</td></tr>
+                      <tr><td id="btn10001973">10001973</td><td>RODA</td><td>AC769LZ</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480070</td><td>UDAI RIO GRANDE</td><td>JR SUR II</td><td>EVA CRISTINA MANSILLA LEIVA</td></tr>
+                      <tr><td id="btn10001883">10001883</td><td>RODA</td><td>AC106DO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330050</td><td>UDAI MUNRO</td><td>JR CONURBANO I</td><td>EZEQUIEL OSCAR GESTO</td></tr>
+                      <tr><td id="btn10001863">10001863</td><td>RODA</td><td>AC106BA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003D0030</td><td>UDAI CNEL. SUAREZ</td><td>JR BONAERENSE VI</td><td>FACUNDO EDUARDO MINNIG</td></tr>
+                      <tr><td id="btn10001728">10001728</td><td>RODA</td><td>AC769LC</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450090</td><td>UDAI SALTA SUR</td><td>JR NORTE</td><td>FANNY ELIZABETH COLQUE</td></tr>
+                      <tr><td id="btn10001857">10001857</td><td>RODA</td><td>AC106EB</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330020</td><td>UDAI SAN ISIDRO</td><td>JR CONURBANO I</td><td>FEDERICO GABRIEL MARTIN BREST</td></tr>
+                      <tr><td id="btn10001865">10001865</td><td>RODA</td><td>AC106EM</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200470100</td><td>UDAI VILLA REGINA</td><td>JR SUR I</td><td>FERNANDO ARIAS</td></tr>
+                      <tr><td id="btn10001596">10001596</td><td>RODA</td><td>AC106CN</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0030</td><td>UDAI RAMALLO</td><td>JR BONAERENSE V</td><td>FERNANDO MARTIN RICCIARDELLI</td></tr>
+                      <tr><td id="btn10001906">10001906</td><td>RODA</td><td>AC295XX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200430030</td><td>UDAI ROSARIO NORTE</td><td>JR LITORAL</td><td>FERNANDO MAURO ROJAS</td></tr>
+                      <tr><td id="btn10001862">10001862</td><td>RODA</td><td>AC295XU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003B0080</td><td>UDAI MERCADO CENTRAL</td><td>JR CONURBANO IV</td><td>FERNANDO SEBASTIAN CORREA</td></tr>
+                      <tr><td id="btn10001907">10001907</td><td>RODA</td><td>AC295XA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003B0070</td><td>UDAI ISIDRO CASANOVA</td><td>JR CONURBANO IV</td><td>FLAVIO RODRIGO RUIZ SEGURA</td></tr>
+                      <tr><td id="btn10001784">10001784</td><td>RODA</td><td>AC934VR</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410050</td><td>UDAI VILLA DOLORES</td><td>JR CENTRO</td><td>FLORENCIA CALVAR</td></tr>
+                      <tr><td id="btn10001979">10001979</td><td>RODA</td><td>AC823SY</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480020</td><td>UDAI CALETA OLIVIA</td><td>JR SUR II</td><td>FLORINDO ESTEBAN NEIRA</td></tr>
+                      <tr><td id="btn10001766">10001766</td><td>RODA</td><td>AC934VS</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440120</td><td>UDAI JUAN JOSE CASTELLI</td><td>JR NORESTE</td><td>FRANCO DARIO TIBERIO</td></tr>
+                      <tr><td id="btn10001957">10001957</td><td>RODA</td><td>AC823TY</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470110</td><td>UDAI EL BOLSON</td><td>JR SUR I</td><td>GABRIEL EDUARDO GONZALEZ</td></tr>
+                      <tr><td id="btn10001914">10001914</td><td>RODA</td><td>AC295XR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0100</td><td>UDAI MONTE GRANDE</td><td>JR CONURBANO IV</td><td>GABRIELA VANESA LEGUIZAMON</td></tr>
+                      <tr><td id="btn10001776">10001776</td><td>RODA</td><td>AC934VU</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430120</td><td>UDAI GUALEGUAYCHU</td><td>JR LITORAL</td><td>GASTON ADRIAN BALERDI</td></tr>
+                      <tr><td id="btn10001145">10001145</td><td>CDTO</td><td>HTG870</td><td>MERCEDES BENZ - SPRINTER 313 CDI/C 3550</td><td>MINIBUS</td><td>2008</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>CLAUDIA ALEJANDRA SZELEPINSKI</td></tr>
+                      <tr><td id="btn10001336">10001336</td><td>CDTO</td><td>LIL395</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>CLAUDIA ALEJANDRA SZELEPINSKI</td></tr>
+                      <tr><td id="btn10001371">10001371</td><td>CDTO</td><td>NFQ823</td><td>MERCEDES BENZ - SPRINTER 415 CDI-C 3665 TE</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>CLAUDIA ALEJANDRA SZELEPINSKI</td></tr>
+                      <tr><td id="btn10001746">10001746</td><td>RODA</td><td>AC934UK</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>FACUNDO MAXIMILIANO ECHEVERRIA</td></tr>
+                      <tr><td id="btn10001955">10001955</td><td>CDTO</td><td>AC284LA</td><td>MERCEDES BENZ - SPRINTER 515 CDI</td><td>MIDIBUS</td><td>2018</td><td>A001</td><td>H900100000</td><td>DIR DE PATRIMONIO Y ANALISIS ADMINISTRATIVO</td><td>DIR GRAL DE OPERACIONES</td><td>GASTON HERNAN MARQUEZ</td></tr>
+                      <tr><td id="btn10001367">10001367</td><td>RODA</td><td>NGU612</td><td>VOLKSWAGEN - PASSAT CC 2.0 TSI</td><td>SEDAN 4 PTAS</td><td>2013</td><td>A001</td><td>H900200060</td><td>COORD. LOGISTICA (DSYS)</td><td>DIR GRAL DE OPERACIONES</td><td>CARLOS JORGE BRESCA</td></tr>
+                      <tr><td id="btn10001806">10001806</td><td>RODA</td><td>AC284LO</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900200060</td><td>COORDINACION DEPOSITO GENERAL</td><td>DIR GRAL DE OPERACIONES</td><td>GASTON HERNAN MARQUEZ</td></tr>
+                      <tr><td id="btn10001530">10001530</td><td>RODA</td><td>AC106DA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10001548">10001548</td><td>RODA</td><td>AC106CO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10001640">10001640</td><td>RODA</td><td>AC106BY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10001688">10001688</td><td>RODA</td><td>AC769LG</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10001866">10001866</td><td>RODA</td><td>AC106ET</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10001930">10001930</td><td>RODA</td><td>AC295XL</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10221842">10221842</td><td>RODA</td><td>AF034IY</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200350000</td><td>JEFATURA REGIONAL BONAERENSE II</td><td>JR BONAERENSE II</td><td>GEORGINA MARIANA BRACONE</td></tr>
+                      <tr><td id="btn10001682">10001682</td><td>RODA</td><td>AC934UR</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430000</td><td>JEFATURA REGIONAL LITORAL</td><td>JR LITORAL</td><td>GERMAN ANDRES BACARELLA</td></tr>
+                      <tr><td id="btn10001963">10001963</td><td>RODA</td><td>AC934VH</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430000</td><td>JEFATURA REGIONAL LITORAL</td><td>JR LITORAL</td><td>GERMAN ANDRES BACARELLA</td></tr>
+                      <tr><td id="btn10001976">10001976</td><td>RODA</td><td>AC769LK</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420020</td><td>UDAI SAN RAFAEL</td><td>JR CUYO</td><td>GONZALO GASTON MOREIRA</td></tr>
+                      <tr><td id="btn10001546">10001546</td><td>RODA</td><td>AC106AM</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200370020</td><td>UDAI 9 DE JULIO</td><td>JR BONAERENSE III</td><td>GRACIELA ELSA GOROSITO</td></tr>
+                      <tr><td id="btn10001994">10001994</td><td>RODA</td><td>AC823UJ</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P20044010N</td><td>OFICINA INGENIERO JUAREZ</td><td>JR NORESTE</td><td>GUILLERMA PEDRINI</td></tr>
+                      <tr><td id="btn10001881">10001881</td><td>RODA</td><td>AC106DH</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320180</td><td>UDAI BERISSO</td><td>JR CONURBANO II</td><td>GUILLERMO DANIEL SCHAPIRO</td></tr>
+                      <tr><td id="btn10001873">10001873</td><td>RODA</td><td>AC106AL</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350270</td><td>UDAI PINAMAR</td><td>JR BONAERENSE II</td><td>GUILLERMO DI GREGORIO</td></tr>
+                      <tr><td id="btn10001704">10001704</td><td>RODA</td><td>AC823SA</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440100</td><td>UDAI FORMOSA</td><td>JR NORESTE</td><td>GUSTAVO MAXIMILIANO LOPEZ PEÑA</td></tr>
+                      <tr><td id="btn10001921">10001921</td><td>RODA</td><td>AC295XJ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0050</td><td>UDAI SAN ANTONIO DE ARECO</td><td>JR BONAERENSE V</td><td>HORACIO AGUSTIN CABRERA</td></tr>
+                      <tr><td id="btn10001646">10001646</td><td>RODA</td><td>AC106ED</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200470090</td><td>UDAI CHOELE CHOEL</td><td>JR SUR I</td><td>HORACIO RODRIGO ARANEDA</td></tr>
+                      <tr><td id="btn10001726">10001726</td><td>RODA</td><td>AC934VB</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460100</td><td>UDAI SANTIAGO DEL ESTERO</td><td>JR NOROESTE</td><td>HUGO ROLANDO ZAVALETA</td></tr>
+                      <tr><td id="btn10001572">10001572</td><td>RODA</td><td>AC106ER</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200420120</td><td>UDAI GUAYMALLEN</td><td>JR CUYO</td><td>HUMBERTO MANUEL AMBROSIO</td></tr>
+                      <tr><td id="btn10001736">10001736</td><td>RODA</td><td>AC769LE</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200360000</td><td>JEFATURA REGIONAL BONAERENSE I</td><td>JR BONAERENSE I</td><td>IGNACIO JAVIER DI BELLA</td></tr>
+                      <tr><td id="btn10001882">10001882</td><td>RODA</td><td>AC105ZZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200360000</td><td>JEFATURA REGIONAL BONAERENSE I</td><td>JR BONAERENSE I</td><td>IGNACIO JAVIER DI BELLA</td></tr>
+                      <tr><td id="btn10001656">10001656</td><td>RODA</td><td>AC106BJ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0090</td><td>UDAI TURDERA</td><td>JR CONURBANO III</td><td>JONATAN RODOLFO LABOLLITA</td></tr>
+                      <tr><td id="btn10001899">10001899</td><td>RODA</td><td>AC106AI</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320210</td><td>UDAI GRAL. VILLEGAS</td><td>JR BONAERENSE III</td><td>JORGE NESTOR MUNTANER</td></tr>
+                      <tr><td id="btn10001566">10001566</td><td>RODA</td><td>AC106EJ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200440080</td><td>UDAI OBERA</td><td>JR NORESTE</td><td>JOSE FRANCISCO FABIO</td></tr>
+                      <tr><td id="btn10001864">10001864</td><td>RODA</td><td>AC106EG</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200440040</td><td>UDAI GOYA</td><td>JR NORESTE</td><td>JOSE HECTOR LAPROVITTA</td></tr>
+                      <tr><td id="btn10001922">10001922</td><td>RODA</td><td>AC295YC</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003E0020</td><td>UDAI OLAVARRIA</td><td>JR BONAERENSE VII</td><td>JOSE MARIA HAMSE</td></tr>
+                      <tr><td id="btn10235460">10235460</td><td>RODA</td><td>AF055ZD</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200440000</td><td>JEFATURA REGIONAL NORESTE</td><td>JR NORESTE</td><td>JUAN ALBERTO BAZAN</td></tr>
+                      <tr><td id="btn10001706">10001706</td><td>RODA</td><td>AC934VT</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460000</td><td>JEFATURA REGIONAL NOROESTE</td><td>JR NOROESTE</td><td>JUAN ALBERTO BAZAN</td></tr>
+                      <tr><td id="btn10001730">10001730</td><td>RODA</td><td>AC934UC</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460000</td><td>JEFATURA REGIONAL NOROESTE</td><td>JR NOROESTE</td><td>JUAN ALBERTO BAZAN</td></tr>
+                      <tr><td id="btn10001969">10001969</td><td>RODA</td><td>AC823SV</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460000</td><td>JEFATURA REGIONAL NOROESTE</td><td>JR NOROESTE</td><td>JUAN ALBERTO BAZAN</td></tr>
+                      <tr><td id="btn10001972">10001972</td><td>RODA</td><td>AC823SM</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420090</td><td>UDAI VALLE DE UCO</td><td>JR CUYO</td><td>JUAN ALEJANDRO MENDEZ</td></tr>
+                      <tr><td id="btn10001694">10001694</td><td>RODA</td><td>AC769LS</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420000</td><td>JEFATURA REGIONAL CUYO</td><td>JR CUYO</td><td>JUAN CRUZ TERRANOVA</td></tr>
+                      <tr><td id="btn10001966">10001966</td><td>RODA</td><td>AC823UG</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420000</td><td>JEFATURA REGIONAL CUYO</td><td>JR CUYO</td><td>JUAN CRUZ TERRANOVA</td></tr>
+                      <tr><td id="btn10001664">10001664</td><td>RODA</td><td>AC106CF</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003A0190</td><td>UDAI FIORITO</td><td>JR CONURBANO III</td><td>JUAN MANUEL LIMONE</td></tr>
+                      <tr><td id="btn10001600">10001600</td><td>RODA</td><td>AC106DX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0000</td><td>JEFATURA REGIONAL CONURBANO IV</td><td>JR CONURBANO IV</td><td>JUAN MANUEL OTERO HOET</td></tr>
+                      <tr><td id="btn10001660">10001660</td><td>RODA</td><td>AC106EH</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0000</td><td>JEFATURA REGIONAL CONURBANO IV</td><td>JR CONURBANO IV</td><td>JUAN MANUEL OTERO HOET</td></tr>
+                      <tr><td id="btn10001778">10001778</td><td>RODA</td><td>AC934UQ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P2003B0000</td><td>JEFATURA REGIONAL CONURBANO IV</td><td>JR CONURBANO IV</td><td>JUAN MANUEL OTERO HOET</td></tr>
+                      <tr><td id="btn10001618">10001618</td><td>RODA</td><td>AC105ZU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200450100</td><td>UDAI SALTA NORTE</td><td>JR NORTE</td><td>JUAN PABLO MARCO</td></tr>
+                      <tr><td id="btn10001983">10001983</td><td>RODA</td><td>AC823SS</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450100</td><td>UDAI SALTA NORTE</td><td>JR NORTE</td><td>JUAN PABLO MARCO</td></tr>
+                      <tr><td id="btn10001986">10001986</td><td>RODA</td><td>AC823SL</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470060</td><td>UDAI GENERAL PICO</td><td>JR SUR I</td><td>JUAN RAMIRO LLANOS</td></tr>
+                      <tr><td id="btn10001984">10001984</td><td>RODA</td><td>AC769LV</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470000</td><td>JEFATURA REGIONAL SUR I</td><td>JR SUR I</td><td>JULIA ANDREA VELAZQUEZ</td></tr>
+                      <tr><td id="btn10001542">10001542</td><td>RODA</td><td>AC106BQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0120</td><td>UDAI BERAZATEGUI</td><td>JR CONURBANO III</td><td>JULIAN LEANDRO MUNIAGURRIA ARRIETE</td></tr>
+                      <tr><td id="btn10001574">10001574</td><td>RODA</td><td>AC106DP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200440060</td><td>UDAI CURUZU CUATIA</td><td>JR NORESTE</td><td>JULIETA MENDIBURO</td></tr>
+                      <tr><td id="btn10001919">10001919</td><td>RODA</td><td>AC295WQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003E0010</td><td>UDAI AZUL</td><td>JR BONAERENSE VII</td><td>KARINA MADDIO</td></tr>
+                      <tr><td id="btn10001668">10001668</td><td>RODA</td><td>AC823UF</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440090</td><td>UDAI ELDORADO</td><td>JR NORESTE</td><td>KARINA PATRICIA MROCZEK</td></tr>
+                      <tr><td id="btn10001931">10001931</td><td>RODA</td><td>AC295XC</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0050</td><td>UDAI LA TABLADA</td><td>JR CONURBANO IV</td><td>LAURA BEATRIZ VALOR</td></tr>
+                      <tr><td id="btn10001568">10001568</td><td>RODA</td><td>AC295XZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200430170</td><td>UDAI ROSARIO OESTE</td><td>JR LITORAL</td><td>LAURA DANIELA ALMIRON</td></tr>
+                      <tr><td id="btn10001710">10001710</td><td>RODA</td><td>AC934VP</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410190</td><td>UDAI CORDOBA II</td><td>JR CENTRO</td><td>LEANDRO GAMBA</td></tr>
+                      <tr><td id="btn10001876">10001876</td><td>RODA</td><td>AC106DV</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320020</td><td>UDAI LA PLATA II</td><td>JR CONURBANO II</td><td>LEANDRO JAVIER ARDILES</td></tr>
+                      <tr><td id="btn10001630">10001630</td><td>RODA</td><td>AC106BK</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330100</td><td>UDAI SAN FERNANDO</td><td>JR CONURBANO I</td><td>LUCIANA SOLE GAITAN</td></tr>
+                      <tr><td id="btn10001995">10001995</td><td>RODA</td><td>AC769LT</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470020</td><td>UDAI GENERAL ROCA</td><td>JR SUR I</td><td>LUCIANO JESUS DELGADO SEMPE</td></tr>
+                      <tr><td id="btn10001872">10001872</td><td>RODA</td><td>AC106AZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430010</td><td>UDAI SANTA FE</td><td>JR LITORAL</td><td>LUIS LOPEZ</td></tr>
+                      <tr><td id="btn10001985">10001985</td><td>RODA</td><td>AC823ST</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450020</td><td>UDAI TUCUMAN</td><td>JR NORTE</td><td>LUISA LILIANA CABALEIRO</td></tr>
+                      <tr><td id="btn10001904">10001904</td><td>RODA</td><td>AC295YA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003A0150</td><td>UDAI PRESIDENTE PERON</td><td>JR CONURBANO III</td><td>MANUEL ALEJANDRO TOFANELLI</td></tr>
+                      <tr><td id="btn10001770">10001770</td><td>RODA</td><td>AC934VE</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410000</td><td>JEFATURA REGIONAL CENTRO</td><td>JR CENTRO</td><td>MARCELA CLAUDIA BARRETO</td></tr>
+                      <tr><td id="btn10001868">10001868</td><td>RODA</td><td>AC106DS</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200410000</td><td>JEFATURA REGIONAL CENTRO</td><td>JR CENTRO</td><td>MARCELA CLAUDIA BARRETO</td></tr>
+                      <tr><td id="btn10001975">10001975</td><td>RODA</td><td>AC823SU</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410000</td><td>JEFATURA REGIONAL CENTRO</td><td>JR CENTRO</td><td>MARCELA CLAUDIA BARRETO</td></tr>
+                      <tr><td id="btn10233193">10233193</td><td>RODA</td><td>AF034IW</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A005</td><td>P200410000</td><td>JEFATURA REGIONAL CENTRO</td><td>JR CENTRO</td><td>MARCELA CLAUDIA BARRETO</td></tr>
+                      <tr><td id="btn10001788">10001788</td><td>RODA</td><td>AC769LF</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420080</td><td>UDAI RAWSON</td><td>JR CUYO</td><td>MARCO GERMAN MARIPIL</td></tr>
+                      <tr><td id="btn10001552">10001552</td><td>RODA</td><td>AC106AD</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380050</td><td>UDAI MERCEDES (BS. AS.)</td><td>JR BONAERENSE IV</td><td>MARCOS CESAR PIGHIN</td></tr>
+                      <tr><td id="btn10001905">10001905</td><td>RODA</td><td>AC295XF</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200360040</td><td>UDAI SAN MIGUEL DEL MONTE</td><td>JR BONAERENSE I</td><td>MARIA ALEJANDRA ALTAMIRANO</td></tr>
+                      <tr><td id="btn10001928">10001928</td><td>RODA</td><td>AC295XO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200350070</td><td>UDAI TANDIL</td><td>JR BONAERENSE I</td><td>MARIA ALEJANDRA FARIÑA</td></tr>
+                      <tr><td id="btn10001982">10001982</td><td>RODA</td><td>AC823TT</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410020</td><td>UDAI RIO CUARTO</td><td>JR CENTRO</td><td>MARIA ANDREA DIAZ</td></tr>
+                      <tr><td id="btn10001853">10001853</td><td>RODA</td><td>AC106DW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200440050</td><td>UDAI MONTE CASEROS</td><td>JR NORESTE</td><td>MARIA BELEN MARTINO</td></tr>
+                      <tr><td id="btn10001712">10001712</td><td>RODA</td><td>AC769LB</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480000</td><td>JEFATURA REGIONAL SUR II</td><td>JR SUR II</td><td>MARIA CAROLINA BARK</td></tr>
+                      <tr><td id="btn10001996">10001996</td><td>RODA</td><td>AC823UL</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480000</td><td>JEFATURA REGIONAL SUR II</td><td>JR SUR II</td><td>MARIA CAROLINA BARK</td></tr>
+                      <tr><td id="btn10213120">10213120</td><td>RODA</td><td>AF034FV</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A005</td><td>P200480000</td><td>JEFATURA REGIONAL SUR II</td><td>JR SUR II</td><td>MARIA CAROLINA BARK</td></tr>
+                      <tr><td id="btn10213122">10213122</td><td>RODA</td><td>AF034FW</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A005</td><td>P200480000</td><td>JEFATURA REGIONAL SUR II</td><td>JR SUR II</td><td>MARIA CAROLINA BARK</td></tr>
+                      <tr><td id="btn10001860">10001860</td><td>RODA</td><td>AC106CS</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430070</td><td>UDAI VENADO TUERTO</td><td>JR LITORAL</td><td>MARIA CRISTINA GOMEZ</td></tr>
+                      <tr><td id="btn10001852">10001852</td><td>RODA</td><td>AC106EF</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200470010</td><td>UDAI NEUQUEN</td><td>JR SUR I</td><td>MARIA DE LOS ANGELES TABOADA</td></tr>
+                      <tr><td id="btn10001992">10001992</td><td>RODA</td><td>AC769LP</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470010</td><td>UDAI NEUQUEN</td><td>JR SUR I</td><td>MARIA DE LOS ANGELES TABOADA</td></tr>
+                      <tr><td id="btn10001620">10001620</td><td>RODA</td><td>AC106AA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200370010</td><td>UDAI PEHUAJO</td><td>JR BONAERENSE III</td><td>MARIA DEL CARMEN FLORES</td></tr>
+                      <tr><td id="btn10001764">10001764</td><td>RODA</td><td>AC934VQ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420070</td><td>UDAI VILLA MERCEDES</td><td>JR CUYO</td><td>MARIA EUGENIA BERROETA</td></tr>
+                      <tr><td id="btn10001879">10001879</td><td>RODA</td><td>AC106EU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380160</td><td>UDAI PILAR</td><td>JR BONAERENSE IV</td><td>MARIA EUGENIA RAU</td></tr>
+                      <tr><td id="btn10001317">10001317</td><td>RODA</td><td>JLH740</td><td>MERCEDES BENZ - SPRINTER 313 CDI/C 3550</td><td>FURGON</td><td>2010</td><td>A001</td><td>H900400000</td><td>DIR ARCHIVO GENERAL</td><td>DIR GRAL DE OPERACIONES</td><td>RAFAEL MEDARDO PRALONG</td></tr>
+                      <tr><td id="btn10001802">10001802</td><td>RODA</td><td>AC284QB</td><td>CITROEN - JUMPER 435 L2H1 HDI 130 MT6</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900400000</td><td>DIR ARCHIVO GENERAL</td><td>DIR GRAL DE OPERACIONES</td><td>RAFAEL MEDARDO PRALONG</td></tr>
+                      <tr><td id="btn10001934">10001934</td><td>RODA</td><td>AC295XP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900400000</td><td>DIR ARCHIVO GENERAL</td><td>DIR GRAL DE OPERACIONES</td><td>RAFAEL MEDARDO PRALONG</td></tr>
+                      <tr><td id="btn10001714">10001714</td><td>RODA</td><td>AC934WA</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>BARRIONUEVO PEDRO MAXIMILIANO</td></tr>
+                      <tr><td id="btn10001913">10001913</td><td>RODA</td><td>AC295WR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>LUCIANO ALEJANDRO MENICUCCI</td></tr>
+                      <tr><td id="btn10001754">10001754</td><td>RODA</td><td>AC934UI</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>MARIA CECILIA SANTIAGO</td></tr>
+                      <tr><td id="btn10001858">10001858</td><td>RODA</td><td>AC106BX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>MARTINA CATANZARO</td></tr>
+                      <tr><td id="btn10001626">10001626</td><td>RODA</td><td>AC106CJ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001702">10001702</td><td>RODA</td><td>AC934VO</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001720">10001720</td><td>RODA</td><td>AC823UA</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001752">10001752</td><td>RODA</td><td>AC823SE</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001768">10001768</td><td>RODA</td><td>AC934VX</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001790">10001790</td><td>RODA</td><td>AC934UZ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001991">10001991</td><td>RODA</td><td>AC934UW</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460160</td><td>UDAI CHILECITO</td><td>JR NOROESTE</td><td>MARIA FERNANDA JUAREZ NARANJO</td></tr>
+                      <tr><td id="btn10001923">10001923</td><td>RODA</td><td>AC295WS</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0070</td><td>UDAI SAN PEDRO</td><td>JR BONAERENSE V</td><td>MARIA ISABEL ROTUNDO</td></tr>
+                      <tr><td id="btn10001900">10001900</td><td>RODA</td><td>AC105ZX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320230</td><td>UDAI JUNIN (BS. AS.)</td><td>JR BONAERENSE III</td><td>MARIA LAURA DI MARCO</td></tr>
+                      <tr><td id="btn10001810">10001810</td><td>RODA</td><td>AC284LM</td><td>MERCEDES BENZ - SPRINTER 415 CDI</td><td>FURGON</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001961">10001961</td><td>RODA</td><td>AC769LQ</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480080</td><td>UDAI USHUAIA</td><td>JR SUR II</td><td>MARIA MARCELA LUJAN TORRES</td></tr>
+                      <tr><td id="btn10001522">10001522</td><td>RODA</td><td>AC106AX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003D0070</td><td>UDAI TRES ARROYOS</td><td>JR BONAERENSE VI</td><td>MARIA NOELIA GARCIA</td></tr>
+                      <tr><td id="btn10001993">10001993</td><td>RODA</td><td>AC823TS</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430080</td><td>UDAI RECONQUISTA</td><td>JR LITORAL</td><td>MARIA PAULA PETROSELLI</td></tr>
+                      <tr><td id="btn10001578">10001578</td><td>RODA</td><td>AC106BZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003E0000</td><td>JR BONAERENSE VII</td><td>JR BONAERENSE VII</td><td>MARIA SOLEDAD NICOLLIER</td></tr>
+                      <tr><td id="btn10001716">10001716</td><td>RODA</td><td>AC823UB</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450080</td><td>UDAI YERBA BUENA</td><td>JR NORTE</td><td>MARIA VALERIA MAXZUD</td></tr>
+                      <tr><td id="btn10001528">10001528</td><td>RODA</td><td>AC106BN</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200450140</td><td>UDAI TUCUMAN II</td><td>JR NORTE</td><td>MARIA VERONICA DIAZ</td></tr>
+                      <tr><td id="btn10001760">10001760</td><td>RODA</td><td>AC934UH</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430020</td><td>UDAI ROSARIO</td><td>JR LITORAL</td><td>MARIANO ALBERTO CARIGNANO</td></tr>
+                      <tr><td id="btn10001917">10001917</td><td>RODA</td><td>AC295XK</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200320460</td><td>UDAI CNEL BRANDSEN</td><td>JR CONURBANO II</td><td>MARIANO DIEZ CASTILLA</td></tr>
+                      <tr><td id="btn10001897">10001897</td><td>RODA</td><td>AC106EW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001875">10001875</td><td>RODA</td><td>AC106EN</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330040</td><td>UDAI MORON</td><td>JR CONURBANO I</td><td>MARIANO PABLO SPINA</td></tr>
+                      <tr><td id="btn10001602">10001602</td><td>RODA</td><td>AC106CA</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200370000</td><td>JEFATURA REGIONAL BONAERENSE III</td><td>JR BONAERENSE III</td><td>MARINA BALBO</td></tr>
+                      <tr><td id="btn10001680">10001680</td><td>RODA</td><td>AC823SC</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200370000</td><td>JEFATURA REGIONAL BONAERENSE III</td><td>JR BONAERENSE III</td><td>MARINA BALBO</td></tr>
+                      <tr><td id="btn10001576">10001576</td><td>RODA</td><td>AC106CR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200420000</td><td>JEFATURA REGIONAL CUYO</td><td>JR CUYO</td><td>MARIO CAYETANO RUBIN</td></tr>
+                      <tr><td id="btn10001962">10001962</td><td>RODA</td><td>AC823SP</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450060</td><td>UDAI ORAN</td><td>JR NORTE</td><td>MARIO FRANCISCO GEREZ</td></tr>
+                      <tr><td id="btn10001855">10001855</td><td>RODA</td><td>AC106BO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003D0020</td><td>UDAI BAHIA BLANCA II</td><td>JR BONAERENSE VI</td><td>MARISA ELISABET BIANCHI</td></tr>
+                      <tr><td id="btn10001936">10001936</td><td>RODA</td><td>AC295XG</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0030</td><td>UDAI SAN JUSTO (BS. AS.)</td><td>JR CONURBANO IV</td><td>MARTA LILIANA VIDAL</td></tr>
+                      <tr><td id="btn10001570">10001570</td><td>RODA</td><td>AC106EO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0000</td><td>JEFATURA REGIONAL CONURBANO III</td><td>JR CONURBANO III</td><td>MARTIN GARCIA OLIVARES</td></tr>
+                      <tr><td id="btn10001598">10001598</td><td>RODA</td><td>AC106CL</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0000</td><td>JEFATURA REGIONAL CONURBANO III</td><td>JR CONURBANO III</td><td>MARTIN GARCIA OLIVARES</td></tr>
+                      <tr><td id="btn10001971">10001971</td><td>RODA</td><td>AC823SW</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480060</td><td>UDAI TRELEW</td><td>JR SUR II</td><td>MARTIN OSCAR DALLA VIA</td></tr>
+                      <tr><td id="btn10001911">10001911</td><td>RODA</td><td>AC295WU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>H900500000</td><td>DIR OBRAS E INFRAESTRUCTURA</td><td>DIR GRAL DE OPERACIONES</td><td>PABLO EZEQUIEL CAMARGO</td></tr>
+                      <tr><td id="btn10001331">10001331</td><td>RODA</td><td>LLC525</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>I000100000</td><td>COORD. GESTION TECNICA Y AD</td><td>SECRETARIA GENERAL</td><td>DAMIAN EUGENIO MOLINA</td></tr>
+                      <tr><td id="btn10001333">10001333</td><td>RODA</td><td>LIL397</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>I000100000</td><td>COORD. GESTION TECNICA Y AD</td><td>SECRETARIA GENERAL</td><td>DAMIAN EUGENIO MOLINA</td></tr>
+                      <tr><td id="btn10001918">10001918</td><td>RODA</td><td>AC295XS</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003E0030</td><td>UDAI SALADILLO</td><td>JR BONAERENSE VII</td><td>MATIAS LUCIANO VIEDMA</td></tr>
+                      <tr><td id="btn10001892">10001892</td><td>RODA</td><td>AC106AR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380020</td><td>UDAI LUJAN</td><td>JR BONAERENSE IV</td><td>MAURICIO HERNAN MOLINERO</td></tr>
+                      <tr><td id="btn10001870">10001870</td><td>RODA</td><td>AC106DJ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380150</td><td>UDAI MORENO (BS. AS.)</td><td>JR BONAERENSE IV</td><td>MAXIMILIANO GABRIEL VENEGONI</td></tr>
+                      <tr><td id="btn10001885">10001885</td><td>RODA</td><td>AC106DQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0030</td><td>UDAI LANUS</td><td>JR CONURBANO III</td><td>MAXIMILIANO ROBERTO STOKLOSA</td></tr>
+                      <tr><td id="btn10001932">10001932</td><td>RODA</td><td>AC295XT</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0080</td><td>UDAI ZARATE</td><td>JR BONAERENSE V</td><td>MAYDA BEATRIZ SANCHEZ ZILIO</td></tr>
+                      <tr><td id="btn10001724">10001724</td><td>RODA</td><td>AC769LH</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450030</td><td>UDAI CONCEPCION</td><td>JR NORTE</td><td>MIGUEL ARIEL MAXZUD</td></tr>
+                      <tr><td id="btn10001614">10001614</td><td>RODA</td><td>AC106DB</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200440000</td><td>UDAI RESISTENCIA</td><td>JR NORESTE</td><td>MIRTA INES TICHY</td></tr>
+                      <tr><td id="btn10001909">10001909</td><td>RODA</td><td>AC106EK</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P200330010</td><td>UDAI SAN MARTIN</td><td>JR CONURBANO I</td><td>MONICA EDITH SALAR</td></tr>
+                      <tr><td id="btn10001782">10001782</td><td>RODA</td><td>AC934VV</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P20041019L</td><td>OFICINA DEAN FUNES</td><td>JR CENTRO</td><td>NADIA CAROLINA JACHUF</td></tr>
+                      <tr><td id="btn10001878">10001878</td><td>RODA</td><td>AC106DI</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320350</td><td>UDAI LOS HORNOS</td><td>JR CONURBANO II</td><td>NADIA SOLANGE RODRIGUEZ</td></tr>
+                      <tr><td id="btn10001692">10001692</td><td>RODA</td><td>AC823UD</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P20044010M</td><td>OFICINA CLORINDA</td><td>JR NORESTE</td><td>NATALIA GABRIELA CENTURION</td></tr>
+                      <tr><td id="btn10001898">10001898</td><td>RODA</td><td>AC106DY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320010</td><td>UDAI LA PLATA I</td><td>JR CONURBANO II</td><td>NATALIA TESTA</td></tr>
+                      <tr><td id="btn10001558">10001558</td><td>RODA</td><td>AC106CX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200460180</td><td>UDAI FRIAS</td><td>JR NOROESTE</td><td>NATALIA VERONICA IZARES</td></tr>
+                      <tr><td id="btn10001987">10001987</td><td>RODA</td><td>AC823SX</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420080</td><td>UDAI RAWSON</td><td>JR CUYO</td><td>NESTOR RAUL ROMERO ALBARRACIN</td></tr>
+                      <tr><td id="btn10001538">10001538</td><td>RODA</td><td>AC106CD</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430100</td><td>UDAI GUALEGUAY</td><td>JR LITORAL</td><td>NICOLAS CAPURRO</td></tr>
+                      <tr><td id="btn10001974">10001974</td><td>RODA</td><td>AC823SO</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480040</td><td>UDAI RIO GALLEGOS</td><td>JR SUR II</td><td>NOELIA AGUSTINA MIRANDA</td></tr>
+                      <tr><td id="btn10001980">10001980</td><td>RODA</td><td>AC823UH</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480040</td><td>UDAI RIO GALLEGOS</td><td>JR SUR II</td><td>NOELIA AGUSTINA MIRANDA</td></tr>
+                      <tr><td id="btn10001562">10001562</td><td>RODA</td><td>AC106EX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0080</td><td>UDAI LOMAS DE ZAMORA</td><td>JR CONURBANO III</td><td>NOELIA GIAMPIETRO</td></tr>
+                      <tr><td id="btn10001368">10001368</td><td>RODA</td><td>NDF396</td><td>MERCEDES BENZ - VIANO 2.2 CDI TREND</td><td>FAMILIAR</td><td>2013</td><td>A001</td><td>I000100000</td><td>COORD. GESTION TECNICA Y AD</td><td>SECRETARIA GENERAL</td><td>DAMIAN EUGENIO MOLINA</td></tr>
+                      <tr><td id="btn10001718">10001718</td><td>RODA</td><td>AC934US</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410200</td><td>UDAI ALTA GRACIA</td><td>JR CENTRO</td><td>OCTAVIO GASTON MOLINA</td></tr>
+                      <tr><td id="btn10001644">10001644</td><td>RODA</td><td>AC106BP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430040</td><td>UDAI RAFAELA</td><td>JR LITORAL</td><td>OFELIA ISABEL LENTORE</td></tr>
+                      <tr><td id="btn10001744">10001744</td><td>RODA</td><td>AC823UC</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440020</td><td>UDAI ROQUE SAENZ PEÑA</td><td>JR NORESTE</td><td>ORLANDO JONATAN OLIVELLO</td></tr>
+                      <tr><td id="btn10001544">10001544</td><td>RODA</td><td>AC106DR</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200470070</td><td>UDAI CIPOLLETTI</td><td>JR SUR I</td><td>ORNELLA LUCIANA MAGLIONE</td></tr>
+                      <tr><td id="btn10001924">10001924</td><td>RODA</td><td>AC295XW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380080</td><td>UDAI NAVARRO</td><td>JR BONAERENSE IV</td><td>OSCAR ALFREDO FERZZOLA</td></tr>
+                      <tr><td id="btn10001880">10001880</td><td>RODA</td><td>AC106AO</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0210</td><td>UDAI SAN VICENTE</td><td>JR CONURBANO III</td><td>PABLO DAVID PALMA</td></tr>
+                      <tr><td id="btn10001337">10001337</td><td>RODA</td><td>LLC524</td><td>VOLKSWAGEN - VENTO 2,5</td><td>SEDAN 4 PTAS</td><td>2012</td><td>A001</td><td>I100000000</td><td>DIR GRAL PLANEAMIENTO</td><td>DIR GRAL DE PLANEAMIENTO</td><td>MATIAS JULIAN BELLIARD</td></tr>
+                      <tr><td id="btn10001674">10001674</td><td>RODA</td><td>AC769LA</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>I204100000</td><td>COORDINACION ACCION COMUNITARIA</td><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>SEBASTIAN ROBERTO MARTINEZ</td></tr>
+                      <tr><td id="btn10001732">10001732</td><td>RODA</td><td>AC823SB</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>I204100000</td><td>COORDINACION ACCION COMUNITARIA</td><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>SEBASTIAN ROBERTO MARTINEZ</td></tr>
+                      <tr><td id="btn10001854">10001854</td><td>RODA</td><td>AC106AQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>I204100000</td><td>COORDINACION ACCION COMUNITARIA</td><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>SEBASTIAN ROBERTO MARTINEZ</td></tr>
+                      <tr><td id="btn10001912">10001912</td><td>RODA</td><td>AC295WY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>I204100000</td><td>COORDINACION ACCION COMUNITARIA</td><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>SEBASTIAN ROBERTO MARTINEZ</td></tr>
+                      <tr><td id="btn10001925">10001925</td><td>RODA</td><td>AC295XI</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A001</td><td>I204100000</td><td>COORDINACION ACCION COMUNITARIA</td><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>SEBASTIAN ROBERTO MARTINEZ</td></tr>
+                      <tr><td id="btn10002010">10002010</td><td>RODA</td><td>AB619KX</td><td>CHEVROLET - S10 2.8</td><td>PICK-UP CABINA DOBLE</td><td>2017</td><td>A001</td><td>I400000000</td><td>DIR GRAL DE PRENSA</td><td>DIR GRAL DE PRENSA</td><td>MARCELO JAVIER ALONSO</td></tr>
+                      <tr><td id="btn10001588">10001588</td><td>RODA</td><td>AC106CH</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>I401070000</td><td>COORDINACION PRODUCCION TECNICA Y ARTIST</td><td>DIR GRAL DE PRENSA</td><td>MARCELO JAVIER ALONSO</td></tr>
+                      <tr><td id="btn10001594">10001594</td><td>RODA</td><td>AC106CM</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>I401070000</td><td>COORDINACION PRODUCCION TECNICA Y ARTIST</td><td>DIR GRAL DE PRENSA</td><td>MARCELO JAVIER ALONSO</td></tr>
+                      <tr><td id="btn10001678">10001678</td><td>RODA</td><td>AC934UY</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430090</td><td>UDAI PARANA</td><td>JR LITORAL</td><td>PABLO LUIS CLEMENTI</td></tr>
+                      <tr><td id="btn10001339">10001339</td><td>RODA</td><td>LBX403</td><td>MERCEDES BENZ - SPRINTER 413</td><td>FURGON</td><td>2012</td><td>A005</td><td>P200480000</td><td>JEFATURA REGIONAL SUR II</td><td>JR SUR II</td><td>PABLO RAUL RUIZ</td></tr>
+                      <tr><td id="btn10001590">10001590</td><td>RODA</td><td>AC106CE</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380190</td><td>UDAI ESCOBAR</td><td>JR BONAERENSE IV</td><td>PATRICIA ALEJANDRA DE LA CRUZ</td></tr>
+                      <tr><td id="btn10001926">10001926</td><td>RODA</td><td>AC295WW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200370030</td><td>UDAI JUNIN II</td><td>JR BONAERENSE III</td><td>PAULA ANDREA NARDONE</td></tr>
+                      <tr><td id="btn10001920">10001920</td><td>RODA</td><td>AC295WP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0020</td><td>UDAI WILDE</td><td>JR CONURBANO III</td><td>PAULA DANIELA LONGATTI</td></tr>
+                      <tr><td id="btn10001887">10001887</td><td>RODA</td><td>AC106AC</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320150</td><td>UDAI LINCOLN</td><td>JR BONAERENSE III</td><td>PEDRO LUIS LOZAS</td></tr>
+                      <tr><td id="btn10001967">10001967</td><td>RODA</td><td>AC769LJ</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480030</td><td>UDAI ESQUEL</td><td>JR SUR II</td><td>RAFAEL HECTOR DELGADO</td></tr>
+                      <tr><td id="btn10001856">10001856</td><td>RODA</td><td>AC106BI</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>I401070000</td><td>COORDINACION PRODUCCION TECNICA Y ARTIST</td><td>DIR GRAL DE PRENSA</td><td>MARCELO JAVIER ALONSO</td></tr>
+                      <tr><td id="btn10001861">10001861</td><td>RODA</td><td>AC106EL</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P2003A0040</td><td>UDAI MONTE CHINGOLO</td><td>JR CONURBANO III</td><td>ROLANDO ANIBAL MIÑO</td></tr>
+                      <tr><td id="btn10207824">10207824</td><td>RODA</td><td>AD738CF</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2019</td><td>A001</td><td>P200400000</td><td>DIR RED INTERIOR</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>GABRIEL CESAR MINIGUTTI</td></tr>
+                      <tr><td id="btn10001642">10001642</td><td>RODA</td><td>AC106DZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330070</td><td>UDAI TIGRE</td><td>JR CONURBANO I</td><td>RAMIRO ALEJANDRO TOSCANI</td></tr>
+                      <tr><td id="btn10001612">10001612</td><td>RODA</td><td>AC106CP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200440110</td><td>UDAI VILLA ANGELA</td><td>JR NORESTE</td><td>RAUL ABELARDO RUIZ DIAZ</td></tr>
+                      <tr><td id="btn10001869">10001869</td><td>RODA</td><td>AC106DL</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200330060</td><td>UDAI MERLO (BS. AS.)</td><td>JR CONURBANO I</td><td>RAUL ALCIDES MIRANDA</td></tr>
+                      <tr><td id="btn10001758">10001758</td><td>RODA</td><td>AC934UP</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460110</td><td>UDAI AÑATUYA</td><td>JR NOROESTE</td><td>RAUL HUMBERTO DIPIERRI</td></tr>
+                      <tr><td id="btn10001958">10001958</td><td>RODA</td><td>AC823TR</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480010</td><td>UDAI COMODORO RIVADAVIA</td><td>JR SUR II</td><td>RENATA HILLER</td></tr>
+                      <tr><td id="btn10001792">10001792</td><td>RODA</td><td>AC823SI</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200420110</td><td>UDAI MAIPU (REG. CUYO)</td><td>JR CUYO</td><td>RICARDO MARTIN MORALES</td></tr>
+                      <tr><td id="btn10001750">10001750</td><td>RODA</td><td>AC934UL</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470140</td><td>UDAI SAN MARTIN DE LOS ANDES</td><td>JR SUR I</td><td>ROBERTO ANDRES BIZZANELLI</td></tr>
+                      <tr><td id="btn10001540">10001540</td><td>RODA</td><td>AC106BT</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200410010</td><td>UDAI CORDOBA I</td><td>JR CENTRO</td><td>ROBERTO NICOLAS GERMIR</td></tr>
+                      <tr><td id="btn10235458">10235458</td><td>RODA</td><td>AF055ZF</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P200460000</td><td>JEFATURA REGIONAL NOROESTE</td><td>JR NOROESTE</td><td>JUAN ALBERTO BAZAN</td></tr>
+                      <tr><td id="btn10213261">10213261</td><td>RODA</td><td>AF055ZR</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A001</td><td>P200470000</td><td>JEFATURA REGIONAL SUR I</td><td>JR SUR I</td><td>JULIA ANDREA VELAZQUEZ</td></tr>
+                      <tr><td id="btn10001415">10001415</td><td>RODA</td><td>NIE278</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001420">10001420</td><td>RODA</td><td>NIE282</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001422">10001422</td><td>RODA</td><td>NIE279</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001606">10001606</td><td>RODA</td><td>AC106CI</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001632">10001632</td><td>RODA</td><td>AC106DC</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001636">10001636</td><td>RODA</td><td>AC106CQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001742">10001742</td><td>RODA</td><td>AC934UM</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001748">10001748</td><td>RODA</td><td>AC769KZ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001877">10001877</td><td>RODA</td><td>AC106CC</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001894">10001894</td><td>RODA</td><td>AC106EI</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002004">10002004</td><td>RODA</td><td>AB619IG</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002005">10002005</td><td>RODA</td><td>AB619IK</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002006">10002006</td><td>RODA</td><td>AB619II</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002007">10002007</td><td>RODA</td><td>AB619IH</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002008">10002008</td><td>RODA</td><td>AB619IF</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002009">10002009</td><td>RODA</td><td>AB619IJ</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002014">10002014</td><td>RODA</td><td>AB738SD</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002015">10002015</td><td>RODA</td><td>AB738SI</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002016">10002016</td><td>RODA</td><td>AB738SH</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002017">10002017</td><td>RODA</td><td>AB738SG</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002018">10002018</td><td>RODA</td><td>AB818SB</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002019">10002019</td><td>RODA</td><td>AB738SJ</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002020">10002020</td><td>RODA</td><td>AB738SK</td><td>IVECO - DAILY 55C17</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002021">10002021</td><td>RODA</td><td>AB738TD</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002022">10002022</td><td>RODA</td><td>AB738TF</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002023">10002023</td><td>RODA</td><td>AB738SE</td><td>IVECO - DAILY 55C17</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002024">10002024</td><td>RODA</td><td>AB738SC</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002025">10002025</td><td>RODA</td><td>AB738SF</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002026">10002026</td><td>RODA</td><td>AB738TE</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002027">10002027</td><td>RODA</td><td>AB738TG</td><td>IVECO - DAILY 3.0</td><td>FURGON</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002028">10002028</td><td>RODA</td><td>AB934KB</td><td>MERCEDES BENZ - B51-ATEGO 1726S</td><td>TRACTOR DE CARRETERA</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002029">10002029</td><td>RODA</td><td>AB944YT</td><td>MERCEDES BENZ - B51-ATEGO 1726S</td><td>TRACTOR DE CARRETERA</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002030">10002030</td><td>RODA</td><td>AC042ON</td><td>MERCEDES BENZ - B51-ATEGO 1726S</td><td>TRACTOR DE CARRETERA</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002031">10002031</td><td>RODA</td><td>AC042QF</td><td>MERCEDES BENZ - B51-ATEGO 1726S</td><td>TRACTOR DE CARRETERA</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002032">10002032</td><td>RODA</td><td>AB934MJ</td><td>INDUSTRIAS BACO SAIC - 06-CH SR 2E TERMIC</td><td>SEMIRREMOLQUE</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002033">10002033</td><td>RODA</td><td>AC042KB</td><td>INDUSTRIAS BACO SAIC - 06-CH SR 2E TERMIC</td><td>SEMIRREMOLQUE</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002034">10002034</td><td>RODA</td><td>AC042QB</td><td>INDUSTRIAS BACO SAIC - 06-CH SR 2E TERMIC</td><td>SEMIRREMOLQUE</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10002035">10002035</td><td>RODA</td><td>AC042QG</td><td>INDUSTRIAS BACO SAIC - 06-CH SR 2E TERMIC</td><td>SEMIRREMOLQUE</td><td>2017</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10213116">10213116</td><td>RODA</td><td>AF034FT</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10213118">10213118</td><td>RODA</td><td>AF034FX</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10213119">10213119</td><td>RODA</td><td>AF034FU</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10213121">10213121</td><td>RODA</td><td>AF034FR</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10213259">10213259</td><td>RODA</td><td>AF034IZ</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2021</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10221845">10221845</td><td>RODA</td><td>AF055ZG</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10221846">10221846</td><td>RODA</td><td>AF055ZP</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10221847">10221847</td><td>RODA</td><td>AF055ZT</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10222971">10222971</td><td>RODA</td><td>AF055ZL</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10223026">10223026</td><td>RODA</td><td>AF055ZQ</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10223074">10223074</td><td>RODA</td><td>AF055ZE</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10223075">10223075</td><td>RODA</td><td>AF055ZK</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10223076">10223076</td><td>RODA</td><td>AF034IU</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10233190">10233190</td><td>RODA</td><td>AF055ZN</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10233191">10233191</td><td>RODA</td><td>AF055ZO</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10233192">10233192</td><td>RODA</td><td>AF055ZU</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10233194">10233194</td><td>RODA</td><td>AF055ZM</td><td>MERCEDES BENZ - SPRINTER FURGÓN 4325 516 CDI V2</td><td>FURGON VIDRIADO C/AS</td><td>2022</td><td>A001</td><td>P205000000</td><td>DIR INTEGRACION TERRITORIAL</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>RODRIGO SEBASTIAN GARCIA</td></tr>
+                      <tr><td id="btn10001738">10001738</td><td>RODA</td><td>AC934UD</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200430220</td><td>UDAI ROSARIO IV</td><td>JR LITORAL</td><td>ROMAN ANDRES COTTA</td></tr>
+                      <tr><td id="btn10001959">10001959</td><td>RODA</td><td>AC823UI</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200480050</td><td>UDAI PUERTO MADRYN</td><td>JR SUR II</td><td>ROMINA LORENA REIS</td></tr>
+                      <tr><td id="btn10001990">10001990</td><td>RODA</td><td>AC823TW</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200470040</td><td>UDAI VIEDMA</td><td>JR SUR I</td><td>RUBEN EDUARDO FINELLI</td></tr>
+                      <tr><td id="btn10001604">10001604</td><td>RODA</td><td>AC106CZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200380140</td><td>UDAI MALVINAS ARGENTINAS</td><td>JR BONAERENSE IV</td><td>SANDRA PATRICIA NACIMIENTO</td></tr>
+                      <tr><td id="btn10001927">10001927</td><td>RODA</td><td>AC295XE</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200320110</td><td>UDAI CHASCOMUS</td><td>JR BONAERENSE I</td><td>SANTIAGO JUAN MANUEL MUSCARELLO</td></tr>
+                      <tr><td id="btn10001937">10001937</td><td>RODA</td><td>AC295XQ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003A0060</td><td>UDAI BERNAL</td><td>JR CONURBANO III</td><td>SANTIAGO MARTIN DE FRANCESCO</td></tr>
+                      <tr><td id="btn10001772">10001772</td><td>RODA</td><td>AC769LI</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200440070</td><td>UDAI POSADAS</td><td>JR NORESTE</td><td>SEBASTIAN EMILIANO OLIVERI</td></tr>
+                      <tr><td id="btn10001889">10001889</td><td>RODA</td><td>AC106AT</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003D0010</td><td>UDAI BAHIA BLANCA</td><td>JR BONAERENSE VI</td><td>SEBASTIAN RADETICH</td></tr>
+                      <tr><td id="btn10001977">10001977</td><td>RODA</td><td>AC823SR</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A001</td><td>P205100000</td><td>UNIDAD COORDINADORA ABORDAJE OPERATIVO</td><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>FLORENCIA AYELEN ELENA</td></tr>
+                      <tr><td id="btn10001423">10001423</td><td>RODA</td><td>NIE276</td><td>MERCEDES BENZ - SPRINTER 415</td><td>MINIBUS</td><td>2013</td><td>A001</td><td>P300000000</td><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>EDITH MARTINEZ FERNANDEZ</td></tr>
+                      <tr><td id="btn10001532">10001532</td><td>RODA</td><td>AC106BM</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P300000000</td><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>EDITH MARTINEZ FERNANDEZ</td></tr>
+                      <tr><td id="btn10001648">10001648</td><td>RODA</td><td>AC106CW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P309000000</td><td>DIR DE VERIFICACIONES</td><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AGUSTIN ALEJANDRO GARABELLO</td></tr>
+                      <tr><td id="btn10001884">10001884</td><td>RODA</td><td>AC106AP</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A001</td><td>P600050000</td><td>COORDINACION MEDICINA PRESTACIONAL</td><td>DIR GRAL DE MONITOREO DE LA GESTION DE PRESTACIONES</td><td>DANY CONO DE SOSA VARELA</td></tr>
+                      <tr><td id="btn10001891">10001891</td><td>RODA</td><td>AC105ZW</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0000</td><td>JEFATURA REGIONAL BONAERENSE V</td><td>JR BONAERENSE V</td><td>SERGIO ARIEL AVERSANO</td></tr>
+                      <tr><td id="btn10001935">10001935</td><td>RODA</td><td>AC295WX</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003B0040</td><td>UDAI LAFERRERE</td><td>JR CONURBANO IV</td><td>SERGIO DAMIAN CERVIÑO</td></tr>
+                      <tr><td id="btn10001780">10001780</td><td>RODA</td><td>AC934VZ</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200450050</td><td>UDAI METAN</td><td>JR NORTE</td><td>SILVANA DEL VALLE SANCHEZ</td></tr>
+                      <tr><td id="btn10001690">10001690</td><td>RODA</td><td>AC934UU</td><td>CHEVROLET - S10 2.8 TD 4X2 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200460120</td><td>UDAI LA RIOJA</td><td>JR NOROESTE</td><td>SILVIA DEL VALLE GAITAN</td></tr>
+                      <tr><td id="btn10001978">10001978</td><td>RODA</td><td>AC769LY</td><td>CHEVROLET - S10 2.8 TD 4X4 LS</td><td>PICK-UP CABINA DOBLE</td><td>2018</td><td>A005</td><td>P200410080</td><td>UDAI LABOULAYE</td><td>JR CENTRO</td><td>SILVIA PATRICIA MARZETTI</td></tr>
+                      <tr><td id="btn10001586">10001586</td><td>RODA</td><td>AC106BU</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003C0060</td><td>UDAI SAN NICOLAS</td><td>JR BONAERENSE V</td><td>SOLEDAD ARGENTE</td></tr>
+                      <tr><td id="btn10001939">10001939</td><td>RODA</td><td>AC295XN</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430210</td><td>UDAI CONCORDIA II</td><td>JR LITORAL</td><td>VALERIA ALEJANDRA LOUREYRO</td></tr>
+                      <tr><td id="btn10001908">10001908</td><td>RODA</td><td>AC295XY</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2017</td><td>A005</td><td>P2003B0060</td><td>UDAI RAFAEL CASTILLO</td><td>JR CONURBANO IV</td><td>VICTOR AGUSTIN MARTONE</td></tr>
+                      <tr><td id="btn10001933">10001933</td><td>RODA</td><td>AC295WZ</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0180</td><td>UDAI BURZACO</td><td>JR CONURBANO III</td><td>VIVIANA BEATRIZ TACHELLA</td></tr>
+                      <tr><td id="btn10001536">10001536</td><td>RODA</td><td>AC106BF</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P200430190</td><td>UDAI VILLA CAÑAS</td><td>JR LITORAL</td><td>WALTER ANDRES MERY</td></tr>
+                      <tr><td id="btn10001580">10001580</td><td>RODA</td><td>AC106CK</td><td>PEUGEOT - PARTNER PATAGONICA 1.6N VTC PLUS</td><td>SEDAN 5 PTAS</td><td>2018</td><td>A005</td><td>P2003A0010</td><td>UDAI AVELLANEDA</td><td>JR CONURBANO III</td><td>YANINA EUGENIA LLANES</td></tr>
+                    </tbody>
+
+
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+        
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <!-- <script src="js/demo/datatables-demo.js"></script> -->
+
+  <!-- Exportar a Excel -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+    <!-- <script src="js/datatable.js"></script> -->
+
+    <script>
+      $(document).ready(function() {
+        $('#dataTable').DataTable( {
+        dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+        buttons: [ 'copy', 'excel'],
+        columnDefs: [
+              { targets: [3, 4, 8, 9, 10], className: 'text-left' },
+              { targets: '_all', className: 'dt-center' }
+            ],
+          //"scrollCollapse": true,
+            "paging": true,
+          //"info": false,
+          // "lengthMenu": [[5,10,50,100,-1], [5,10,50,100,"Todo"]],
+        "pageLength": 12,
+          "language": {
+              "zeroRecords": "No se encontraron coincidencias.",
+              "paginate": {
+                  "first": "Primera",
+                  "last": "Última ",
+                  "next": "  >>",
+                  "previous": "<<  "                   
+              },
+              "sLengthMenu": "Mostrar de a _MENU_ resultados",
+              "emptyTable": "No hay datos disponibles en la tabla.",
+              "search": "Buscar... ",
+              "info": "Mostrando _START_ de _END_ (de _TOTAL_ resultados)",
+              "infoEmpty": "Mostrando 0 de 0 resultados",
+              "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+          }
+          } );
+      } );
+    </script>
+
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="js/scriptSA.js"></script>
+
+
+
+</body>
+
+</html>

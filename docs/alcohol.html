@@ -1,0 +1,2798 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+
+  <!-- Favicons -->
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i style="font-size: large;" class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="saldo.html">
+          <i class="fas fa-file-invoice-dollar"></i>
+        <span>Saldos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item"> -->
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        <!-- </li> -->
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          
+            <h1 class="h1 mb-4 text-gray-800 text-center">Salidas de Depósito - <strong>Artículos de Prevención</strong></h1>
+
+            <h6 class="font-weight-bold text-primary ml-2 mt-3"> Actualizado al <span class="font-weight-bold text-primary pr-0" style="border: none; background-color: #f8f9fc;" disabled="true" type="text" id="ActualizadoAlcohol"></span></h6>
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+                <div class="card shadow mb-4 border-left-info">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">ALCOHOL EN GEL 500cm3 - MAT. 763 <span class="text-danger">(sin stock)</span></h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart763"></canvas>
+                    </div>
+                  </div>
+                  
+                  <div class="card shadow mb-0">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" style="background-color: #ffe7e7;">
+                      <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                        <span class="font-weight-bold text-danger pr-0" id="stock763"></span>
+                         | Cobertura: 
+                         <span class="font-weight-bold text-dark pr-0" id="restante763"></span>
+                          meses
+                      </h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma763"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes763"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual763"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>3.708</td>
+                              <td>309</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>15.969</td>
+                              <td>1.331</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>41.917</td>
+                              <td>3.493</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>49.325</td>
+                              <td>4.110</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+            </div>
+
+              <!-- Area Chart -->
+              <div class="col-12 col-xl-4">
+                <div class="card shadow mb-4 border-left-warning">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">BARBIJOS DESCARTABLES - MAT. 2239 <span class="text-danger"></span></h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart2239"></canvas>
+                    </div>
+                  </div>
+                  
+                  <div class="card shadow mb-0">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" >
+                      <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                        <span class="font-weight-bold text-dark pr-0" id="stock2239"></span>
+                         | Cobertura: 
+                         <span class="font-weight-bold text-dark pr-0" id="restante2239"></span>
+                          meses
+                      </h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma2239"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes2239"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual2239"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>617</td>
+                              <td>51</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>22.742</td>
+                              <td>1.895</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>28.927</td>
+                              <td>2.411</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>8.140</td>
+                              <td>678</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+
+              <!-- Area Chart -->
+             <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-secondary">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">ALCOHOL ETILICO 5Lt. - MAT. 6148<span class="text-warning"></span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart6148"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                      <span class="font-weight-bold text-dark pr-0" id="stock6148"></span>
+                       | Cobertura: 
+                       <span class="font-weight-bold text-dark pr-0" id="restante6148"></span>
+                        meses
+                    </h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6148"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6148"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual6148"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>40</td>
+                              <td>3</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>77</td>
+                              <td>6</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>216</td>
+                              <td>18</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>136</td>
+                              <td>11</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Area Chart PANTALLA ACRÍLICA DE PROTECCIÓN 90X60 - MAT. 6141-->
+            <div class="col-12 col-xl-4" style="display: none;">
+              <div class="card shadow mb-4 border-left-secondary">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">PANTALLA ACRÍLICA DE PROTECCIÓN 90X60 - MAT. 6141 <span class="text-danger"></span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart6141"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                      <span class="font-weight-bold text-dark pr-0" id="stock6141"></span>
+                       | Cobertura: 
+                       <span class="font-weight-bold text-dark pr-0" id="restante6141"></span>
+                        meses
+                    </h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6141"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6141"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual6141"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>491</td>
+                              <td>41</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>291</td>
+                              <td>24</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>2.901</td>
+                              <td>242</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>2.778</td>
+                              <td>232</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+              <!-- Area Chart ALFOMBRAS; POLIETILENO (COVID) - MAT. 6222-->
+              <div class="col-12 col-xl-4" style="display: none;">
+                <div class="card shadow mb-4 border-left-warning">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">ALFOMBRAS; POLIETILENO (COVID) - MAT. 6222<span class="text-danger"></span></h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart6222"></canvas>
+                    </div>
+                  </div>
+                  <div class="card shadow mb-0">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                      <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                        <span class="font-weight-bold text-dark pr-0" id="stock6222"></span>
+                         | Cobertura: 
+                         <span class="font-weight-bold text-dark pr-0" id="restante6222"></span>
+                          meses
+                      </h6>
+                    </a>
+                      <!-- Card Content - Collapse -->
+                      <div class="collapse show" id="collapseCard">
+                        <div class="card-body pt-1 pb-1">
+                          <table class="table table-sm table-bordered">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col" class="text-center align-middle">Año</th>
+                                <th scope="col" class="text-center align-middle">Total Año</th>
+                                <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                                <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                              </tr>
+                            </thead>
+                            <tbody style="text-align: center;">
+                              <tr>
+                                <th scope="row">2024</th>
+                                <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6222"></td>
+                                <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6222"></td>
+                                <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual6222"></td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2023</th>
+                                <td>102</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2022</th>
+                                <td>320</td>
+                                <td>27</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2021</th>
+                                <td>21</td>
+                                <td>2</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- Area Chart TERMÓMETRO INFRARROJO DIGITAL - MAT. 6341-->
+              <div class="col-12 col-xl-4" style="display: none;">
+                <div class="card shadow mb-4 border-left-success">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark"><span class="text-primary"></span> TERMÓMETRO INFRARROJO DIGITAL - MAT. 6341 <span class="text-danger"></span></h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="">
+                    <div class="chart-area">
+                      <canvas id="myAreaChart6341"></canvas>
+                    </div>
+                  </div>
+                  <div class="card shadow mb-0">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                      <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                        <span class="font-weight-bold text-dark pr-0" id="stock6341"></span>
+                         | Cobertura: 
+                         <span class="font-weight-bold text-dark pr-0" id="restante6341"></span>
+                          meses
+                      </h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6341"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6341"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual6341"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>10</td>
+                              <td>1</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>164</td>
+                              <td>14</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>66</td>
+                              <td>6</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+
+            <!-- <div class="col-xl-3"></div> -->
+
+            <!-- Area Chart MÁSCARA PROTECCIÓN FACIAL - MAT. 6130-->
+            <div class="col-12 col-xl-4" style="display: none;">
+              <div class="card shadow mb-4 border-left-dark">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">MÁSCARA PROTECCIÓN FACIAL - MAT. 6130 <span class="text-danger"></span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart6130"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                      <span class="font-weight-bold text-dark pr-0" id="stock6130"></span>
+                       | Cobertura: 
+                       <span class="font-weight-bold text-dark pr-0" id="restante6130"></span>
+                        meses
+                    </h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6130"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6130"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 45px; background-color: white;" disabled="true" type="text" id="interAnual6130"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>36</td>
+                              <td>3</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>430</td>
+                              <td>36</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>2.410</td>
+                              <td>201</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>7.215</td>
+                              <td>601</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-primary">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark"><span class="text-primary"></span> ALCOHOL EN GEL BIDON 5Lt. - MAT. 3927<span class="text-danger"> (sin stock)</span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart3927"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" style="background-color: #ffe7e7;">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                      <span class="font-weight-bold text-danger pr-0" id="stock3927"></span>
+                       | Cobertura: 
+                       <span class="font-weight-bold text-dark pr-0" id="restante3927"></span>
+                        meses
+                    </h6>
+                  </a>
+                  <!-- Card Content - Collapse -->
+                  <div class="collapse show" id="collapseCard">
+                    <div class="card-body pt-1 pb-1">
+                      <table class="table table-sm table-bordered">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col" class="text-center align-middle">Año</th>
+                            <th scope="col" class="text-center align-middle">Total Año</th>
+                            <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                            <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                          </tr>
+                        </thead>
+                        <tbody style="text-align: center;">
+                          <tr>
+                            <th scope="row">2023</th>
+                            <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma3927"></td>
+                            <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes3927"></td>
+                            <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual3927"></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2022</th>
+                            <td>2.483</td>
+                            <td>207</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2021</th>
+                            <td>3.586</td>
+                            <td>299</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">2020</th>
+                            <td>693</td>
+                            <td>58</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+              <!-- <div class="col-xl-1"></div> -->
+
+              <!-- Area Chart PANEL DIVISORIO 5444-->
+            <div class="col-12 col-xl-4" style="display: none;">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">PANEL DIVISORIO - 75X50 CM - MAT. 5444<span class="text-danger"> (sin stock)</span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart5444"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" style="background-color: #ffe7e7;">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                      <span class="font-weight-bold text-danger pr-0" id="stock5444"></span>
+                       | Cobertura: 
+                       <span class="font-weight-bold text-dark pr-0" id="restante5444"></span>
+                        meses
+                    </h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma5444"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes5444"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual5444"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2022</th>
+                              <td>656</td>
+                              <td>55</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td>4.325</td>
+                              <td>360</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>8</td>
+                              <td>...</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Area Chart TERMOMETRO-->
+            <div class="col-12 col-xl-3" style="display: none;">
+              <div class="card shadow mb-4 border-left-danger">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">TERMÓMETRO MED. DIGITAL - MAT. 6138 <span class="text-danger">(sin stock)</span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart6138"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" style="background-color: #ffe7e7;">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: <input class="font-weight-bold text-danger pr-0" style="border: none; width: 30px; background-color: #ffe7e7;" disabled="true" type="text" id="stock6138">| Cobertura: <input class="font-weight-bold text-dark pr-0" style="border: none; width: 30px; background-color: #ffe7e7;" disabled="true" type="text" id="restante6138"> meses</h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6138"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6138"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>432</td>
+                              <td>36</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Area Chart ALFOMBRA 6140-->
+            <div class="col-12 col-xl-3" style="display: none;">
+              <div class="card shadow mb-4 border-left-danger">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">ALFOMBRA SANITIZANTE - MAT. 6140<span class="text-danger"> (sin stock)</span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart6140"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" style="background-color: #ffe7e7;">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: <input class="font-weight-bold text-danger pr-0" style="border: none; width: 30px; background-color: #ffe7e7;" disabled="true" type="text" id="stock6140">| Cobertura: <input class="font-weight-bold text-dark pr-0" style="border: none; width: 35px; background-color: #ffe7e7;" disabled="true" type="text" id="restante6140"> meses</h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6140"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6140"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>575</td>
+                              <td>48</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Area Chart ALCOHOL 5606-->
+            <div class="col-12 col-xl-3" style="display: none;">
+              <div class="card shadow mb-4 border-left-danger">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">ALCOHOL EN GEL 250cm3 - MAT. 5606<span class="text-danger"> (sin stock)</span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart5606"></canvas>
+                  </div>
+                </div>
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard" style="background-color: #ffe7e7;">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: <input class="font-weight-bold text-danger pr-0" style="border: none; width: 30px; background-color: #ffe7e7;" disabled="true" type="text" id="stock5606">| Cobertura: <input class="font-weight-bold text-dark pr-0" style="border: none; width: 30px; background-color: #ffe7e7;" disabled="true" type="text" id="restante5606"> meses</h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2021</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma5606"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes5606"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;">-</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2020</th>
+                              <td>43.145</td>
+                              <td>3.595</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- REPELENTE DE INSECTOS - MAT. 6302-->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-secondary">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-secondary">REPELENTE DE INSECTOS - MAT. 6302 <span class="text-danger"></span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChart6302"></canvas>
+                  </div>
+                </div>
+
+                <div class="card shadow mb-0">
+                  <!-- Card Header - Accordion -->
+                  <a href="#collapseCard" class="d-block card-header collapsed py-2 text-center" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                    <h6 class="m-0 font-weight-bold text-gray-800 text-center">Stock actual: 
+                      <span class="font-weight-bold text-dark pr-0" id="stock6302"></span>
+                        | Cobertura: 
+                        <span class="font-weight-bold text-dark pr-0" id="restante6302"></span>
+                        meses
+                    </h6>
+                  </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCard">
+                      <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered">
+                          <thead class="thead-dark">
+                            <tr>
+                              <th scope="col" class="text-center align-middle">Año</th>
+                              <th scope="col" class="text-center align-middle">Total Año</th>
+                              <th scope="col" class="text-center align-middle" data-toggle="tooltip" data-html="true" data-placement="top" title="No se tiene en cuenta el mes en curso para el cálculo de Promedio Mensual">Promedio ´24 *</th>
+                              <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th>
+                            </tr>
+                          </thead>
+                          <tbody style="text-align: center;">
+                            <tr>
+                              <th scope="row">2024</th>
+                              <td><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="suma6302"></td>
+                              <td style="width: 27%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes6302"></td>
+                              <td class="font-weight-bold text-dark text-center" style="width: 30%;"><input class="text-center font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="interAnual6302"></td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2023</th>
+                              <td>22.563</td>
+                              <td>1.880</td>
+                            </tr>
+                            <!-- <tr>
+                              <th scope="row">2022</th>
+                              <td>7.236</td>
+                              <td>603</td>
+                            </tr> -->
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                </div>
+
+              </div>
+            </div>
+            
+
+         
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-torta.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+  <script src="extras.js"></script>
+
+  <!-- Graficos JS -->
+  <script>
+  document.getElementById("ActualizadoAlcohol").innerHTML = FechaActualizacion;
+    // ALCOHOL EN GEL 500CM3 - Mat. 763
+    var ctx763 = document.getElementById("myAreaChart763");
+        
+        var myLineChart = new Chart(ctx763, {
+          type: 'line',
+          data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+              label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)", pointHitRadius: 10, pointBorderWidth: 2,                        
+              data: [0, 0, 0, 0, 0, 0, 712, 18593, 18397, 8558, 4735, 0],
+            }
+            ,
+            {
+              label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)", pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [8345, 3186, 5281, 3784, 2884, 3034, 4707, 3458, 2269, 1760, 1837, 1372]
+            }
+            ,
+            {
+              label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)", pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [1061, 1896, 4524, 4178, 230, 582, 295, 1894, 477, 122, 370, 340],
+            }
+            ,
+            {
+              label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)", pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [379, 511, 311, 431, 430, 576, 335, 464, 256, 15, 0, 0],
+            }
+            ,
+            {
+              label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)", pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: data763,
+            }
+          ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'date'
+                },
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 12
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  maxTicksLimit: 8,
+                  padding: 10,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return '' + number_format(value);
+                  }
+                },
+                gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              intersect: false,
+              mode: 'index',
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+              }
+            }
+          }
+        });        
+        var suma763 = 0;
+        data763.forEach (function(numero){
+            suma763 += parseInt(numero, 10);
+        });
+        document.getElementById("suma763").value = number_format(suma763);
+        var cantxmes763 = (suma763-(data763[(data763.length-1)]))/(data763.length-1);
+        
+        var interAnual763 = 209;
+        var restanteanio763 = stockActual763/interAnual763;
+        var restante763 = document.getElementById("restante763");
+        restante763.innerHTML = parseFloat(restanteanio763, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes763").value = number_format(parseInt(cantxmes763, 10));
+        var stock763 = document.getElementById("stock763");
+        stock763.innerHTML = number_format(parseInt(stockActual763, 10));
+        document.getElementById("interAnual763").value = number_format(parseInt(interAnual763, 10));
+
+    // Barbijo Descartable - Mat. 2239
+    var ctx2239 = document.getElementById("myAreaChart2239");
+        
+        var myLineChart = new Chart(ctx2239, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [0, 0, 0, 110, 324, 65, 3653, 1159, 838, 1315, 1158, 0],
+            }
+            ,
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [3053, 2374, 2825, 1771, 1769, 990, 1813, 2675, 3788, 2409, 3057, 2403],
+            }
+            ,
+            {
+            label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)",
+            pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [1309,	3979,	3085,	3872,	2858,	1782,	1843,	1509,	1379,	485,	211,	430],
+            }
+            ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)",
+            pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [97, 216, 66, 57, 23, 14, 31, 44, 40, 29, 0, 0],
+            }
+            ,
+            {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+            pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: data2239,
+            }
+          ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });        
+        var suma2239 = 0;
+        data2239.forEach (function(numero){
+            suma2239 += parseInt(numero, 10);
+        });
+        document.getElementById("suma2239").value = number_format(suma2239);
+        var cantxmes2239 = (suma2239-(data2239[(data2239.length-1)]))/(data2239.length-1);
+        
+        var interAnual2239 = 21;
+        var restanteanio2239 = stockActual2239/interAnual2239;
+        var restante2239 = document.getElementById("restante2239");
+        restante2239.innerHTML = parseFloat(restanteanio2239, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes2239").value = number_format(parseInt(cantxmes2239, 10));
+        var stock2239 = document.getElementById("stock2239");
+        stock2239.innerHTML = number_format(parseInt(stockActual2239, 10));
+        document.getElementById("interAnual2239").value = number_format(parseInt(interAnual2239, 10));
+
+    // Alcohol en Gel 5Lt. - Mat. 3927
+    var ctx3927 = document.getElementById("myAreaChart3927");
+        
+        var myLineChart = new Chart(ctx3927, {
+          type: 'line',
+          data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+              label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", ointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)", pointHitRadius: 10, pointBorderWidth: 2,
+              data: [0, 0, 0, 0, 0, 0, 0, 6, 132, 453, 169, 0],
+            }
+            ,
+            {
+              label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)", pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [872, 102, 162, 121, 36, 256, 499, 296, 428, 398, 298, 118],
+              // data: [0, 0, 0, 0, 0, 0, 960, 3600, 7434, 8262, 7809, 7750, 7750, 6878, 6776, 6614, 6493],
+            }
+            ,
+            {
+              label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)", pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [60, 104, 59, 70, 44, 2037, 32, 36, 35, 6, 0, 0],
+            }
+            ,
+            {
+              label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)", pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            }
+            ,
+            {
+              label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)", pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: data3927,
+            }
+          ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'date'
+                },
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 12
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  maxTicksLimit: 7,
+                  padding: 10,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return '' + number_format(value);
+                  }
+                },
+                gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              intersect: false,
+              mode: 'index',
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+              }
+            }
+          }
+        });        
+        var suma3927 = 0;
+        data3927.forEach (function(numero){
+            suma3927 += parseInt(numero, 10);
+        });
+        document.getElementById("suma3927").value = number_format(suma3927);
+        var cantxmes3927 = (suma3927-(data3927[(data3927.length-1)]))/(data3927.length-1);
+        
+        var interAnual3927 = 0.00001;
+        var restanteanio3927 = stockActual3927/interAnual3927;
+        var restante3927 = document.getElementById("restante3927");
+        restante3927.innerHTML = parseFloat(restanteanio3927, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes3927").value = number_format(parseInt(cantxmes3927, 10));
+        var stock3927 = document.getElementById("stock3927");
+        stock3927.innerHTML = number_format(parseInt(stockActual3927, 10));
+        document.getElementById("interAnual3927").value = number_format(parseInt(interAnual3927, 10));
+
+    // Alcohol en Gel 5Lt. - Mat. 5606 - SIN STOCK
+    var ctx5606 = document.getElementById("myAreaChart5606");
+        var myLineChart = new Chart(ctx5606, {
+          type: 'line',
+          data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+              label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", ointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)", pointHitRadius: 10, pointBorderWidth: 2,
+              data: [456, 240, 8995, 6891, 15034, 8837, 2692, 0, 0, 0, 0, 0],
+            },
+            {
+              label: "2021",
+              lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+              pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [0, 0, 0, 0, 0]
+            }
+            ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'date'
+                },
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 12
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  maxTicksLimit: 5,
+                  padding: 10,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return '' + number_format(value);
+                  }
+                },
+                gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              intersect: false,
+              mode: 'index',
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+              }
+            }
+          }
+        });
+        data5606 = [0, 0, 0, 0, 0, 0, 0];
+        var suma5606 = 0;
+        data5606.forEach (function(numero){
+            suma5606 += parseInt(numero, 10);
+        });
+        document.getElementById("suma5606").value = number_format(suma5606);
+        var cantxmes5606 = (suma5606-(data5606[(data5606.length-1)]))/(data5606.length-1);
+        var stockActual5606 = 0-(data5606[(data5606.length-1)]);
+        // restanteanio = stockActual5606/2214;
+        var restanteanio5606 = 0;
+        document.getElementById("restante5606").value = parseFloat(restanteanio5606, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes5606").value = number_format(parseInt(cantxmes5606, 10));
+        document.getElementById("stock5606").value = number_format(parseInt(stockActual5606, 10));
+
+    // Mascara Proteccion Facial - Mat. 6130
+    var ctx6130 = document.getElementById("myAreaChart6130");
+        
+        var myLineChart = new Chart(ctx6130, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)", pointHitRadius: 10, pointBorderWidth: 2, //6046
+            data: [0, 0, 0, 260, 2089, 19, 1583, 393, 384, 1318, 1205, 0],
+            }
+            ,
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [1110, 645, 617, 25, 0, 0, 0, 0, 0, 0, 10, 3]
+            }
+            ,
+            {
+            label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)",
+            pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba2, 156, 25, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [146, 185, 56, 0, 20, 0, 20, 3, 0, 0, 0, 0],
+            }
+            ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)",
+            pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba235,52,222, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [31, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0],
+            }
+            ,
+            {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+            pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: data6130,
+            }
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 8,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+        suma6130 = 0;
+        data6130.forEach (function(numero){
+            suma6130 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6130").value = number_format(suma6130);
+        cantxmes6130 = (suma6130-(data6130[(data6130.length-1)]))/(data6130.length-1);
+        var interAnual6130 = 0.1;
+        restanteanio6130 = stockActual6130/interAnual6130;
+        var restante6130 = document.getElementById("restante6130");
+        restante6130.innerHTML = parseFloat(restanteanio6130, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6130").value = number_format(parseInt(cantxmes6130, 10));
+        var stock6130 = document.getElementById("stock6130");
+        stock6130.innerHTML = number_format(parseInt(stockActual6130, 10));
+        document.getElementById("interAnual6130").value = number_format(parseInt(interAnual6130, 10));
+
+    // Termómetro medic. Digital - Mat. 6138 - SIN STOCK
+    var ctx6138 = document.getElementById("myAreaChart6138");
+        var myLineChart = new Chart(ctx6138, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)", pointHitRadius: 10, pointBorderWidth: 2,                          
+            data: [0, 0, 0, 0, 0, 25, 374, 0, 1, 4, 57, 0],
+            },
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [4, 18, 17, 29, 0, 0, 0, 0, 0],
+            // data: [0, 0, 0, 0, 25, 500, 500, 126, 130, 129, 125, 68, 68, 64, 46, 29, 0],
+            }
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+        data6138 = [4, 18, 17, 29, 0, 0, 0, 0, 0];
+        suma6138 = 0;
+        data6138.forEach (function(numero){
+            suma6138 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6138").value = number_format(suma6138);
+        cantxmes6138 = (suma6138-(data6138[(data6138.length-1)]))/(data6138.length-1);
+        stockActual6138 = 0-(data6138[(data6138.length-1)]);
+        restanteanio6138 = stockActual6138/1;
+        document.getElementById("restante6138").value = parseFloat(restanteanio6138, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6138").value = number_format(parseInt(cantxmes6138, 10));
+        document.getElementById("stock6138").value = number_format(parseInt(stockActual6138, 10));
+
+    // Alfombra Sanizitante - Mat. 6140 - SIN STOCK
+    var ctx6140 = document.getElementById("myAreaChart6140");
+        var myLineChart = new Chart(ctx6140, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",            pointHitRadius: 10, pointBorderWidth: 2, //573
+            data: [0, 0, 0, 0, 44, 54, 318, 73, 37, 47, 2, 25],
+            },
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [0, 0, 0, 0, 0],
+            // data: [0, 0, 0, 0, 100, 556, 502, 184, 111, 74, 27, 25, 0],
+            }
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+        data6140 = [0, 0, 0, 0, 0, 0, 0];
+        suma6140 = 0;
+        data6140.forEach (function(numero){
+            suma6140 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6140").value = number_format(suma6140);
+        var cantxmes6140 = (suma6140-(data6140[(data6140.length-1)]))/(data6140.length-1);
+        stockActual6140 = 0-(data6140[(data6140.length-1)]);
+        //restanteanio6140 = stockActual6140/11;
+        var restanteanio6140 = 0;
+        document.getElementById("restante6140").value = parseFloat(restanteanio6140, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6140").value = number_format(parseInt(cantxmes6140, 10));
+        document.getElementById("stock6140").value = number_format(parseInt(stockActual6140, 10));
+
+    // PANTALLA ACRÍLICA DE PROTECCIÓN 90X60 - Mat. 6141
+    var ctx6141 = document.getElementById("myAreaChart6141");
+        
+        var myLineChart = new Chart(ctx6141, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",         pointHitRadius: 10, pointBorderWidth: 2,                          
+            data: [0, 0, 0, 0, 0, 0, 2306, 216, 35, 173, 48, 0],
+            }
+            ,
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)", pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: [24, 3, 519, 921, 238, 99, 132, 92, 342, 0, 515, 16],
+            }
+            ,
+            {
+            label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)", pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: [14, 27, 19, 32, 19, 24, 33, 72, 18, 28, 5, 0],
+            }
+            ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)", pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: [4, 0, 0, 0, 87, 137, 83, 91, 40, 29, 20, 0],
+            }
+            ,
+            {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)", pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: data6141,
+            }
+          ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 8,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+        suma6141 = 0;
+        data6141.forEach (function(numero){
+            suma6141 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6141").value = number_format(suma6141);
+        var cantxmes6141 = (suma6141-(data6141[(data6141.length-1)]))/(data6141.length-1);
+        
+        var interAnual6141 = 41;
+        var restanteanio6141 = stockActual6141/interAnual6141;
+        var restante6141 = document.getElementById("restante6141");
+        restante6141.innerHTML = parseFloat(restanteanio6141, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6141").value = number_format(parseInt(cantxmes6141, 10));
+        var stock6141 = document.getElementById("stock6141");
+        stock6141.innerHTML = number_format(parseInt(stockActual6141, 10));
+        document.getElementById("interAnual6141").value = number_format(parseInt(interAnual6141, 10));
+
+    // Alcohol Etilico 5Lt. - Mat. 6148
+    var ctx6148 = document.getElementById("myAreaChart6148");
+        
+        var myLineChart = new Chart(ctx6148, {
+          type: 'line',
+          data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+              label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", ointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)", pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, ointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)", pointHitRadius: 10, pointBorderWidth: 2, //126
+              data: [0, 0, 0, 0, 0, 0, 55, 3, 67, 1, 10, 0],
+            }
+            ,
+            {
+              label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)", pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [66, 0, 0, 46, 10, 8, 1, 10, 21, 6, 15, 33],
+            }
+            ,
+            {
+              label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)", pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [15, 30, 20, 0, 10, 0, 2, 0, 0, 0, 0, 0],
+            }
+            ,
+            {
+              label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)", pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: [0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0],
+            }
+            ,
+            {
+              label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)", pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+              pointHitRadius: 10, pointBorderWidth: 2,
+              data: data6148,
+            }
+          ],
+          },
+          options: {
+            maintainAspectRatio: false,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                time: {
+                  unit: 'date'
+                },
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 12
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  maxTicksLimit: 5,
+                  padding: 10,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return '' + number_format(value);
+                  }
+                },
+                gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              intersect: false,
+              mode: 'index',
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+              }
+            }
+          }
+        });      
+        var suma6148 = 0;
+        data6148.forEach (function(numero){
+            suma6148 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6148").value = number_format(suma6148);
+        var cantxmes6148 = (suma6148-(data6148[(data6148.length-1)]))/(data6148.length-1);
+        
+        var interAnual6148 = 3;
+        var restanteanio6148 = stockActual6148/interAnual6148;
+        var restante6148 = document.getElementById("restante6148");
+        restante6148.innerHTML = parseFloat(restanteanio6148, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6148").value = number_format(parseInt(cantxmes6148, 10));
+        var stock6148 = document.getElementById("stock6148");
+        stock6148.innerHTML = number_format(parseInt(stockActual6148, 10));
+        document.getElementById("interAnual6148").value = number_format(parseInt(interAnual6148, 10));
+
+    // Alfombra Sanizitante - Mat. 6222
+    var ctx6222 = document.getElementById("myAreaChart6222");
+        
+        var myLineChart = new Chart(ctx6222, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 6, 2],
+            }
+            ,
+            {
+            label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)",
+            pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [20, 154, 53, 20, 22, 9, 16, 7, 18, 0, 1, 0],
+            }
+            ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)",
+            pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [1, 1, 4, 2, 21, 13, 11, 28, 8, 7, 6, 0],
+            }
+            ,
+            {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+            pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: data6222,
+            }
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 8,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + parseFloat(value, 10).toFixed(0).replace('.', ',');
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });        
+        var suma6222 = 0;
+        data6222.forEach (function(numero){
+            suma6222 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6222").value = number_format(suma6222);
+        var cantxmes6222 = (suma6222-(data6222[(data6222.length-1)]))/(data6222.length-1);
+        
+        var interAnual6222 = 8;
+        var restanteanio6222 = stockActual6222/interAnual6222;
+        var restante6222 = document.getElementById("restante6222");
+        restante6222.innerHTML = parseFloat(restanteanio6222, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6222").value = number_format(parseInt(cantxmes6222, 10));
+        var stock6222 = document.getElementById("stock6222");
+        stock6222.innerHTML = number_format(parseInt(stockActual6222, 10));
+        document.getElementById("interAnual6222").value = number_format(parseInt(interAnual6222, 10));
+
+        // Taco de Papel 9x9 Multicolor - Mat. 6302
+    var ctx6302 = document.getElementById("myAreaChart6302");
+        
+        var myLineChart = new Chart(ctx6302, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            // {
+            // label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)", pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)",
+            // pointHitRadius: 10, pointBorderWidth: 2,
+            // data: [1, 0, 0, 0, 0, 15, 530, 777, 1264, 406, 0, 0],
+            // }
+            // ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)", pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [25, 10764, 9204, 684, 840, 168, 24, 62, 264, 420, 108, 0],
+            }
+            ,
+            {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)", pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: data6302,
+            }
+          ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 8,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });        
+        var suma6302 = 0;
+        data6302.forEach (function(numero){
+            suma6302 += parseInt(numero, 10);
+        });
+        // console.log(suma6302);
+        document.getElementById("suma6302").value = number_format(suma6302).replace(',', '.');
+        var cantxmes6302 = (suma6302-(data6302[(data6302.length-1)]))/(data6302.length-1);
+        
+        var interAnual6302 = 988;
+        var restanteanio6302 = stockActual6302/interAnual6302;
+        var restante6302 = document.getElementById("restante6302");
+        restante6302.innerHTML = parseFloat(restanteanio6302, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6302").value = number_format(parseInt(cantxmes6302, 10)).replace(',', '.');
+        var stock6302 = document.getElementById("stock6302");
+        stock6302.innerHTML = number_format(parseInt(stockActual6302, 10)).replace(',', '.');
+        document.getElementById("interAnual6302").value = number_format(parseInt(interAnual6302, 10)).replace(',', '.'); 
+
+
+    // Termómetro medic. Digital - Mat. 6341 
+    var ctx6341 = document.getElementById("myAreaChart6341");
+        
+        var myLineChart = new Chart(ctx6341, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [0, 0, 0, 0, 0, 0, 28, 22, 0, 0, 4, 12],
+            }
+            ,
+            {
+            label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)",
+            pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba2, 156, 25, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [59, 43, 15, 10, 17, 8, 6, 1, 5, 0, 0, 0],
+            }
+            ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)",
+            pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba235,52,222, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [1, 3, 0, 0, 0, 1, 0, 3, 1, 1, 0, 0],
+            }
+            ,
+            {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+            pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: data6341,
+            }
+            ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 8,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });
+        var suma6341 = 0;
+        data6341.forEach (function(numero){
+            suma6341 += parseInt(numero, 10);
+        });
+        document.getElementById("suma6341").value = number_format(suma6341);
+        var cantxmes6341 = (suma6341-(data6341[(data6341.length-1)]))/(data6341.length-1);
+        
+        var interAnual6341 = 1;
+        var restanteanio = stockActual6341/interAnual6341;
+        var restante6341 = document.getElementById("restante6341");
+        restante6341.innerHTML = parseFloat(restanteanio, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes6341").value = number_format(parseInt(cantxmes6341, 10));
+        var stock6341 = document.getElementById("stock6341");
+        stock6341.innerHTML = number_format(parseInt(stockActual6341, 10));
+        document.getElementById("interAnual6341").value = number_format(parseInt(interAnual6341, 10));
+
+    // PANEL DIVISORIO-MATERIAL: MDF-75X50 CM - Mat. 5444 - A014 / SIN STOCK
+    var ctx5444 = document.getElementById("myAreaChart5444");
+        
+        var myLineChart = new Chart(ctx5444, {
+        type: 'line',
+        data: {
+            labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+            datasets: [
+            {
+            label: "2020", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",         pointHitRadius: 10, pointBorderWidth: 2,                          
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0],
+            }
+            ,
+            {
+            label: "2021", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)", pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: [0, 10, 75, 334, 15, 1575, 453, 1017, 270, 308, 188, 80],
+            }
+            ,
+            {
+            label: "2022", lineTension: 0.1, backgroundColor: "rgba(2, 156, 25, 0.05)", borderColor: "rgba(2, 156, 25, 1)", pointRadius: 3, pointBackgroundColor: "rgba(2, 156, 25, 1)", pointBorderColor: "rgba(2, 156, 25, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(2, 156, 25, 1)", pointHoverBorderColor: "rgba(2, 156, 25, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: [82, 60, 82, 51, 126, 64, 33, 103, 55, 0, 0, 0],
+            }
+            ,
+            {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(235,52,222, 0.05)", borderColor: "rgba(235,52,222, 1)", pointRadius: 3, pointBackgroundColor: "rgba(235,52,222, 1)", pointBorderColor: "rgba(235,52,222, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(235,52,222, 1)", pointHoverBorderColor: "rgba(235,52,222, 1)", pointHitRadius: 10, pointBorderWidth: 2, 
+            data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            }
+          ],
+        },
+        options: {
+            maintainAspectRatio: false,
+            layout: {
+            padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+            }
+            },
+            scales: {
+            xAxes: [{
+                time: {
+                unit: 'date'
+                },
+                gridLines: {
+                display: false,
+                drawBorder: false
+                },
+                ticks: {
+                maxTicksLimit: 12
+                }
+            }],
+            yAxes: [{
+                ticks: {
+                maxTicksLimit: 5,
+                padding: 10,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                    return '' + number_format(value);
+                }
+                },
+                gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+                }
+            }],
+            },
+            legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            intersect: false,
+            mode: 'index',
+            caretPadding: 10,
+            callbacks: {
+                label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+                }
+            }
+            }
+        }
+        });        
+        var suma5444 = 0;
+        data5444.forEach (function(numero){
+            suma5444 += parseInt(numero, 10);
+        });
+        document.getElementById("suma5444").value = number_format(suma5444);
+        var cantxmes5444 = (suma5444-(data5444[(data5444.length-1)]))/(data5444.length-1);
+        
+        var interAnual5444 = 0.01;
+        var restanteanio5444 = stockActual5444/interAnual5444;
+        var restante5444 = document.getElementById("restante5444");
+        restante5444.innerHTML = parseFloat(restanteanio5444, 10).toFixed(2).replace('.', ',');
+        document.getElementById("promxmes5444").value = number_format(parseInt(cantxmes5444, 10));
+        var stock5444 = document.getElementById("stock5444");
+        stock5444.innerHTML = number_format(parseInt(stockActual5444, 10));
+        document.getElementById("interAnual5444").value = number_format(parseInt(interAnual5444, 10));
+
+        
+ </script>
+
+</body>
+
+</html>

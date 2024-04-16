@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+<!-- Custom styles for this page -->
+<link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA #37bbed
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item active">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i style="font-size: large;" class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="saldo.html">
+          <i class="fas fa-file-invoice-dollar"></i>
+        <span>Saldos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <!-- <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+          <i class="far fa-check-circle"></i>
+          <span>Recepciones</span>
+        </a>
+        <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+            <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+            <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+          </div>
+        </div>
+      </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item"> -->
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        <!-- </li> -->
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-4 text-gray-800 text-center"> <strong>MATERIALES - HISTORICO SALIDAS</strong></h1>
+
+          <div class="row">
+
+          <div class="col-12 col-xl-1"></div>
+          <!-- <div class="col-12 col-xl-1"></div> -->
+
+                                            <script>
+                                              const FechaActual = "10/04/2024 15:00:00"
+                                            </script>
+                
+                <!-- DataTales Example -->
+            <div class="col-12 col-xl-12 mb-4">
+              <div class="card shadow mb-4 border-left-info">
+                  <h5 class="m-0 font-weight-bold text-secondary ml-2 mt-3">Salidas de Depósito - x mes (Actualizado al <span class="font-weight-bold text-primary pr-0" style="border: none;" disabled="true" type="text" id="ActualizadoSaldo"></span>)</h5>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <style type="text/css">
+                      .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+                        color: white !important;
+                        border: 1px solid #36729b;
+                        background-color: #00aced;
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, 00aced));
+                        background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: #00aced;
+                    }
+                    .dataTables_wrapper .dataTables_paginate .paginate_button {
+                        box-sizing: border-box;
+                        display: inline-block;
+                        min-width: 1.5em;
+                        padding: 0.5em 1em;
+                        margin-left: 2px;
+                        text-align: center;
+                        text-decoration: none !important;
+                        cursor: pointer;
+                        cursor: hand;
+                        color: #00aced !important;
+                        border: 1px solid transparent;
+                        border-radius: 2px;
+                    }
+                    .dt-buttons {
+                      margin-left: 20px;
+                    }
+                    button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+                        color: #fff;
+                        background-color: #00aced;
+                        border-color: #00aced;
+                    }
+                    table.dataTable.no-footer {
+                        border-bottom: 1px solid #ddd6d6;
+                    }
+                    .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+                        color: #898181;
+                    }
+                    table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+                        right: 0.5em;
+                        content: "";
+                    }
+                    table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+                        right: 0.5em;
+                        content: "";
+                    }
+                    </style>
+                    <style type="text/css">
+                      .cero{
+                        color: #e74a3b!important;
+                        font-weight: 700!important;
+                      }
+                      .dataTable tbody tr td{
+                          vertical-align: middle!important;
+                            /* padding: 4px 5px; */
+                      }
+                    </style>
+                    <!-- <div>
+                      Elegir Columnas: <a class="toggle-vis" data-column="2">nov-22</a> - <a class="toggle-vis" data-column="3">dic-22</a> - <a class="toggle-vis" data-column="4">Start date</a> - <a class="toggle-vis" data-column="5">Salary</a>
+                    </div> -->
+                    <table class="table table-bordered table-hover text-center table-sm display" id="dataTable" width="100%" cellspacing="0">
+
+                      <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th style="background-color: #757373;">Cod. Material</th><th style="background-color: #757373;" class="text-center">Texto material</th><th>ene´23</th><th>feb´23</th><th>mar´23</th><th>abr´23</th><th>may´23</th><th>jun´23</th><th>jul´23</th><th>ago´23</th><th>sep´23</th><th>oct´23</th><th>nov´23</th><th>dic´23</th><th style="background-color: #045804;">ene´24</th><th style="background-color: #045804;">feb´24</th><th style="background-color: #045804;">mar´24</th><th style="background-color: #a81305;">Total 12 meses</th><th style="background-color: #a81305;">Prom 12 meses</th></tr></thead>
+  
+                      <tbody>
+                        <tr><td>3361</td><td>PAPEL OBRA TAMAÑO A4 (21X29.7CM) 75GR.</td><td>17630</td><td>26640</td><td>24480</td><td>19210</td><td>8300</td><td>21280</td><td>27730</td><td>30020</td><td>14650</td><td>3970</td><td>3490</td><td>440</td><td>11120</td><td>23800</td><td>25960</td><td>189980</td><td>15832</td></tr>
+                        <tr><td>3495</td><td>BOLIGRAFO DESCARTABLE TRAZO 1MM NEGRO</td><td>1473</td><td>7</td><td>4829</td><td>4596</td><td>6239</td><td>3639</td><td>5383</td><td>183</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20040</td><td>1670</td></tr>
+                        <tr><td>836</td><td>RESALTADOR AMARIL TRAZO GR.PTA BIS.P/FAX</td><td>1171</td><td>1838</td><td>1722</td><td>1329</td><td>1608</td><td>1424</td><td>1792</td><td>1955</td><td>1529</td><td>2286</td><td>1306</td><td>0</td><td>2347</td><td>1353</td><td>1429</td><td>18358</td><td>1529</td></tr>
+                        <tr><td>6302</td><td>REPELENTE DE INSECTOS</td><td>25</td><td>10764</td><td>9204</td><td>684</td><td>840</td><td>168</td><td>24</td><td>62</td><td>264</td><td>420</td><td>108</td><td>0</td><td>3980</td><td>1756</td><td>3552</td><td>11858</td><td>988</td></tr>
+                        <tr><td>6795</td><td>SOBRE DE PAPEL -A4 - 80GRM2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10000</td><td>833</td></tr>
+                        <tr><td>145</td><td>BOLIGRAFO PUNTA 1 MM. COLOR AZUL DESCART</td><td>1686</td><td>0</td><td>5757</td><td>5801</td><td>3277</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9078</td><td>756</td></tr>
+                        <tr><td>4390</td><td>CABLE DE FIBRA OPTICA; ADAPTADOR UNIVERS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5660</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3250</td><td>8910</td><td>742</td></tr>
+                        <tr><td>167</td><td>BROCHES P/ABROCHAD N50 P.FILOSAS CJX1000</td><td>1231</td><td>2458</td><td>1905</td><td>1642</td><td>1606</td><td>1592</td><td>1929</td><td>1232</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8001</td><td>666</td></tr>
+                        <tr><td>720</td><td>MARCADOR TRAZO ANCHO NEGRO PUNTA REDONDA</td><td>293</td><td>599</td><td>430</td><td>438</td><td>527</td><td>340</td><td>578</td><td>503</td><td>482</td><td>625</td><td>362</td><td>0</td><td>844</td><td>508</td><td>424</td><td>5631</td><td>469</td></tr>
+                        <tr><td>235</td><td>CARPETA CARTUL.1A CALID T/OFICIO AMARIL.</td><td>461</td><td>474</td><td>660</td><td>378</td><td>496</td><td>915</td><td>787</td><td>541</td><td>505</td><td>542</td><td>240</td><td>0</td><td>373</td><td>335</td><td>424</td><td>5536</td><td>461</td></tr>
+                        <tr><td>203</td><td>CAJA DE ARCHIVO, CARTÓN OFICIO ALTO 12CM</td><td>925</td><td>1235</td><td>1159</td><td>830</td><td>803</td><td>467</td><td>946</td><td>802</td><td>777</td><td>833</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5458</td><td>454</td></tr>
+                        <tr><td>796</td><td>ROLLO DE PAPEL TERMICO</td><td>211</td><td>1000</td><td>417</td><td>463</td><td>327</td><td>214</td><td>467</td><td>451</td><td>398</td><td>787</td><td>301</td><td>0</td><td>515</td><td>396</td><td>327</td><td>4646</td><td>387</td></tr>
+                        <tr><td>234</td><td>CARPETA CARTÓN, 24 X 34 CM</td><td>206</td><td>720</td><td>492</td><td>302</td><td>362</td><td>219</td><td>735</td><td>281</td><td>181</td><td>391</td><td>1081</td><td>0</td><td>216</td><td>319</td><td>291</td><td>4378</td><td>364</td></tr>
+                        <tr><td>4273</td><td>BOLSA FRISELINA</td><td>0</td><td>0</td><td>400</td><td>4300</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4300</td><td>358</td></tr>
+                        <tr><td>837</td><td>RESALTADOR CELESTE TR.GR PTA BISEL.P/FAX</td><td>16</td><td>0</td><td>527</td><td>561</td><td>756</td><td>598</td><td>836</td><td>732</td><td>588</td><td>120</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4196</td><td>349</td></tr>
+                        <tr><td>146</td><td>BOLIGRAFO PUNTA 1 MM. COLOR ROJO DESCART</td><td>334</td><td>550</td><td>508</td><td>526</td><td>558</td><td>357</td><td>668</td><td>497</td><td>509</td><td>483</td><td>60</td><td>0</td><td>35</td><td>0</td><td>0</td><td>3693</td><td>307</td></tr>
+                        <tr><td>160</td><td>BROCHES 2 PATAS DORADOS, NO. 12</td><td>228</td><td>325</td><td>232</td><td>179</td><td>258</td><td>213</td><td>256</td><td>289</td><td>426</td><td>397</td><td>374</td><td>0</td><td>648</td><td>209</td><td>303</td><td>3552</td><td>296</td></tr>
+                        <tr><td>471</td><td>CLIPS METALICOS PLATEADOS DE 33 MM.</td><td>195</td><td>327</td><td>256</td><td>280</td><td>335</td><td>295</td><td>444</td><td>414</td><td>295</td><td>524</td><td>282</td><td>0</td><td>461</td><td>37</td><td>0</td><td>3367</td><td>280</td></tr>
+                        <tr><td>162</td><td>BROCHES 2 PATAS DORADOS, NO. 8</td><td>265</td><td>439</td><td>275</td><td>208</td><td>309</td><td>226</td><td>266</td><td>313</td><td>236</td><td>352</td><td>291</td><td>0</td><td>495</td><td>172</td><td>316</td><td>3184</td><td>265</td></tr>
+                        <tr><td>3360</td><td>PAPEL OBRA TAMAÑO A3 (43X29,7 CM) 80GR.</td><td>0</td><td>305</td><td>100</td><td>600</td><td>201</td><td>100</td><td>100</td><td>100</td><td>300</td><td>300</td><td>150</td><td>0</td><td>500</td><td>300</td><td>450</td><td>3101</td><td>258</td></tr>
+                        <tr><td>144</td><td>BOBINA DE HILO POLIPROPILENO 400 GR.</td><td>140</td><td>196</td><td>160</td><td>232</td><td>201</td><td>172</td><td>305</td><td>253</td><td>185</td><td>329</td><td>183</td><td>0</td><td>428</td><td>190</td><td>215</td><td>2693</td><td>224</td></tr>
+                        <tr><td>126</td><td>BIBLIORATO TAMAÑO OFICIO</td><td>238</td><td>266</td><td>159</td><td>199</td><td>259</td><td>210</td><td>293</td><td>252</td><td>180</td><td>346</td><td>165</td><td>0</td><td>319</td><td>195</td><td>176</td><td>2594</td><td>216</td></tr>
+                        <tr><td>163</td><td>BROCHES 2 PATAS DORADOS NO. 6</td><td>210</td><td>318</td><td>236</td><td>138</td><td>216</td><td>184</td><td>260</td><td>238</td><td>185</td><td>258</td><td>310</td><td>0</td><td>436</td><td>117</td><td>234</td><td>2576</td><td>214</td></tr>
+                        <tr><td>3559</td><td>ARANDELA DE CARTÓN- 25 MM - CAJA 500 UN</td><td>225</td><td>251</td><td>188</td><td>158</td><td>202</td><td>190</td><td>223</td><td>202</td><td>228</td><td>342</td><td>192</td><td>0</td><td>392</td><td>193</td><td>191</td><td>2513</td><td>209</td></tr>
+                        <tr><td>763</td><td>ALCOHOL USO MEDICINAL GEL 500 CM3</td><td>379</td><td>511</td><td>311</td><td>431</td><td>430</td><td>576</td><td>335</td><td>464</td><td>256</td><td>15</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2507</td><td>208</td></tr>
+                        <tr><td>494</td><td>COLA TRANSPARENTE C/DOSIFICADOR30 ML.</td><td>249</td><td>525</td><td>429</td><td>405</td><td>334</td><td>330</td><td>571</td><td>404</td><td>266</td><td>142</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>2472</td><td>206</td></tr>
+                        <tr><td>148</td><td>BOLIGRAFO PUNTA 1 MM. COLOR VERDE</td><td>194</td><td>472</td><td>434</td><td>392</td><td>452</td><td>250</td><td>462</td><td>299</td><td>217</td><td>155</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>2231</td><td>185</td></tr>
+                        <tr><td>839</td><td>RESALTADOR VERDE TIPO PUNTA CHANFLEADA</td><td>412</td><td>621</td><td>811</td><td>799</td><td>800</td><td>590</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2189</td><td>182</td></tr>
+                        <tr><td>6825</td><td>CARTUCHO DE TONER LEXMARK MS823DN</td><td>145</td><td>217</td><td>268</td><td>228</td><td>244</td><td>230</td><td>341</td><td>364</td><td>264</td><td>243</td><td>180</td><td>0</td><td>0</td><td>35</td><td>0</td><td>2129</td><td>177</td></tr>
+                        <tr><td>242</td><td>CARPETA PVC  TAPA TRANSPARENTE  OFICIO</td><td>316</td><td>628</td><td>576</td><td>467</td><td>564</td><td>516</td><td>40</td><td>0</td><td>192</td><td>84</td><td>82</td><td>0</td><td>59</td><td>0</td><td>0</td><td>2004</td><td>167</td></tr>
+                        <tr><td>838</td><td>RESALTADOR FUCSIA TIPO PUNTA CHANFLEADA</td><td>402</td><td>1</td><td>990</td><td>886</td><td>892</td><td>213</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1991</td><td>165</td></tr>
+                        <tr><td>161</td><td>BROCHES 2 PATAS DORADOS, NO. 4</td><td>187</td><td>243</td><td>120</td><td>105</td><td>191</td><td>191</td><td>136</td><td>156</td><td>143</td><td>157</td><td>204</td><td>0</td><td>309</td><td>132</td><td>181</td><td>1905</td><td>158</td></tr>
+                        <tr><td>296</td><td>CART.TON LEXMARK T652DN NP.T650H11L</td><td>205</td><td>378</td><td>210</td><td>5</td><td>0</td><td>16</td><td>403</td><td>372</td><td>284</td><td>379</td><td>332</td><td>0</td><td>3</td><td>34</td><td>0</td><td>1828</td><td>152</td></tr>
+                        <tr><td>903</td><td>SOBRES KRAFT 25X35 CM.80 GR. X100 C/MEMB</td><td>93</td><td>175</td><td>115</td><td>175</td><td>121</td><td>110</td><td>105</td><td>212</td><td>130</td><td>135</td><td>140</td><td>0</td><td>188</td><td>52</td><td>170</td><td>1538</td><td>128</td></tr>
+                        <tr><td>4203</td><td>SILLA OPERATIVA ERGONOMETRICA</td><td>133</td><td>88</td><td>188</td><td>217</td><td>300</td><td>256</td><td>95</td><td>129</td><td>80</td><td>114</td><td>31</td><td>20</td><td>21</td><td>96</td><td>14</td><td>1373</td><td>114</td></tr>
+                        <tr><td>630</td><td>GOMA DE BORRAR LAPIZ TINTA</td><td>610</td><td>1202</td><td>726</td><td>510</td><td>576</td><td>119</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>13</td><td>0</td><td>0</td><td>1218</td><td>101</td></tr>
+                        <tr><td>243</td><td>CARPETA PVC  TAPA TRANSPARENTE A4</td><td>533</td><td>1290</td><td>1223</td><td>993</td><td>144</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1139</td><td>94</td></tr>
+                        <tr><td>725</td><td>MARCADOR TRAZO FINO COLOR ROJO</td><td>107</td><td>241</td><td>198</td><td>78</td><td>143</td><td>148</td><td>161</td><td>199</td><td>128</td><td>138</td><td>5</td><td>0</td><td>22</td><td>1</td><td>0</td><td>1023</td><td>85</td></tr>
+                        <tr><td>638</td><td>GUANTES DE TRABAJO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1000</td><td>83</td></tr>
+                        <tr><td>723</td><td>MARCADOR TRAZO FINO COLOR NEGRO</td><td>246</td><td>427</td><td>359</td><td>270</td><td>335</td><td>201</td><td>97</td><td>40</td><td>10</td><td>0</td><td>0</td><td>0</td><td>14</td><td>0</td><td>0</td><td>967</td><td>80</td></tr>
+                        <tr><td>721</td><td>MARCADOR TRAZO ANCHO ROJO PUNTA REDONDA</td><td>120</td><td>162</td><td>197</td><td>164</td><td>144</td><td>114</td><td>133</td><td>104</td><td>122</td><td>160</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>946</td><td>78</td></tr>
+                        <tr><td>239</td><td>CARPETA COLGANTE, TAM.OFICIO C/ VISOR</td><td>105</td><td>131</td><td>55</td><td>100</td><td>13</td><td>31</td><td>47</td><td>155</td><td>59</td><td>65</td><td>85</td><td>0</td><td>179</td><td>15</td><td>195</td><td>944</td><td>78</td></tr>
+                        <tr><td>722</td><td>MARCADOR TRAZO ANCHO VERDE PUNTA REDONDA</td><td>120</td><td>147</td><td>171</td><td>118</td><td>134</td><td>122</td><td>172</td><td>162</td><td>77</td><td>140</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>925</td><td>77</td></tr>
+                        <tr><td>6271</td><td>COMPUTADORA ESCRITORIO AVANZADA-AIO</td><td>228</td><td>224</td><td>197</td><td>166</td><td>237</td><td>170</td><td>150</td><td>141</td><td>23</td><td>31</td><td>4</td><td>0</td><td>2</td><td>0</td><td>0</td><td>924</td><td>77</td></tr>
+                        <tr><td>823</td><td>PRECINTO PLAST T/AJUST.C.RATONC/TRABA S.</td><td>69</td><td>94</td><td>67</td><td>173</td><td>64</td><td>60</td><td>107</td><td>74</td><td>52</td><td>135</td><td>60</td><td>0</td><td>80</td><td>67</td><td>42</td><td>914</td><td>76</td></tr>
+                        <tr><td>83</td><td>ABROCHADORA METÁLICA 21/6 Ó 21/8</td><td>102</td><td>200</td><td>140</td><td>167</td><td>149</td><td>155</td><td>146</td><td>194</td><td>85</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>898</td><td>74</td></tr>
+                        <tr><td>6686</td><td>GORRA CON VISERA TIPO TRUCKER</td><td>0</td><td>0</td><td>0</td><td>885</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>885</td><td>73</td></tr>
+                        <tr><td>3203</td><td>ESCANER DE HUELLAS DIGITAL</td><td>17</td><td>41</td><td>28</td><td>18</td><td>20</td><td>4</td><td>20</td><td>31</td><td>14</td><td>765</td><td>4</td><td>4</td><td>0</td><td>0</td><td>0</td><td>880</td><td>73</td></tr>
+                        <tr><td>905</td><td>SOBRES PAP.BLANCO 80GR TAM 17,5 X 25 CM</td><td>48</td><td>72</td><td>48</td><td>48</td><td>57</td><td>48</td><td>51</td><td>96</td><td>87</td><td>102</td><td>78</td><td>0</td><td>102</td><td>78</td><td>120</td><td>867</td><td>72</td></tr>
+                        <tr><td>7025</td><td>PECHERAS; COLOR BLANCO</td><td>0</td><td>0</td><td>0</td><td>860</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>860</td><td>71</td></tr>
+                        <tr><td>6937</td><td>SELLADOR DE SILICONA-USO: UNIVERSAL</td><td>0</td><td>0</td><td>0</td><td>0</td><td>300</td><td>0</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>800</td><td>66</td></tr>
+                        <tr><td>801</td><td>PERFORAD.BASE MADERA, MEDIANA 2 PERFORAC</td><td>51</td><td>151</td><td>70</td><td>92</td><td>68</td><td>71</td><td>87</td><td>72</td><td>69</td><td>140</td><td>35</td><td>0</td><td>4</td><td>0</td><td>0</td><td>638</td><td>53</td></tr>
+                        <tr><td>164</td><td>BROCHES APRIETA PAPEL 20 MM COLOR NEGRO</td><td>60</td><td>145</td><td>71</td><td>73</td><td>69</td><td>59</td><td>112</td><td>73</td><td>100</td><td>81</td><td>10</td><td>0</td><td>40</td><td>2</td><td>1</td><td>620</td><td>51</td></tr>
+                        <tr><td>784</td><td>PAPEL MADERA 80GR. PLIEGOS  85 X 120 CM.</td><td>49</td><td>95</td><td>20</td><td>75</td><td>10</td><td>85</td><td>83</td><td>53</td><td>45</td><td>100</td><td>34</td><td>0</td><td>25</td><td>50</td><td>50</td><td>610</td><td>50</td></tr>
+                        <tr><td>904</td><td>SOBRES KRAFT 37X45CM.80 GR. X100 C/MEMBR</td><td>20</td><td>50</td><td>55</td><td>63</td><td>65</td><td>30</td><td>52</td><td>70</td><td>65</td><td>60</td><td>35</td><td>0</td><td>76</td><td>35</td><td>55</td><td>606</td><td>50</td></tr>
+                        <tr><td>5991</td><td>ESCRITORIO ERGONOMICO-MAT: MDF-120X70X75</td><td>0</td><td>0</td><td>0</td><td>0</td><td>99</td><td>148</td><td>32</td><td>91</td><td>104</td><td>76</td><td>21</td><td>0</td><td>8</td><td>17</td><td>4</td><td>600</td><td>50</td></tr>
+                        <tr><td>7151</td><td>CUADROS PLAN DE PAGO DEUDA PREVISIONAL</td><td>0</td><td>0</td><td>0</td><td>298</td><td>252</td><td>5</td><td>3</td><td>12</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>574</td><td>47</td></tr>
+                        <tr><td>891</td><td>SACABROCHES TIPO MARIPOSA</td><td>173</td><td>297</td><td>165</td><td>176</td><td>175</td><td>148</td><td>52</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>557</td><td>46</td></tr>
+                        <tr><td>159</td><td>BROCHE PLÁSTICO TIPO NEPACO Nº 2</td><td>58</td><td>55</td><td>54</td><td>55</td><td>30</td><td>49</td><td>97</td><td>49</td><td>54</td><td>45</td><td>39</td><td>0</td><td>65</td><td>39</td><td>34</td><td>556</td><td>46</td></tr>
+                        <tr><td>6961</td><td>PINCELES TIPO CHATO</td><td>0</td><td>0</td><td>0</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>41</td></tr>
+                        <tr><td>1435</td><td>ASIENTO INODORO;T/PTA.MOD.UNIVERSAL;PVC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>41</td></tr>
+                        <tr><td>2278</td><td>CINTAS SELLADORAS-TEFLON-3/4 PULG</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>41</td></tr>
+                        <tr><td>1512</td><td>PINCEL N°25 CERDA TIPO CHATO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>500</td><td>41</td></tr>
+                        <tr><td>6141</td><td>PANTALLA ACRILICA DE PROTECCION 90 X 60</td><td>4</td><td>0</td><td>0</td><td>0</td><td>87</td><td>137</td><td>83</td><td>91</td><td>40</td><td>29</td><td>20</td><td>0</td><td>4</td><td>0</td><td>2</td><td>493</td><td>41</td></tr>
+                        <tr><td>726</td><td>MARCADOR TRAZO FINO COLOR VERDE</td><td>35</td><td>121</td><td>130</td><td>133</td><td>116</td><td>85</td><td>10</td><td>22</td><td>40</td><td>0</td><td>10</td><td>0</td><td>25</td><td>0</td><td>0</td><td>441</td><td>36</td></tr>
+                        <tr><td>786</td><td>PAPEL OBRA OFICIO 80GR. RESMA X 500</td><td>0</td><td>20</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>0</td><td>430</td><td>35</td></tr>
+                        <tr><td>624</td><td>FORMULAR. A4 DISC. C/FONDO SEGUR. NUMER</td><td>15</td><td>33</td><td>18</td><td>44</td><td>38</td><td>58</td><td>25</td><td>20</td><td>42</td><td>51</td><td>25</td><td>0</td><td>35</td><td>37</td><td>43</td><td>418</td><td>34</td></tr>
+                        <tr><td>597</td><td>ESPONJERO REDONDO DE GOMA</td><td>17</td><td>136</td><td>20</td><td>44</td><td>61</td><td>53</td><td>73</td><td>77</td><td>47</td><td>33</td><td>0</td><td>0</td><td>27</td><td>0</td><td>0</td><td>415</td><td>34</td></tr>
+                        <tr><td>6207</td><td>FLEXIBLE MALLLADO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>33</td></tr>
+                        <tr><td>5543</td><td>RODILLO DE POLIÉSTER  LARGO  22 CM.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>33</td></tr>
+                        <tr><td>5544</td><td>RODILLO DE LANA LARGO 22 CM. PELO LARGO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>400</td><td>33</td></tr>
+                        <tr><td>6984</td><td>COMPUTADORAS; TIPO: TODO EN UNO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>254</td><td>50</td><td>54</td><td>27</td><td>1</td><td>10</td><td>2</td><td>398</td><td>33</td></tr>
+                        <tr><td>7153</td><td>CUADROS EN CADA ETAPA DE TU VIDA (50X70)</td><td>0</td><td>0</td><td>0</td><td>219</td><td>170</td><td>0</td><td>0</td><td>3</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>394</td><td>32</td></tr>
+                        <tr><td>6548</td><td>MASILLA - ENVASE X 250GR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>200</td><td>0</td><td>100</td><td>80</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>380</td><td>31</td></tr>
+                        <tr><td>902</td><td>SOBRES BLAN. C/MEM. 11 X 22 CM.80/90 GR.</td><td>41</td><td>58</td><td>40</td><td>100</td><td>37</td><td>24</td><td>78</td><td>35</td><td>44</td><td>3</td><td>14</td><td>0</td><td>30</td><td>6</td><td>1</td><td>372</td><td>31</td></tr>
+                        <tr><td>4342</td><td>FLEXIBLE MALLADO ACERO INOX 1/2"* 40 CM</td><td>10</td><td>0</td><td>0</td><td>0</td><td>200</td><td>0</td><td>0</td><td>160</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>360</td><td>30</td></tr>
+                        <tr><td>712</td><td>MARCAD.P/PIZAR.BLA.COL.AZUL PTA.SINT.RED</td><td>11</td><td>26</td><td>15</td><td>19</td><td>42</td><td>27</td><td>25</td><td>43</td><td>50</td><td>44</td><td>22</td><td>0</td><td>46</td><td>3</td><td>30</td><td>351</td><td>29</td></tr>
+                        <tr><td>7154</td><td>CUADROS MDF 5070 HOMBRE 2</td><td>0</td><td>0</td><td>0</td><td>182</td><td>143</td><td>5</td><td>3</td><td>12</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>349</td><td>29</td></tr>
+                        <tr><td>685</td><td>LIBRO ACTAS T/DURAS OFICIO 200 FOL NUMER</td><td>71</td><td>126</td><td>77</td><td>75</td><td>68</td><td>66</td><td>59</td><td>42</td><td>8</td><td>2</td><td>0</td><td>0</td><td>12</td><td>0</td><td>0</td><td>332</td><td>27</td></tr>
+                        <tr><td>5857</td><td>BANNER C/SOPORTE ALUMINIO - ANSES 2.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>323</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>323</td><td>26</td></tr>
+                        <tr><td>833</td><td>REGLA PLASTICA TRANSPARENTE DE 30 CM.</td><td>389</td><td>797</td><td>475</td><td>320</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>320</td><td>26</td></tr>
+                        <tr><td>85</td><td>ABROCHADORAS  TIPO PINZA  Nº 50</td><td>170</td><td>282</td><td>199</td><td>204</td><td>105</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>311</td><td>25</td></tr>
+                        <tr><td>1454</td><td>ALFOMBRA - PELO CORTADO /BOUCLE 50 X 50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>310</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>310</td><td>25</td></tr>
+                        <tr><td>3977</td><td>TÓNER P/IMPRESORA SAMSUNG 5010 ND/XBG</td><td>14</td><td>40</td><td>27</td><td>39</td><td>28</td><td>9</td><td>43</td><td>25</td><td>25</td><td>36</td><td>32</td><td>0</td><td>29</td><td>8</td><td>30</td><td>304</td><td>25</td></tr>
+                        <tr><td>5305</td><td>CABLE UTP CAT 6 GRIS TIPO AMP 01427254</td><td>24</td><td>50</td><td>70</td><td>0</td><td>50</td><td>50</td><td>70</td><td>0</td><td>30</td><td>50</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>300</td><td>25</td></tr>
+                        <tr><td>3465</td><td>PINTURA LÁTEX 20LTS</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>300</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>300</td><td>25</td></tr>
+                        <tr><td>101</td><td>ALMOHADILLAS PARA SELLOS</td><td>65</td><td>164</td><td>120</td><td>153</td><td>74</td><td>58</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>289</td><td>24</td></tr>
+                        <tr><td>123</td><td>BIBLIORATO TAMAÑO ESQUELA</td><td>25</td><td>24</td><td>26</td><td>30</td><td>22</td><td>19</td><td>9</td><td>4</td><td>21</td><td>46</td><td>12</td><td>0</td><td>67</td><td>23</td><td>23</td><td>276</td><td>23</td></tr>
+                        <tr><td>1871</td><td>ORGANIZADOR TIPO FAYSER 19"</td><td>0</td><td>0</td><td>0</td><td>0</td><td>120</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>120</td><td>270</td><td>22</td></tr>
+                        <tr><td>6983</td><td>DIG. DE IMAGENES/ESCANER; TIPO: ESTANDAR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>50</td><td>0</td><td>3</td><td>18</td><td>88</td><td>53</td><td>2</td><td>1</td><td>6</td><td>12</td><td>263</td><td>21</td></tr>
+                        <tr><td>604</td><td>ETIQUETAS LOMO BIBLIORATO OFICIO</td><td>27</td><td>41</td><td>12</td><td>19</td><td>26</td><td>10</td><td>30</td><td>24</td><td>14</td><td>31</td><td>18</td><td>0</td><td>51</td><td>22</td><td>12</td><td>257</td><td>21</td></tr>
+                        <tr><td>2239</td><td>BARBIJOS DESC. (PP), 2 CAPAS, CAJAX50UN</td><td>97</td><td>216</td><td>66</td><td>57</td><td>23</td><td>14</td><td>31</td><td>44</td><td>40</td><td>29</td><td>0</td><td>0</td><td>13</td><td>2</td><td>2</td><td>255</td><td>21</td></tr>
+                        <tr><td>1317</td><td>FILM STRECH 50 CMS 24 MICRONES TRICAPA</td><td>0</td><td>120</td><td>0</td><td>4</td><td>120</td><td>126</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>250</td><td>20</td></tr>
+                        <tr><td>1349</td><td>COLA ADHESIVA P/PAPEL 300 GR</td><td>113</td><td>201</td><td>140</td><td>169</td><td>79</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>249</td><td>20</td></tr>
+                        <tr><td>821</td><td>PORTATACO CALENDAR. PLASTICO NEGRO CHICO</td><td>10</td><td>33</td><td>11</td><td>21</td><td>41</td><td>15</td><td>20</td><td>14</td><td>18</td><td>24</td><td>13</td><td>0</td><td>54</td><td>6</td><td>16</td><td>242</td><td>20</td></tr>
+                        <tr><td>1857</td><td>CUTER TIPO HOJA MÓVIL 20MM</td><td>153</td><td>314</td><td>200</td><td>138</td><td>99</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>239</td><td>19</td></tr>
+                        <tr><td>900</td><td>SOBRE BLANCO 80GR 11X22CM MEMBR./VENTANA</td><td>16</td><td>31</td><td>15</td><td>11</td><td>7</td><td>9</td><td>16</td><td>30</td><td>14</td><td>47</td><td>6</td><td>0</td><td>42</td><td>22</td><td>14</td><td>218</td><td>18</td></tr>
+                        <tr><td>165</td><td>BROCHES APRIETA PAPEL 40 MM COLOR NEGRO</td><td>51</td><td>135</td><td>87</td><td>75</td><td>70</td><td>11</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>45</td><td>3</td><td>0</td><td>212</td><td>17</td></tr>
+                        <tr><td>6021</td><td>ACEITE LUBRICANTE W40 - 155 GR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>200</td><td>16</td></tr>
+                        <tr><td>6562</td><td>SELLADOR - ENVASE X 280ML</td><td>0</td><td>0</td><td>0</td><td>0</td><td>200</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>200</td><td>16</td></tr>
+                        <tr><td>5435</td><td>CARTEL 22 X 14 AMBIENTE LIBRE DE HUMO</td><td>12</td><td>24</td><td>33</td><td>10</td><td>29</td><td>36</td><td>27</td><td>25</td><td>25</td><td>2</td><td>12</td><td>0</td><td>15</td><td>2</td><td>2</td><td>185</td><td>15</td></tr>
+                        <tr><td>1254</td><td>TANDEM DE CUATRO SILLAS</td><td>27</td><td>10</td><td>13</td><td>11</td><td>24</td><td>38</td><td>6</td><td>40</td><td>19</td><td>17</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>155</td><td>12</td></tr>
+                        <tr><td>714</td><td>MARCAD.P/PIZAR.BLA.COL.VERD PTA SINT.RED</td><td>13</td><td>9</td><td>9</td><td>59</td><td>12</td><td>18</td><td>16</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>12</td><td>7</td><td>28</td><td>152</td><td>12</td></tr>
+                        <tr><td>4405</td><td>BASTIDOR; TIPO: AUTOPORTANTE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>150</td><td>12</td></tr>
+                        <tr><td>828</td><td>RACIONADOR ESCRIT. P/CINTA ADHES.12X33MM</td><td>2</td><td>4</td><td>16</td><td>14</td><td>15</td><td>19</td><td>11</td><td>11</td><td>5</td><td>21</td><td>7</td><td>0</td><td>40</td><td>0</td><td>0</td><td>143</td><td>11</td></tr>
+                        <tr><td>1855</td><td>PACHERA DE 24 PORTS RJ45 013750142</td><td>0</td><td>0</td><td>0</td><td>0</td><td>60</td><td>0</td><td>60</td><td>0</td><td>19</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>139</td><td>11</td></tr>
+                        <tr><td>1455</td><td>ANTIPARRAS DE SEGURIDAD; VISOR ACRILICO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>130</td><td>10</td></tr>
+                        <tr><td>619</td><td>FOLIOS TAMAÑO OFICIO(PAQUETE 100UN)</td><td>89</td><td>137</td><td>87</td><td>88</td><td>33</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>7</td><td>0</td><td>0</td><td>129</td><td>10</td></tr>
+                        <tr><td>153</td><td>BORRADOR PLÁSTICO P/FIBRA TIPO MARCADOR</td><td>11</td><td>22</td><td>8</td><td>14</td><td>14</td><td>10</td><td>7</td><td>18</td><td>17</td><td>21</td><td>5</td><td>0</td><td>13</td><td>4</td><td>4</td><td>127</td><td>10</td></tr>
+                        <tr><td>6268</td><td>ESCANER CAMARA DOCUMENTO</td><td>17</td><td>52</td><td>28</td><td>18</td><td>25</td><td>6</td><td>16</td><td>34</td><td>10</td><td>9</td><td>3</td><td>4</td><td>0</td><td>0</td><td>0</td><td>125</td><td>10</td></tr>
+                        <tr><td>5858</td><td>BANNER C/SOPORTE ALUMINIO - ANSES 1</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>99</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>119</td><td>9</td></tr>
+                        <tr><td>1253</td><td>TANDEM DE TRES SILLAS</td><td>6</td><td>13</td><td>25</td><td>4</td><td>51</td><td>19</td><td>4</td><td>24</td><td>2</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>113</td><td>9</td></tr>
+                        <tr><td>4449</td><td>MESA IMPRESORA ALTA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>19</td><td>35</td><td>2</td><td>27</td><td>4</td><td>6</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td><td>107</td><td>8</td></tr>
+                        <tr><td>2223</td><td>REMERAS, MATERIAL ALGODÓN, MANGA CORTA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>63</td><td>0</td><td>40</td><td>0</td><td>0</td><td>0</td><td>103</td><td>8</td></tr>
+                        <tr><td>7169</td><td>BUZOS; TELA: ALGODON C/FRIZA, USO:TALLER</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>63</td><td>0</td><td>40</td><td>0</td><td>0</td><td>0</td><td>103</td><td>8</td></tr>
+                        <tr><td>290</td><td>TONER HP LASER JET 3005 Q7551X 13000 COP</td><td>1</td><td>20</td><td>14</td><td>8</td><td>12</td><td>6</td><td>11</td><td>14</td><td>3</td><td>15</td><td>13</td><td>0</td><td>4</td><td>1</td><td>14</td><td>101</td><td>8</td></tr>
+                        <tr><td>6959</td><td>RODILLO EPOXI</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>6978</td><td>RODILLO EPOXI-LARGO: 10 CM</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>4020</td><td>FUELLE INODORO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>6929</td><td>JUNTA P/BASE INODORO-MATERIAL: GOMA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>6969</td><td>REP. Y ACC. P/INODORO ENCHUFE FUELLE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>1344</td><td>CIERRA PUERTAS HIDRÁULICOS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>6536</td><td>CERRADURAS DE HIERRO - SIN TAMBOR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>6504</td><td>CARTON CORRUGADO ANCHO 1M ; LARGO 25M</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>100</td><td>8</td></tr>
+                        <tr><td>6222</td><td>ALFOMBRAS; MATERIAL: POLIETILENO</td><td>1</td><td>1</td><td>4</td><td>2</td><td>21</td><td>13</td><td>11</td><td>28</td><td>8</td><td>7</td><td>6</td><td>0</td><td>3</td><td>0</td><td>1</td><td>100</td><td>8</td></tr>
+                        <tr><td>2828</td><td>CARTEL IDENTIFICATORIO-25X15 PRIVADO</td><td>7</td><td>20</td><td>30</td><td>6</td><td>11</td><td>17</td><td>13</td><td>17</td><td>11</td><td>1</td><td>4</td><td>0</td><td>10</td><td>0</td><td>0</td><td>90</td><td>7</td></tr>
+                        <tr><td>4423</td><td>ILUMINACION DE EMERGENCIA-RECARGA 24HS.</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>90</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>90</td><td>7</td></tr>
+                        <tr><td>2822</td><td>CARTEL 20X20 BAÑO MIXTO</td><td>7</td><td>14</td><td>33</td><td>6</td><td>12</td><td>13</td><td>8</td><td>21</td><td>11</td><td>0</td><td>0</td><td>0</td><td>15</td><td>1</td><td>0</td><td>87</td><td>7</td></tr>
+                        <tr><td>6269</td><td>IMPRESORA ELECTROFOTOGRAFICA ALTOVOLUMEN</td><td>3</td><td>14</td><td>7</td><td>7</td><td>21</td><td>5</td><td>9</td><td>14</td><td>19</td><td>7</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>86</td><td>7</td></tr>
+                        <tr><td>6236</td><td>COMPUTADORA ESCRITORIO AVANZADA-REND.MED</td><td>58</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>40</td><td>0</td><td>7</td><td>6</td><td>1</td><td>20</td><td>1</td><td>7</td><td>84</td><td>7</td></tr>
+                        <tr><td>1092</td><td>TUBOS DE MINAS DE 0,5 MM.</td><td>1</td><td>14</td><td>2</td><td>3</td><td>9</td><td>4</td><td>3</td><td>11</td><td>5</td><td>15</td><td>10</td><td>0</td><td>15</td><td>8</td><td>0</td><td>83</td><td>6</td></tr>
+                        <tr><td>3283</td><td>MONITOR DE 21.5"</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>41</td><td>5</td><td>3</td><td>3</td><td>2</td><td>20</td><td>5</td><td>0</td><td>80</td><td>6</td></tr>
+                        <tr><td>6506</td><td>REP. Y ACC. P/ INODORO GOMA ASIENTO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>80</td><td>0</td><td>0</td><td>0</td><td>0</td><td>80</td><td>6</td></tr>
+                        <tr><td>3228</td><td>SILLA PLASTICA APILABLE</td><td>39</td><td>0</td><td>0</td><td>0</td><td>36</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>76</td><td>6</td></tr>
+                        <tr><td>1225</td><td>SILLA PUBLICO/OFFICE NO GIRATORIA</td><td>0</td><td>0</td><td>0</td><td>35</td><td>35</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>74</td><td>6</td></tr>
+                        <tr><td>2286</td><td>FLOTANTES P/TANQUES AGUA;DIAM 1 PULG</td><td>20</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>3939</td><td>REP Y ACC P/VALV.P/ INODORO-FV 368/01</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>3940</td><td>REP Y ACC P/VALV.P/ INODORO-FV-PISTON</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>3941</td><td>REP Y ACC P/VALV.P/ INODORO-FV-ARO/RETEN</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>3942</td><td>REP Y ACC P/VALV.P/INODORO-FV-RESO MANIJ</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>3944</td><td>REP Y ACC P/VALV.P/INODORO-FV-ORING</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>6290</td><td>GRIFERIA T/BAÑO-ACC.P/PRES-INODORO-TECLA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>759</td><td>PANTALON DE TRABAJO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>57</td><td>0</td><td>13</td><td>0</td><td>0</td><td>0</td><td>70</td><td>5</td></tr>
+                        <tr><td>2830</td><td>CARTEL IDENTIFICATORIO-25X15 ARCHIVO</td><td>4</td><td>11</td><td>15</td><td>4</td><td>8</td><td>11</td><td>6</td><td>15</td><td>4</td><td>4</td><td>3</td><td>0</td><td>10</td><td>0</td><td>1</td><td>66</td><td>5</td></tr>
+                        <tr><td>4204</td><td>SILLA ORIENTADOR ERGONOMETRICA</td><td>0</td><td>2</td><td>13</td><td>1</td><td>17</td><td>8</td><td>6</td><td>9</td><td>11</td><td>5</td><td>8</td><td>0</td><td>0</td><td>1</td><td>0</td><td>66</td><td>5</td></tr>
+                        <tr><td>2810</td><td>CARTEL IDENTIFICATORIO-25X15 OFFICE</td><td>4</td><td>14</td><td>16</td><td>2</td><td>15</td><td>9</td><td>5</td><td>15</td><td>4</td><td>0</td><td>3</td><td>0</td><td>10</td><td>0</td><td>1</td><td>64</td><td>5</td></tr>
+                        <tr><td>4159</td><td>PAPEL OBRA A4, 150GR, RESMA X 500</td><td>0</td><td>0</td><td>0</td><td>0</td><td>53</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>63</td><td>5</td></tr>
+                        <tr><td>199</td><td>CAJA P.EMBALAR CARTÓN GRUESO 45X35 X35CM</td><td>4</td><td>20</td><td>0</td><td>0</td><td>0</td><td>60</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>60</td><td>5</td></tr>
+                        <tr><td>5407</td><td>UNIDAD IMAGEN P/IMPRESORA MULTIFUNCION</td><td>0</td><td>0</td><td>0</td><td>0</td><td>60</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>60</td><td>5</td></tr>
+                        <tr><td>2823</td><td>CARTEL 20X20 BAÑO MUJER</td><td>4</td><td>5</td><td>2</td><td>2</td><td>10</td><td>8</td><td>14</td><td>5</td><td>3</td><td>1</td><td>2</td><td>0</td><td>15</td><td>0</td><td>0</td><td>60</td><td>5</td></tr>
+                        <tr><td>240</td><td>CARPETA FIBRA NEGRA OFICIO 2 ANILLAS RED</td><td>76</td><td>156</td><td>133</td><td>47</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>3</td><td>2</td><td>0</td><td>57</td><td>4</td></tr>
+                        <tr><td>2821</td><td>CARTEL 20X20  BAÑO HOMBRE</td><td>4</td><td>5</td><td>2</td><td>2</td><td>10</td><td>8</td><td>14</td><td>5</td><td>3</td><td>1</td><td>2</td><td>0</td><td>10</td><td>0</td><td>0</td><td>55</td><td>4</td></tr>
+                        <tr><td>4084</td><td>AIRE ACONDICIONADO TIPO SPLIT 6000 F/C</td><td>4</td><td>11</td><td>7</td><td>4</td><td>6</td><td>8</td><td>5</td><td>11</td><td>9</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>50</td><td>4</td></tr>
+                        <tr><td>6960</td><td>BANDEJAS P/PINTOR</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>7008</td><td>BROCAS; TIPO: MULTICONSTRUCCION 6MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>7009</td><td>BROCAS 8MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>7010</td><td>BROCAS 10MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>1340</td><td>GRIFERIA T/BAÑO;ACC.PRESION;LAVATORIO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>1341</td><td>GRIFERIA T/BAÑO;ACC.PRESION;MINGITORIO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>5648</td><td>GRIFERIA D COCINA MONOCOMANDO-PICO MOVIL</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>50</td><td>4</td></tr>
+                        <tr><td>337</td><td>CARTUCHO DE TONER BROTHER HL 5250</td><td>1</td><td>10</td><td>0</td><td>0</td><td>6</td><td>1</td><td>7</td><td>8</td><td>5</td><td>10</td><td>1</td><td>0</td><td>2</td><td>0</td><td>6</td><td>46</td><td>3</td></tr>
+                        <tr><td>3494</td><td>MARCADOR P/PIZ PTA RED. GRUESO VERDE</td><td>25</td><td>58</td><td>23</td><td>22</td><td>22</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>44</td><td>3</td></tr>
+                        <tr><td>1266</td><td>MATAFUEGO A BASE DE POLVO DE 5 K.C/ACC</td><td>4</td><td>3</td><td>2</td><td>7</td><td>5</td><td>5</td><td>4</td><td>16</td><td>2</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>42</td><td>3</td></tr>
+                        <tr><td>6435</td><td>PANTALLA DIGITAL 43 PULGADAS</td><td>0</td><td>31</td><td>2</td><td>1</td><td>0</td><td>3</td><td>4</td><td>0</td><td>1</td><td>15</td><td>8</td><td>2</td><td>1</td><td>2</td><td>3</td><td>40</td><td>3</td></tr>
+                        <tr><td>1962</td><td>DISY.TETRAPOLAR 63A, 4X63A,50HZ,220/380V</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>3</td></tr>
+                        <tr><td>6043</td><td>CARTELERA COLGAR GREMIAL 70X100 SECASFPI</td><td>2</td><td>2</td><td>7</td><td>2</td><td>8</td><td>3</td><td>4</td><td>11</td><td>4</td><td>4</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>40</td><td>3</td></tr>
+                        <tr><td>6148</td><td>ALCOHOL ETILICO 5 LITROS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>3</td></tr>
+                        <tr><td>6512</td><td>FLOTANTES P/TANQUES AGUA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>3</td></tr>
+                        <tr><td>5708</td><td>MUEBLE ORIENTADOR-DIM.APROX. 100 X 80 CM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>23</td><td>2</td><td>6</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>40</td><td>3</td></tr>
+                        <tr><td>5535</td><td>CARTELERA CORCHO 1,20 X 1,00 M</td><td>5</td><td>19</td><td>8</td><td>4</td><td>11</td><td>12</td><td>1</td><td>9</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>38</td><td>3</td></tr>
+                        <tr><td>5427</td><td>CARTELERA P/COLGAR - 70 X 100 CM</td><td>4</td><td>5</td><td>9</td><td>4</td><td>9</td><td>11</td><td>2</td><td>8</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>38</td><td>3</td></tr>
+                        <tr><td>7152</td><td>CUADROS EN CADA ETAPA DE TU VIDA</td><td>0</td><td>0</td><td>0</td><td>5</td><td>6</td><td>5</td><td>3</td><td>12</td><td>4</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>37</td><td>3</td></tr>
+                        <tr><td>5740</td><td>ARMARIOS MADERA, MELAMINA 1,2X0,44X1,20</td><td>70</td><td>21</td><td>10</td><td>2</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>20</td><td>7</td><td>36</td><td>3</td></tr>
+                        <tr><td>6046</td><td>CARTELERA COLGAR GREMIAL 70X100 APOPS</td><td>2</td><td>2</td><td>8</td><td>2</td><td>7</td><td>4</td><td>2</td><td>11</td><td>3</td><td>1</td><td>2</td><td>0</td><td>1</td><td>2</td><td>0</td><td>35</td><td>2</td></tr>
+                        <tr><td>6147</td><td>LAVANDINA 5 LITROS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>35</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>35</td><td>2</td></tr>
+                        <tr><td>2816</td><td>CARTEL IDENTIFICATORIO-25X15 SUPERVISOR</td><td>0</td><td>0</td><td>0</td><td>2</td><td>5</td><td>0</td><td>4</td><td>1</td><td>0</td><td>2</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>34</td><td>2</td></tr>
+                        <tr><td>4086</td><td>AIRE ACONDICIONADO PISOTECHO 9000 F/C</td><td>1</td><td>1</td><td>3</td><td>0</td><td>9</td><td>9</td><td>0</td><td>5</td><td>0</td><td>9</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>33</td><td>2</td></tr>
+                        <tr><td>4085</td><td>AIRE ACONDICIONADO TIPO SPLIT 4500 F/C</td><td>8</td><td>36</td><td>22</td><td>12</td><td>11</td><td>6</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>31</td><td>2</td></tr>
+                        <tr><td>6045</td><td>CARTELERA COLGAR GREMIAL 70X100 UPCN</td><td>2</td><td>2</td><td>8</td><td>2</td><td>7</td><td>3</td><td>2</td><td>11</td><td>3</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>31</td><td>2</td></tr>
+                        <tr><td>6118</td><td>NUMERADOR PUESTO 20 X 20 C/SOPORTE 11-20</td><td>6</td><td>3</td><td>2</td><td>4</td><td>13</td><td>4</td><td>4</td><td>2</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>31</td><td>2</td></tr>
+                        <tr><td>5989</td><td>CAJONERA RODANTE 3 CAJONES-MATERIAL: MDF</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>15</td><td>6</td><td>31</td><td>2</td></tr>
+                        <tr><td>2840</td><td>CARTEL 20X20 BAÑO PERSONA C/DISCAPACIDAD</td><td>2</td><td>8</td><td>6</td><td>1</td><td>10</td><td>2</td><td>5</td><td>3</td><td>1</td><td>0</td><td>2</td><td>0</td><td>5</td><td>1</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6944</td><td>CUCHARA P/ALBAÑIL</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6945</td><td>BALDES P/ALBAÑIL</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6951</td><td>CINTAS DE DEMARCAR</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6954</td><td>FRATACHOS TIPO LLANA LISA</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6934</td><td>GRIFERIA DE BAÑO-MONOCOMANDO-U:LAVATORIO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6552</td><td>CINTA ANTIDESLIZANTE 2,5CM X 18M</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6935</td><td>CINTA DE DEMARCAR CEBRADA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6938</td><td>CINTA DE DEMARCAR-COLOR AMARILLA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>2334</td><td>ESPATULA ACERO MANGO PLASTICO A=70MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>2338</td><td>ESPATULA ACERO A=200MM MANGO MADERA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>30</td><td>2</td></tr>
+                        <tr><td>6941</td><td>MARTILLO GALPONERO</td><td>0</td><td>0</td><td>0</td><td>28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>28</td><td>2</td></tr>
+                        <tr><td>6943</td><td>MARTILLO TIPO MAZA</td><td>0</td><td>0</td><td>0</td><td>28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>28</td><td>2</td></tr>
+                        <tr><td>6940</td><td>CORTA FRIO</td><td>0</td><td>0</td><td>0</td><td>28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>28</td><td>2</td></tr>
+                        <tr><td>1159</td><td>LECTOR DE CODIGO DE BARRA</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>6</td><td>0</td><td>0</td><td>7</td><td>23</td><td>1</td></tr>
+                        <tr><td>6036</td><td>ACONDIC. AIRE PISO TECHO 15000FR-C.N.25A</td><td>6</td><td>6</td><td>12</td><td>5</td><td>6</td><td>8</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>21</td><td>1</td></tr>
+                        <tr><td>6942</td><td>MARTILLO DE GOMA</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6947</td><td>FRATACHO DE MADERA</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6948</td><td>FRATACHO PVC</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6946</td><td>FRATACHO DE PLÁSTICO</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6996</td><td>TALADROS A BATERIA 2000 RPM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6516</td><td>MECHAS MILIMETRICA 8 MM MULTICONSTRUCC.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6517</td><td>MECHAS MILIMETRICA 10 MM MULTICONSTRUCC.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6518</td><td>MECHAS MILIMETRICA WIDIA 6 MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6526</td><td>MECHA DE WIDIA 12MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>6970</td><td>GUANTES; MATERIAL NITRILO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>2179</td><td>ELECTRODOS,DIAM 2.5-P/SOLD.ARCO EL.P.AZU</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>1470</td><td>EXTENSOR P/RODILLO ALUMINIO DE 1.50 A 3M</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>294</td><td>CART.TON LEXMARK T632DTN NP 12 A 7465</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>1</td><td>1</td><td>4</td><td>0</td><td>7</td><td>2</td><td>0</td><td>2</td><td>0</td><td>0</td><td>20</td><td>1</td></tr>
+                        <tr><td>3223</td><td>TELEVISOR LED E 32 PULGADAS</td><td>2</td><td>5</td><td>4</td><td>5</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td><td>7</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>19</td><td>1</td></tr>
+                        <tr><td>2832</td><td>CARTEL IDENTIFICATORIO-25X15 ADMINISTRAC</td><td>1</td><td>2</td><td>2</td><td>1</td><td>1</td><td>0</td><td>2</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>10</td><td>0</td><td>1</td><td>19</td><td>1</td></tr>
+                        <tr><td>2825</td><td>CARTEL 20X20  PRIVADO MIXTO</td><td>2</td><td>4</td><td>2</td><td>0</td><td>2</td><td>2</td><td>6</td><td>4</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td><td>18</td><td>1</td></tr>
+                        <tr><td>6950</td><td>CONO SEÑALIZADOR</td><td>0</td><td>0</td><td>0</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>18</td><td>1</td></tr>
+                        <tr><td>6044</td><td>CARTELERA COLGAR GREMIAL 70X100 ATE</td><td>2</td><td>0</td><td>0</td><td>0</td><td>3</td><td>2</td><td>1</td><td>5</td><td>2</td><td>2</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>18</td><td>1</td></tr>
+                        <tr><td>1852</td><td>DESTRUCTORA DE DOCUMENTOS DE OFIC CHICA</td><td>3</td><td>3</td><td>4</td><td>3</td><td>3</td><td>2</td><td>0</td><td>2</td><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>16</td><td>1</td></tr>
+                        <tr><td>6117</td><td>NUMERADOR PUESTO 20 X 20  C/SOPORTE 1-10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>1</td><td>8</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>16</td><td>1</td></tr>
+                        <tr><td>3594</td><td>HELADERAS; CAPACIDAD 120L - C/CONGELADOR</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>3</td><td>5</td><td>3</td><td>16</td><td>1</td></tr>
+                        <tr><td>6326</td><td>ACOND. DE AIRE 6TR FRIO/CALOR</td><td>9</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>7</td><td>2</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>15</td><td>1</td></tr>
+                        <tr><td>5849</td><td>PANTALON DE VESTIR FEMENINO TALLE 6</td><td>3</td><td>0</td><td>3</td><td>0</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>15</td><td>1</td></tr>
+                        <tr><td>2833</td><td>CARTEL IDENTIFICATORIO-25X15 SALA REUNIO</td><td>0</td><td>0</td><td>1</td><td>0</td><td>2</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>15</td><td>1</td></tr>
+                        <tr><td>1996</td><td>RACKS</td><td>4</td><td>1</td><td>7</td><td>3</td><td>4</td><td>0</td><td>0</td><td>6</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td><td>1</td></tr>
+                        <tr><td>5442</td><td>CARTELERA DE COLGAR BASE MDF 1,50X1,00 M</td><td>0</td><td>6</td><td>0</td><td>5</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td><td>1</td></tr>
+                        <tr><td>1241</td><td>MESA REUNION CHICA</td><td>0</td><td>0</td><td>2</td><td>1</td><td>0</td><td>4</td><td>4</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td><td>1</td></tr>
+                        <tr><td>1247</td><td>MESA DE TRABAJO</td><td>0</td><td>0</td><td>0</td><td>5</td><td>1</td><td>1</td><td>0</td><td>5</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td><td>1</td></tr>
+                        <tr><td>5819</td><td>PANTALON DE VESTIR MASCULINO TALLE 64</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>14</td><td>1</td></tr>
+                        <tr><td>3193</td><td>MATAFUEGO BASE ANHIDRIDO CARB 3,5 K</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>3</td><td>3</td><td>5</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>13</td><td>1</td></tr>
+                        <tr><td>1252</td><td>MESA PARA IMPRESORA</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>12</td><td>1</td></tr>
+                        <tr><td>6178</td><td>TERMOTANQUE - CAPACIDAD 50 L</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>3</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>11</td><td>0</td></tr>
+                        <tr><td>2814</td><td>CARTEL IDENTIFICATORIO-25X15 SECRETARÍA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>11</td><td>0</td></tr>
+                        <tr><td>2283</td><td>FLOTANTES P/TANQUES AGUA;DIAM 2PULG</td><td>20</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>4364</td><td>PORTAFOLLETOS DE PIE 1,80 X 0,6</td><td>1</td><td>4</td><td>0</td><td>5</td><td>4</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>790</td><td>PAPEL OBRA A3 42X29,7CM 70GR. ALIS.ROSA</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>5345</td><td>CARTUCHO TINTA HP OFFICEJET 200 COLOR</td><td>0</td><td>0</td><td>3</td><td>3</td><td>6</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>1467</td><td>ENDUIDO ENVASE 20 LITROS</td><td>2</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>2970</td><td>BOMBA CENTRÍFUGA CAUDAL 15M3/H</td><td>0</td><td>2</td><td>0</td><td>0</td><td>2</td><td>0</td><td>3</td><td>1</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>6119</td><td>NUMERADOR PUESTO 20X20 C/SOPORTE 21-30</td><td>1</td><td>1</td><td>0</td><td>1</td><td>0</td><td>2</td><td>2</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>10</td><td>0</td></tr>
+                        <tr><td>6955</td><td>FRATACHO LLANA DENTADA</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>2173</td><td>MECHAS P/ACERO (JGO DE 25 PZAS)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>6936</td><td>MEMBRANA ASFALTICA C/RECUB. ALUMINIO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>7188</td><td>PAPEL OBRA A3 150GR USO INTERNO IMPRENTA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>7189</td><td>PAPEL OBRA A4 120GR USO INTERNO IMPRENTA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>6783</td><td>IMPRESORA DE CODIGO DE BARRAS</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>6550</td><td>TAPETES DE PVC 0,9X1,5M</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>6192</td><td>BOMBA CENTRIFUGA 3000 LITROS</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td><td>0</td><td>0</td><td>10</td><td>0</td></tr>
+                        <tr><td>6532</td><td>ALICATE DE CORTE DIAGONAL 6 PULGADAS</td><td>0</td><td>0</td><td>19</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>0</td></tr>
+                        <tr><td>2837</td><td>CARTEL 20X20 PRIVADO MUJER</td><td>0</td><td>1</td><td>2</td><td>2</td><td>2</td><td>0</td><td>4</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>0</td></tr>
+                        <tr><td>1835</td><td>GAZEBOS ESTRUCTURALES PORTÁTILES 3M X 3M</td><td>0</td><td>2</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>0</td></tr>
+                        <tr><td>3343</td><td>MASTIL CAÑO 2 M</td><td>0</td><td>2</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>0</td></tr>
+                        <tr><td>6322</td><td>CORTINA DE AIRE C/CALOR-3000M3/H-L:110CM</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>9</td><td>0</td></tr>
+                        <tr><td>2734</td><td>TERMINAL AUTOCONSULTA</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>0</td><td>1</td><td>1</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>9</td><td>0</td></tr>
+                        <tr><td>4435</td><td>ESCRITORIO TRABAJO</td><td>32</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td></tr>
+                        <tr><td>4447</td><td>CAJONERA RODANTE</td><td>28</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td></tr>
+                        <tr><td>6127</td><td>NEUMATICO RADIAL S/ CAMARA 185/65 R15</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td></tr>
+                        <tr><td>5433</td><td>CARTEL 20X20 PRIVADO HOMBRE</td><td>0</td><td>1</td><td>2</td><td>2</td><td>2</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>8</td><td>0</td></tr>
+                        <tr><td>5344</td><td>CARTUCHO TINTA HP OFFICEJET 200 NEGRO</td><td>4</td><td>3</td><td>3</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>7</td><td>0</td></tr>
+                        <tr><td>6327</td><td>ACOND- DE AIRE FRIO 17KW - CALOR 18.04KW</td><td>2</td><td>0</td><td>3</td><td>1</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>7</td><td>0</td></tr>
+                        <tr><td>6341</td><td>TERMOMETRO INFRRAROJO DIGITAL 36 A 40°C</td><td>1</td><td>3</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>3</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td></tr>
+                        <tr><td>1475</td><td>MASILLA PRESENTACIÓN ENVASE X 32 KG</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td></tr>
+                        <tr><td>7026</td><td>MESA DE APOYO, MATERIAL  PLÁSTICO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td></tr>
+                        <tr><td>4249</td><td>NEUMATICOS RADIAL MEDIDA: 195/75R16</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td></tr>
+                        <tr><td>2895</td><td>DISYUNTORES DIFERENCIALES-TETRAPOLAR</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td></tr>
+                        <tr><td>6130</td><td>MASCARA PROTECCION FACIAL</td><td>31</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td></tr>
+                        <tr><td>4343</td><td>PORTAFOLLETOS MATERIAL MDF MEDIDA 130X90</td><td>1</td><td>3</td><td>0</td><td>2</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td></tr>
+                        <tr><td>1885</td><td>SOPORTE EXTERIOR DE PARED 45º P/1.5 M</td><td>0</td><td>1</td><td>0</td><td>1</td><td>2</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td></tr>
+                        <tr><td>5441</td><td>CARTELERA DE PIE BASE MDF 1,50 X 1,00 M</td><td>0</td><td>0</td><td>0</td><td>2</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>5</td><td>0</td></tr>
+                        <tr><td>1244</td><td>MESA OFFICE (HT 12)</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
+                        <tr><td>6956</td><td>CAJAS P.HERRAMIENTAS 3 COMPARTIMENTOS</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
+                        <tr><td>6990</td><td>LIJADORAS ORB.; N° CARRERAS: 14000RPM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
+                        <tr><td>6992</td><td>DELANTALES; TIPO: P/SOLDAR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
+                        <tr><td>5554</td><td>CAJA P/HERRAMIENTAS - 60X25X25 CM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
+                        <tr><td>2951</td><td>EXTENSIÓN ESCRITORIO ADMINISTRATIVO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>4</td><td>0</td></tr>
+                        <tr><td>1805</td><td>SOPORTE DE PARED P/TELEVISORES LCD</td><td>1</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td></tr>
+                        <tr><td>6601</td><td>LLAVE CRIQUET NEUMATICA ENCASTRE  ½" 68</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td></tr>
+                        <tr><td>287</td><td>CARTUCHO IMP.HP 3800 NEGRO - Q6470A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>3</td><td>0</td></tr>
+                        <tr><td>3497</td><td>MARCADOR P/PIZ PTA RED. GRUESO ROJO</td><td>20</td><td>54</td><td>25</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>5429</td><td>BANNER, FAZ SIMPLE, 0,90 X 1,90 CM.</td><td>9</td><td>2</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>4174</td><td>TERMOTANQUE GENERICO</td><td>1</td><td>0</td><td>1</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>3344</td><td>MASTIL CAÑO 1,5 M</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>3852</td><td>CONTENEDOR DE RESIDUOS 50 L AZUL</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>6565</td><td>TALADRO ELECTRICO DIAM PERF ACERO 16MM</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>5482</td><td>CABINA VIGILANCIA-FIBRA DE VIDRIO-MOVIL</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>1215</td><td>ESCRITORIO GERENTE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>6692</td><td>MESA RECTANGULAR PLASTICO 1,40X0,75</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>2</td><td>0</td></tr>
+                        <tr><td>1354</td><td>PINCHA PAPELES METÁLICO, ALTO 12,5 CM</td><td>19</td><td>81</td><td>20</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>3496</td><td>MARCADOR P/PIZ PTA RED. GRUESO AZUL</td><td>30</td><td>35</td><td>6</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>5285</td><td>CONTENEDOR DE RESIDUOS 28 L NEGRO</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>4083</td><td>AIRE ACONDICIONADO TIPO SPLIT 3000 F/C</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6971</td><td>ANDAMIO METALICO</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6976</td><td>ANDAMIO P/TRABAJOS EN ALTURA-PORTATIL</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6611</td><td>SOLDADORA ELÉCTRICA INVERTER DE 250 AMPE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6131</td><td>CAMISOLIN</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>5434</td><td>CARTEL IDENTIFICATORIO-25X15 MESA DE COM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>2813</td><td>CARTEL IDENTIFICATORIO-25X15 GERENTE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6270</td><td>COMPUTADORA PORTATIL DELGADA Y LIVIANA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>5286</td><td>CONTENEDOR DE RESIDUOS 50 L VERDE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6235</td><td>COMPUTADORA PORTATIL</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6259</td><td>JUEGO DE VAJILLA - HASTA 500 COMPONENTES</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>6826</td><td>IMPRESORA COD. BARRA; CODIF. RFID- MESA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+                        <tr><td>1498</td><td>TORNILLO T1 PHILLIPS 8MM X 1/2"</td><td>0</td><td>0</td><td>15600</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1463</td><td>CONJUNTO FIJACIÓN</td><td>0</td><td>0</td><td>14670</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5539</td><td>TORNILLO AUTOPERFOR. ACERO 6MM X 2 PULG</td><td>0</td><td>0</td><td>12000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5983</td><td>TORNILLO PHILIPS-DIAM:8MM-LARGO:1 1/4PUL</td><td>0</td><td>0</td><td>8000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>680</td><td>LAPIZ NEGRO GRAFITO ALTA CAL.TRAZO MEDIO</td><td>904</td><td>1826</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>169</td><td>BROCHES P/ABROCHAD. 21/6 CJX1000</td><td>514</td><td>495</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3304</td><td>ETIQUETAS AUTOADHESIVAS; MEDIDA 100X35MM</td><td>0</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1360</td><td>ARRANCADOR P/TUBO UNIVERSAL 4-65W</td><td>0</td><td>0</td><td>1000</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>724</td><td>MARCADOR TRAZO FINO COLOR AZUL</td><td>129</td><td>194</td><td>204</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>4034</td><td>BALASTOS P/TUBO FLUOR 2X36W</td><td>0</td><td>0</td><td>480</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>917</td><td>TACO NOTAS AUTOADHES. 38X50 MM. AMARILLO</td><td>259</td><td>206</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1355</td><td>CINTA DE EMBALAR</td><td>313</td><td>96</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3443</td><td>DISCOS DE CORTE ABRASIVO DIÁM EXT 355MM</td><td>0</td><td>0</td><td>400</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>892</td><td>SACAPUNTAS INDIVIDUALES</td><td>244</td><td>126</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>2156</td><td>DISCOS DE CORTE-DIAM114MM-ESP3.2MM.AMOLA</td><td>0</td><td>0</td><td>370</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>2159</td><td>DISCOS DE CORTE-DIAM230MM-ESP3.2MM.AMOLA</td><td>0</td><td>0</td><td>300</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1361</td><td>BALASTRO P/TUBO POT.36W FRECUEN 220/50HZ</td><td>0</td><td>0</td><td>300</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>115</td><td>BANDAS ELASTICAS FINAS BOLSA X 250 GR</td><td>153</td><td>144</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1394</td><td>CINTA AISLADORA PVC A=19MM L=20M</td><td>150</td><td>0</td><td>100</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5713</td><td>CARTEL 70 X 100 - TRABAJADORES</td><td>0</td><td>0</td><td>237</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5712</td><td>CARTEL 70 X 100 -JUBILADOS Y PENSIONADOS</td><td>0</td><td>0</td><td>232</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>521</td><td>CUADERNO 84H 21X29.7CM.RAY, T DUR. ESPIR</td><td>209</td><td>17</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>766</td><td>PAPEL ILUSTRACIÓN A4  BLANCO MATE 115GR.</td><td>0</td><td>199</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5716</td><td>CARTEL 70 X 100 - PROTECCIÓN SOCIAL</td><td>0</td><td>0</td><td>198</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5724</td><td>CARTEL 50 X 70 - TRÁMITES WEB</td><td>0</td><td>0</td><td>196</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5726</td><td>CARTEL 50 X 70 - DOCUMENTO DE IDENTIDAD</td><td>0</td><td>0</td><td>186</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>713</td><td>MARCAD.P/PIZAR.BLA.COL.NEGR PTA.SINT.RED</td><td>45</td><td>77</td><td>58</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5728</td><td>CARTEL 50X70- LOS TRÁMITES SON GRATUITOS</td><td>0</td><td>0</td><td>166</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5725</td><td>CARTEL 50X70-130 ATENCIÓN TELEFÓNICA</td><td>0</td><td>0</td><td>157</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5962</td><td>PANTALON DE TRABAJO - TALLE 44</td><td>156</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1437</td><td>RIBBONS</td><td>0</td><td>150</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>413</td><td>CINTA DE ENMASCARAR 24 MM</td><td>100</td><td>0</td><td>48</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6193</td><td>LIJA AL AGUA Nº 120</td><td>10</td><td>0</td><td>126</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5727</td><td>CARTEL 50 X 70 - SOLICITUD DE TURNO</td><td>0</td><td>0</td><td>95</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6530</td><td>DESTORNILLADOR DE PUNTA PLANA 2,5MM DIAM</td><td>0</td><td>0</td><td>78</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5623</td><td>MECHA MILIMETRICA DE WIDIA-DIAMETRO:10MM</td><td>0</td><td>0</td><td>68</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5625</td><td>MECHA MILIMETRICA DE WIDIA-DIAMETRO: 6MM</td><td>0</td><td>0</td><td>63</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5624</td><td>MECHA MILIMETRICA DE WIDIA-DIAMETRO: 8MM</td><td>0</td><td>0</td><td>58</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6531</td><td>PINZA MULTIUSOS DE PUNTA DE ACERO</td><td>0</td><td>0</td><td>58</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1812</td><td>HIERRO ANGULO 1"1/4 X 1"1/4 X 3/16" X6MT</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5963</td><td>PANTALON DE TRABAJO - TALLE 42</td><td>50</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5982</td><td>PRECINTO PLASTICO-TIPO:4,8X250MM-T.SEG:1</td><td>20</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6523</td><td>PROBADORES DE TENSION</td><td>0</td><td>0</td><td>49</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3469</td><td>CARTÓN CORRUGADO ANCHO 1M, ROLLO DE 30M</td><td>48</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5633</td><td>VALVULA P/INODORO- MODELO: PARA EMBUTIR</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6547</td><td>REP. Y ACC. P/INODORO - TORNILLO</td><td>40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6561</td><td>SELLADOR DE SILICONA - ENVASE 300GR</td><td>20</td><td>0</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3264</td><td>SWITCHES</td><td>0</td><td>39</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1813</td><td>HIERRO ANGULO 1"1/2 X 1"1/2 X 3/16" X6MT</td><td>38</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>2078</td><td>TONER FOTOC RICOH 4500 HA 12000 COPIAS</td><td>14</td><td>23</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5976</td><td>CARTEL 70 X 100 - D.N.I.</td><td>0</td><td>0</td><td>32</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6541</td><td>BRAZO MECANICO  PARA CIERRAPUERTA</td><td>0</td><td>0</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5960</td><td>PANTALON DE TRABAJO - TALLE 48</td><td>29</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6528</td><td>DESTORNILLADOR DE PUNTA PLANA 5,5MM DIAM</td><td>0</td><td>0</td><td>29</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6527</td><td>DESTORNILLADOR DE PUNTA PHILLIPS 3MM</td><td>0</td><td>0</td><td>28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6533</td><td>PINZA MULTIUSO UNIVERSAL AISLADA</td><td>0</td><td>0</td><td>28</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5961</td><td>PANTALON DE TRABAJO - TALLE 46</td><td>27</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6524</td><td>DESTORNILLADORES PHILLIPS 6 MM</td><td>0</td><td>0</td><td>27</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5719</td><td>CARTEL 70 X 100 - D.N.I. / ANSES</td><td>0</td><td>0</td><td>25</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6529</td><td>DESTORNILLADOR DE PUNTA PLANA 4MM DIAM</td><td>0</td><td>0</td><td>24</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5981</td><td>PRECINTO PLASTICO-TIPO:4,8X300MM-T.SEG:6</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>116</td><td>BANDEJA PORTAPAPELES PLASTICA SIMPLE</td><td>20</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6051</td><td>CARTEL-70 X 100 CM- TRAMITES Y CONSULTAS</td><td>0</td><td>0</td><td>13</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1386</td><td>INTERRUPTOR TERMOMAG. BIPOLAR 25A</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5620</td><td>PISTOLA SOPLETE PARA SOLDAR</td><td>0</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>6563</td><td>CEMENTO DE CONTACTO - ENVASE X 500GR</td><td>0</td><td>0</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1853</td><td>DESTRUCTORA DE DOCUMENTOS DE OFIC GRANDE</td><td>0</td><td>2</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3470</td><td>PAPEL DE LIJA TIPO AL AGUA, NÚMERO 80</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3851</td><td>CONTENEDOR DE RESIDUOS 28 L VERDE</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>4292</td><td>DISCO ABRASIVO USO AMOLAR 115 MM</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5722</td><td>CARTEL 70 X 100 - DESARROLLO SOCIAL</td><td>0</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5284</td><td>CONTENEDOR DE RESIDUOS 28 L AZUL</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5428</td><td>CARTELERA COLGAR 70X100 ANSES</td><td>0</td><td>3</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5723</td><td>CARTEL 70 X 100 - EMPLEO</td><td>0</td><td>0</td><td>4</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1462</td><td>ROLLO X 150 MTS DE CINTA UNION P/DURLOCK</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3560</td><td>CINTA ADHESIVA TRANSPARENTE- 12MMX33M</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3563</td><td>PORTA LÁPICES DE ESCRITORIO PLÁSTICO</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3503</td><td>ESTUFA TIRO BALANCEADO 3000 KCAL GAS NAT</td><td>0</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1245</td><td>MESA DE APOYO INFORMATICO</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>972</td><td>TIJERAS DE ACERO  CON MANGO PLASTICO</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5820</td><td>PANTALON DE VESTIR MASCULINO TALLE 62</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5694</td><td>SIERRA CIRCULAR-DIAMETRO: 184 MM</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5718</td><td>CARTEL 70 X 100 - ATENCIÓN CON TURNO</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5720</td><td>CARTEL 70 X 100  -  AUTO-CONSULTA</td><td>0</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>398</td><td>CILINDRO P/ IMP- BROTHER 5250  -  DR 520</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>977</td><td>TINTA PARA SELLOS DE GOMA COLOR NEGRO</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5752</td><td>MATAFUEGOS; BC, DIOX CARBONO. 7KG</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1011</td><td>TONER SAMSUNG CLP670N NP.CLT K508L NEGRO</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1264</td><td>MATAFUEGO BASE ANHIDRIDO CARBON. DE 5 K.</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>2556</td><td>BANNER C/SOPORTE ALUMINIO - ANSES 3</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1267</td><td>MATAFUEGO A BASE DE AFFF DE 10 L.C/ACC</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>620</td><td>FOLIOS TAMAÑO A4 (PAQUETE 100UN)</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3805</td><td>TÓNER PARA IMPRESORA HP M551. AMARILLO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3807</td><td>TÓNER PARA IMPRESORA HP M551. CIAN</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>3808</td><td>TÓNER PARA IMPRESORA HP M551. MAGENTA</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>522</td><td>CUADERNO 84HJ. CUADR. A4 ESPIR 70GR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>918</td><td>TACO NOTAS AUTOADHES. 76X76 MM. AMARILLO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1269</td><td>MATAFUEGO BASE DE HCFC 123 PRESION 5KG</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>802</td><td>PERFORADORA DE ESCRITORIO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5831</td><td>PANTALON DE VESTIR MASCULINO TALLE 40</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5832</td><td>PANTALON DE VESTIR MASCULINO TALLE 38</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5822</td><td>PANTALON DE VESTIR MASCULINO TALLE 58</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5823</td><td>PANTALON DE VESTIR MASCULINO TALLE 56</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5754</td><td>MATAFUEGOS; ABC, AGUA PULVER, 10 L</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1395</td><td>CABLECANAL PVC 40X30MM</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>788</td><td>PAPEL OBRA A3 42X29,7 70GR. ALIS. AMAR.</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>789</td><td>PAPEL OBRA A3 42X29,7CM 70GR. ALIS.CELES</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>791</td><td>PAPEL OBRA A3 42X29,7CM 70GR. ALIS.VERDE</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>793</td><td>PAPEL OBRA A4 DE 210 X 297 MM. 80 G. PQ</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5593</td><td>PINTURA-ESMALTE SINT. SAT. BLANCO X 4 L</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1974</td><td>BASTIDOR PLAST.MOD.3 P.CAMBRE COD.6790</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1982</td><td>TAPA T/STANDARD MOD.2 S/TOMA PLASTICO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>4123</td><td>MODULO TOMA CAMBRE 3 PATAS CHATAS 10A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>4417</td><td>MODULO TOMACORRIENTE P/EMBUTIR; CTE: 10A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5978</td><td>INTERRUPTOR ELECT.LLAVE 1 PTO. TECLA-10A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>5979</td><td>TAPA T/STANDARD MOD.1 S/TOMA PLASTICO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1406</td><td>DISY.DIF T/BIPOLAR C.CORTE 25A 50HZ 220V</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>1981</td><td>JABALINAS ACERO/COBRE 1.5M LARGO</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>4125</td><td>INTERRUPTOR TERMOMAG. BIPOLAR 20A</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                        <tr><td>765</td><td>PAPEL ILUSTRACIÓN A3 BLANCO MATE 115GR</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td class="cero">0</td><td class="cero">0</td></tr>
+                      </tbody>
+ 
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Exportar a Excel DataTables CDN-->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+  <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+
+  <!-- Exportar a Excel -->
+  <!-- <script src="./js/descTabla/script.js"></script> -->
+
+  <!-- dataTable -->
+  <script>
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+  </script>
+
+<script>
+  document.getElementById("ActualizadoSaldo").innerHTML = FechaActual;  
+</script>
+
+<!-- <script>
+      const table = new DataTable('#dataTable', {
+                        fixedColumns: {
+                            start: 2
+                        },
+                        paging: false,
+                        scrollCollapse: true,
+                        scrollY: '300px',
+                        scrollX: true
+                    });
+    
+    document.querySelectorAll('a.toggle-vis').forEach((el) => {
+        el.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            let columnIdx = e.target.getAttribute('data-column');
+            let column = table.column(columnIdx);
+    
+            // Toggle the visibility
+            column.visible(!column.visible());
+        });
+    });
+</script> -->
+
+<script>
+  $('#dataTable').dataTable( {
+      dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+      buttons: ['copy', 'excel'],
+      columnDefs: [
+      // {
+      //     targets: 3,
+      //     render: $.fn.dataTable.render.number('.', '')
+      { targets: [2, 3,	4,	5,	6,	7,	8,	9,	10,	11,	12,	13,	14,	15,	16,	17,	18], render: $.fn.dataTable.render.number('.', ''), searchable: false },
+      { targets: [0], className:'font-weight-bold dt-head-center align-middle' },
+      { targets: [1], className:'text-left font-weight-bold dt-head-center align-middle' },
+      { targets: [17, 18], className:'text-right font-weight-bold dt-head-center' },
+      // { targets: [5], className:'text-right text-success font-weight-bold dt-head-center' }
+      // { targets: '_all', className:'dt-center' }
+      ],
+    "order": [[17, 'desc']],
+    "pageLength": 10,
+    "language": {
+                    "zeroRecords": "No se encontraron coincidencias.",
+                    "paginate": {
+                        "first": "Primera",
+                        "last": "Última ",
+                        "next": "  >>",
+                        "previous": "<<  "                   
+                    },
+                    "sLengthMenu": "Mostrar de a _MENU_ resultados",
+                    "emptyTable": "No hay datos disponibles en la tabla.",
+                    "search": "Buscar... ",
+                    "info": "Mostrando _START_ a _END_ (de _TOTAL_ resultados)",
+                    "infoEmpty": "Mostrando 0 de 0 resultados",
+                    "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+                }
+    }
+   );
+</script>
+
+
+</body>
+
+</html>

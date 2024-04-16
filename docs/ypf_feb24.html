@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template -->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this page -->
+  <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+
+</head>
+
+<body  id="page-top" class="sidebar-toggled">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        </li>
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          <h1 class="h1 mb-4 text-gray-800 text-center"><strong>Consumos FEBRERO´24</strong> - YPF en Ruta - Vehículos ANSES</h1>
+
+          <div class="row">
+
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-6 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">ANÁLISIS DE CARGA SEGÚN FLOTA - JEFATURAS REGIONALES</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th class="align-middle">DEPENDENCIAS</th><th class="align-middle">TOTAL FLOTA</th><th class="align-middle">CONSUMO YPF</th><th class="align-middle">CONSUMOS SAP</th><th class="align-middle">SIN CONSUMO SAP</th><th class="align-middle">SIN REGISTRO SAP</th></tr></thead>
+                            <tbody class="align-middle">
+                                <tr><td class="text-left">JR BONAERENSE I</td><td>5</td><td>3</td><td>3</td><td>2</td><td>0</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE II</td><td>9</td><td>3</td><td>3</td><td>0</td><td>6</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE III</td><td>10</td><td>5</td><td>6</td><td>0</td><td>4</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE IV</td><td>12</td><td>11</td><td>11</td><td>0</td><td>1</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE V</td><td>8</td><td>5</td><td>5</td><td>3</td><td>0</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE VI</td><td>6</td><td>6</td><td>6</td><td>0</td><td>0</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE VII</td><td>5</td><td>4</td><td>3</td><td>0</td><td>2</td></tr>
+                                <tr><td class="text-left">JR CAPITAL FEDERAL</td><td>2</td><td>2</td><td>2</td><td>0</td><td>0</td></tr>
+                                <tr><td class="text-left">JR CENTRO</td><td>14</td><td>8</td><td>8</td><td>0</td><td>6</td></tr>
+                                <tr><td class="text-left">JR CONURBANO I</td><td>13</td><td>8</td><td>8</td><td>5</td><td>0</td></tr>
+                                <tr><td class="text-left">JR CONURBANO II</td><td>8</td><td>4</td><td>4</td><td>4</td><td>0</td></tr>
+                                <tr><td class="text-left">JR CONURBANO III</td><td>15</td><td>3</td><td>3</td><td>6</td><td>6</td></tr>
+                                <tr><td class="text-left">JR CONURBANO IV</td><td>12</td><td>4</td><td>4</td><td>0</td><td>8</td></tr>
+                                <tr><td class="text-left">JR CUYO</td><td>18</td><td>5</td><td>5</td><td>0</td><td>13</td></tr>
+                                <tr><td class="text-left">JR LITORAL</td><td>17</td><td>10</td><td>10</td><td>0</td><td>7</td></tr>
+                                <tr><td class="text-left">JR NORESTE</td><td>19</td><td>7</td><td>3</td><td>3</td><td>13</td></tr>
+                                <tr><td class="text-left">JR NOROESTE</td><td>10</td><td>4</td><td>2</td><td>0</td><td>8</td></tr>
+                                <tr><td class="text-left">JR NORTE</td><td>13</td><td>8</td><td>8</td><td>2</td><td>3</td></tr>
+                                <tr><td class="text-left">JR SUR I</td><td>20</td><td>7</td><td>5</td><td>4</td><td>11</td></tr>
+                                <tr><td class="text-left">JR SUR II</td><td>14</td><td>3</td><td>0</td><td>0</td><td>14</td></tr>
+                                <tr class="table-info"><td class="font-weight-bold text-dark">TOTAL</td><td class="font-weight-bold text-dark">230</td><td class="font-weight-bold text-dark">110</td><td class="font-weight-bold text-dark">99</td><td class="font-weight-bold text-dark">29</td><td class="font-weight-bold text-dark">102</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        <!-- <div class="col-12 col-xl-1"></div>
+        <div class="col-12 col-xl-1"></div> -->
+        
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-6 mb-4">
+              <div class="card shadow mb-4 border-left-info">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center">
+                      <h6 class="m-0 font-weight-bold text-dark">ANÁLISIS DE CONSUMOS POR LITROS - JEFATURAS REGIONALES</h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="">
+                      <div class="card-body pt-1 pb-1">
+                          <table class="table table-sm table-bordered table-hover text-center">
+                          <thead class="table-secondary"><tr style="color: rgb(252, 250, 250);" class="font-weight-bold"><th></th><th colspan="3" style="background-color: #ec4014;">REGISTROS DE CARGAS</th><th colspan="3" style="background-color: #017a1f; width: 40%;">LITROS</th></tr></thead>
+                          <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th class="align-middle">DEPENDENCIAS</th><th class="align-middle">SAP</th><th class="align-middle">YPF</th><th class="align-middle" style="width: 7%;">DIFERENCIAS</th><th class="align-middle">SAP</th><th class="align-middle">YPF</th><th class="align-middle" style="width: 13%;">DIFERENCIAS</th></tr></thead>
+                              <tbody class="align-middle">
+                                <tr><td class="text-left">JR BONAERENSE I</td><td>6</td><td>6</td><td>0</td><td>151,33</td><td>152,33</td><td>-1,00</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE II</td><td>7</td><td>7</td><td>0</td><td>196,2</td><td>196,20</td><td>0,00</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE III</td><td>14</td><td>13</td><td>1</td><td>391,05</td><td>391,04</td><td>0,01</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE IV</td><td>19</td><td>19</td><td>0</td><td>841,39</td><td>871,72</td><td>-30,33</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE V</td><td>10</td><td>10</td><td>0</td><td>368,69</td><td>368,69</td><td>0,00</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE VI</td><td>9</td><td>11</td><td>-2</td><td>183,03</td><td>228,24</td><td>-45,21</td></tr>
+                                <tr><td class="text-left">JR BONAERENSE VII</td><td>17</td><td>17</td><td>0</td><td>248,95</td><td>243,96</td><td>4,99</td></tr>
+                                <tr><td class="text-left">JR CAPITAL FEDERAL</td><td>2</td><td>2</td><td>0</td><td>72,15</td><td>72,15</td><td>0,00</td></tr>
+                                <tr><td class="text-left">JR CENTRO</td><td>20</td><td>20</td><td>0</td><td>598,13</td><td>598,29</td><td>-0,16</td></tr>
+                                <tr><td class="text-left">JR CONURBANO I</td><td>12</td><td>12</td><td>0</td><td>456,82</td><td>456,72</td><td>0,10</td></tr>
+                                <tr><td class="text-left">JR CONURBANO II</td><td>4</td><td>4</td><td>0</td><td>173,07</td><td>173,07</td><td>0,00</td></tr>
+                                <tr><td class="text-left">JR CONURBANO III</td><td>7</td><td>7</td><td>0</td><td>249,83</td><td>249,83</td><td>0,00</td></tr>
+                                <tr><td class="text-left">JR CONURBANO IV</td><td>8</td><td>9</td><td>-1</td><td>307,53</td><td>353,87</td><td>-46,34</td></tr>
+                                <tr><td class="text-left">JR CUYO</td><td>14</td><td>13</td><td>1</td><td>453,71</td><td>407,06</td><td>46,65</td></tr>
+                                <tr><td class="text-left">JR LITORAL</td><td>26</td><td>28</td><td>-2</td><td>922,28</td><td>1.085,44</td><td>-163,16</td></tr>
+                                <tr><td class="text-left">JR NORESTE</td><td>7</td><td>23</td><td>-16</td><td>306,55</td><td>795,82</td><td>-489,27</td></tr>
+                                <tr><td class="text-left">JR NOROESTE</td><td>10</td><td>27</td><td>-17</td><td>188,7</td><td>672,06</td><td>-483,36</td></tr>
+                                <tr><td class="text-left">JR NORTE</td><td>16</td><td>16</td><td>0</td><td>588,42</td><td>589,42</td><td>-1,00</td></tr>
+                                <tr><td class="text-left">JR SUR I</td><td>27</td><td>29</td><td>-2</td><td>530,55</td><td>641,44</td><td>-110,89</td></tr>
+                                <tr><td class="text-left">JR SUR II</td><td>0</td><td>6</td><td>-6</td><td>0,00</td><td>211,65</td><td>-211,65</td></tr>
+                                <tr class="table-info"><td class="font-weight-bold text-dark">TOTAL</td><td class="font-weight-bold text-dark">235</td><td class="font-weight-bold text-dark">279</td><td class="font-weight-bold text-dark">-44</td><td class="font-weight-bold text-dark">7.228,38</td><td class="font-weight-bold text-dark">8.758,99</td><td class="font-weight-bold text-dark">-1.530,62</td></tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Area Chart AACC-->
+          <div class="col-12 col-xl-6 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">ANÁLISIS DE CARGA SEGÚN FLOTA - DIRECCIÓN GENERAL</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th class="align-middle">DEPENDENCIAS</th><th class="align-middle">TOTAL FLOTA</th><th class="align-middle">CONSUMO YPF</th><th class="align-middle">CONSUMOS SAP</th><th class="align-middle">SIN CONSUMO SAP</th><th class="align-middle">SIN REGISTRO SAP</th></tr></thead>
+                            <tbody>
+                                <tr><td class="text-left">COORDINACIÓN LOGÍSTICA</td><td>35</td><td>17</td><td>&nbsp;</td><td>&nbsp;</td><td>35</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE ANÁLISIS Y LIQ DE SENT JUD</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE CONTROL DEL FGS</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INF E INN TECNOLOGICA</td><td>4</td><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>4</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INVERSIONES</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE MONITOREO DE GEST DE PREST</td><td>1</td><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE OPERACIONES</td><td>51</td><td>18</td><td>1</td><td>&nbsp;</td><td>50</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PLANEAMIENTO</td><td>2</td><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>2</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PRENSA</td><td>4</td><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>4</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PREST CENTRALIZADAS</td><td>3</td><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>3</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PREST DESCENTRALIZADAS</td><td>2</td><td>3</td><td>&nbsp;</td><td>&nbsp;</td><td>2</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PROY DE NIÑEZ,ADOL,JUV Y GEN</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE RECURSOS HUMANOS</td><td>1</td><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL REL INST Y CON LA COMU</td><td>5</td><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>5</td></tr>
+                                <tr><td class="text-left">DIR INTEGRACION TERRITORIAL</td><td>55</td><td>18</td><td>&nbsp;</td><td>&nbsp;</td><td>55</td></tr>
+                                <tr><td class="text-left">DIRECCION EJECUTIVA</td><td>1</td><td>1</td><td>&nbsp;</td><td>&nbsp;</td><td>1</td></tr>
+                                <tr><td class="text-left">SD EJ DE ADMINISTRACION</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">SD EJ DE PRESTACIONES</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">SECRETARIA GENERAL</td><td>3</td><td>2</td><td>&nbsp;</td><td>&nbsp;</td><td>3</td></tr>
+                                <tr><td class="text-left">SECRETARIA LEGAL Y TECNICA</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr><td class="text-left">UNIDAD DE AUDITORÍA INTERNA</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td></tr>
+                                <tr class="table-info"><td class="font-weight-bold text-dark">TOTAL</td><td class="font-weight-bold text-dark">167</td><td class="font-weight-bold text-dark">72</td><td class="font-weight-bold text-dark">1</td><td class="font-weight-bold text-dark">0</td><td class="font-weight-bold text-dark">166</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <!-- Area Chart AACC-->
+          <div class="col-12 col-xl-6 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">ANÁLISIS DE CONSUMOS EN LITROS - DIRECCIÓN GENERAL</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                    <div class="card-body pt-1 pb-1">
+                        <table class="table table-sm table-bordered table-hover text-center">
+                        <thead class="table-secondary"><tr style="color: rgb(255, 255, 255);" class="font-weight-bold"><th></th><th colspan="3" style="background-color: #ec4014;">REGISTROS DE CARGAS</th><th colspan="3" style="background-color: #017a1f;">LITROS</th></tr></thead>
+                        <thead style="background-color: #0481CB;"><tr style="color: white;" class="font-weight-bold"><th class="align-middle">DEPENDENCIAS</th><th class="align-middle">SAP</th><th class="align-middle">YPF</th><th class="align-middle">DIFERENCIAS</th><th class="align-middle">SAP</th><th class="align-middle">YPF</th><th class="align-middle">DIFERENCIAS</th></tr></thead>
+                            <tbody class="align-middle">
+                                <tr><td class="text-left">COORDINACIÓN LOGÍSTICA</td><td>&nbsp;</td><td>42</td><td>-42</td><td>&nbsp;</td><td>2.042,12</td><td>-2.042,12</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE ANÁLISIS Y LIQ DE SENT JUD</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE CONTROL DEL FGS</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INF E INN TECNOLOGICA</td><td>&nbsp;</td><td>9</td><td>-9</td><td>&nbsp;</td><td>341,73</td><td>-341,73</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INVERSIONES</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE MONITOREO DE GEST DE PREST</td><td>&nbsp;</td><td>1</td><td>-1</td><td>&nbsp;</td><td>51,09</td><td>-51,09</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE OPERACIONES</td><td>3</td><td>48</td><td>-45</td><td>103,51</td><td>2.446,18</td><td>-2.342,67</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PLANEAMIENTO</td><td>&nbsp;</td><td>9</td><td>-9</td><td>&nbsp;</td><td>247,63</td><td>-247,63</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PRENSA</td><td>&nbsp;</td><td>5</td><td>-5</td><td>&nbsp;</td><td>151,80</td><td>-151,80</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PREST CENTRALIZADAS</td><td>&nbsp;</td><td>5</td><td>-5</td><td>&nbsp;</td><td>191,02</td><td>-191,02</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PREST DESCENTRALIZADAS</td><td>&nbsp;</td><td>14</td><td>-14</td><td>&nbsp;</td><td>618,51</td><td>-618,51</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PROY DE NIÑEZ,ADOL,JUV Y GEN</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE RECURSOS HUMANOS</td><td>&nbsp;</td><td>10</td><td>-10</td><td>&nbsp;</td><td>338,47</td><td>-338,47</td></tr>
+                                <tr><td class="text-left">DIR GRAL REL INST Y CON LA COMU</td><td>&nbsp;</td><td>1</td><td>-1</td><td>&nbsp;</td><td>53,85</td><td>-53,85</td></tr>
+                                <tr><td class="text-left">DIR INTEGRACION TERRITORIAL</td><td>&nbsp;</td><td>35</td><td>-35</td><td>&nbsp;</td><td>1.570,74</td><td>-1.570,74</td></tr>
+                                <tr><td class="text-left">DIRECCION EJECUTIVA</td><td>&nbsp;</td><td>3</td><td>-3</td><td>&nbsp;</td><td>110,22</td><td>-110,22</td></tr>
+                                <tr><td class="text-left">SD EJ DE ADMINISTRACION</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">SD EJ DE PRESTACIONES</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">SECRETARIA GENERAL</td><td>&nbsp;</td><td>7</td><td>-7</td><td>&nbsp;</td><td>344,43</td><td>-344,43</td></tr>
+                                <tr><td class="text-left">SECRETARIA LEGAL Y TECNICA</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr><td class="text-left">UNIDAD DE AUDITORÍA INTERNA</td><td>&nbsp;</td><td>&nbsp;</td><td>0</td><td>&nbsp;</td><td>&nbsp;</td><td>0,00</td></tr>
+                                <tr class="table-info"><td class="font-weight-bold text-dark">TOTAL</td><td class="font-weight-bold text-dark">3</td><td class="font-weight-bold text-dark">189</td><td class="font-weight-bold text-dark">-186</td><td class="font-weight-bold text-dark">103,51</td><td class="font-weight-bold text-dark">8.507,79</td><td class="font-weight-bold text-dark">-8.404,28</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-12 mb-4">
+            <div class="">
+                <h4 class="m-2 text-dark font-weight-bold text-center">DOMINIOS CON DIFERENCIAS</h4>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-1"></div>
+
+          <!-- Area Chart -->
+          <div class="col-12 col-xl-10 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+              <!-- Card Header - Dropdown -->
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-dark">REGISTROS CON DIFERENCIAS EN <span class="text-success font-weight-bold">SAP</span> / <span class="font-weight-bold" style="color: #acaf06;">YPF</span> - POR DOMINIO / 
+                  <!-- <a href="Extracto YPF de Agosto 2023.xlsx">(descargar en archivo Excel)</a> -->
+                </h6>
+              </div>
+              <!-- Card Body -->
+              <div class="">
+                <div class="card-body pt-1 pb-1">
+                  
+                  <table class="table table-sm table-bordered table-hover text-center display" id="datatable_2" width="100%" cellspacing="0">
+                    
+                    <style type="text/css">
+                      .dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+                        color: white !important;
+                        border: 1px solid #36729b;
+                        background-color: #00aced;
+                        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, white), color-stop(100%, 00aced));
+                        background: -webkit-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: -moz-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: -ms-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: -o-linear-gradient(top, white 0%, #dcdcdc 100%);
+                        background: #00aced;
+                    }
+                    .dataTables_wrapper .dataTables_paginate .paginate_button {
+                        box-sizing: border-box;
+                        display: inline-block;
+                        min-width: 1.5em;
+                        padding: 0.5em 1em;
+                        margin-left: 2px;
+                        text-align: center;
+                        text-decoration: none !important;
+                        cursor: pointer;
+                        cursor: hand;
+                        color: #00aced !important;
+                        border: 1px solid transparent;
+                        border-radius: 2px;
+                    }
+                    .dt-buttons {
+                      margin-left: 20px;
+                    }
+                    button.dt-button, div.dt-button, a.dt-button, input.dt-button {
+                        color: #fff;
+                        background-color: #00aced;
+                        border-color: #00aced;
+                    }
+                    table.dataTable.no-footer {
+                        border-bottom: 1px solid #ddd6d6;
+                    }
+                    .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
+                        color: #898181;
+                    }
+                    table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+                        right: 0.5em;
+                        content: "";
+                    }
+                    table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+                        right: 0.5em;
+                        content: "";
+                    }
+                    </style>
+                    <style type="text/css">
+                      .dataTable tbody tr td{
+                      vertical-align: middle!important;
+                      padding: 4px 5px;
+                      }
+                    </style>
+
+                      <thead style="background-color: #0481CB;"><tr style="color: white;" class="text-center"><th class="align-middle">DEPENDENCIA</th><th class="align-middle">DOMINIO</th><th class="align-middle" style="background-color: #037e14;">LTS SAP</th><th class="align-middle" style="background-color: #8c8f03;">LTS YPF</th><th class="align-middle" style="background-color: #aa0404;">Dif LTS</th><th class="align-middle" style="background-color: #037e14;">CARGAS SAP</th><th class="align-middle" style="background-color: #8c8f03;">TICKETS YPF</th><th class="align-middle" style="background-color: #aa0404;">Dif TICKETS</th></tr>
+                      </thead>
+                      
+                      <tbody>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>JAT829</td><td>0,00</td><td>176,64</td><td>-176,64</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>NGU612</td><td>0,00</td><td>161,13</td><td>-161,13</td><td>5</td><td>0</td><td>5</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>JCV338</td><td>0,00</td><td>80,16</td><td>-80,16</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284LJ</td><td>0,00</td><td>132,47</td><td>-132,47</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284LH</td><td>0,00</td><td>193,74</td><td>-193,74</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284LD</td><td>0,00</td><td>188,25</td><td>-188,25</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284KY</td><td>0,00</td><td>220,65</td><td>-220,65</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC823SG</td><td>0,00</td><td>119,52</td><td>-119,52</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284KZ</td><td>0,00</td><td>123,62</td><td>-123,62</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AB665LA</td><td>0,00</td><td>77,60</td><td>-77,60</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284LB</td><td>0,00</td><td>50,10</td><td>-50,10</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>LGE583</td><td>0,00</td><td>59,92</td><td>-59,92</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC295WO</td><td>0,00</td><td>141,55</td><td>-141,55</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>NIE281</td><td>0,00</td><td>58,76</td><td>-58,76</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>NFQ784</td><td>0,00</td><td>123,57</td><td>-123,57</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>NES062</td><td>0,00</td><td>52,01</td><td>-52,01</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>COORD. LOGISTICA (DSYS)</td><td>AC284PZ</td><td>0,00</td><td>82,43</td><td>-82,43</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>LIL400</td><td>0,00</td><td>118,26</td><td>-118,26</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>AC105ZT</td><td>0,00</td><td>90,54</td><td>-90,54</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>JJL571</td><td>0,00</td><td>132,93</td><td>-132,93</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>DIR GRAL DE MONITOREO DE LA GESTION DE PRESTACIONES</td><td>AC106AP</td><td>0,00</td><td>51,09</td><td>-51,09</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LO</td><td>0,00</td><td>179,46</td><td>-179,46</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>FRZ403</td><td>103,51</td><td>36,84</td><td>66,67</td><td>1</td><td>3</td><td>-2</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>JLH740</td><td>0,00</td><td>127,73</td><td>-127,73</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295XP</td><td>0,00</td><td>47,53</td><td>-47,53</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823TZ</td><td>0,00</td><td>105,81</td><td>-105,81</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UK</td><td>0,00</td><td>147,58</td><td>-147,58</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VY</td><td>0,00</td><td>69,45</td><td>-69,45</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823SH</td><td>0,00</td><td>76,63</td><td>-76,63</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VX</td><td>0,00</td><td>287,10</td><td>-287,10</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106CJ</td><td>0,00</td><td>147,30</td><td>-147,30</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823SE</td><td>0,00</td><td>185,75</td><td>-185,75</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WR</td><td>0,00</td><td>136,68</td><td>-136,68</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UI</td><td>0,00</td><td>166,73</td><td>-166,73</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LM</td><td>0,00</td><td>211,93</td><td>-211,93</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106BX</td><td>0,00</td><td>126,46</td><td>-126,46</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VO</td><td>0,00</td><td>105,37</td><td>-105,37</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UZ</td><td>0,00</td><td>208,61</td><td>-208,61</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WU</td><td>0,00</td><td>79,22</td><td>-79,22</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>0,00</td><td>223,99</td><td>-223,99</td><td>8</td><td>0</td><td>8</td></tr>
+                        <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>AC106AG</td><td>0,00</td><td>23,64</td><td>-23,64</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE PRENSA</td><td>AC106BI</td><td>0,00</td><td>120,02</td><td>-120,02</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>DIR GRAL DE PRENSA</td><td>AC106CH</td><td>0,00</td><td>31,78</td><td>-31,78</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AC106CW</td><td>0,00</td><td>60,80</td><td>-60,80</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>NIE276</td><td>0,00</td><td>45,37</td><td>-45,37</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AC106BM</td><td>0,00</td><td>84,85</td><td>-84,85</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AC106CC</td><td>0,00</td><td>238,94</td><td>-238,94</td><td>8</td><td>0</td><td>8</td></tr>
+                        <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AD738CF</td><td>0,00</td><td>304,25</td><td>-304,25</td><td>5</td><td>0</td><td>5</td></tr>
+                        <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AC823SR</td><td>0,00</td><td>75,32</td><td>-75,32</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>0,00</td><td>338,47</td><td>-338,47</td><td>10</td><td>0</td><td>10</td></tr>
+                        <tr><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>AC295WY</td><td>0,00</td><td>53,85</td><td>-53,85</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB818SB</td><td>0,00</td><td>67,12</td><td>-67,12</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FT</td><td>0,00</td><td>131,42</td><td>-131,42</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IH</td><td>0,00</td><td>125,92</td><td>-125,92</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FR</td><td>0,00</td><td>98,04</td><td>-98,04</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZO</td><td>0,00</td><td>48,50</td><td>-48,50</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZT</td><td>0,00</td><td>193,01</td><td>-193,01</td><td>5</td><td>0</td><td>5</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IG</td><td>0,00</td><td>154,04</td><td>-154,04</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FX</td><td>0,00</td><td>44,73</td><td>-44,73</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CQ</td><td>0,00</td><td>47,64</td><td>-47,64</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB738SE</td><td>0,00</td><td>66,44</td><td>-66,44</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB738SH</td><td>0,00</td><td>58,08</td><td>-58,08</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>0,00</td><td>236,11</td><td>-236,11</td><td>6</td><td>0</td><td>6</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>NIE282</td><td>0,00</td><td>37,06</td><td>-37,06</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZN</td><td>0,00</td><td>36,89</td><td>-36,89</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106DC</td><td>0,00</td><td>42,27</td><td>-42,27</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC769KZ</td><td>0,00</td><td>58,11</td><td>-58,11</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC934UM</td><td>0,00</td><td>77,14</td><td>-77,14</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034IU</td><td>0,00</td><td>48,22</td><td>-48,22</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>DIRECCION EJECUTIVA</td><td>JAT828</td><td>0,00</td><td>110,22</td><td>-110,22</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>61,58</td><td>62,58</td><td>-1,00</td><td>3</td><td>3</td><td>0</td></tr>
+                        <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>188,15</td><td>218,49</td><td>-30,34</td><td>4</td><td>3</td><td>1</td></tr>
+                        <tr><td>JR BONAERENSE IV</td><td>AC106CZ</td><td>49,51</td><td>49,50</td><td>0,01</td><td>1</td><td>2</td><td>-1</td></tr>
+                        <tr><td>JR BONAERENSE VI</td><td>AC106AT</td><td>41,89</td><td>87,20</td><td>-45,31</td><td>3</td><td>1</td><td>2</td></tr>
+                        <tr><td>JR BONAERENSE VI</td><td>AC106AN</td><td>3,98</td><td>3,88</td><td>0,10</td><td>1</td><td>1</td><td>0</td></tr>
+                        <tr><td>JR BONAERENSE VII</td><td>AC106BZ</td><td>0,00</td><td>33,62</td><td>-33,62</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>155,19</td><td>116,58</td><td>38,61</td><td>14</td><td>15</td><td>-1</td></tr>
+                        <tr><td>JR CENTRO</td><td>AC934VR</td><td>64,22</td><td>64,38</td><td>-0,16</td><td>6</td><td>6</td><td>0</td></tr>
+                        <tr><td>JR CONURBANO I</td><td>AC106ES</td><td>102,41</td><td>102,31</td><td>0,10</td><td>2</td><td>2</td><td>0</td></tr>
+                        <tr><td>JR CONURBANO IV</td><td>AC295XU</td><td>71,65</td><td>117,99</td><td>-46,34</td><td>3</td><td>2</td><td>1</td></tr>
+                        <tr><td>JR CUYO</td><td>AC934VQ</td><td>147,82</td><td>101,17</td><td>46,65</td><td>4</td><td>5</td><td>-1</td></tr>
+                        <tr><td>JR LITORAL</td><td>AC934VU</td><td>35,53</td><td>147,38</td><td>-111,85</td><td>3</td><td>1</td><td>2</td></tr>
+                        <tr><td>JR LITORAL</td><td>AC934UN</td><td>48,27</td><td>45,37</td><td>2,90</td><td>1</td><td>2</td><td>-1</td></tr>
+                        <tr><td>JR LITORAL</td><td>AC934UH</td><td>108,40</td><td>162,61</td><td>-54,21</td><td>3</td><td>2</td><td>1</td></tr>
+                        <tr><td>JR NORESTE</td><td>AC823UJ</td><td>0,00</td><td>74,62</td><td>-74,62</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>JR NORESTE</td><td>AC823SA</td><td>0,00</td><td>128,68</td><td>-128,68</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>JR NORESTE</td><td>AC934VS</td><td>75,98</td><td>75,99</td><td>-0,01</td><td>1</td><td>1</td><td>0</td></tr>
+                        <tr><td>JR NORESTE</td><td>AC106DW</td><td>0,00</td><td>127,93</td><td>-127,93</td><td>5</td><td>0</td><td>5</td></tr>
+                        <tr><td>JR NORESTE</td><td>AC769LI</td><td>0,00</td><td>158,03</td><td>-158,03</td><td>4</td><td>0</td><td>4</td></tr>
+                        <tr><td>JR NOROESTE</td><td>AC934VT</td><td>87,41</td><td>345,54</td><td>-258,13</td><td>10</td><td>2</td><td>8</td></tr>
+                        <tr><td>JR NOROESTE</td><td>AC106CX</td><td>0,00</td><td>39,51</td><td>-39,51</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>JR NOROESTE</td><td>AC934VB</td><td>0,00</td><td>185,72</td><td>-185,72</td><td>8</td><td>0</td><td>8</td></tr>
+                        <tr><td>JR NORTE</td><td>AC823SS</td><td>58,86</td><td>59,86</td><td>-1,00</td><td>1</td><td>1</td><td>0</td></tr>
+                        <tr><td>JR SUR I</td><td>AC106EY</td><td>0,00</td><td>35,04</td><td>-35,04</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>JR SUR I</td><td>AC934UL</td><td>0,01</td><td>75,85</td><td>-75,84</td><td>1</td><td>1</td><td>0</td></tr>
+                        <tr><td>JR SUR II</td><td>AC823UL</td><td>0,00</td><td>49,02</td><td>-49,02</td><td>1</td><td>0</td><td>1</td></tr>
+                        <tr><td>JR SUR II</td><td>AC823UI</td><td>0,00</td><td>95,51</td><td>-95,51</td><td>2</td><td>0</td><td>2</td></tr>
+                        <tr><td>JR SUR II</td><td>AC769LQ</td><td>0,00</td><td>67,12</td><td>-67,12</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>SECRETARIA GENERAL</td><td>LIL397</td><td>0,00</td><td>147,39</td><td>-147,39</td><td>3</td><td>0</td><td>3</td></tr>
+                        <tr><td>SECRETARIA GENERAL</td><td>LLC525</td><td>0,00</td><td>197,04</td><td>-197,04</td><td>4</td><td>0</td><td>4</td></tr>
+                      </tbody>
+                      
+
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-12 mb-4">
+            <div class="">
+                <h4 class="m-2 text-dark font-weight-bold text-center">DETALLE DE REMITOS SAP / YPF</h4>
+            </div>
+          </div>
+
+          <div class="col-12 col-xl-1"></div>
+
+          <!-- DataTales Example -->
+          <div class="col-12 col-xl-10 mb-4">
+            <div class="card shadow mb-4 border-left-info">
+              <div class="card-header py-3 d-flex flex-row align-items-center">
+                <h6 class="m-0 font-weight-bold text-dark">REMITOS DE SAP e YPF - POR N° DE TICKET Y MONTO <span class="text-danger">(al 08/04/2024)</span></h6>
+              </div>
+              <!-- <button style="width: 15%;" type="button" class="btn btn-outline-secondary mt-1" id="btnExportar">Exportar a Excel</button> -->
+              <div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table table-bordered table-hover text-center table-sm display" id="dataTable" width="100%" cellspacing="0">
+
+                        <thead style="background-color: #0481CB;">
+                            <tr style="color: white;" class="text-center"><th class="align-middle">DEPENDENCIA</th><th class="align-middle">DOMINIO</th><th class="align-middle">SISTEMA</th><th class="align-middle">LTS</th><th class="align-middle">REMITO</th><th class="align-middle">FECHA</th><th class="align-middle">DOC MED SAP</th></tr>
+                        </thead>
+
+                        <tbody>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284PZ</td><td>YPF</td><td>82,43</td><td>1852-00034635</td><td>2/2/2024 08:44</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC823SG</td><td>YPF</td><td>79,17</td><td>1852-00034640</td><td>2/2/2024 09:40</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LH</td><td>YPF</td><td>77,81</td><td>9236-00005364</td><td>5/2/2024 10:23</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC934UM</td><td>YPF</td><td>77,14</td><td>7253-00010245</td><td>5/2/2024 17:57</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823SH</td><td>YPF</td><td>76,63</td><td>3510-00045431</td><td>15/2/2024 20:06</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UI</td><td>YPF</td><td>76,54</td><td>1953-00009102</td><td>14/2/2024 21:25</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VF</td><td>YPF</td><td>76,05</td><td>2844-00007245</td><td>22/2/2024 07:48</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC934VS</td><td>YPF</td><td>75,99</td><td>4949-00002444</td><td>5/2/2024 13:36</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC934UL</td><td>YPF</td><td>75,85</td><td>4552-00019002</td><td>8/2/2024 07:18</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AC823SR</td><td>YPF</td><td>75,32</td><td>1869-00008019</td><td>20/2/2024 10:34</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>YPF</td><td>75,29</td><td>3473-00014593</td><td>7/2/2024 09:36</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AD738CF</td><td>YPF</td><td>74,69</td><td>4991-00100854</td><td>7/2/2024 17:37</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VX</td><td>YPF</td><td>74,66</td><td>5397-00042680</td><td>23/2/2024 06:23</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VX</td><td>YPF</td><td>74,07</td><td>6754-00008590</td><td>14/2/2024 13:12</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VX</td><td>YPF</td><td>73,26</td><td>7004-00108507</td><td>1/2/2024 14:24</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC823UG</td><td>YPF</td><td>73,18</td><td>3913-00026586</td><td>21/2/2024 08:38</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IH</td><td>YPF</td><td>72,47</td><td>3473-00014932</td><td>26/2/2024 07:05</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LC</td><td>YPF</td><td>72,12</td><td>3687-00033152</td><td>8/2/2024 19:40</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LJ</td><td>YPF</td><td>71,93</td><td>8557-00092459</td><td>28/2/2024 12:46</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>YPF</td><td>71,50</td><td>3473-00014641</td><td>9/2/2024 08:20</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934VU</td><td>YPF</td><td>71,22</td><td>1603-00010997</td><td>9/2/2024 11:16</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LH</td><td>YPF</td><td>69,84</td><td>4974-00090429</td><td>22/2/2024 07:47</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UK</td><td>YPF</td><td>69,14</td><td>3900-00019107</td><td>19/2/2024 13:04</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SA</td><td>YPF</td><td>69,08</td><td>8575-00031106</td><td>22/2/2024 17:39</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823SE</td><td>YPF</td><td>68,01</td><td>7533-00016437</td><td>7/2/2024 06:37</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB738SE</td><td>YPF</td><td>66,44</td><td>3458-00004661</td><td>21/2/2024 08:03</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LM</td><td>YPF</td><td>66,35</td><td>4974-00089061</td><td>8/2/2024 08:26</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UZ</td><td>YPF</td><td>65,60</td><td>5577-00045710</td><td>8/2/2024 17:59</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284KY</td><td>YPF</td><td>65,33</td><td>4992-00119363</td><td>15/2/2024 10:52</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>65,22</td><td>1772-00031707</td><td>27/2/2024 20:19</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LH</td><td>YPF</td><td>65,21</td><td>2474-00043022</td><td>28/2/2024 07:59</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VX</td><td>YPF</td><td>65,11</td><td>8302-00025994</td><td>29/2/2024 05:48</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284KY</td><td>YPF</td><td>65,04</td><td>7447-00009541</td><td>26/2/2024 08:24</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LO</td><td>YPF</td><td>63,79</td><td>5337-00023508</td><td>29/2/2024 11:00</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284KZ</td><td>YPF</td><td>63,35</td><td>1852-00035272</td><td>14/2/2024 11:21</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UH</td><td>YPF</td><td>63,00</td><td>5766-00025073</td><td>20/2/2024 15:59</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NFQ784</td><td>YPF</td><td>62,95</td><td>3538-00049878</td><td>2/2/2024 17:34</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823TV</td><td>YPF</td><td>62,56</td><td>5063-00005202</td><td>21/2/2024 11:16</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823TZ</td><td>YPF</td><td>62,09</td><td>9709-00006000</td><td>23/2/2024 19:46</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AD738CF</td><td>YPF</td><td>62,00</td><td>3452-00020457</td><td>22/2/2024 18:49</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NFQ784</td><td>YPF</td><td>60,62</td><td>7326-00022651</td><td>15/2/2024 07:29</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LJ</td><td>YPF</td><td>60,54</td><td>7447-00009496</td><td>22/2/2024 08:08</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284KZ</td><td>YPF</td><td>60,27</td><td>1611-00001159</td><td>27/2/2024 09:28</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VO</td><td>YPF</td><td>60,13</td><td>7004-00109802</td><td>21/2/2024 08:57</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823TT</td><td>YPF</td><td>60,12</td><td>3356-00002243</td><td>20/2/2024 11:22</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823SE</td><td>YPF</td><td>60,08</td><td>4974-00090178</td><td>20/2/2024 08:53</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC823SS</td><td>YPF</td><td>59,86</td><td>4455-00022629</td><td>6/2/2024 14:02</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LO</td><td>YPF</td><td>59,63</td><td>1852-00034552</td><td>1/2/2024 08:20</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>JLH740</td><td>YPF</td><td>59,32</td><td>4159-00020913</td><td>27/2/2024 12:17</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NIE281</td><td>YPF</td><td>58,76</td><td>4974-00089629</td><td>15/2/2024 07:25</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SU</td><td>YPF</td><td>58,73</td><td>2810-00021180</td><td>9/2/2024 09:15</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LH</td><td>YPF</td><td>58,69</td><td>9117-00028775</td><td>9/2/2024 10:30</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AD738CF</td><td>YPF</td><td>58,35</td><td>4991-00103387</td><td>29/2/2024 12:56</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC769KZ</td><td>YPF</td><td>58,11</td><td>9174-00098902</td><td>8/2/2024 09:35</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB738SH</td><td>YPF</td><td>58,08</td><td>4063-00054077</td><td>19/2/2024 12:53</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823SE</td><td>YPF</td><td>57,66</td><td>4991-00103136</td><td>27/2/2024 20:14</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UZ</td><td>YPF</td><td>57,46</td><td>7005-00004844</td><td>15/2/2024 11:37</td><td> </td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106BH</td><td>YPF</td><td>57,10</td><td>3464-00014008</td><td>19/2/2024 09:17</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IG</td><td>YPF</td><td>56,96</td><td>7115-00009948</td><td>2/2/2024 15:15</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LM</td><td>YPF</td><td>56,84</td><td>4974-00090572</td><td>23/2/2024 08:14</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LO</td><td>YPF</td><td>56,04</td><td>1852-00035350</td><td>16/2/2024 08:30</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>55,83</td><td>9240-00009501</td><td>15/2/2024 15:42</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AD738CF</td><td>YPF</td><td>55,59</td><td>4379-00023487</td><td>26/2/2024 22:29</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SU</td><td>YPF</td><td>55,09</td><td>6078-00084585</td><td>27/2/2024 08:57</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>JAT829</td><td>YPF</td><td>54,47</td><td>1852-00034849</td><td>6/2/2024 11:00</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UH</td><td>YPF</td><td>54,21</td><td>1852-00036031</td><td>28/2/2024 07:18</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284KY</td><td>YPF</td><td>53,95</td><td>4995-00065189</td><td>1/2/2024 08:34</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>53,93</td><td>6533-00000393</td><td>27/2/2024 14:05</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>AC295WY</td><td>YPF</td><td>53,85</td><td>1852-00034545</td><td>1/2/2024 08:08</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IG</td><td>YPF</td><td>53,77</td><td>8343-00011892</td><td>23/2/2024 17:53</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AD738CF</td><td>YPF</td><td>53,62</td><td>4379-00023355</td><td>20/2/2024 23:38</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>JAT829</td><td>YPF</td><td>53,57</td><td>1852-00035502</td><td>19/2/2024 09:46</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IH</td><td>YPF</td><td>53,45</td><td>9314-00012059</td><td>28/2/2024 07:59</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EE</td><td>YPF</td><td>53,35</td><td>5114-00024698</td><td>6/2/2024 17:38</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>AC105ZT</td><td>YPF</td><td>53,06</td><td>7004-00109363</td><td>15/2/2024 12:51</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>JAT829</td><td>YPF</td><td>52,94</td><td>5398-00011858</td><td>29/2/2024 17:55</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LD</td><td>YPF</td><td>52,68</td><td>2474-00041933</td><td>9/2/2024 08:12</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC769LI</td><td>YPF</td><td>52,68</td><td>4101-00019821</td><td>21/2/2024 08:37</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC769LI</td><td>YPF</td><td>52,67</td><td>4101-00019899</td><td>26/2/2024 08:11</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LLC525</td><td>YPF</td><td>52,62</td><td>6149-00020835</td><td>18/2/2024 12:56</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LM</td><td>YPF</td><td>52,50</td><td>4974-00088323</td><td>1/2/2024 08:26</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106EH</td><td>YPF</td><td>52,49</td><td>5431-00033648</td><td>28/2/2024 07:24</td><td> </td></tr>
+                          <tr><td>DIRECCION EJECUTIVA</td><td>JAT828</td><td>YPF</td><td>52,18</td><td>1852-00035016</td><td>8/2/2024 15:40</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NES062</td><td>YPF</td><td>52,01</td><td>6509-00007158</td><td>8/2/2024 11:16</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>YPF</td><td>51,87</td><td>8450-00051145</td><td>2/2/2024 09:22</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106ES</td><td>YPF</td><td>51,80</td><td>2194-00010241</td><td>1/2/2024 07:16</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LIL397</td><td>YPF</td><td>51,43</td><td>1852-00035570</td><td>20/2/2024 11:26</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE MONITOREO DE LA GESTION DE PRESTACIONES</td><td>AC106AP</td><td>YPF</td><td>51,09</td><td>7427-00049883</td><td>1/2/2024 12:23</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LLC525</td><td>YPF</td><td>51,07</td><td>5198-00025872</td><td>2/2/2024 11:16</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XZ</td><td>YPF</td><td>51,06</td><td>9223-00035670</td><td>27/2/2024 13:53</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XO</td><td>YPF</td><td>50,92</td><td>8248-00041366</td><td>8/2/2024 10:16</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LLC525</td><td>YPF</td><td>50,92</td><td>6149-00020770</td><td>10/2/2024 14:05</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LIL397</td><td>YPF</td><td>50,89</td><td>1559-00001769</td><td>8/2/2024 07:46</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106ES</td><td>YPF</td><td>50,51</td><td>5198-00026397</td><td>20/2/2024 08:39</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WR</td><td>YPF</td><td>50,13</td><td>7004-00108765</td><td>5/2/2024 14:56</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LB</td><td>YPF</td><td>50,10</td><td>1852-00035770</td><td>23/2/2024 09:18</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FT</td><td>YPF</td><td>50,10</td><td>3386-00035869</td><td>7/2/2024 06:15</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FR</td><td>YPF</td><td>50,10</td><td>3386-00035663</td><td>2/2/2024 07:14</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>YPF</td><td>50,07</td><td>8539-00028196</td><td>19/2/2024 15:44</td><td> </td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC295YD</td><td>YPF</td><td>49,51</td><td>4482-00013286</td><td>7/2/2024 08:30</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106EH</td><td>YPF</td><td>49,51</td><td>5431-00032444</td><td>1/2/2024 11:37</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XA</td><td>YPF</td><td>49,51</td><td>6115-00019982</td><td>14/2/2024 06:45</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106CZ</td><td>YPF</td><td>49,50</td><td>7979-00025324</td><td>7/2/2024 08:29</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106DQ</td><td>YPF</td><td>49,50</td><td>2783-00010263</td><td>5/2/2024 14:42</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LW</td><td>YPF</td><td>49,49</td><td>3729-00052207</td><td>26/2/2024 06:51</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC295WO</td><td>YPF</td><td>49,39</td><td>2890-00009999</td><td>16/2/2024 14:20</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EE</td><td>YPF</td><td>49,29</td><td>5114-00024938</td><td>20/2/2024 18:33</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>49,29</td><td>2907-00006329</td><td>6/2/2024 07:03</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>YPF</td><td>49,13</td><td>9286-00022967</td><td>20/2/2024 10:15</td><td> </td></tr>
+                          <tr><td>JR SUR II</td><td>AC823UL</td><td>YPF</td><td>49,02</td><td>8410-00018505</td><td>9/2/2024 10:09</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LD</td><td>YPF</td><td>48,96</td><td>7431-00040281</td><td>1/2/2024 09:33</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC295WO</td><td>YPF</td><td>48,72</td><td>1685-00005857</td><td>22/2/2024 08:44</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106AB</td><td>YPF</td><td>48,65</td><td>4509-00022934</td><td>16/2/2024 09:49</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZO</td><td>YPF</td><td>48,50</td><td>9174-00100937</td><td>26/2/2024 15:07</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FT</td><td>YPF</td><td>48,50</td><td>9174-00100924</td><td>26/2/2024 14:33</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZT</td><td>YPF</td><td>48,50</td><td>9174-00098247</td><td>2/2/2024 22:09</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC105ZY</td><td>YPF</td><td>48,50</td><td>1824-00019446</td><td>22/2/2024 11:59</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034IU</td><td>YPF</td><td>48,22</td><td>2741-00025576</td><td>5/2/2024 14:40</td><td> </td></tr>
+                          <tr><td>JR SUR II</td><td>AC823UI</td><td>YPF</td><td>48,13</td><td>3081-00007220</td><td>29/2/2024 15:26</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC295WQ</td><td>YPF</td><td>48,03</td><td>5920-00010186</td><td>19/2/2024 07:22</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UI</td><td>YPF</td><td>48,00</td><td>8490-00040163</td><td>23/2/2024 12:15</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>YPF</td><td>47,81</td><td>2751-00016811</td><td>1/2/2024 11:09</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>YPF</td><td>47,78</td><td>2942-00024168</td><td>28/2/2024 08:27</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>YPF</td><td>47,71</td><td>8251-00010593</td><td>6/2/2024 06:57</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CQ</td><td>YPF</td><td>47,64</td><td>3386-00036386</td><td>22/2/2024 11:16</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XU</td><td>YPF</td><td>47,60</td><td>4000-00002717</td><td>29/2/2024 10:51</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295XP</td><td>YPF</td><td>47,53</td><td>8303-00059652</td><td>2/2/2024 13:41</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>YPF</td><td>47,53</td><td>8710-00014659</td><td>20/2/2024 16:22</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>YPF</td><td>47,46</td><td>1881-00067234</td><td>21/2/2024 09:46</td><td> </td></tr>
+                          <tr><td>JR SUR II</td><td>AC823UI</td><td>YPF</td><td>47,38</td><td>4870-00092913</td><td>7/2/2024 09:53</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>YPF</td><td>47,35</td><td>9286-00023028</td><td>22/2/2024 10:44</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BF</td><td>YPF</td><td>47,33</td><td>9803-00010807</td><td>2/2/2024 11:52</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>YPF</td><td>47,16</td><td>9117-00028870</td><td>20/2/2024 10:58</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106AU</td><td>YPF</td><td>47,15</td><td>3344-00034621</td><td>8/2/2024 07:10</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>YPF</td><td>47,04</td><td>7143-00062886</td><td>9/2/2024 21:26</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>YPF</td><td>47,04</td><td>8529-00008238</td><td>9/2/2024 15:20</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZT</td><td>YPF</td><td>47,04</td><td>5431-00032738</td><td>7/2/2024 07:25</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934US</td><td>YPF</td><td>47,04</td><td>4504-00012227</td><td>5/2/2024 11:44</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SD</td><td>YPF</td><td>47,04</td><td>4377-00020409</td><td>19/2/2024 11:24</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AF055ZA</td><td>YPF</td><td>47,04</td><td>3952-00036290</td><td>14/2/2024 12:40</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AC106BM</td><td>YPF</td><td>47,03</td><td>4974-00088945</td><td>7/2/2024 09:03</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LL</td><td>YPF</td><td>46,40</td><td>4749-00083147</td><td>21/2/2024 13:41</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XU</td><td>YPF</td><td>46,33</td><td>3905-00048128</td><td>16/2/2024 15:51</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DM</td><td>YPF</td><td>46,26</td><td>6263-00011169</td><td>8/2/2024 11:14</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823TT</td><td>YPF</td><td>46,13</td><td>4383-00020149</td><td>21/2/2024 13:51</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106EK</td><td>YPF</td><td>46,05</td><td>5198-00025940</td><td>5/2/2024 06:51</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106AY</td><td>YPF</td><td>46,03</td><td>8315-00020616</td><td>15/2/2024 12:14</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC295YC</td><td>YPF</td><td>45,73</td><td>4710-00050995</td><td>28/2/2024 12:26</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>YPF</td><td>45,65</td><td>9618-00005468</td><td>24/2/2024 18:30</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>45,54</td><td>8085-00030165</td><td>6/2/2024 18:22</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>45,54</td><td>5733-00014514</td><td>6/2/2024 06:46</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LD</td><td>YPF</td><td>45,47</td><td>2474-00042604</td><td>21/2/2024 08:17</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UH</td><td>YPF</td><td>45,40</td><td>4167-00045245</td><td>23/2/2024 10:58</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>NIE276</td><td>YPF</td><td>45,37</td><td>8268-00018728</td><td>28/2/2024 15:15</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UN</td><td>YPF</td><td>45,37</td><td>7808-00004774</td><td>27/2/2024 16:26</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VO</td><td>YPF</td><td>45,24</td><td>7004-00108901</td><td>7/2/2024 08:57</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LIL397</td><td>YPF</td><td>45,07</td><td>6149-00020938</td><td>27/2/2024 07:20</td><td> </td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106DH</td><td>YPF</td><td>45,06</td><td>5446-00015899</td><td>19/2/2024 15:43</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UZ</td><td>YPF</td><td>45,05</td><td>4992-00120054</td><td>21/2/2024 06:03</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SZ</td><td>YPF</td><td>44,96</td><td>4949-00002645</td><td>21/2/2024 11:32</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SZ</td><td>YPF</td><td>44,96</td><td>2721-00015498</td><td>21/2/2024 08:26</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SZ</td><td>YPF</td><td>44,96</td><td>8583-00010674</td><td>7/2/2024 08:18</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>YPF</td><td>44,87</td><td>2751-00017274</td><td>23/2/2024 15:20</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>AC106CC</td><td>YPF</td><td>44,85</td><td>9174-00101426</td><td>29/2/2024 15:37</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>44,82</td><td>5278-00132172</td><td>20/2/2024 20:27</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NGU612</td><td>YPF</td><td>44,81</td><td>4163-00058003</td><td>21/2/2024 08:29</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LL</td><td>YPF</td><td>44,78</td><td>2904-00046933</td><td>22/2/2024 19:32</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106DX</td><td>YPF</td><td>44,77</td><td>6115-00020098</td><td>20/2/2024 08:23</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FX</td><td>YPF</td><td>44,73</td><td>3458-00004670</td><td>22/2/2024 14:48</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>LIL400</td><td>YPF</td><td>44,66</td><td>7845-00011178</td><td>7/2/2024 09:53</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LW</td><td>YPF</td><td>44,58</td><td>5084-00007682</td><td>27/2/2024 09:58</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106BX</td><td>YPF</td><td>44,37</td><td>5224-00015682</td><td>16/2/2024 08:29</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106AO</td><td>YPF</td><td>44,36</td><td>9987-00031211</td><td>8/2/2024 11:21</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WR</td><td>YPF</td><td>44,28</td><td>7004-00109694</td><td>20/2/2024 08:58</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FR</td><td>YPF</td><td>44,26</td><td>3510-00045389</td><td>15/2/2024 11:04</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106AD</td><td>YPF</td><td>44,22</td><td>3473-00014494</td><td>1/2/2024 11:12</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EU</td><td>YPF</td><td>44,16</td><td>7090-00017236</td><td>23/2/2024 10:19</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DU</td><td>YPF</td><td>44,06</td><td>6204-00019546</td><td>28/2/2024 10:07</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC823TZ</td><td>YPF</td><td>43,72</td><td>7452-00013096</td><td>27/2/2024 21:10</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>YPF</td><td>43,61</td><td>4868-00036089</td><td>7/2/2024 13:26</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC295WO</td><td>YPF</td><td>43,44</td><td>5278-00130219</td><td>7/2/2024 20:37</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB619IG</td><td>YPF</td><td>43,31</td><td>7115-00010047</td><td>9/2/2024 17:17</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106DJ</td><td>YPF</td><td>43,08</td><td>1744-00059770</td><td>28/2/2024 16:09</td><td> </td></tr>
+                          <tr><td>DIRECCION EJECUTIVA</td><td>JAT828</td><td>YPF</td><td>43,04</td><td>8983-00004781</td><td>1/2/2024 09:31</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>43,01</td><td>2604-00022204</td><td>7/2/2024 16:15</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>YPF</td><td>42,63</td><td>1745-00016156</td><td>8/2/2024 06:25</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EG</td><td>YPF</td><td>42,47</td><td>5679-00073424</td><td>26/2/2024 19:09</td><td> </td></tr>
+                          <tr><td>SECRETARIA GENERAL</td><td>LLC525</td><td>YPF</td><td>42,43</td><td>5198-00026518</td><td>22/2/2024 19:25</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106BA</td><td>YPF</td><td>42,37</td><td>8480-00000433</td><td>5/2/2024 06:57</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC823SC</td><td>YPF</td><td>42,34</td><td>1909-00017086</td><td>7/2/2024 05:41</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WR</td><td>YPF</td><td>42,27</td><td>6759-00016880</td><td>27/2/2024 07:17</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106DC</td><td>YPF</td><td>42,27</td><td>3386-00036057</td><td>14/2/2024 10:25</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>YPF</td><td>42,23</td><td>5198-00026547</td><td>23/2/2024 11:00</td><td> </td></tr>
+                          <tr><td>JR CAPITAL FEDERAL</td><td>AC106AW</td><td>YPF</td><td>42,20</td><td>5360-00048998</td><td>9/2/2024 11:23</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UI</td><td>YPF</td><td>42,19</td><td>4172-00140804</td><td>22/2/2024 10:12</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>42,06</td><td>4744-00042339</td><td>23/2/2024 13:35</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106AD</td><td>YPF</td><td>42,01</td><td>2751-00017348</td><td>28/2/2024 07:04</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>41,97</td><td>4319-00017224</td><td>19/2/2024 12:24</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VY</td><td>YPF</td><td>41,93</td><td>5360-00049244</td><td>14/2/2024 20:31</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AT</td><td>YPF</td><td>41,89</td><td>4905-00033469</td><td>28/2/2024 07:28</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>41,83</td><td>5360-00050080</td><td>26/2/2024 11:36</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BP</td><td>YPF</td><td>41,70</td><td>3499-00011248</td><td>2/2/2024 14:13</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>41,63</td><td>4569-00016401</td><td>5/2/2024 08:30</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>YPF</td><td>41,48</td><td>9713-00044727</td><td>16/2/2024 10:31</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>YPF</td><td>41,39</td><td>2522-00011042</td><td>23/2/2024 05:48</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106BX</td><td>YPF</td><td>41,36</td><td>9380-00012010</td><td>22/2/2024 11:42</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>YPF</td><td>41,36</td><td>3473-00014835</td><td>20/2/2024 11:42</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284LD</td><td>YPF</td><td>41,14</td><td>2474-00043023</td><td>28/2/2024 08:01</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC105ZW</td><td>YPF</td><td>40,93</td><td>4175-00025361</td><td>5/2/2024 07:20</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106BX</td><td>YPF</td><td>40,73</td><td>9174-00098453</td><td>5/2/2024 11:44</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>LIL400</td><td>YPF</td><td>40,65</td><td>7418-00009136</td><td>18/2/2024 19:48</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934VU</td><td>YPF</td><td>40,63</td><td>9946-00012661</td><td>6/2/2024 09:40</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UZ</td><td>YPF</td><td>40,50</td><td>1778-00073016</td><td>2/2/2024 10:23</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC823SG</td><td>YPF</td><td>40,35</td><td>4851-00012792</td><td>27/2/2024 12:25</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UK</td><td>YPF</td><td>40,34</td><td>2474-00042712</td><td>22/2/2024 19:39</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>LGE583</td><td>YPF</td><td>40,31</td><td>7004-00108914</td><td>7/2/2024 11:37</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>YPF</td><td>40,24</td><td>6161-00018168</td><td>14/2/2024 07:43</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AA</td><td>YPF</td><td>40,18</td><td>3601-00010569</td><td>20/2/2024 09:01</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NGU612</td><td>YPF</td><td>40,13</td><td>4163-00056548</td><td>1/2/2024 09:30</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>JCV338</td><td>YPF</td><td>40,08</td><td>1852-00036064</td><td>28/2/2024 15:48</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>JCV338</td><td>YPF</td><td>40,08</td><td>7004-00109255</td><td>14/2/2024 10:07</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WU</td><td>YPF</td><td>39,61</td><td>2816-00043374</td><td>8/2/2024 09:24</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC295WU</td><td>YPF</td><td>39,61</td><td>2816-00043335</td><td>5/2/2024 12:57</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>39,61</td><td>7452-00012793</td><td>6/2/2024 19:31</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZT</td><td>YPF</td><td>39,61</td><td>6263-00011221</td><td>14/2/2024 07:01</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106CJ</td><td>YPF</td><td>39,60</td><td>5747-00046162</td><td>8/2/2024 16:00</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106CJ</td><td>YPF</td><td>39,56</td><td>7665-00014996</td><td>16/2/2024 11:04</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC106CX</td><td>YPF</td><td>39,51</td><td>8221-00065709</td><td>15/2/2024 15:04</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LL</td><td>YPF</td><td>39,33</td><td>6225-00002285</td><td>22/2/2024 10:55</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106CE</td><td>YPF</td><td>39,30</td><td>3513-00033435</td><td>16/2/2024 10:24</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>39,28</td><td>5360-00048907</td><td>8/2/2024 11:07</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AF055ZA</td><td>YPF</td><td>39,17</td><td>3952-00036489</td><td>22/2/2024 10:40</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>YPF</td><td>38,98</td><td>4985-00076154</td><td>16/2/2024 19:50</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC769LY</td><td>YPF</td><td>38,88</td><td>5572-00064642</td><td>28/2/2024 07:55</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AB665LA</td><td>YPF</td><td>38,80</td><td>7065-00091506</td><td>26/2/2024 11:13</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AB665LA</td><td>YPF</td><td>38,80</td><td>7081-00028651</td><td>2/2/2024 09:51</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>38,78</td><td>6465-00007721</td><td>9/2/2024 20:11</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NGU612</td><td>YPF</td><td>38,76</td><td>4163-00056922</td><td>6/2/2024 07:40</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823UJ</td><td>YPF</td><td>38,65</td><td>4543-00026630</td><td>28/2/2024 12:23</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>JLH740</td><td>YPF</td><td>38,61</td><td>5278-00129593</td><td>5/2/2024 09:39</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106CJ</td><td>YPF</td><td>38,42</td><td>8302-00025310</td><td>7/2/2024 06:16</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>JJL571</td><td>YPF</td><td>38,31</td><td>5753-00023204</td><td>18/2/2024 16:01</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AT</td><td>YPF</td><td>38,24</td><td>5102-00090354</td><td>2/2/2024 11:20</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>YPF</td><td>38,12</td><td>8529-00008271</td><td>16/2/2024 14:13</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>38,12</td><td>9592-00004571</td><td>6/2/2024 18:35</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934UK</td><td>YPF</td><td>38,10</td><td>2474-00042924</td><td>26/2/2024 20:07</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XT</td><td>YPF</td><td>38,00</td><td>6845-00031410</td><td>6/2/2024 07:25</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AC106BM</td><td>YPF</td><td>37,82</td><td>9174-00099768</td><td>16/2/2024 11:47</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC769LY</td><td>YPF</td><td>37,74</td><td>3200-00021167</td><td>28/2/2024 12:43</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>AC105ZT</td><td>YPF</td><td>37,48</td><td>7004-00108575</td><td>2/2/2024 08:43</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>37,35</td><td>9592-00004644</td><td>23/2/2024 21:34</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB818SB</td><td>YPF</td><td>37,11</td><td>3735-00030196</td><td>5/2/2024 08:02</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>NIE282</td><td>YPF</td><td>37,06</td><td>4563-00062665</td><td>16/2/2024 05:27</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC295XW</td><td>YPF</td><td>36,94</td><td>5592-00015050</td><td>15/2/2024 12:29</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZN</td><td>YPF</td><td>36,89</td><td>3386-00036098</td><td>15/2/2024 06:33</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>FRZ403</td><td>YPF</td><td>36,84</td><td>2474-00041704</td><td>5/2/2024 12:34</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>YPF</td><td>36,77</td><td>5198-00026774</td><td>29/2/2024 17:36</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>36,65</td><td>9238-00010775</td><td>23/2/2024 00:27</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>AC284KY</td><td>YPF</td><td>36,33</td><td>7447-00009573</td><td>28/2/2024 07:10</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>JJL571</td><td>YPF</td><td>36,32</td><td>7533-00016887</td><td>26/2/2024 14:07</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC284LM</td><td>YPF</td><td>36,24</td><td>3905-00048056</td><td>15/2/2024 08:18</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106AU</td><td>YPF</td><td>36,13</td><td>6663-00041398</td><td>22/2/2024 07:28</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>36,01</td><td>9494-00023547</td><td>15/2/2024 14:08</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>JJL571</td><td>YPF</td><td>35,99</td><td>3514-00015338</td><td>5/2/2024 19:49</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>YPF</td><td>35,97</td><td>5530-00006054</td><td>21/2/2024 07:17</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC295WW</td><td>YPF</td><td>35,84</td><td>3237-00014339</td><td>8/2/2024 13:32</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934VU</td><td>YPF</td><td>35,53</td><td>1603-00012069</td><td>28/2/2024 13:09</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106DW</td><td>YPF</td><td>35,38</td><td>4598-00011150</td><td>23/2/2024 16:37</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106EY</td><td>YPF</td><td>35,04</td><td>1500-00011244</td><td>28/2/2024 06:52</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRENSA</td><td>AC106BI</td><td>YPF</td><td>35,00</td><td>7004-00110030</td><td>23/2/2024 14:25</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>35,00</td><td>4522-00013164</td><td>15/2/2024 10:16</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>34,68</td><td>7452-00012991</td><td>21/2/2024 19:36</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>YPF</td><td>34,66</td><td>9117-00028701</td><td>2/2/2024 10:13</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>YPF</td><td>34,65</td><td>3896-00007722</td><td>14/2/2024 12:59</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>34,64</td><td>5648-00019906</td><td>27/2/2024 13:18</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NGU612</td><td>YPF</td><td>34,63</td><td>3173-00036239</td><td>29/2/2024 07:45</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>YPF</td><td>34,55</td><td>5278-00130131</td><td>7/2/2024 13:07</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>YPF</td><td>34,55</td><td>4851-00012576</td><td>15/2/2024 07:21</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AV</td><td>YPF</td><td>34,45</td><td>1909-00017310</td><td>20/2/2024 07:21</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>YPF</td><td>34,40</td><td>1886-00058561</td><td>26/2/2024 12:18</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>YPF</td><td>34,36</td><td>1489-00010551</td><td>21/2/2024 09:43</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>YPF</td><td>34,09</td><td>4985-00075898</td><td>13/2/2024 21:45</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZT</td><td>YPF</td><td>33,96</td><td>9314-00012034</td><td>26/2/2024 07:10</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>33,67</td><td>4563-00062740</td><td>26/2/2024 06:00</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106BZ</td><td>YPF</td><td>33,62</td><td>9123-00023671</td><td>7/2/2024 08:41</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>33,56</td><td>5337-00023187</td><td>20/2/2024 06:12</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC769LT</td><td>YPF</td><td>33,49</td><td>9080-00050472</td><td>16/2/2024 10:56</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DL</td><td>YPF</td><td>33,14</td><td>8367-00021025</td><td>29/2/2024 10:14</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC823TS</td><td>YPF</td><td>33,06</td><td>4302-00041931</td><td>23/2/2024 07:19</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>33,04</td><td>5337-00022896</td><td>9/2/2024 06:13</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>LIL400</td><td>YPF</td><td>32,95</td><td>7418-00009218</td><td>25/2/2024 21:33</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>32,94</td><td>8085-00030166</td><td>6/2/2024 18:26</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>YPF</td><td>32,93</td><td>2522-00010916</td><td>16/2/2024 05:49</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC823UB</td><td>YPF</td><td>32,93</td><td>4971-00011250</td><td>27/2/2024 09:18</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FT</td><td>YPF</td><td>32,82</td><td>9174-00101232</td><td>28/2/2024 14:13</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>32,66</td><td>3726-00008906</td><td>29/2/2024 07:30</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AC106CW</td><td>YPF</td><td>32,51</td><td>4175-00025887</td><td>21/2/2024 12:36</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>32,39</td><td>9174-00098778</td><td>7/2/2024 10:23</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRENSA</td><td>AC106CH</td><td>YPF</td><td>31,78</td><td>7004-00109569</td><td>19/2/2024 08:47</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>31,71</td><td>3512-00010539</td><td>15/2/2024 07:29</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>31,69</td><td>5278-00129059</td><td>1/2/2024 18:40</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>31,31</td><td>3678-00009191</td><td>7/2/2024 06:09</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106BO</td><td>YPF</td><td>31,23</td><td>4905-00033208</td><td>21/2/2024 09:08</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>31,10</td><td>1852-00035685</td><td>22/2/2024 06:07</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>YPF</td><td>31,04</td><td>3467-00013190</td><td>21/2/2024 15:53</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZQ</td><td>YPF</td><td>30,84</td><td>4974-00088645</td><td>4/2/2024 17:04</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>YPF</td><td>30,66</td><td>4330-00052792</td><td>20/2/2024 08:23</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>YPF</td><td>30,60</td><td>3467-00013037</td><td>8/2/2024 18:13</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106DW</td><td>YPF</td><td>30,56</td><td>4124-00043211</td><td>20/2/2024 12:03</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>YPF</td><td>30,34</td><td>3473-00014487</td><td>31/1/2024 21:04</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AB818SB</td><td>YPF</td><td>30,01</td><td>4159-00020945</td><td>29/2/2024 07:35</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRENSA</td><td>AC106BI</td><td>YPF</td><td>30,00</td><td>9626-00022915</td><td>28/2/2024 08:13</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRENSA</td><td>AC106BI</td><td>YPF</td><td>30,00</td><td>9626-00022555</td><td>8/2/2024 08:38</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>29,96</td><td>3512-00010715</td><td>26/2/2024 06:50</td><td> </td></tr>
+                          <tr><td>JR CAPITAL FEDERAL</td><td>AC105ZV</td><td>YPF</td><td>29,95</td><td>2548-00006356</td><td>28/2/2024 13:14</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>JLH740</td><td>YPF</td><td>29,80</td><td>5401-00036925</td><td>22/2/2024 08:28</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106DW</td><td>YPF</td><td>29,77</td><td>4598-00011092</td><td>20/2/2024 06:44</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC106CJ</td><td>YPF</td><td>29,72</td><td>8341-00008491</td><td>28/2/2024 10:44</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>29,50</td><td>3954-00030206</td><td>14/2/2024 07:37</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>YPF</td><td>29,31</td><td>5198-00025969</td><td>5/2/2024 16:25</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>YPF</td><td>29,21</td><td>8509-00018093</td><td>16/2/2024 09:24</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EG</td><td>YPF</td><td>28,90</td><td>1482-00006092</td><td>27/2/2024 20:31</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>28,88</td><td>1730-00013405</td><td>8/2/2024 06:22</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>28,82</td><td>2527-00009750</td><td>27/2/2024 15:10</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>28,74</td><td>7452-00012845</td><td>9/2/2024 20:50</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>AC106CW</td><td>YPF</td><td>28,29</td><td>6689-00076269</td><td>19/2/2024 10:01</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VP</td><td>YPF</td><td>28,22</td><td>7659-00012745</td><td>2/2/2024 14:42</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>27,86</td><td>2803-00005827</td><td>26/2/2024 16:28</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823TV</td><td>YPF</td><td>27,55</td><td>3618-00111511</td><td>19/2/2024 06:34</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>AC934VY</td><td>YPF</td><td>27,52</td><td>2726-00008118</td><td>16/2/2024 18:51</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>27,34</td><td>4258-00029676</td><td>26/2/2024 11:24</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>27,17</td><td>9566-00008659</td><td>20/2/2024 10:44</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823UJ</td><td>YPF</td><td>26,98</td><td>5662-00005539</td><td>26/2/2024 12:54</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SA</td><td>YPF</td><td>26,96</td><td>4543-00026473</td><td>21/2/2024 07:42</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BP</td><td>YPF</td><td>26,87</td><td>4988-00030722</td><td>7/2/2024 11:57</td><td> </td></tr>
+                          <tr><td>JR SUR II</td><td>AC769LQ</td><td>YPF</td><td>26,43</td><td>2715-00088364</td><td>1/2/2024 14:34</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC769LI</td><td>YPF</td><td>26,34</td><td>4101-00019780</td><td>19/2/2024 08:57</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC769LI</td><td>YPF</td><td>26,34</td><td>1800-00016836</td><td>6/2/2024 20:53</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BN</td><td>YPF</td><td>25,63</td><td>2600-00012440</td><td>7/2/2024 08:56</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>YPF</td><td>25,14</td><td>5198-00026316</td><td>16/2/2024 12:31</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC823TS</td><td>YPF</td><td>25,10</td><td>9278-00015027</td><td>23/2/2024 12:38</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>25,06</td><td>5337-00022835</td><td>7/2/2024 06:49</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PRENSA</td><td>AC106BI</td><td>YPF</td><td>25,02</td><td>1851-00004264</td><td>15/2/2024 08:32</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>YPF</td><td>25,01</td><td>9618-00005418</td><td>16/2/2024 18:34</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC106DA</td><td>YPF</td><td>25,00</td><td>7826-00030806</td><td>23/2/2024 07:58</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BW</td><td>YPF</td><td>24,51</td><td>3729-00051611</td><td>14/2/2024 07:31</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>YPF</td><td>24,49</td><td>1795-00142246</td><td>27/2/2024 09:14</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EG</td><td>YPF</td><td>24,32</td><td>6857-00007959</td><td>26/2/2024 07:55</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XU</td><td>YPF</td><td>24,06</td><td>5003-00064160</td><td>2/2/2024 09:50</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF055ZT</td><td>YPF</td><td>23,90</td><td>8529-00008199</td><td>2/2/2024 06:37</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>23,87</td><td>3888-00058423</td><td>19/2/2024 15:45</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>23,85</td><td>1852-00034793</td><td>5/2/2024 11:51</td><td> </td></tr>
+                          <tr><td>JR SUR II</td><td>AC769LQ</td><td>YPF</td><td>23,74</td><td>2715-00088943</td><td>8/2/2024 16:43</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>AC106AG</td><td>YPF</td><td>23,64</td><td>3512-00010324</td><td>4/2/2024 12:59</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>YPF</td><td>23,52</td><td>9618-00005422</td><td>19/2/2024 07:22</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC106AL</td><td>YPF</td><td>22,96</td><td>7286-00046556</td><td>27/2/2024 10:29</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106BU</td><td>YPF</td><td>22,94</td><td>4175-00026090</td><td>28/2/2024 12:05</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>YPF</td><td>22,61</td><td>2626-00024022</td><td>15/2/2024 06:12</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE INFORMATICA E INNOVACION.TECNOLOGICA</td><td>JJL571</td><td>YPF</td><td>22,31</td><td>4876-00026499</td><td>15/2/2024 11:00</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>22,16</td><td>7499-00011299</td><td>16/2/2024 19:12</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>YPF</td><td>22,05</td><td>4330-00052975</td><td>22/2/2024 13:19</td><td> </td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106DY</td><td>YPF</td><td>21,40</td><td>3630-00031842</td><td>21/2/2024 06:55</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LW</td><td>YPF</td><td>20,98</td><td>3729-00052303</td><td>27/2/2024 15:53</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BF</td><td>YPF</td><td>20,57</td><td>9803-00010976</td><td>26/2/2024 08:53</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SA</td><td>YPF</td><td>20,05</td><td>3865-00021241</td><td>22/2/2024 21:06</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC105ZZ</td><td>YPF</td><td>20,00</td><td>5810-00030292</td><td>8/2/2024 12:08</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106EH</td><td>YPF</td><td>19,80</td><td>6115-00020134</td><td>21/2/2024 12:39</td><td> </td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XA</td><td>YPF</td><td>19,80</td><td>2220-00056460</td><td>22/2/2024 06:26</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AA</td><td>YPF</td><td>19,52</td><td>2819-00005666</td><td>23/2/2024 07:06</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>19,38</td><td>7452-00013028</td><td>23/2/2024 13:15</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>19,34</td><td>9592-00004635</td><td>22/2/2024 07:02</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>YPF</td><td>19,13</td><td>5421-00015059</td><td>23/2/2024 18:16</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>19,10</td><td>5098-00016367</td><td>16/2/2024 10:59</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>YPF</td><td>18,98</td><td>2342-00005441</td><td>20/2/2024 10:57</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC105ZZ</td><td>YPF</td><td>18,83</td><td>3744-00013455</td><td>20/2/2024 11:44</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>YPF</td><td>18,63</td><td>3483-00022005</td><td>19/2/2024 06:22</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>YPF</td><td>18,43</td><td>9080-00049582</td><td>1/2/2024 12:01</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>18,42</td><td>9600-00017894</td><td>20/2/2024 11:56</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>YPF</td><td>18,01</td><td>4383-00020265</td><td>27/2/2024 11:48</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AV</td><td>YPF</td><td>17,30</td><td>5231-00040028</td><td>16/2/2024 09:08</td><td> </td></tr>
+                          <tr><td>JR SUR II</td><td>AC769LQ</td><td>YPF</td><td>16,95</td><td>8504-00047161</td><td>8/2/2024 08:27</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE RECURSOS HUMANOS</td><td>JCV354</td><td>YPF</td><td>16,81</td><td>5278-00129322</td><td>2/2/2024 19:11</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>16,40</td><td>1981-00024490</td><td>20/2/2024 10:43</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>YPF</td><td>16,32</td><td>9333-00094031</td><td>21/2/2024 09:25</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106DW</td><td>YPF</td><td>16,29</td><td>4598-00011080</td><td>19/2/2024 07:38</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC823UB</td><td>YPF</td><td>16,00</td><td>4971-00011227</td><td>26/2/2024 09:18</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106DW</td><td>YPF</td><td>15,93</td><td>4124-00043384</td><td>23/2/2024 11:41</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC769LT</td><td>YPF</td><td>15,87</td><td>4907-00023781</td><td>16/2/2024 16:16</td><td> </td></tr>
+                          <tr><td>DIR GRAL DE PLANEAMIENTO</td><td>LLC524</td><td>YPF</td><td>15,71</td><td>3512-00010751</td><td>28/2/2024 06:51</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC769LT</td><td>YPF</td><td>15,71</td><td>4907-00023693</td><td>14/2/2024 08:42</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>JAT829</td><td>YPF</td><td>15,66</td><td>6509-00007331</td><td>27/2/2024 15:27</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>15,15</td><td>2514-00006750</td><td>27/2/2024 11:52</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>YPF</td><td>15,02</td><td>9982-00005149</td><td>21/2/2024 08:28</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>15,01</td><td>5966-00002832</td><td>8/2/2024 13:02</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>15,01</td><td>3697-00020096</td><td>7/2/2024 11:45</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>15,01</td><td>4553-00010832</td><td>7/2/2024 08:25</td><td> </td></tr>
+                          <tr><td>DIRECCION EJECUTIVA</td><td>JAT828</td><td>YPF</td><td>15,00</td><td>7004-00108797</td><td>5/2/2024 19:56</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BN</td><td>YPF</td><td>15,00</td><td>2600-00012457</td><td>8/2/2024 08:47</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>14,91</td><td>3719-00027273</td><td>23/2/2024 17:40</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EQ</td><td>YPF</td><td>14,81</td><td>6649-00048816</td><td>20/2/2024 12:18</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>LGE583</td><td>YPF</td><td>14,71</td><td>1852-00035716</td><td>22/2/2024 13:44</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>14,40</td><td>6892-00005960</td><td>20/2/2024 15:40</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>14,28</td><td>5648-00019814</td><td>21/2/2024 20:01</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>YPF</td><td>14,10</td><td>4514-00024452</td><td>23/2/2024 18:26</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>YPF</td><td>13,70</td><td>3954-00030682</td><td>28/2/2024 07:02</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>13,45</td><td>2514-00006697</td><td>21/2/2024 14:05</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>YPF</td><td>13,18</td><td>6017-00004596</td><td>21/2/2024 11:58</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>12,68</td><td>9468-00099614</td><td>2/2/2024 07:20</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>YPF</td><td>12,60</td><td>2626-00023641</td><td>1/2/2024 16:17</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SA</td><td>YPF</td><td>12,59</td><td>1557-00002667</td><td>27/2/2024 10:35</td><td> </td></tr>
+                          <tr><td>JR LITORAL</td><td>AC823TS</td><td>YPF</td><td>12,50</td><td>9278-00014979</td><td>22/2/2024 04:48</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>YPF</td><td>12,50</td><td>9080-00050415</td><td>15/2/2024 13:48</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>YPF</td><td>12,49</td><td>5421-00014954</td><td>19/2/2024 06:31</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>YPF</td><td>12,30</td><td>3235-00021012</td><td>19/2/2024 18:14</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AV</td><td>YPF</td><td>11,48</td><td>1909-00016967</td><td>1/2/2024 11:04</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AC106CC</td><td>YPF</td><td>11,35</td><td>2835-00034708</td><td>29/2/2024 13:09</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>11,34</td><td>9468-00099791</td><td>9/2/2024 15:19</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>YPF</td><td>11,11</td><td>2626-00024052</td><td>15/2/2024 15:51</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>10,83</td><td>9468-00099628</td><td>2/2/2024 14:24</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC295WT</td><td>YPF</td><td>10,72</td><td>4905-00032610</td><td>6/2/2024 08:10</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>YPF</td><td>10,28</td><td>6078-00084557</td><td>26/2/2024 11:10</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>10,25</td><td>9468-00100295</td><td>29/2/2024 16:27</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>10,16</td><td>5648-00019748</td><td>19/2/2024 07:48</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>10,00</td><td>4553-00010849</td><td>8/2/2024 16:12</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BW</td><td>YPF</td><td>10,00</td><td>3729-00051700</td><td>15/2/2024 14:20</td><td> </td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BN</td><td>YPF</td><td>10,00</td><td>2600-00012483</td><td>9/2/2024 09:22</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>9,57</td><td>3638-00014089</td><td>21/2/2024 15:04</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VF</td><td>YPF</td><td>9,41</td><td>2844-00007250</td><td>22/2/2024 14:51</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>9,41</td><td>4553-00010970</td><td>20/2/2024 14:56</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>9,22</td><td>9604-00014249</td><td>20/2/2024 08:00</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>YPF</td><td>9,21</td><td>9604-00014240</td><td>19/2/2024 09:17</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>9,13</td><td>2604-00022671</td><td>26/2/2024 09:14</td><td> </td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823UJ</td><td>YPF</td><td>8,99</td><td>4239-00021445</td><td>27/2/2024 20:43</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>YPF</td><td>8,92</td><td>8038-00029041</td><td>20/2/2024 14:34</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>YPF</td><td>7,79</td><td>9713-00044679</td><td>15/2/2024 12:48</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>7,69</td><td>4985-00076453</td><td>21/2/2024 10:44</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>YPF</td><td>7,53</td><td>2522-00010957</td><td>19/2/2024 05:34</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>YPF</td><td>7,10</td><td>9982-00005153</td><td>21/2/2024 15:30</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AT</td><td>YPF</td><td>7,07</td><td>4905-00032458</td><td>2/2/2024 06:12</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>YPF</td><td>6,99</td><td>9618-00005411</td><td>16/2/2024 07:17</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>6,83</td><td>1720-00017771</td><td>27/2/2024 16:30</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>YPF</td><td>6,64</td><td>4381-00013255</td><td>23/2/2024 10:08</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>6,20</td><td>7499-00011268</td><td>15/2/2024 08:06</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>6,18</td><td>5648-00019800</td><td>21/2/2024 07:55</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>YPF</td><td>6,02</td><td>1740-00001215</td><td>20/2/2024 13:52</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>5,67</td><td>8327-00007220</td><td>1/2/2024 08:48</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>YPF</td><td>5,46</td><td>9166-00023037</td><td>19/2/2024 08:10</td><td> </td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BK</td><td>YPF</td><td>5,42</td><td>3459-00008077</td><td>29/2/2024 15:18</td><td> </td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>YPF</td><td>4,95</td><td>9117-00028861</td><td>19/2/2024 11:36</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>YPF</td><td>4,94</td><td>9080-00049574</td><td>1/2/2024 10:03</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>LGE583</td><td>YPF</td><td>4,90</td><td>7004-00108617</td><td>2/2/2024 13:15</td><td> </td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SD</td><td>YPF</td><td>4,70</td><td>2574-00011756</td><td>21/2/2024 07:45</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>4,13</td><td>8225-00002067</td><td>19/2/2024 08:27</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AN</td><td>YPF</td><td>3,88</td><td>3235-00021193</td><td>27/2/2024 14:33</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>3,85</td><td>2514-00006564</td><td>1/2/2024 13:46</td><td> </td></tr>
+                          <tr><td>DIR INTEGRACION TERRITORIAL</td><td>AF034FR</td><td>YPF</td><td>3,68</td><td>4974-00091001</td><td>28/2/2024 07:40</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>3,37</td><td>9468-00100277</td><td>29/2/2024 07:18</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>3,10</td><td>1772-00030917</td><td>8/2/2024 07:09</td><td> </td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>YPF</td><td>2,95</td><td>5530-00006059</td><td>21/2/2024 16:47</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>YPF</td><td>2,87</td><td>1720-00017723</td><td>26/2/2024 10:00</td><td> </td></tr>
+                          <tr><td>COORD. LOGISTICA  (DSYS)</td><td>NGU612</td><td>YPF</td><td>2,80</td><td>3173-00036196</td><td>28/2/2024 07:09</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VB</td><td>YPF</td><td>2,64</td><td>2996-00005506</td><td>6/2/2024 06:36</td><td> </td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>YPF</td><td>2,37</td><td>5648-00019872</td><td>26/2/2024 07:39</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>2,22</td><td>9468-00099774</td><td>9/2/2024 07:18</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>1,95</td><td>2514-00006682</td><td>20/2/2024 06:41</td><td> </td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>YPF</td><td>1,86</td><td>8201-00051839</td><td>14/2/2024 06:57</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>YPF</td><td>1,73</td><td>2514-00006744</td><td>27/2/2024 07:08</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>YPF</td><td>0,94</td><td>3467-00013022</td><td>8/2/2024 08:22</td><td> </td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC769LE</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131450</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC934VN</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>01/02/2024</td><td>131320</td></tr>
+                          <tr><td>JR NORESTE</td><td>AF055ZS</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO</td><td>29/02/2024</td><td>131639</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CK</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131872</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106AF</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131790</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC295WZ</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131868</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106ED</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131926</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC295XK</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>01/02/2024</td><td>131324</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823UE</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO</td><td>29/02/2024</td><td>131643</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CF</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131863</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106DV</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>01/02/2024</td><td>131330</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106EX</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131865</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106DI</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>01/02/2024</td><td>131332</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106CZ</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131725</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106EL</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131870</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106EN</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO FEBRERO 2024</td><td>29/02/2024</td><td>131634</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DO</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO FEBRERO 2024</td><td>29/02/2024</td><td>131627</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106EF</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131896</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EJ</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO</td><td>29/02/2024</td><td>131488</td></tr>
+                          <tr><td>JR NORTE</td><td>AC823SP</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131768</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106CN</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO</td><td>29/02/2024</td><td>131793</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106AH</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131861</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106EB</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO FEBRERO 2024</td><td>29/02/2024</td><td>131631</td></tr>
+                          <tr><td>JR SUR I</td><td>AC934UL</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131928</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DK</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO FEBRERO 2024</td><td>29/02/2024</td><td>131622</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XF</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131457</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295WS</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO</td><td>29/02/2024</td><td>131797</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DZ</td><td>SAP</td><td>0,01</td><td>SIN CONSUMO FEBRERO 2024</td><td>29/02/2024</td><td>131630</td></tr>
+                          <tr><td>JR NORTE</td><td>AC823ST</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131779</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106EM</td><td>SAP</td><td>0,01</td><td>SIN CONSUMOS</td><td>29/02/2024</td><td>131914</td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>FRZ403</td><td>SAP</td><td>36,84</td><td>2474-00041704</td><td>05/02/2024</td><td>131048</td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>FRZ403</td><td>SAP</td><td>6,06</td><td>2474-00041706</td><td>05/02/2024</td><td>131049</td></tr>
+                          <tr><td>DIR GRAL DE OPERACIONES</td><td>FRZ403</td><td>SAP</td><td>60,61</td><td>2474-00041705</td><td>05/02/2024</td><td>131050</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC105ZZ</td><td>SAP</td><td>18,83</td><td>3744-00013455</td><td>20/02/2024</td><td>131448</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC105ZZ</td><td>SAP</td><td>20,00</td><td>5810-00030292</td><td>08/02/2024</td><td>131447</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC106DA</td><td>SAP</td><td>25,00</td><td>7826-00030806</td><td>23/02/2024</td><td>131733</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC823SC</td><td>SAP</td><td>42,34</td><td>1909-00017086</td><td>07/02/2024</td><td>131687</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>SAP</td><td>47,78</td><td>2942-00024168</td><td>28/02/2024</td><td>131707</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>SAP</td><td>44,87</td><td>2751-00017274</td><td>23/02/2024</td><td>131706</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>SAP</td><td>47,46</td><td>1881-00067234</td><td>21/02/2024</td><td>131705</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>SAP</td><td>41,36</td><td>3473-00014835</td><td>20/02/2024</td><td>131702</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>SAP</td><td>71,50</td><td>3473-00014641</td><td>09/02/2024</td><td>131701</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC823SJ</td><td>SAP</td><td>75,29</td><td>3473-00014593</td><td>07/02/2024</td><td>131700</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC105ZR</td><td>SAP</td><td>47,81</td><td>2751-00016811</td><td>01/02/2024</td><td>131704</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC105ZW</td><td>SAP</td><td>40,93</td><td>4175-00025361</td><td>05/02/2024</td><td>131803</td></tr>
+                          <tr><td>JR CAPITAL FEDERAL</td><td>AC105ZV</td><td>SAP</td><td>29,95</td><td>2548-00006356</td><td>28/02/2024</td><td>131646</td></tr>
+                          <tr><td>JR CAPITAL FEDERAL</td><td>AC106AW</td><td>SAP</td><td>42,20</td><td>5360-00048998</td><td>09/02/2024</td><td>131645</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>SAP</td><td>18,01</td><td>4383-00020265</td><td>27/02/2024</td><td>131824</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SU</td><td>SAP</td><td>55,09</td><td>6078-00084585</td><td>27/02/2024</td><td>131834</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>SAP</td><td>10,28</td><td>6078-00084557</td><td>26/02/2024</td><td>131821</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>SAP</td><td>34,40</td><td>1886-00058561</td><td>26/02/2024</td><td>131823</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC106DS</td><td>SAP</td><td>47,53</td><td>8710-00014659</td><td>20/02/2024</td><td>131822</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SU</td><td>SAP</td><td>58,73</td><td>2810-00021180</td><td>09/02/2024</td><td>131833</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>SAP</td><td>36,77</td><td>5198-00026774</td><td>29/02/2024</td><td>131618</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>SAP</td><td>42,23</td><td>5198-00026547</td><td>23/02/2024</td><td>131617</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106ES</td><td>SAP</td><td>50,61</td><td>5198-00026397</td><td>20/02/2024</td><td>131636</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>SAP</td><td>25,14</td><td>5198-00026316</td><td>16/02/2024</td><td>131616</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BG</td><td>SAP</td><td>29,31</td><td>5198-00025969</td><td>05/02/2024</td><td>131615</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106ES</td><td>SAP</td><td>51,80</td><td>2194-00010241</td><td>01/02/2024</td><td>131635</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106BH</td><td>SAP</td><td>57,10</td><td>3464-00014008</td><td>19/02/2024</td><td>131318</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>SAP</td><td>47,16</td><td>9117-00028870</td><td>20/02/2024</td><td>132114</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>SAP</td><td>4,95</td><td>9117-00028861</td><td>19/02/2024</td><td>132113</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>SAP</td><td>34,65</td><td>3896-00007722</td><td>14/02/2024</td><td>132112</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>SAP</td><td>34,55</td><td>5278-00130131</td><td>07/02/2024</td><td>132111</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106CL</td><td>SAP</td><td>34,66</td><td>9117-00028701</td><td>02/02/2024</td><td>132110</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106EH</td><td>SAP</td><td>52,49</td><td>5431-00033648</td><td>28/02/2024</td><td>131518</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106EH</td><td>SAP</td><td>19,80</td><td>6115-00020134</td><td>21/02/2024</td><td>131517</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106DX</td><td>SAP</td><td>44,77</td><td>6115-00020098</td><td>20/02/2024</td><td>131513</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC106EH</td><td>SAP</td><td>49,51</td><td>5431-00032444</td><td>01/02/2024</td><td>131516</td></tr>
+                          <tr><td>JR CUYO</td><td>AF055ZA</td><td>SAP</td><td>39,17</td><td>3952-00036489</td><td>22/02/2024</td><td>131676</td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>SAP</td><td>35,97</td><td>5530-00006054</td><td>21/02/2024</td><td>131669</td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>SAP</td><td>15,02</td><td>9982-00005149</td><td>21/02/2024</td><td>131670</td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>SAP</td><td>7,10</td><td>9982-00005153</td><td>21/02/2024</td><td>131671</td></tr>
+                          <tr><td>JR CUYO</td><td>AC106CR</td><td>SAP</td><td>2,95</td><td>5530-00006059</td><td>21/02/2024</td><td>131672</td></tr>
+                          <tr><td>JR CUYO</td><td>AC823UG</td><td>SAP</td><td>73,18</td><td>3913-00026586</td><td>21/02/2024</td><td>131665</td></tr>
+                          <tr><td>JR CUYO</td><td>AF055ZA</td><td>SAP</td><td>47,04</td><td>3952-00036290</td><td>14/02/2024</td><td>131675</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>13,70</td><td>3954-00030682</td><td>28/02/2024</td><td>131578</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>35,00</td><td>4522-00013164</td><td>15/02/2024</td><td>132165</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>29,50</td><td>3954-00030206</td><td>14/02/2024</td><td>132164</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>28,88</td><td>1780-00013405</td><td>08/02/2024</td><td>132163</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>45,54</td><td>5733-00014514</td><td>06/02/2024</td><td>131575</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>45,54</td><td>8085-00030165</td><td>06/02/2024</td><td>131576</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UR</td><td>SAP</td><td>32,94</td><td>8085-00030166</td><td>06/02/2024</td><td>131577</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SZ</td><td>SAP</td><td>44,96</td><td>4949-00002673</td><td>23/02/2024</td><td>132307</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SZ</td><td>SAP</td><td>44,96</td><td>2721-00015498</td><td>21/02/2024</td><td>132304</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC823SZ</td><td>SAP</td><td>44,96</td><td>4949-00002645</td><td>21/02/2024</td><td>132306</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>SAP</td><td>49,29</td><td>2907-00006329</td><td>06/02/2024</td><td>130989</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934VT</td><td>SAP</td><td>38,12</td><td>9592-00004571</td><td>06/02/2024</td><td>130990</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LL</td><td>SAP</td><td>39,33</td><td>6225-00002285</td><td>22/02/2024</td><td>131753</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LL</td><td>SAP</td><td>44,78</td><td>2904-00046933</td><td>22/02/2024</td><td>131754</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LL</td><td>SAP</td><td>46,40</td><td>4749-00083147</td><td>21/02/2024</td><td>131752</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC295WT</td><td>SAP</td><td>10,72</td><td>4905-00032610</td><td>06/02/2024</td><td>131747</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DU</td><td>SAP</td><td>44,06</td><td>6204-00019546</td><td>28/02/2024</td><td>131628</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934US</td><td>SAP</td><td>47,04</td><td>4504-00012227</td><td>05/02/2024</td><td>131974</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC295WQ</td><td>SAP</td><td>48,03</td><td>5920-00010186</td><td>19/02/2024</td><td>131495</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AT</td><td>SAP</td><td>41,89</td><td>4905-00033469</td><td>28/02/2024</td><td>131734</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106BO</td><td>SAP</td><td>31,23</td><td>4905-00033208</td><td>21/02/2024</td><td>131738</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AN</td><td>SAP</td><td>3,98</td><td>03235-00021193</td><td>27/02/2024</td><td>131736</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106DH</td><td>SAP</td><td>45,06</td><td>5446-00015899</td><td>19/02/2024</td><td>131322</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>10,25</td><td>9468-00100295</td><td>29/02/2024</td><td>131571</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>3,37</td><td>9468-00100277</td><td>29/02/2024</td><td>131572</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>1,73</td><td>2514-00006744</td><td>27/02/2024</td><td>131569</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>15,15</td><td>2514-00006750</td><td>27/02/2024</td><td>131570</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>7,68</td><td>4985-00076453</td><td>21/02/2024</td><td>131567</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>18,45</td><td>2514-00006697</td><td>21/02/2024</td><td>131568</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>1,95</td><td>2514-00006682</td><td>20/02/2024</td><td>131565</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>16,40</td><td>1981-00024490</td><td>20/02/2024</td><td>131566</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>2,22</td><td>9468-00099774</td><td>09/02/2024</td><td>131563</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>11,34</td><td>9468-00099791</td><td>09/02/2024</td><td>131564</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>33,62</td><td>9123-00023671</td><td>07/02/2024</td><td>131610</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>12,68</td><td>9468-00099614</td><td>02/02/2024</td><td>131561</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>10,83</td><td>9468-00099628</td><td>02/02/2024</td><td>131562</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>5,67</td><td>8327-00007220</td><td>01/02/2024</td><td>131559</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC106CB</td><td>SAP</td><td>3,85</td><td>2514-00006564</td><td>01/02/2024</td><td>131560</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EQ</td><td>SAP</td><td>14,81</td><td>6649-00048816</td><td>20/02/2024</td><td>131709</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>SAP</td><td>30,04</td><td>3467-00013190</td><td>21/02/2024</td><td>131455</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>SAP</td><td>0,94</td><td>3467-00013022</td><td>08/02/2024</td><td>131453</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XE</td><td>SAP</td><td>30,60</td><td>3467-00013037</td><td>08/02/2024</td><td>131454</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AV</td><td>SAP</td><td>34,45</td><td>1909-00017310</td><td>20/02/2024</td><td>132046</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AV</td><td>SAP</td><td>17,30</td><td>5231-00040028</td><td>16/02/2024</td><td>132045</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AV</td><td>SAP</td><td>11,48</td><td>1909-00016967</td><td>01/02/2024</td><td>132044</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>SAP</td><td>22,61</td><td>2626-00024022</td><td>15/02/2024</td><td>131902</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>SAP</td><td>12,50</td><td>9080-00050415</td><td>15/02/2024</td><td>131903</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>SAP</td><td>11,11</td><td>2626-00024052</td><td>15/02/2024</td><td>131904</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>SAP</td><td>18,43</td><td>9080-00049582</td><td>01/02/2024</td><td>131900</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>SAP</td><td>12,60</td><td>2626-00023641</td><td>01/02/2024</td><td>131901</td></tr>
+                          <tr><td>JR SUR I</td><td>AC106DR</td><td>SAP</td><td>4,94</td><td>9080-00049574</td><td>01/02/2024</td><td>131899</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106BA</td><td>SAP</td><td>42,37</td><td>8480-00000433</td><td>05/02/2024</td><td>131745</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LH</td><td>SAP</td><td>77,81</td><td>9236-00005364</td><td>05/02/2024</td><td>131756</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC105ZY</td><td>SAP</td><td>48,50</td><td>1824-00019446</td><td>22/02/2024</td><td>131580</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VP</td><td>SAP</td><td>28,22</td><td>07659-00012745</td><td>02/02/2024</td><td>131839</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC295YD</td><td>SAP</td><td>49,51</td><td>4482-00013286</td><td>07/02/2024</td><td>131326</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106CE</td><td>SAP</td><td>39,30</td><td>3513-00033435</td><td>16/02/2024</td><td>131713</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>34,64</td><td>5648-19906</td><td>27/02/2024</td><td>132034</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>2,37</td><td>5648-19872</td><td>26/02/2024</td><td>132033</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>6,18</td><td>5648-19800</td><td>21/02/2024</td><td>132030</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>9,57</td><td>3638-14089</td><td>21/02/2024</td><td>132031</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>14,28</td><td>5648-19814</td><td>21/02/2024</td><td>132032</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>10,16</td><td>5648-19748</td><td>19/02/2024</td><td>132028</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823SL</td><td>SAP</td><td>23,87</td><td>3888-58423</td><td>19/02/2024</td><td>132029</td></tr>
+                          <tr><td>JR SUR I</td><td>AC769LT</td><td>SAP</td><td>33,49</td><td>9080-00050472</td><td>16/02/2024</td><td>131910</td></tr>
+                          <tr><td>JR SUR I</td><td>AC769LT</td><td>SAP</td><td>15,87</td><td>4907-00023781</td><td>16/02/2024</td><td>131911</td></tr>
+                          <tr><td>JR SUR I</td><td>AC769LT</td><td>SAP</td><td>15,71</td><td>4907-00023693</td><td>14/02/2024</td><td>131909</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EG</td><td>SAP</td><td>28,90</td><td>1482-00006092</td><td>27/02/2024</td><td>131535</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EG</td><td>SAP</td><td>24,32</td><td>6857-00007959</td><td>26/02/2024</td><td>131533</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC106EG</td><td>SAP</td><td>42,47</td><td>5679-00073424</td><td>26/02/2024</td><td>131534</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934VU</td><td>SAP</td><td>35,53</td><td>1603-00012069</td><td>28/02/2024</td><td>131585</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106AY</td><td>SAP</td><td>46,03</td><td>8315-00020616</td><td>15/02/2024</td><td>131613</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XA</td><td>SAP</td><td>19,80</td><td>6115-00019982</td><td>22/02/2024</td><td>131506</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XA</td><td>SAP</td><td>49,51</td><td>2220-00056460</td><td>14/02/2024</td><td>131505</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DM</td><td>SAP</td><td>46,26</td><td>6263-000011169</td><td>08/02/2024</td><td>131625</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EE</td><td>SAP</td><td>49,29</td><td>5114-00024938</td><td>20/02/2024</td><td>131722</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EE</td><td>SAP</td><td>53,35</td><td>5114-00024698</td><td>06/02/2024</td><td>131721</td></tr>
+                          <tr><td>JR NORESTE</td><td>AC934VS</td><td>SAP</td><td>75,98</td><td>4949-0002444</td><td>05/02/2024</td><td>131640</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LW</td><td>SAP</td><td>44,58</td><td>5084-00007682</td><td>27/02/2024</td><td>131761</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LW</td><td>SAP</td><td>20,98</td><td>3729-00052303</td><td>27/02/2024</td><td>131762</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LW</td><td>SAP</td><td>49,49</td><td>3729-00052207</td><td>26/02/2024</td><td>131760</td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BW</td><td>SAP</td><td>10,00</td><td>3729-00051700</td><td>15/02/2024</td><td>131759</td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BW</td><td>SAP</td><td>24,51</td><td>3729-00051611</td><td>14/02/2024</td><td>131758</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>SAP</td><td>22,05</td><td>4330-00052975</td><td>22/02/2024</td><td>132042</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>SAP</td><td>30,66</td><td>4330-00052792</td><td>20/02/2024</td><td>132041</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>SAP</td><td>41,48</td><td>9713-00044727</td><td>16/02/2024</td><td>132040</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>SAP</td><td>7,79</td><td>9713-00044679</td><td>15/02/2024</td><td>132039</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>SAP</td><td>40,24</td><td>6161-00018168</td><td>14/02/2024</td><td>132038</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC105ZX</td><td>SAP</td><td>47,71</td><td>8251-00010593</td><td>06/02/2024</td><td>132037</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC295WW</td><td>SAP</td><td>35,84</td><td>3237-00014339</td><td>08/02/2024</td><td>131698</td></tr>
+                          <tr><td>JR CONURBANO II</td><td>AC106DY</td><td>SAP</td><td>21,40</td><td>3630-00031842</td><td>21/02/2024</td><td>131328</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>9,22</td><td>09604-00014249</td><td>20/02/2024</td><td>131267</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>18,42</td><td>09600-00017894</td><td>20/02/2024</td><td>131268</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>9,41</td><td>04553-00010970</td><td>20/02/2024</td><td>131269</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>9,21</td><td>09604-00014240</td><td>19/02/2024</td><td>131266</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>15,01</td><td>05966-00002832</td><td>08/02/2024</td><td>131209</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>10,00</td><td>04553-00010849</td><td>08/02/2024</td><td>131210</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>15,01</td><td>03697-00020096</td><td>07/02/2024</td><td>131208</td></tr>
+                          <tr><td>JR NOROESTE</td><td>AC934UU</td><td>SAP</td><td>15,01</td><td>04553-00010832</td><td>07/02/2024</td><td>131207</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC769LY</td><td>SAP</td><td>38,88</td><td>5572-00064642</td><td>28/02/2024</td><td>131826</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC769LY</td><td>SAP</td><td>37,74</td><td>3200-00021167</td><td>28/02/2024</td><td>131827</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106DQ</td><td>SAP</td><td>49,50</td><td>2783-00010263</td><td>05/02/2024</td><td>131877</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AC</td><td>SAP</td><td>0,01</td><td>SIN MOVIMIENTOS</td><td>06/02/2024</td><td>130672</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106CZ</td><td>SAP</td><td>49,50</td><td>7979-00025324</td><td>07/02/2024</td><td>132067</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XU</td><td>SAP</td><td>47,59</td><td>4000-00002717</td><td>28/02/2024</td><td>131501</td></tr>
+                          <tr><td>JR CONURBANO IV</td><td>AC295XU</td><td>SAP</td><td>24,06</td><td>5003-00064180</td><td>02/02/2024</td><td>131499</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106AD</td><td>SAP</td><td>42,01</td><td>2751-00017348</td><td>28/02/2024</td><td>131717</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106AD</td><td>SAP</td><td>44,22</td><td>3473-00014494</td><td>01/02/2024</td><td>132069</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106DL</td><td>SAP</td><td>33,14</td><td>8367-00021025</td><td>29/02/2024</td><td>131623</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106DJ</td><td>SAP</td><td>43,08</td><td>1744-00059770</td><td>28/02/2024</td><td>132071</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC295XW</td><td>SAP</td><td>36,94</td><td>5592-00015050</td><td>15/02/2024</td><td>131711</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>SAP</td><td>41,39</td><td>2522-00011042</td><td>23/02/2024</td><td>131732</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>SAP</td><td>16,32</td><td>9333-00094031</td><td>21/02/2024</td><td>131731</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>SAP</td><td>7,53</td><td>2522-00010957</td><td>19/02/2024</td><td>131729</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>SAP</td><td>50,07</td><td>8539-00028196</td><td>19/02/2024</td><td>131730</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC295XD</td><td>SAP</td><td>32,93</td><td>2522-00010916</td><td>16/02/2024</td><td>132093</td></tr>
+                          <tr><td>JR BONAERENSE VII</td><td>AC295YC</td><td>SAP</td><td>45,73</td><td>04710-00050995</td><td>28/02/2024</td><td>131493</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UN</td><td>SAP</td><td>45,54</td><td>7808-00004774</td><td>27/02/2024</td><td>131589</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UN</td><td>SAP</td><td>2,73</td><td>07608-00174556</td><td>27/02/2024</td><td>131590</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AA</td><td>SAP</td><td>19,52</td><td>2819-00005666</td><td>23/02/2024</td><td>131690</td></tr>
+                          <tr><td>JR BONAERENSE III</td><td>AC106AA</td><td>SAP</td><td>40,18</td><td>3601-00010569</td><td>20/02/2024</td><td>131689</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106AU</td><td>SAP</td><td>36,13</td><td>6663-00041398</td><td>22/02/2024</td><td>131799</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106AU</td><td>SAP</td><td>47,15</td><td>3344-00034621</td><td>08/02/2024</td><td>131798</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106EU</td><td>SAP</td><td>44,16</td><td>7090-00017236</td><td>23/02/2024</td><td>131719</td></tr>
+                          <tr><td>JR BONAERENSE II</td><td>AC106AL</td><td>SAP</td><td>22,96</td><td>7286-00046556</td><td>27/02/2024</td><td>131728</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BP</td><td>SAP</td><td>26,87</td><td>4968-30722</td><td>07/02/2024</td><td>131593</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BP</td><td>SAP</td><td>41,70</td><td>3499-11248</td><td>02/02/2024</td><td>131592</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC823TS</td><td>SAP</td><td>33,06</td><td>4302-00041931</td><td>23/02/2024</td><td>131596</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC823TS</td><td>SAP</td><td>25,10</td><td>9278-00015027</td><td>23/02/2024</td><td>131597</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC823TS</td><td>SAP</td><td>12,50</td><td>9278-00014979</td><td>22/02/2024</td><td>131595</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823TT</td><td>SAP</td><td>46,13</td><td>4383-00020149</td><td>21/02/2024</td><td>131837</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823TT</td><td>SAP</td><td>60,12</td><td>3356-00002243</td><td>20/02/2024</td><td>131836</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UH</td><td>SAP</td><td>45,40</td><td>4167-00045245</td><td>23/02/2024</td><td>131600</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC934UH</td><td>SAP</td><td>63,00</td><td>5766-00025073</td><td>20/02/2024</td><td>131599</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>SAP</td><td>47,35</td><td>9286-00023028</td><td>22/02/2024</td><td>131606</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>SAP</td><td>49,13</td><td>9286-00022987</td><td>20/02/2024</td><td>131605</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>SAP</td><td>18,63</td><td>3483-00022005</td><td>19/02/2024</td><td>131604</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>SAP</td><td>34,55</td><td>4851-00012576</td><td>15/02/2024</td><td>131603</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XX</td><td>SAP</td><td>42,63</td><td>1745-00016156</td><td>08/02/2024</td><td>131602</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC295XZ</td><td>SAP</td><td>51,06</td><td>09223-00035670</td><td>27/02/2024</td><td>131750</td></tr>
+                          <tr><td>JR NORTE</td><td>AC823SS</td><td>SAP</td><td>58,86</td><td>04455-00022629</td><td>06/02/2024</td><td>131770</td></tr>
+                          <tr><td>JR NORTE</td><td>AC769LC</td><td>SAP</td><td>72,12</td><td>3687-00033152</td><td>08/02/2024</td><td>131774</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>SAP</td><td>24,49</td><td>1795-00142246</td><td>27/02/2024</td><td>131855</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>SAP</td><td>34,36</td><td>1489-00010551</td><td>21/02/2024</td><td>131857</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>SAP</td><td>29,21</td><td>8509-00018093</td><td>16/02/2024</td><td>131854</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>SAP</td><td>43,61</td><td>4868-00036089</td><td>07/02/2024</td><td>132087</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XJ</td><td>SAP</td><td>51,87</td><td>8450-00051145</td><td>02/02/2024</td><td>131856</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>6,83</td><td>1720-00017771</td><td>27/02/2024</td><td>131923</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>2,87</td><td>1720-00017723</td><td>26/02/2024</td><td>131922</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>42,06</td><td>4744-00042339</td><td>23/02/2024</td><td>131920</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>14,91</td><td>3719-00027273</td><td>23/02/2024</td><td>131921</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>41,97</td><td>4319-00017224</td><td>19/02/2024</td><td>131919</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>19,10</td><td>5098-00016367</td><td>16/02/2024</td><td>131917</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>22,16</td><td>7499-00011299</td><td>16/02/2024</td><td>131918</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>6,20</td><td>7499-00011268</td><td>15/02/2024</td><td>131915</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823UK</td><td>SAP</td><td>36,01</td><td>9494-00023547</td><td>15/02/2024</td><td>131916</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106BK</td><td>SAP</td><td>5,42</td><td>3459-00008077</td><td>29/02/2024</td><td>132108</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VF</td><td>SAP</td><td>76,05</td><td>2844-00007245</td><td>22/02/2024</td><td>131661</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VF</td><td>SAP</td><td>9,41</td><td>2844-00007250</td><td>22/02/2024</td><td>131662</td></tr>
+                          <tr><td>JR CONURBANO I</td><td>AC106EK</td><td>SAP</td><td>46,05</td><td>5198-00025940</td><td>05/02/2024</td><td>131632</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC106BU</td><td>SAP</td><td>22,94</td><td>4175-00026090</td><td>28/02/2024</td><td>131794</td></tr>
+                          <tr><td>JR CONURBANO III</td><td>AC106AO</td><td>SAP</td><td>44,36</td><td>9987-00031211</td><td>08/02/2024</td><td>132116</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823TV</td><td>SAP</td><td>62,56</td><td>5063-00005202</td><td>21/02/2024</td><td>132026</td></tr>
+                          <tr><td>JR SUR I</td><td>AC823TV</td><td>SAP</td><td>27,55</td><td>3618-00111511</td><td>19/02/2024</td><td>132025</td></tr>
+                          <tr><td>JR BONAERENSE I</td><td>AC295XO</td><td>SAP</td><td>50,92</td><td>8248-00041366</td><td>08/02/2024</td><td>131452</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>SAP</td><td>19,13</td><td>5421-00015059</td><td>23/02/2024</td><td>131743</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>SAP</td><td>8,92</td><td>8038-00029041</td><td>20/02/2024</td><td>131742</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>SAP</td><td>12,49</td><td>5421-00014954</td><td>19/02/2024</td><td>131740</td></tr>
+                          <tr><td>JR BONAERENSE VI</td><td>AC106AX</td><td>SAP</td><td>12,30</td><td>3255-00021012</td><td>19/02/2024</td><td>131741</td></tr>
+                          <tr><td>JR BONAERENSE IV</td><td>AC106AB</td><td>SAP</td><td>48,65</td><td>4509-00022934</td><td>16/02/2024</td><td>131715</td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BN</td><td>SAP</td><td>10,00</td><td>2600-00012483</td><td>09/02/2024</td><td>131782</td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BN</td><td>SAP</td><td>15,00</td><td>2600-00012457</td><td>08/02/2024</td><td>131781</td></tr>
+                          <tr><td>JR NORTE</td><td>AC106BN</td><td>SAP</td><td>25,63</td><td>2600-00012440</td><td>07/02/2024</td><td>131780</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BF</td><td>SAP</td><td>20,57</td><td>9803-00010976</td><td>26/02/2024</td><td>131609</td></tr>
+                          <tr><td>JR LITORAL</td><td>AC106BF</td><td>SAP</td><td>47,33</td><td>9803-00010807</td><td>02/02/2024</td><td>131608</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>SAP</td><td>6,64</td><td>4381-00013255</td><td>23/02/2024</td><td>131846</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>SAP</td><td>14,10</td><td>4514-00024452</td><td>23/02/2024</td><td>131847</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>SAP</td><td>13,02</td><td>6017-00004596</td><td>21/02/2024</td><td>131845</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>SAP</td><td>18,98</td><td>2342-00005441</td><td>20/02/2024</td><td>131843</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>SAP</td><td>6,02</td><td>1740-00001215</td><td>20/02/2024</td><td>131844</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC934VR</td><td>SAP</td><td>5,46</td><td>9166-00023037</td><td>19/02/2024</td><td>131842</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SD</td><td>SAP</td><td>4,70</td><td>2574-00011756</td><td>21/02/2024</td><td>131830</td></tr>
+                          <tr><td>JR CENTRO</td><td>AC823SD</td><td>SAP</td><td>47,04</td><td>4377-00020409</td><td>19/02/2024</td><td>131829</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>SAP</td><td>46,65</td><td>9618-00005468</td><td>24/02/2024</td><td>131681</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>SAP</td><td>45,65</td><td>9618-00005468</td><td>24/02/2024</td><td>132119</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>SAP</td><td>23,52</td><td>9618-00005422</td><td>19/02/2024</td><td>131680</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>SAP</td><td>25,01</td><td>9618-00005418</td><td>16/02/2024</td><td>131679</td></tr>
+                          <tr><td>JR CUYO</td><td>AC934VQ</td><td>SAP</td><td>6,99</td><td>9618-00005411</td><td>16/02/2024</td><td>131678</td></tr>
+                          <tr><td>JR NORTE</td><td>AC823UB</td><td>SAP</td><td>32,93</td><td>4971-00011250</td><td>27/02/2024</td><td>131785</td></tr>
+                          <tr><td>JR NORTE</td><td>AC823UB</td><td>SAP</td><td>16,00</td><td>4971-00011227</td><td>26/02/2024</td><td>131784</td></tr>
+                          <tr><td>JR BONAERENSE V</td><td>AC295XT</td><td>SAP</td><td>38,00</td><td>6845-00031410</td><td>06/02/2024</td><td>131801</td></tr>
+                        </tbody>
+                        
+
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <!-- /.container-fluid -->
+        </div>
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+   <!-- Page level plugins -->
+  <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <!-- <script src="js/demo/datatables-demo.js"></script> -->
+
+  <!-- Exportar a Excel DataTable CDN -->
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+    <!-- <script src="js/datatable.js"></script> -->
+
+  <!-- dataTable -->
+
+  <script>
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+  </script>
+
+  <script>
+    $('#datatable_2').dataTable( {
+      dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+                  buttons: [ 'copy', 'excel', 'pdf'],
+              //"scrollCollapse": true,
+                "paging": true,
+              //"info": false,
+              // "lengthMenu": [[5,10,50,100,-1], [5,10,50,100,"Todo"]],
+              // "order": [[3, 'desc']],
+              "pageLength": 10,
+              "language": {
+                  "zeroRecords": "No se encontraron coincidencias.",
+                  "paginate": {
+                      "first": "Primera",
+                      "last": "Última ",
+                      "next": "  >>",
+                      "previous": "<<  "                   
+                  },
+                  "sLengthMenu": "Mostrar de a _MENU_ resultados",
+                  "emptyTable": "No hay datos disponibles en la tabla.",
+                  "search": "Buscar... ",
+                  "info": "Mostrando _START_ a _END_ (de _TOTAL_ resultados)",
+                  "infoEmpty": "Mostrando 0 de 0 resultados",
+                  "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+              },
+              columnDefs: [
+              { targets: [ 0 ], width: '33%', className: 'dt-left' }, //dt-head-left
+              { targets: '_all', className: 'dt-center' }
+              ]
+              } );
+  </script>
+
+<!-- Ordenar columnas en Tabla -->
+<script>
+  $('#dataTable').dataTable( {
+    dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+                buttons: [ 'copy', 'excel', 'pdf'],
+            //"scrollCollapse": true,
+              "paging": true,
+            //"info": false,
+            // "lengthMenu": [[5,10,50,100,-1], [5,10,50,100,"Todo"]],
+            "order": [[3, 'desc']],
+            "pageLength": 10,
+            "language": {
+                "zeroRecords": "No se encontraron coincidencias.",
+                "paginate": {
+                    "first": "Primera",
+                    "last": "Última ",
+                    "next": "  >>",
+                    "previous": "<<  "                   
+                },
+                "sLengthMenu": "Mostrar de a _MENU_ resultados",
+                "emptyTable": "No hay datos disponibles en la tabla.",
+                "search": "Buscar... ",
+                "info": "Mostrando _START_ a _END_ (de _TOTAL_ resultados)",
+                "infoEmpty": "Mostrando 0 de 0 resultados",
+                "infoFiltered": "[filtrado de un total de _MAX_ resultados]"
+            },
+            columnDefs: [
+            { targets: [ 0 ], width: '33%', className: 'dt-left' }, //dt-head-left
+            { targets: '_all', className: 'dt-center' }
+            ]
+            } );
+</script>
+
+</body>
+
+</html>

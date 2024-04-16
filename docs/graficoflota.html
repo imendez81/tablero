@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+  <title>Tablero de Gestión - DSyS</title>
+
+  <!-- Favicons -->
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+      <!-- FECHA 
+        <div class="text-center mt-1" style="color: white;">
+          <script type="text/javascript">
+              var  today = new Date();
+              var m = today.getMonth() + 1;
+              var mes = (m < 10) ? '0' + m : m;
+              document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+          </script>
+        </div>  -->
+
+      <!-- Sidebar - Brand -->
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+        <div class="sidebar-brand-icon">
+          <!-- <i class="fas fa-dolly"></i> -->
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+      </a>
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <li class="nav-item">
+        <a class="nav-link" href="papel.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. PLANIFICACION</span></a>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+        <li class="nav-item">
+            <a class="nav-link" href="stock_valor.html">
+                <!-- <i class="fas fa-pallet"></i> -->
+                <i class="fas fa-industry"></i>
+            <span>Stock</span></a>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+              <a class="nav-link" href="pedidos24.html">
+            <i class="fas fa-dolly"></i>
+            <!-- <i class="fas fa-truck-loading"></i> -->
+        <span>Pedidos</span></a>
+      </li>
+
+      <!-- Nav Item - Utilities Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calendario</span>
+        </a>
+        <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Período:</h6>
+            <a class="collapse-item" href="calendario.html">1er Semestre</a>
+            <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+          </div>
+        </div>
+      </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- <li class="nav-item">
+              <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                <i class="far fa-check-circle"></i>
+                <span>Recepciones</span>
+              </a>
+              <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                 <div class="bg-white py-2 collapse-inner rounded">
+                  <h6 class="collapse-header">Categorías:</h6>
+                  <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                  <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+		              <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                </div>
+              </div>
+            </li>  -->
+
+      <!-- Divider -->
+      <!-- <hr class="sidebar-divider"> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link"  href="#"> -->
+            <!-- <i class="fas fa-pallet"></i> -->
+            <!-- <i class="fas fa-chart-pie"></i>
+        <span>Parque Informático</span></a>
+      </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-map-pin"></i>
+          <span>Asignación de bienes</span></a>
+      </li> -->
+
+          <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="top15.html">
+                <i class="fas fa-dolly"></i>
+                <i class="fas fa-truck-loading"></i> 
+            <span>TOP 15</span></a>
+        </li> -->
+
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item"> -->
+            <!--<a class="nav-link" href="remanente.html">-->
+                <!--<i class="fas fa-battery-quarter"></i>-->
+            <!--<span>Cobertura de Stock</span></a>-->
+        <!-- </li> -->
+
+        <!-- Nav Item -  -->
+        <!--<li class="nav-item">
+          <a class="nav-link" href="aperturas.html">
+              <i class="fas fa-truck-loading"></i>
+              <span>Listas de Empaque</span>
+          </a>
+        </li>-->
+
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+
+      <li class="nav-item active">
+        <a class="nav-link" href="emplazamientoflota.html">
+          <!-- <i class="fas fa-home"></i> -->
+          <span>COORD. LOGÍSTICA</span></a>
+      </li>
+            
+      <li class="nav-item active">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+          <i style="font-size: large;" class="fas fa-car-side"></i>
+          <span>Flota</span>
+        </a>
+        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Categorías:</h6>
+            <a class="collapse-item" href="flota.html">Detalle Flota</a>
+            <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+            <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+            <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+            <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+            <a class="collapse-item" href="utilities-other.html">Other</a> -->
+          </div>
+        </div>
+      </li>
+
+      <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+            <i class="fas fa-gas-pump"></i>
+        <span>YPF en Ruta</span></a>
+        </a>
+        <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Períodos / Saldos:</h6>
+            <a class="collapse-item" href="saldos.html">Saldos</a>
+            <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+              <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2023</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                    <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                  </ul>
+              </details>
+            <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+            <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+
+          </div>
+        </div>
+      </li>
+
+    <!-- Nav Item -  -->
+    <li class="nav-item">
+      <a class="nav-link" href="ypf_boxes.html">
+          <i class="fas fa-tools"></i>
+          <span>YPF BOXES</span>
+      </a>
+    </li>
+
+    <!-- Nav Item -  -->
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="corasavslog.html">
+            <i class="fas fa-shipping-fast"></i>
+            <span>CORASA vs LOGÍSTICA</span>
+        </a>
+    </li> -->
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+            <i class="far fa-calendar-check"></i>
+            <span>Calendario</span>
+        </a>
+      </li>-->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider my-0">
+
+      <!-- Nav Item - Dashboard -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">
+          <i class="fas fa-book"></i>
+          <span>NORMATIVA</span></a>
+      </li>
+
+      <!-- Divider -->
+      <hr class="sidebar-divider">
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+          <i class="far fa-id-card"></i>
+          <span>DIRECCIONES Y CONTACTOS</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">
+            <i class="far fa-address-card"></i>
+            <span>Contactos</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="tables.html">
+          <i class="far fa-building"></i>
+          <span>Listado Oficinas ANSES</span></a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="oficinas.html">
+            <i class="fas fa-map-marked-alt"></i>
+            <span>Mapa Oficinas ANSES</span>
+        </a>
+      </li>
+
+      <!-- Nav Item -  -->
+      <!-- <li class="nav-item">
+        <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+          <i class="fas fa-search-location"></i>
+            <span>Buscador UDAM ANSES</span>
+        </a>
+      </li> -->
+
+      <!-- Divider -->
+      <hr class="sidebar-divider d-none d-md-block">
+
+      <!-- Sidebar Toggler (Sidebar) -->
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Begin Page Content -->
+      <div class="container-fluid">
+
+
+        <!-- Page Heading -->
+        <h1 class="h1 mb-2 text-gray-800 text-center">Flota Vehículos - ANSES</h1>
+          
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary mb-1">Actualizado al 07/02/2024</h6>
+            <div class="card shadow mb-0">
+              <!-- Card Header - Accordion -->
+              <!-- <a href="#collapseCard" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCard">
+                <h6 class="m-0 font-weight-bold text-gray-800">Descargar</h6>
+              </a> -->
+              <!-- Card Content - Collapse -->
+              <!-- <div class="collapse" id="collapseCard">
+                <div class="card-body pt-1 pb-1">
+                  <div class="input-group-text" id="btnGroupAddon">Seleccionar "Mostrar de a 1,000" para descargar la tabla completa.</div>
+                  <button type="button" class="btn btn-outline-secondary mt-2" id="btnExportar">Exportar a Excel</button>
+                </div>
+              </div> -->
+            </div>
+          </div>
+
+        <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-6">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - JEFATURAS REGIONALES (230 Vehículos)</h6>
+                  <!-- <meter class="ml-4" value=51 min="0" max="59" optimum="55" low="5" high="50"></meter> -->
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartA005"></canvas>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-6">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - ÁREA CENTRAL (167 Vehículos)</h6>
+                  <!-- <meter class="ml-4" value=51 min="0" max="59" optimum="55" low="5" high="50"></meter> -->
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartA001"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-12 col-xl-1"></div> -->
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-5">
+              <div class="card shadow mb-4 border-left-info">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">% DE VEHÍCULOS POR SUBDIRECCIÓN</h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                    <div class="pie-area">
+                        <canvas id="myPieChartSub"></canvas>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- <div class="col-12 col-xl-1"></div> -->
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4 mt-3">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - SUBDIRECCIÓN EJECUTIVA DE PRESTACIONES</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartSEDP"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-3 mt-5">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - SUBDIRECCIÓN EJECUTIVA DE ADM.</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartSEA"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - SECRETARÍA GENERAL</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartSEG"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - DIRECCIÓN EJECUTIVA</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartDEJ"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS - SEC. LEGAL Y TEC. / SEC. de OP. del FGS</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartSLT"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS POR MARCA SEGÚN EMPLAZAMIENTO</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="bar-area">
+                    <!-- <div id="chart_div"></div> -->
+                    <canvas id="myBarChartMarca"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-info">
+                  <!-- Card Header - Dropdown -->
+                  <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS POR TIPO DE COMBUSTIBLE</h6>
+                  </div>
+                  <!-- Card Body -->
+                  <div class="card-body">
+                  <div class="pie-area">
+                      <canvas id="myPieChartComb"></canvas>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+              <div class="card shadow mb-4 border-left-info">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">CANTIDAD VEHÍCULOS POR MARCA</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="pie-area">
+                    <canvas id="myPieChartMarca"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            
+
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-torta.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+
+<!-- Gráfico -->
+
+    <script type="text/javascript">
+
+        // Cantidad vehículos A005
+        var ctx = document.getElementById("myBarChartA005");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["JR BONA I", "JR BONA II", "JR BONA III", "JR BONA IV", "JR BONA V", "JR BONA VI", "JR BONA VII", "JR CAP FED", "JR CENTRO", "JR CONU I", "JR CONU II", "JR CONU III", "JR CONU IV", "JR CUYO", "JR LITORAL", "JR NORESTE", "JR NOROESTE", "JR NORTE", "JR SUR I", "JR SUR II"],
+          datasets: [{
+            label: "Cant. Vehículos: ",
+            backgroundColor: "#32a852",
+            hoverBackgroundColor: "#5bd47c",
+            borderColor: "#32a852",
+            data: [5, 9, 10, 12, 8, 6, 5, 2, 14, 13, 8, 15, 12, 18, 17, 19, 10, 13, 20, 14],
+            }
+            ],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: true,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 19
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 8,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  display: false,
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: false, position: 'bottom'
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+
+        // Cantidad vehículos A001
+        var ctx = document.getElementById("myBarChartA001");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["DG INF INN TEC",  "DG MON GEST DE PREST",  "DG OPERACIONES",  "DG PLANEAMIENTO",  "DG PRENSA",  "DG DE PREST CENT",  "DG DE PREST DESCENT",  "DG REL INST Y LA COMU",  "DIR GRAL RR HH",  "DIR EJECUTIVA",  "SEC GENERAL"],
+          datasets: [{
+            label: "Cant. Vehículos: ",
+            backgroundColor: "#e84135",
+            hoverBackgroundColor: "#e37971",
+            borderColor: "#e84135",
+            data: [4, 1, 86, 2, 4, 3, 57, 5, 1, 1, 3]
+            }
+            ],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: true,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 18
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 10,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  display: false,
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: false, position: 'bottom'
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+
+        // Cant. Vehículos SEA
+        var ctx = document.getElementById("myBarChartSEA");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["DG OPERACIONES", "DG INF E INNOV.TEC", "SD EJ DE ADM"],
+          datasets: [{
+            label: "Cant. Vehículos: ",
+            backgroundColor: "#e84135",
+            hoverBackgroundColor: "#e37971",
+            borderColor: "#e84135",
+            data: [86,	4,	0],
+            }],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: true,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 15
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 8,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  display: false,
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: false, position: 'bottom'
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+
+        // Cant. Vehículos SEG
+        var ctx = document.getElementById("myBarChartSEG");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["SECRETARIA GENERAL", "DG REL INST Y LA COMU"],
+          datasets: [{
+            label: "Cant. Vehículos: ",
+            backgroundColor: "#e84135",
+            hoverBackgroundColor: "#e37971",
+            borderColor: "#e84135",
+            data: [3, 5],
+            }],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: true,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 15
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 8,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  display: false,
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: false, position: 'bottom'
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+
+        // Cant. Vehículos DEJ
+        var ctx = document.getElementById("myBarChartDEJ");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["UN DE AUD INTERNA", "DG PROY DE NIÑEZ", "DIR EJECUTIVA", "DG PRENSA", "DG PLANEAMIENTO"],
+          datasets: [{
+            label: "Cant. Vehículos: ",
+            backgroundColor: "#e84135",
+            hoverBackgroundColor: "#e37971",
+            borderColor: "#e84135",
+            data: [0,	0, 1, 4, 2],
+            }],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: true,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 15
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 8,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  display: false,
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: false, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+
+        // Cant. Vehículos SLyT-SEdeOp del FGS
+        var ctx = document.getElementById("myBarChartSLT");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["SEC LEGAL Y TECNICA", "DG ADM Y TECNICA", "DG AN Y LIQ SENT JUDI", "DG INVERSIONES", "DG CTL FGS", "DG OPER DEL FGS"],
+          datasets: [{
+            label: "Secretaría Legal y Técnica: ",
+            backgroundColor: "#4e73df",
+            hoverBackgroundColor: "#2e59d9",
+            borderColor: "#4e73df",
+            data: [0, 0, 0]
+          },
+          {
+            label: "Subdir Ejec de Op del FGS: ",
+            backgroundColor: "#e84135",
+            hoverBackgroundColor: ['#e37971'],
+            borderColor: "#e84135",
+            data: [0, 0, 0, 0, 0, 0],
+          }
+        ],
+        },
+        options: {
+          maintainAspectRatio: true,
+          layout: {
+            padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+            }
+          },
+          scales: {
+            xAxes: [{
+              // time: {
+              //   unit: 'month'
+              // },
+              gridLines: {
+                display: true,
+                drawBorder: false
+              },
+              ticks: {
+                maxTicksLimit: 15
+              },
+              maxBarThickness: 25,
+            }],
+            yAxes: [{
+              ticks: {
+                min: 0,
+                max: 5,
+                maxTicksLimit: 6,
+                padding: 5,
+                // Include a dollar sign in the ticks
+                callback: function(value, index, values) {
+                  return number_format(value) + '';
+                }
+              },
+              gridLines: {
+                color: "rgb(234, 236, 244)",
+                zeroLineColor: "rgb(234, 236, 244)",
+                drawBorder: false,
+                borderDash: [2],
+                zeroLineBorderDash: [2]
+              }
+            }],
+          },
+          legend: {
+            display: true, position: 'bottom'
+          },
+          tooltips: {
+            titleMarginBottom: 10,
+            titleFontColor: '#6e707e',
+            titleFontSize: 14,
+            backgroundColor: "rgb(255,255,255)",
+            bodyFontColor: "#858796",
+            borderColor: '#dddfeb',
+            borderWidth: 1,
+            xPadding: 15,
+            yPadding: 15,
+            displayColors: false,
+            caretPadding: 10,
+            callbacks: {
+              label: function(tooltipItem, chart) {
+                var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                return datasetLabel + number_format(tooltipItem.yLabel) + '';
+              }
+            }
+          },
+        },
+        plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -4, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+      });
+
+        // Cantidad vehículos SUBDIRECCIÓN EJEC. DE PRESTACIONES
+        var ctx = document.getElementById("myBarChartSEDP");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["DG PREST CENT", "DG PREST DESCENT", "RED BS AS", "RED INTERIOR", "SD EJ DE PRESTACIONES", "DG MON GEST DE PREST"],
+          datasets: [{
+            label: "Cant. Vehículos: ",
+            backgroundColor: "#e84135",
+            hoverBackgroundColor: "#e37971",
+            borderColor: "#e84135",
+            data: [3, 57, 105, 128, 0, 1],
+            }
+            ],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: true,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 20
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 10,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  display: false,
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: false, position: 'bottom'
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+
+        // Cantidad vehículos por MARCA
+        var ctx = document.getElementById("myPieChartMarca");
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["PEUGEOT: 160", 	"CHEVROLET: 112", 	"MB: 66", 	"VW: 23", 	"IVECO: 20", 	"FORD: 7", 	"CITROEN: 4", 	"Ind. BACO: 4", "RENAULT: 1"],
+                datasets: [{
+                data: [160,	112, 66, 23, 20, 7, 4, 4, 1],
+                backgroundColor: ['#1cc88a', '#f2160f', '#4287f5', '#00edfa', '#ff700a', '#8217fc', '#e607fa', '#706c70'],
+                hoverBackgroundColor: ['#20a877', '#d1110a', '#7599d1', '#a7f8fc', '#facaa7', '#bf90f5', '#f3a7fa', '#d9cad9'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)"
+                }],
+            },
+            options: {
+                maintainAspectRatio: true,
+                tooltips: {
+                enabled: false,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: true,
+                caretPadding: 10,
+                },
+                legend: {
+                display: true, position: 'bottom'
+                },
+                // cutoutPercentage: 20,
+            },
+        });
+
+        // Cantidad vehículos por tipo de Combustible
+        var ctx = document.getElementById("myPieChartComb");
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["NAFTA: 47,58%", "GASOIL: 53,18%"],
+                datasets: [{
+                data: [184, 209],
+                backgroundColor: ['#1cc88a', '#f2160f'],
+                hoverBackgroundColor: ['#20a877', '#d1110a'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)"
+                }],
+            },
+            options: {
+                maintainAspectRatio: true,
+                tooltips: {
+                enabled: false,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: true,
+                caretPadding: 10,
+                },
+                legend: {
+                display: true, position: 'bottom'
+                },
+                // cutoutPercentage: 20,
+            },
+        });
+
+        // % vehículos por Sub Dirección
+        var ctx = document.getElementById("myPieChartSub");
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["SD EJ de Prest: 74,05%", "SD EJ de Adm.: 21,91%", "Sec General: 2,01%", "DIR EJ: 1,76%", "Sec Legal y Téc: 0,00%", "SD EJ de Op del FGS: 0,00%"],
+                datasets: [{
+                data: [294, 87, 8, 7, 0, 0],
+                backgroundColor: ['#1cc88a', '#f2160f', '#4287f5', '#00edfa', '#ff700a', '#8217fc'],
+                hoverBackgroundColor: ['#20a877', '#d1110a', '#7599d1', '#a7f8fc', '#facaa7', '#bf90f5'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)"
+                }],
+            },
+            options: {
+                maintainAspectRatio: true,
+                tooltips: {
+                enabled: false,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: true,
+                caretPadding: 10,
+                },
+                legend: {
+                display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+                },
+                // cutoutPercentage: 20,
+            },
+        });
+
+
+        // Cantidad vehículos por MARCA segun emplazamiento
+        var ctx = document.getElementById("myBarChartMarca");
+        var myBarChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ["CHEVROLET", "CITROEN", "VOLKSWAGEN", "IND BACO SAIC", "MERCEDES BENZ", "IVECO", "PEUGEOT","FORD","RENAULT"],
+          datasets: [{
+            label: "A001: ",
+            backgroundColor: "#f2160f",
+            hoverBackgroundColor: "#d1110a",
+            borderColor: "#4e73df",
+            data: [25, 4,	23,	4, 55, 20, 32, 7, 1],
+            },
+            {
+            label: "A005: ",
+            backgroundColor: "#1cc88a",
+            hoverBackgroundColor: ['#4c7d52'],
+            borderColor: "rgba(234, 236, 244, 1)",
+            data: [87, 0, 0, 0, 11, 0, 128, 0, 0],
+            }],
+            },
+          options: {
+            maintainAspectRatio: true,
+            layout: {
+              padding: {
+                left: 10,
+                right: 25,
+                top: 25,
+                bottom: 0
+              }
+            },
+            scales: {
+              xAxes: [{
+                // time: {
+                //   unit: 'month'
+                // },
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  maxTicksLimit: 8
+                },
+                maxBarThickness: 25,
+              }],
+              yAxes: [{
+                ticks: {
+                  min: 0,
+                  // max: 160,
+                  maxTicksLimit: 6,
+                  padding: 5,
+                  // Include a dollar sign in the ticks
+                  callback: function(value, index, values) {
+                    return number_format(value) + '';
+                  }
+                },
+                gridLines: {
+                  color: "rgb(234, 236, 244)",
+                  zeroLineColor: "rgb(234, 236, 244)",
+                  drawBorder: false,
+                  borderDash: [2],
+                  zeroLineBorderDash: [2]
+                }
+              }],
+            },
+            legend: {
+              display: true, position: 'bottom'
+            },
+            tooltips: {
+              titleMarginBottom: 10,
+              titleFontColor: '#6e707e',
+              titleFontSize: 14,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: false,
+              caretPadding: 10,
+              callbacks: {
+                label: function(tooltipItem, chart) {
+                  var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+                  return datasetLabel + number_format(tooltipItem.yLabel) + '';
+                }
+              }
+            },
+          },
+          plugins: {
+            afterDatasetsDraw: function (context, easing) {
+            var ctx = context.chart.ctx;
+              context.data.datasets.forEach(function (dataset) {
+                for (var i = 0; i < dataset.data.length; i++) {
+                    if (dataset.data[i] != 0) {
+                      var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model;
+                        var textY = model.y + (dataset.type == "line" ? -3 : 15); 
+                          ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontSize, 'normal', Chart.defaults.global.defaultFontFamily);
+                          ctx.textAlign = 'start';
+                          ctx.textBaseline = 'middle';
+                          ctx.fillStyle = dataset.type == "line" ? "black" : "black";
+                          ctx.save();
+                          ctx.translate(model.x, textY-20);
+                          ctx.rotate(0);
+                          ctx.fillText(dataset.data[i], -5, 0);
+                          ctx.restore();
+                        }
+                      }
+                    });
+                  }
+                }
+        });
+    
+        // Cantidad vehículos por Año de Const. DISPLAY: NONE
+        var ctx = document.getElementById("myPieChartAnioConst");
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["2018: 267", 	"2017: 48", 	"2013: 16", 	"2010: 15", 	"2012: 12", 	"2011: 2", 	"2008: 2", 	"2006: 2", 	"2009: 1", "2019: 2", "2021: 10", "2022: 20"],
+                datasets: [{
+                data: [267,	48,	16,	15,	12,	2, 2, 2, 1, 2, 10, 20],
+                backgroundColor: ['#1cc88a', '#f2160f', '#4287f5', '#00edfa', '#ff700a', '#8217fc', '#e607fa', '#706c70', '#f7f305', '#52513b', '#5dfc9a'],
+                hoverBackgroundColor: ['#20a877', '#d1110a', '#7599d1', '#a7f8fc', '#facaa7', '#bf90f5', '#f3a7fa', '#d9cad9', '#ebe857' , '#b3b18f', '#95e6b4'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)"
+                }],
+            },
+            options: {
+                maintainAspectRatio: true,
+                tooltips: {
+                enabled: false,
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: true,
+                caretPadding: 10,
+                },
+                legend: {
+                display: true, position: 'bottom'
+                },
+                // cutoutPercentage: 20,
+            },
+        });
+
+
+
+    </script>
+
+    
+</body>
+
+</html>

@@ -1,0 +1,1926 @@
+<!DOCTYPE html>
+<html lang="es" style="font-size: 75%">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Tablero de Gestión - DSyS</title>
+
+  <!-- Favicons -->
+  <link href="img/graficoIcono.png" rel="icon">
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this page -->
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+  <!-- Google Charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body  id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!-- Sidebar -->
+    <ul style="background-color: #0481CB;" class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+
+        <!-- FECHA 
+          <div class="text-center mt-1" style="color: white;">
+            <script type="text/javascript">
+                var  today = new Date();
+                var m = today.getMonth() + 1;
+                var mes = (m < 10) ? '0' + m : m;
+                document.write(today.getDate(),' / ' +mes,' / '+today.getFullYear());
+            </script>
+          </div>  -->
+  
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+          <div class="sidebar-brand-icon">
+            <!-- <i class="fas fa-dolly"></i> -->
+            <i class="far fa-chart-bar"></i>
+          </div>
+          <div class="sidebar-brand-text mx-3">Tablero de Gestión</sup></div>
+        </a>
+  
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+  
+        <li class="nav-item active">
+          <a class="nav-link" href="papel.html">
+            <!-- <i class="fas fa-home"></i> -->
+            <span>COORD. PLANIFICACION</span></a>
+        </li>
+  
+        <!-- Nav Item - Pages Collapse Menu -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+          <i class="fas fa-truck-loading"></i>
+          <span>Salidas</span></a>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Materiales:</h6>
+            <a class="collapse-item" href="papel.html">Papel Obra</a>
+            <a class="collapse-item" href="toner.html">Informática</a>
+            <a class="collapse-item" href="boli.html">Librería</a>
+            <a class="collapse-item" href="alcohol.html">Art. de Prevención</a>
+            <!-- <a class="collapse-item" href="anexo5.html">Pedidos</a> -->
+            <a class="collapse-item" href="mathistorico.html">Todos los Materiales</a>
+          </div>
+        </div>
+      </li>
+  
+      <!-- Nav Item -  -->
+          <li class="nav-item">
+              <a class="nav-link" href="stock_valor.html">
+                  <!-- <i class="fas fa-pallet"></i> -->
+                  <i class="fas fa-industry"></i>
+              <span>Stock</span></a>
+          </li>
+  
+          <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item active">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePedidos" aria-expanded="true" aria-controls="collapsePedidos">
+                <i style="font-size: large;" class="fas fa-dolly"></i>
+            <span>Pedidos</span></a>
+            </a>
+            <div id="collapsePedidos" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Año:</h6>
+                <a class="collapse-item" href="pedidos24.html">2024</a>
+                <a class="collapse-item" href="pedidos23.html">2023</a>
+                <a class="collapse-item" href="pedidos22.html">2022</a>
+                <a class="collapse-item" href="pedidos.html">2021</a>
+            </div>
+            </div>
+        </li>
+
+        <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="saldo.html">
+          <i class="fas fa-file-invoice-dollar"></i>
+        <span>Saldos</span></a>
+      </li>
+  
+        <!-- Nav Item - Utilities Collapse Menu -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="true" aria-controls="collapseCalendar">
+            <i class="far fa-calendar-alt"></i>
+            <span>Calendario</span>
+          </a>
+          <div id="collapseCalendar" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Período:</h6>
+              <a class="collapse-item" href="calendario.html">1er Semestre</a>
+              <a class="collapse-item" href="calen2do.html">2do Semestre</a>
+            </div>
+          </div>
+        </li>
+  
+              <!-- Nav Item - Utilities Collapse Menu -->
+              <!-- <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRecepcion" aria-expanded="true" aria-controls="collapseRecepcion">
+                  <i class="far fa-check-circle"></i>
+                  <span>Recepciones</span>
+                </a>
+                <div id="collapseRecepcion" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                   <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Categorías:</h6>
+                    <a class="collapse-item" href="recepcion2.html">Pendientes (totales)</a>
+                    <a class="collapse-item" href="recepcionpendiente.html">Listado de Pedidos</a>
+                        <a class="collapse-item" href="entregascorasa.html">Entregas CORASA</a>
+                  </div>
+                </div>
+              </li>  -->
+  
+        <!-- Divider -->
+        <!-- <hr class="sidebar-divider"> -->
+  
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+          <a class="nav-link"  href="#"> -->
+              <!-- <i class="fas fa-pallet"></i> -->
+              <!-- <i class="fas fa-chart-pie"></i>
+          <span>Parque Informático</span></a>
+        </li> -->
+  
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+            <a class="nav-link"  href="#"> -->
+                <!-- <i class="fas fa-pallet"></i> -->
+                <!-- <i class="fas fa-map-pin"></i>
+            <span>Asignación de bienes</span></a>
+        </li> -->
+  
+            <!-- Nav Item -  -->
+          <!-- <li class="nav-item">
+              <a class="nav-link" href="top15.html">
+                  <i class="fas fa-dolly"></i>
+                  <i class="fas fa-truck-loading"></i> 
+              <span>TOP 15</span></a>
+          </li> -->
+  
+          <!-- Nav Item -  -->
+          <!-- <li class="nav-item"> -->
+              <!--<a class="nav-link" href="remanente.html">-->
+                  <!--<i class="fas fa-battery-quarter"></i>-->
+              <!--<span>Cobertura de Stock</span></a>-->
+          <!-- </li> -->
+  
+          <!-- Nav Item -  -->
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="aperturas.html">
+                <i class="fas fa-truck-loading"></i>
+                <span>Listas de Empaque</span>
+            </a>
+          </li> -->
+  
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+  
+  
+        <li class="nav-item">
+          <a class="nav-link" href="emplazamientoflota.html">
+            <!-- <i class="fas fa-home"></i> -->
+            <span>COORD. LOGÍSTICA</span></a>
+        </li>
+              
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-car-side"></i>
+            <span>Flota</span>
+          </a>
+          <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Categorías:</h6>
+              <a class="collapse-item" href="flota.html">Detalle Flota</a>
+              <a class="collapse-item" href="emplazamientoflota.html">Emplazamiento</a>
+              <a class="collapse-item" href="graficoflota.html">Gráficos</a>
+              <!--<a class="collapse-item" href="services.html">Servicios de Mant.</a>-->
+              <!--<a class="collapse-item" href="utilities-border.html">Borders</a>
+              <a class="collapse-item" href="utilities-other.html">Other</a> -->
+            </div>
+          </div>
+        </li>
+  
+        <!-- Nav Item - Pages Collapse Menu -->
+        <li class="nav-item">
+          <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsethree" aria-expanded="true" aria-controls="collapsethree">
+              <i class="fas fa-gas-pump"></i>
+          <span>YPF en Ruta</span></a>
+          </a>
+          <div id="collapsethree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+              <h6 class="collapse-header">Períodos / Saldos:</h6>
+              <a class="collapse-item" href="saldos.html">Saldos</a>
+              <a class="collapse-item" href="ypf_2024.html">Consumos 2024</a>
+                <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                <summary class="mb-2" >Detalle 2024</summary>
+                <ul class="bg-white">
+                    <li class="mb-1 pt-1" href="ypf_ene24.html"><a class="text-dark" href="ypf_ene24.html">Ene´24</a></li>
+                    <li class="mb-1" href="ypf_feb24.html"><a class="text-dark" href="ypf_feb24.html">Feb´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_mar24.html">Mar´24</a></li>
+                    <!-- <li class="mb-1"><a class="text-dark" href="ypf_abr24.html">Abr´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_may24.html">May´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jun24.html">Jun´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_jul24.html">Jul´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_ago24.html">Ago´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_sep24.html">Sep´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_oct24.html">Oct´24</a></li>
+                    <li class="mb-1"><a class="text-dark" href="ypf_nov24.html">Nov´24</a></li>
+                    <li><a class="text-dark" href="ypf_dic24.html">Dic´24</a></li> -->
+                  </ul>
+              </details>
+              <a class="collapse-item" href="ypf_2023.html">Consumos 2023</a>
+                <details class="collapse-item" href="#" data-toggle="collapse" data-target="#collapseCons23" aria-expanded="true" aria-controls="collapseCons23">
+                  <summary class="mb-2" >Detalle 2023</summary>
+                  <ul class="bg-white">
+                      <li class="mb-1 pt-1"><a class="text-dark" href="ypf_ene23.html">Ene´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_feb23.html">Feb´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_mar23.html">Mar´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_abr23.html">Abr´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_may23.html">May´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_jun23.html">Jun´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_jul23.html">Jul´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_ago23.html">Ago´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_sep23.html">Sep´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_oct23.html">Oct´23</a></li>
+                      <li class="mb-1"><a class="text-dark" href="ypf_nov23.html">Nov´23</a></li>
+                      <li><a class="text-dark" href="ypf_dic23.html">Dic´23</a></li>
+                    </ul>
+                </details>
+              <a class="collapse-item" href="ypf_2022.html">Consumos 2022</a>
+              <a class="collapse-item" href="ypfenruta.html">Consumos 2021</a>
+  
+            </div>
+          </div>
+        </li>
+  
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+        <a class="nav-link" href="ypf_boxes.html">
+            <i class="fas fa-tools"></i>
+            <span>YPF BOXES</span>
+        </a>
+      </li>
+  
+      <!-- Nav Item -  -->
+      <li class="nav-item">
+          <a class="nav-link" href="corasavslog.html">
+              <i class="fas fa-shipping-fast"></i>
+              <span>CORASA vs LOGÍSTICA</span>
+          </a>
+      </li>
+  
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" target="_blank" href="\\nascordoba.anses.gov.ar\Dir. Gral. Operaciones\Dir. Servicios y Suministros\Monitoreo y Seguimiento de Gestión\Metricas\CalendarioAutomotores\index.html">
+              <i class="far fa-calendar-check"></i>
+              <span>Calendario</span>
+          </a>
+        </li>-->
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+  
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            <i class="fas fa-book"></i>
+            <span>NORMATIVA</span></a>
+        </li>
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+  
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+          <a class="nav-link" href="contactos.html">
+            <i class="far fa-id-card"></i>
+            <span>DIRECCIONES Y CONTACTOS</span>
+          </a>
+        </li>
+  
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+          <a class="nav-link" href="contactos.html">
+              <i class="far fa-address-card"></i>
+              <span>Contactos</span>
+          </a>
+        </li>
+  
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+          <a class="nav-link" href="tables.html">
+            <i class="far fa-building"></i>
+            <span>Listado Oficinas ANSES</span></a>
+        </li>
+  
+        <!-- Nav Item -  -->
+        <li class="nav-item">
+          <a class="nav-link" href="oficinas.html">
+              <i class="fas fa-map-marked-alt"></i>
+              <span>Mapa Oficinas ANSES</span>
+          </a>
+        </li>
+  
+        <!-- Nav Item -  -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" target="_blank" href="https://www.anses.gob.ar/operativos-territoriales">
+            <i class="fas fa-search-location"></i>
+              <span>Buscador UDAM ANSES</span>
+          </a>
+        </li> -->
+  
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+  
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+          <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+  
+    </ul>
+    <!-- End of Sidebar -->
+
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <!-- Main Content -->
+      <div id="content">
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid mt-3">
+
+          <!-- Page Heading -->
+          
+            <h1 class="h1 mb-4 text-gray-800 text-center">Cantidad de pedidos trabajados -<span class="text-info"> 2024</span> -</h1>
+
+          <div class="row">
+
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+                <div class="card shadow mb-4 border-left-primary">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">TOTAL GENERAL<span class="text-info"></span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="">
+                    <div class="chart-area">
+                        <canvas id="myAreaChartTotalGral22"></canvas>
+                    </div>
+                    </div>
+    
+                    <div class="card shadow mt-2 mb-0">
+                    <!-- Card Header - Accordion -->
+                    <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <h6 class="m-0 font-weight-bold text-gray-800">                    
+                        </h6>
+                    </a> -->
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCard">
+                            <div class="card-body pt-1 pb-1">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Año</th>
+                                            <th scope="col" class="text-center align-middle">Total</th>
+                                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody style="text-align: center;">
+                                            <tr>
+                                                <th scope="row" class="font-weight-bold">2024</th>
+                                                <td><input class="font-weight-bold text-dark pr-0 ml-4" style="border: none; width: 49px; background-color: white;" disabled="true" type="text" id="sumaTotalGral22"></td>
+                                                <td style="width: 40%;"><input class="font-weight-bold text-dark pr-0" style="border: none; width: 28px; background-color: white;" disabled="true" type="text" id="promxmesTotalGral22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">2023</th>
+                                                <td class="">9.159</td>
+                                                <td class="">763</td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+                <div class="card shadow mb-4 border-left-primary">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">JEFATURAS REGIONALES<span class="text-info"></span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="">
+                    <div class="chart-area">
+                        <canvas id="myAreaChartTotal22"></canvas>
+                    </div>
+                    </div>
+    
+                    <div class="card shadow mt-2 mb-0">
+                    <!-- Card Header - Accordion -->
+                    <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <h6 class="m-0 font-weight-bold text-gray-800">                    
+                        </h6>
+                    </a> -->
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCard">
+                            <div class="card-body pt-1 pb-1">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Total Año</th>
+                                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody style="text-align: center;">
+                                            <tr>
+                                                <td><input class="font-weight-bold text-dark pr-0 ml-4" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaTotal22"></td>
+                                                <td style="width: 40%;"><input class="font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesTotal22"></td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-4">
+                <div class="card shadow mb-4 border-left-primary">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">ÁREAS CENTRALES<span class="text-info"></span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="">
+                    <div class="chart-area">
+                        <canvas id="myAreaChartTotalAC22"></canvas>
+                    </div>
+                    </div>
+    
+                    <div class="card shadow mt-2 mb-0">
+                    <!-- Card Header - Accordion -->
+                    <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <h6 class="m-0 font-weight-bold text-gray-800">                    
+                        </h6>
+                    </a> -->
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCard">
+                            <div class="card-body pt-1 pb-1">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Total Año</th>
+                                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody style="text-align: center;">
+                                            <tr>
+                                                <td><input class="font-weight-bold text-dark pr-0 ml-4" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaTotalAC22"></td>
+                                                <td style="width: 40%;"><input class="font-weight-bold text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesTotalAC22"></td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-xl-1"></div> -->
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-3">
+              <div class="card shadow mb-4 border-left-primary">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-2 d-flex flex-row align-items-center">
+                  <h6 class="m-0 font-weight-bold text-dark">Jefaturas Regionales - <span class="text-info">Bona I-II, CABA, Cuyo, Noroeste</span></h6>
+                </div>
+                <!-- Card Body -->
+                <div class="">
+                  <div class="chart-area">
+                    <canvas id="myAreaChartTop5_22"></canvas>
+                  </div>
+                </div>
+
+                <div class="card shadow mt-2 mb-0">
+                  <!-- Card Header - Accordion -->
+                  <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                    <h6 class="m-0 font-weight-bold text-gray-800">                    
+                    </h6>
+                  </a> -->
+                  <!-- Card Content - Collapse -->
+                  <div class="collapse show" id="collapseCard">
+                    <div class="card-body pt-1 pb-1">
+                      <table class="table table-sm table-bordered">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col" class="text-center align-middle">Jef. Regional</th>
+                            <th scope="col" class="text-center align-middle">Total Año</th>
+                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                            <!-- <th scope="col" class="text-center align-middle">Prom Últimos 12 meses</th> -->
+                          </tr>
+                        </thead>
+                            <tbody style="text-align: center;">
+                                <tr>
+                                    <th class="align-middle text-left" scope="row">JR CABA</th>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCap_22"></td>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesCap_22"></td>
+                                </tr>
+                                <tr>
+                                    <th class="align-middle text-left" scope="row">JR CUYO</th>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCuy_22"></td>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesCuy_22"></td>
+                                </tr>
+                                <tr>
+                                    <th class="align-middle text-left" scope="row">JR BONA I</th>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBon1_22"></td>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesBon1_22"></td>
+                                </tr>
+                                <tr>
+                                    <th class="align-middle text-left" scope="row">JR BONA II</th>
+                                    <td style="width: 20%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBon2_22"></td>
+                                    <td style="width: 20%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: auto; background-color: white;" disabled="true" type="text" id="promxmesBon2_22"></td>
+                                </tr>
+                                <tr>
+                                    <th class="align-middle text-left" scope="row">JR NOROESTE</th>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaNorO_22"></td>
+                                    <td style="width: 30%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesNorO_22"></td>
+                                </tr>
+                            </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-3">
+                <div class="card shadow mb-4 border-left-primary">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                        <h6 class="m-0 font-weight-bold text-dark">Jefaturas Regionales - <span class="text-info">Sur I, Bona VI-VII, Litoral, Noreste</span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="">
+                        <div class="chart-area">
+                            <canvas id="myAreaChartTop10_22"></canvas>
+                        </div>
+                    </div>
+    
+                    <div class="card shadow mt-2 mb-0">
+                        <!-- Card Header - Accordion -->
+                        <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                            <h6 class="m-0 font-weight-bold text-gray-800">                    
+                            </h6>
+                        </a> -->
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCard">
+                            <div class="card-body pt-1 pb-1">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Jef. Regional</th>
+                                            <th scope="col" class="text-center align-middle">Total Año</th>
+                                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody style="text-align: center;">
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR LITORAL</th>
+                                                <td style="width: 20%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaLit_22"></td>
+                                                <td style="width: 20%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: auto; background-color: white;" disabled="true" type="text" id="promxmesLit_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR NORESTE</th>
+                                                <td style="width: 20%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaNorE_22"></td>
+                                                <td style="width: 20%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: auto; background-color: white;" disabled="true" type="text" id="promxmesNorE_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR SUR I</th>
+                                                <td style="width: 20%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaSurI_22"></td>
+                                                <td style="width: 20%;"><input class="font-weight-bold text-dark text-center pr-0" style="border: none; width: auto; background-color: white;" disabled="true" type="text" id="promxmesSurI_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR BONA VI</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBonaVI_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesBonaVI_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR BONA VII</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBonaVII_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesBonaVII_22"></td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-xl-1"></div> -->
+            <!-- <div class="col-12 col-xl-1"></div> -->
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-3">
+                <div class="card shadow mb-4 border-left-primary">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">Jefaturas Regionales - <span class="text-info">Bona III-IV-V, Conu II-III, Sur II</span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="">
+                    <div class="chart-area">
+                        <canvas id="myAreaChartTop15_22"></canvas>
+                    </div>
+                    </div>
+    
+                    <div class="card shadow mt-2 mb-0">
+                    <!-- Card Header - Accordion -->
+                    <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <h6 class="m-0 font-weight-bold text-gray-800">                    
+                        </h6>
+                    </a> -->
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCard">
+                            <div class="card-body pt-1 pb-1">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Jef. Regional</th>
+                                            <th scope="col" class="text-center align-middle">Total Año</th>
+                                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody style="text-align: center;">
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR CONURBANO II</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCon2_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesCon2_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR CONURBANO III</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCon3_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesCon3_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR BONA III</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBon3_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesBon3_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR BONA IV</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBon4_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesBon4_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR BONA V</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaBonaV_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesBonaV_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR SUR II</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaSur2_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesSur2_22"></td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+           
+
+            <!-- Area Chart -->
+            <div class="col-12 col-xl-3">
+                <div class="card shadow mb-4 border-left-primary">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark">Jefaturas Regionales - <span class="text-info">Norte, Conu I-IV, Centro</span></h6>
+                    </div>
+                    <!-- Card Body -->
+                    <div class="">
+                    <div class="chart-area">
+                        <canvas id="myAreaChartTop20_22"></canvas>
+                    </div>
+                    </div>
+    
+                    <div class="card shadow mt-2 mb-0">
+                    <!-- Card Header - Accordion -->
+                    <!-- <a href="#collapseCard" class="d-block card-header collapsed py-3" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="collapseCard">
+                        <h6 class="m-0 font-weight-bold text-gray-800">                    
+                        </h6>
+                    </a> -->
+                        <!-- Card Content - Collapse -->
+                        <div class="collapse show" id="collapseCard">
+                            <div class="card-body pt-1 pb-1">
+                                <table class="table table-sm table-bordered">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th scope="col" class="text-center align-middle">Jef. Regional</th>
+                                            <th scope="col" class="text-center align-middle">Total Año</th>
+                                            <th scope="col" class="text-center align-middle">Promedio Mensual</th>
+                                        </tr>
+                                    </thead>
+                                        <tbody style="text-align: center;">
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR CONURBANO I</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCon1_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmes_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR CONURBANO IV</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCon4_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesCon4_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR CENTRO</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaCen_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesCen_22"></td>
+                                            </tr>
+                                            <tr>
+                                                <th class="align-middle text-left" scope="row">JR NORTE</th>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 66px; background-color: white;" disabled="true" type="text" id="sumaNor_22"></td>
+                                                <td style="width: 30%;"><input class="font-weight-bold text-center text-dark pr-0" style="border: none; width: 55px; background-color: white;" disabled="true" type="text" id="promxmesNor_22"></td>
+                                            </tr>
+                                        </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+
+            <!-- DISPLAY: NONE -->
+            <div class="col-12 col-xl-5" style="display: none;">
+                <div class="card shadow mb-4 border-left-info">
+                    <!-- Card Header - Dropdown -->
+                    <div class="card-header py-2 d-flex flex-row align-items-center">
+                    <h6 class="m-0 font-weight-bold text-dark"><span class="text-info"> % SOBRE TOTAL</span> - POR GRUPO DE COMPRAS </h6>
+                    <!-- <meter class="ml-4" value=184 min="0" max="387" optimum="380" low="50" high="360"></meter> -->
+                    </div>
+                    <!-- Card Body -->
+                    <div class="card-body">
+                      <div class="pie-area">
+                          <canvas id="myPieChart_3"></canvas>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-xl-1"></div>
+            <div class="col-12 col-xl-1"></div>
+            <div class="col-12 col-xl-1"></div>
+
+            <!-- DataTales Example -->
+            <div class="card shadow mb-4 col-12 col-xl-6">
+                <div class="card-header py-3">
+                    <h3 class="m-0 text-dark">Pedidos Trabajados - <span class="font-weight-bold text-gray-800">Totales 2024</span></h3>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-hover table-sm" id="dataTable" cellspacing="0">
+
+                            <thead style="background-color: #0481CB;" class="font-weight-bold text-white text-center">
+                                <tr><th class="align-middle">Dependencia</th><th class="align-middle">Total Año</th><th class="align-middle">Promedio Mensual</th></tr>
+                            </thead>
+
+                            <tbody class="text-center">
+                                <tr><td class="text-left">JEFATURA REGIONAL LITORAL</td><td>220</td><td>73</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL NORESTE</td><td>148</td><td>49</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CONURBANO III</td><td>136</td><td>45</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CONURBANO I</td><td>91</td><td>30</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL SUR I</td><td>107</td><td>36</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CONURBANO IV</td><td>80</td><td>27</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL NORTE</td><td>70</td><td>23</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL SUR II</td><td>86</td><td>29</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE IV</td><td>79</td><td>26</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CUYO</td><td>91</td><td>30</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE III</td><td>78</td><td>26</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE ASUNTOS JURÍDICOS</td><td>81</td><td>27</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CENTRO</td><td>73</td><td>24</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CAPITAL FEDERAL</td><td>76</td><td>25</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE II</td><td>80</td><td>27</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL NOROESTE</td><td>73</td><td>24</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE V</td><td>65</td><td>22</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL CONURBANO II</td><td>56</td><td>19</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE VI</td><td>60</td><td>20</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE OPERACIONES</td><td>45</td><td>15</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE VII</td><td>30</td><td>10</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PRESTACIONES CENTRALIZADAS</td><td>31</td><td>10</td></tr>
+                                <tr><td class="text-left">JEFATURA REGIONAL BONAERENSE I</td><td>35</td><td>12</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INFORMÁTICA E INNOVACIÓN TECNOLÓGICA</td><td>25</td><td>8</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PRESTACIONES DESCENTRALIZADAS</td><td>21</td><td>7</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE DISEÑO DE NORMAS Y PROCESOS</td><td>25</td><td>8</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE CONTROL PRESTACIONAL</td><td>15</td><td>5</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PRENSA</td><td>9</td><td>3</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE RECURSOS HUMANOS</td><td>10</td><td>3</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE FINANZAS</td><td>8</td><td>3</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE MONITOREO DE LA GESTIÓN DE PRESTACIONES</td><td>7</td><td>2</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE ANÁLISIS Y LIQUIDACIÓN DE SENTENCIAS JUDICIALES</td><td>7</td><td>2</td></tr>
+                                <tr><td class="text-left">DIR GRAL ADMINISTRATIVA Y TÉCNICA</td><td>4</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE PLANEAMIENTO</td><td>8</td><td>3</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE RELACIONES INSTITUCIONALES Y CON LA COMUNIDAD</td><td>8</td><td>3</td></tr>
+                                <tr><td class="text-left">SD EJ DE ADMINISTRACIÓN</td><td>5</td><td>2</td></tr>
+                                <tr><td class="text-left">DIRECCIÓN EJECUTIVA</td><td>4</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE OPERACIONES DEL FGS</td><td>3</td><td>1</td></tr>
+                                <tr><td class="text-left">SECRETARÍA GENERAL</td><td>5</td><td>2</td></tr>
+                                <tr><td class="text-left">SECRETARÍA LEGAL Y TÉCNICA</td><td>4</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INFANCIAS, JUVENTUDES, GENER</td><td>3</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE INVERSIONES</td><td>2</td><td>1</td></tr>
+                                <tr><td class="text-left">SD EJ DE OPERACIÓN DEL FGS</td><td>2</td><td>1</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE CONTROL DEL FGS</td><td>1</td><td>0</td></tr>
+                                <tr><td class="text-left">DIR GRAL DE GESTIÓN ESTRATÉGICA Y ASUNTOS SOCIETARIOS</td><td>1</td><td>0</td></tr>
+                                <tr><td class="text-left">SD EJ DE PRESTACIONES</td><td>1</td><td>0</td></tr>
+                                <tr><td class="text-left">UNIDAD DE AUDITORÍA INTERNA</td><td>2</td><td>1</td></tr>
+                                <tfoot>
+                                    <tr style="background-color: #058005;" class="font-weight-bold text-white text-center"><td class="text-left">TOTAL GENERAL</td><td>2.071</td><td>690</td></tr>
+                                </tfoot>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+          <div class="copyright text-center my-auto">
+            <span>Coord. Servicios Generales y Planificación de Requerimientos - 2024 -</span>
+          </div>
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/chart-torta.js"></script>
+  <script src="js/demo/chart-pie-demo.js"></script>
+
+  <script src="vendor/counterup/counterup.min.js"></script>
+
+
+  <!-- Graficos JS -->
+  <script>
+  
+// JR Bonaerense I-II, CABA, Cuyo, Noroeste
+    var ctx = document.getElementById("myAreaChartTop5_22");
+      var dataCap = [33, 14, 29];
+      var dataNorO = [38, 5, 30];
+      var dataCuy = [60, 2, 29];
+      var dataBon1 = [16, 1, 18];
+      var dataBon2 = [25, 19, 36];
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+          {
+          label: "BONA I", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+          pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataBon1,
+          },
+          {
+          label: "BONA II", lineTension: 0.1, backgroundColor: "rgba(213, 52, 235, 0.05)", borderColor: "rgba(213, 52, 235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(213, 52, 235, 1)",
+          pointBorderColor: "rgba(213, 52, 235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(213, 52, 235, 1)", pointHoverBorderColor: "rgba(213, 52, 235, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataBon2,
+          },
+          {
+            label: "CAP FED", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataCap,
+           },
+            {
+            label: "CUYO", lineTension: 0.1, backgroundColor: "rgba(6, 158, 24, 0.05)", borderColor: "rgba(6, 158, 24, 1)", pointRadius: 3, pointBackgroundColor: "rgba(6, 158, 24, 1)",
+            pointBorderColor: "rgba(6, 158, 24, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(6, 158, 24, 1)", pointHoverBorderColor: "rgba(6, 158, 24, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataCuy,
+            },
+          {
+          label: "NOROESTE", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)",
+          pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataNorO,
+          },
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(value);
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+            display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      });
+      sumaCap = 0;
+      dataCap.forEach (function(numero){
+          sumaCap += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCap_22").value = number_format(sumaCap);
+      cantxmesCap = sumaCap/dataCap.length;
+      document.getElementById("promxmesCap_22").value = number_format(parseInt(cantxmesCap, 10));
+
+      sumaNorO = 0;
+      dataNorO.forEach (function(numero){
+          sumaNorO += parseInt(numero, 10);
+      });
+      document.getElementById("sumaNorO_22").value = number_format(sumaNorO);
+      cantxmesNorO = sumaNorO/dataNorO.length;
+      document.getElementById("promxmesNorO_22").value = number_format(parseInt(cantxmesNorO, 10));
+
+      sumaCuy = 0;
+      dataCuy.forEach (function(numero){
+          sumaCuy += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCuy_22").value = number_format(sumaCuy);
+      cantxmesCuy = sumaCuy/dataCuy.length;
+      document.getElementById("promxmesCuy_22").value = number_format(parseInt(cantxmesCuy, 10));
+
+      sumaBon1 = 0;
+      dataBon1.forEach (function(numero){
+          sumaBon1 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBon1_22").value = number_format(sumaBon1);
+      cantxmesBon1 = sumaBon1/dataBon1.length;
+      document.getElementById("promxmesBon1_22").value = number_format(parseInt(cantxmesBon1, 10));
+
+      sumaBon2 = 0;
+      dataBon2.forEach (function(numero){
+          sumaBon2 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBon2_22").value = number_format(sumaBon2);
+      cantxmesBon2 = sumaBon2/dataBon2.length;
+      document.getElementById("promxmesBon2_22").value = number_format(parseInt(cantxmesBon2, 10));
+
+
+  // JR Sur I, Bonaerense VI-VII, Litoral, Noreste
+    var ctx = document.getElementById("myAreaChartTop10_22");
+      var dataNorE = [71, 27, 50];
+      var dataLit = [103, 53, 64];
+      var dataSurI = [46, 32, 29];
+      var dataBonaVI = [20, 17, 23];
+      var dataBonaVII = [9, 10, 11];
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+            {
+            label: "NORESTE", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataNorE,
+            },
+            {
+            label: "SUR I", lineTension: 0.1, backgroundColor: "rgba(6, 158, 24, 0.05)", borderColor: "rgba(6, 158, 24, 1)", pointRadius: 3, pointBackgroundColor: "rgba(6, 158, 24, 1)",
+            pointBorderColor: "rgba(6, 158, 24, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(6, 158, 24, 1)", pointHoverBorderColor: "rgba(6, 158, 24, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataSurI,
+            },
+            {
+            label: "LITORAL", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataLit,
+            },
+            {
+            label: "BONA VI", lineTension: 0.1, backgroundColor: "rgba(213, 52, 235, 0.05)", borderColor: "rgba(213, 52, 235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(213, 52, 235, 1)",
+            pointBorderColor: "rgba(213, 52, 235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(213, 52, 235, 1)", pointHoverBorderColor: "rgba(213, 52, 235, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataBonaVI,
+            },
+            {
+            label: "BONA VII", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+            pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataBonaVII,
+            },
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(value);
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+          display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      });  
+      
+      sumaLit = 0;
+      dataLit.forEach (function(numero){
+          sumaLit += parseInt(numero, 10);
+      });
+      document.getElementById("sumaLit_22").value = number_format(sumaLit);
+      cantxmesLit = sumaLit/dataLit.length;
+      document.getElementById("promxmesLit_22").value = number_format(parseInt(cantxmesLit, 10));
+
+      sumaNorE = 0;
+      dataNorE.forEach (function(numero){
+          sumaNorE += parseInt(numero, 10);
+      });
+      document.getElementById("sumaNorE_22").value = number_format(sumaNorE);
+      cantxmesNorE = sumaNorE/dataNorE.length;
+      document.getElementById("promxmesNorE_22").value = number_format(parseInt(cantxmesNorE, 10));
+
+      sumaSurI = 0;
+      dataSurI.forEach (function(numero){
+          sumaSurI += parseInt(numero, 10);
+      });
+      document.getElementById("sumaSurI_22").value = number_format(sumaSurI);
+      cantxmesSurI = sumaSurI/dataSurI.length;
+      document.getElementById("promxmesSurI_22").value = number_format(parseInt(cantxmesSurI, 10));
+
+      sumaBonaVI = 0;
+      dataBonaVI.forEach (function(numero){
+          sumaBonaVI += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBonaVI_22").value = number_format(sumaBonaVI);
+      cantxmesBonaVI = sumaBonaVI/dataBonaVI.length;
+      document.getElementById("promxmesBonaVI_22").value = number_format(parseInt(cantxmesBonaVI, 10));
+
+      sumaBonaVII = 0;
+      dataBonaVII.forEach (function(numero){
+          sumaBonaVII += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBonaVII_22").value = number_format(sumaBonaVII);
+      cantxmesBonaVII = sumaBonaVII/dataBonaVII.length;
+      document.getElementById("promxmesBonaVII_22").value = number_format(parseInt(cantxmesBonaVII, 10));
+
+
+  // JR Bonaerense III-IV-V, Conurbano II-III, Sur II
+    var ctx = document.getElementById("myAreaChartTop15_22");
+      var dataBon3 = [23, 27, 28];
+      var dataBon4 = [33, 32, 14];
+      var dataCon2 = [25, 15, 16];
+      var dataCon3 = [42, 47, 47];
+      var dataSur2 = [37, 30, 19];
+      var dataBonaV = [21, 21, 23];
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+            {
+            label: "SUR II", lineTension: 0.1, backgroundColor: "rgba(252, 186, 3, 0.05)", borderColor: "rgba(252, 186, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 186, 3, 1)",
+            pointBorderColor: "rgba(252, 186, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 186, 3, 1)", pointHoverBorderColor: "rgba(252, 186, 3, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataSur2,
+            },
+            {
+            label: "BONA III", lineTension: 0.1, backgroundColor: "rgba(6, 158, 24, 0.05)", borderColor: "rgba(6, 158, 24, 1)", pointRadius: 3, pointBackgroundColor: "rgba(6, 158, 24, 1)",
+            pointBorderColor: "rgba(6, 158, 24, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(6, 158, 24, 1)", pointHoverBorderColor: "rgba(6, 158, 24, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataBon3,
+            },
+            {
+            label: "BONA IV", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+            pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataBon4,
+            },
+          {
+          label: "BONA V", lineTension: 0.1, backgroundColor: "rgba(26, 197, 219, 0.05)", borderColor: "rgba(26, 197, 219, 1)", pointRadius: 3, pointBackgroundColor: "rgba(26, 197, 219, 1)",
+          pointBorderColor: "rgba(26, 197, 219, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(26, 197, 219, 1)", pointHoverBorderColor: "rgba(26, 197, 219, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataBonaV,
+          },
+            {
+            label: "CONU II", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)",
+            pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataCon2,
+            },
+            {
+            label: "CONU III", lineTension: 0.1, backgroundColor: "rgba(213, 52, 235, 0.05)", borderColor: "rgba(213, 52, 235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(213, 52, 235, 1)",
+            pointBorderColor: "rgba(213, 52, 235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(213, 52, 235, 1)", pointHoverBorderColor: "rgba(213, 52, 235, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataCon3,
+            }
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(value);
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+          display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      });
+      
+      sumaBon3 = 0;
+      dataBon3.forEach (function(numero){
+          sumaBon3 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBon3_22").value = number_format(sumaBon3);
+      cantxmesBon3 = sumaBon3/dataBon3.length;
+      document.getElementById("promxmesBon3_22").value = number_format(parseInt(cantxmesBon3, 10));
+
+      sumaBon4 = 0;
+      dataBon4.forEach (function(numero){
+          sumaBon4 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBon4_22").value = number_format(sumaBon4);
+      cantxmesBon4 = sumaBon4/dataBon4.length;
+      document.getElementById("promxmesBon4_22").value = number_format(parseInt(cantxmesBon4, 10));
+      
+      sumaCon2 = 0;
+      dataCon2.forEach (function(numero){
+          sumaCon2 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCon2_22").value = number_format(sumaCon2);
+      cantxmesCon2 = sumaCon2/dataCon2.length;
+      document.getElementById("promxmesCon2_22").value = number_format(parseInt(cantxmesCon2, 10)); 
+
+      sumaCon3 = 0;
+      dataCon3.forEach (function(numero){
+          sumaCon3 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCon3_22").value = number_format(sumaCon3);
+      cantxmesCon3 = sumaCon3/dataCon3.length;
+      document.getElementById("promxmesCon3_22").value = number_format(parseInt(cantxmesCon3, 10));      
+
+      sumaSur2 = 0;
+      dataSur2.forEach (function(numero){
+          sumaSur2 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaSur2_22").value = number_format(sumaSur2);
+      cantxmesSur2 = sumaSur2/dataSur2.length;
+      document.getElementById("promxmesSur2_22").value = number_format(parseInt(cantxmesSur2, 10));
+
+      sumaBonaV = 0;
+      dataBonaV.forEach (function(numero){
+          sumaBonaV += parseInt(numero, 10);
+      });
+      document.getElementById("sumaBonaV_22").value = number_format(sumaBonaV);
+      cantxmesBonaV = sumaBonaV/dataBonaV.length;
+      document.getElementById("promxmesBonaV_22").value = number_format(parseInt(cantxmesBonaV, 10));
+
+
+    // JR Norte, Conurbano I-IV, Centro
+    var ctx = document.getElementById("myAreaChartTop20_22");
+      var dataCon1 = [36, 44, 11];
+      var dataNor = [41, 28, 1];
+      var dataCen = [32, 17, 24];
+      var dataCon4 = [30, 47, 3];
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+          {
+          label: "CENTRO", lineTension: 0.1, backgroundColor: "rgba(78, 115, 223, 0.05)", borderColor: "rgba(78, 115, 223, 1)", pointRadius: 3, pointBackgroundColor: "rgba(78, 115, 223, 1)",
+          pointBorderColor: "rgba(78, 115, 223, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(78, 115, 223, 1)", pointHoverBorderColor: "rgba(78, 115, 223, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataCen,
+          },
+          {
+          label: "NORTE", lineTension: 0.1, backgroundColor: "rgba(6, 158, 24, 0.05)", borderColor: "rgba(6, 158, 24, 1)", pointRadius: 3, pointBackgroundColor: "rgba(6, 158, 24, 1)",
+          pointBorderColor: "rgba(6, 158, 24, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(6, 158, 24, 1)", pointHoverBorderColor: "rgba(6, 158, 24, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataNor,
+          },
+        {
+        label: "CONU I", lineTension: 0.1, backgroundColor: "rgba(255, 0, 93, 0.05)", borderColor: "rgba(255, 0, 93, 1)", pointRadius: 3, pointBackgroundColor: "rgba(255, 0, 93, 1)",
+        pointBorderColor: "rgba(255, 0, 93, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(255, 0, 93, 1)", pointHoverBorderColor: "rgba(255, 0, 93, 1)",
+        pointHitRadius: 10, pointBorderWidth: 2,
+        data: dataCon1,
+        },
+        {
+        label: "CONU IV", lineTension: 0.1, backgroundColor: "rgba(26, 197, 219, 0.05)", borderColor: "rgba(26, 197, 219, 1)", pointRadius: 3, pointBackgroundColor: "rgba(26, 197, 219, 1)",
+        pointBorderColor: "rgba(26, 197, 219, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(26, 197, 219, 1)", pointHoverBorderColor: "rgba(26, 197, 219, 1)",
+        pointHitRadius: 10, pointBorderWidth: 2,
+        data: dataCon4,
+        },
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(value);
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+          display: true, position: 'bottom',
+                    "labels":   {
+                                    "fontSize": 10,
+                                }
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      });
+      
+      sumaCon1 = 0;
+      dataCon1.forEach (function(numero){
+          sumaCon1 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCon1_22").value = number_format(sumaCon1);
+      cantxmes = sumaCon1/dataCon1.length;
+      document.getElementById("promxmes_22").value = number_format(parseInt(cantxmes, 10));
+      
+      sumaCon4 = 0;
+      dataCon4.forEach (function(numero){
+          sumaCon4 += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCon4_22").value = number_format(sumaCon4);
+      cantxmesCon4 = sumaCon4/dataCon4.length;
+      document.getElementById("promxmesCon4_22").value = number_format(parseInt(cantxmesCon4, 10));  
+
+      sumaNor = 0;
+      dataNor.forEach (function(numero){
+          sumaNor += parseInt(numero, 10);
+      });
+      document.getElementById("sumaNor_22").value = number_format(sumaNor);
+      cantxmesNor = sumaNor/dataNor.length;
+      document.getElementById("promxmesNor_22").value = number_format(parseInt(cantxmesNor, 10));
+
+      sumaCen = 0;
+      dataCen.forEach (function(numero){
+          sumaCen += parseInt(numero, 10);
+      });
+      document.getElementById("sumaCen_22").value = number_format(sumaCen);
+      cantxmesCen = sumaCen/dataCen.length;
+      document.getElementById("promxmesCen_22").value = number_format(parseInt(cantxmesCen, 10));
+
+
+    // TOTAL GENERAL
+    var ctx = document.getElementById("myAreaChartTotalGral22");
+      var dataTotalGral = [820, 607, 644]; 
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+        {
+            label: "2024", lineTension: 0.1, backgroundColor: "rgba(67, 133, 240, 0.05)", borderColor: "rgba(67, 133, 240, 1)", pointRadius: 3, pointBackgroundColor: "rgba(67, 133, 240, 1)",
+            pointBorderColor: "rgba(67, 133, 240, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(67, 133, 240, 1)", pointHoverBorderColor: "rgba(67, 133, 240, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: dataTotalGral,
+        }
+        ,
+        {
+            label: "2023", lineTension: 0.1, backgroundColor: "rgba(225,229,235, 0.05)", borderColor: "rgba(225,229,235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(225,229,235, 1)",
+            pointBorderColor: "rgba(225,229,235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(225,229,235, 1)", pointHoverBorderColor: "rgba(225,229,235, 1)",
+            pointHitRadius: 10, pointBorderWidth: 2,
+            data: [687, 1012, 1092, 1010, 940, 801, 725, 921, 727, 841, 369, 34],
+        }
+        //   {
+        //   label: "2022", lineTension: 0.1, backgroundColor: "rgba(225,229,235, 0.05)", borderColor: "rgba(225,229,235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(225,229,235, 1)",
+        //   pointBorderColor: "rgba(225,229,235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(225,229,235, 1)", pointHoverBorderColor: "rgba(225,229,235, 1)",
+        //   pointHitRadius: 10, pointBorderWidth: 2,
+        //   data: [385, 832, 1528, 1303, 1059, 1256, 1190, 1329, 1103, 876, 1087, 582],
+        //   }
+        //   ,
+        //   ,{
+        //   label: "2021", lineTension: 0.1, backgroundColor: "rgba(225, 229, 235, 0.05)", borderColor: "rgba(225, 229, 235, 1)", pointRadius: 3, pointBackgroundColor: "rgba(225, 229, 235, 1)",
+        //   pointBorderColor: "rgba(225, 229, 235, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(225, 229, 235, 1)", pointHoverBorderColor: "rgba(225, 229, 235, 1)",
+        //   pointHitRadius: 10, pointBorderWidth: 2,
+        //   data: [971, 642, 640, 736, 639, 907, 728, 647, 743, 818, 1029, 496 ,0],
+        //   }
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(parseInt(value, 10));
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+          display: true, position: 'bottom'
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      });
+      sumaTotalGral = 0;
+      dataTotalGral.forEach (function(numero){
+          sumaTotalGral += parseInt(numero, 10);
+      });
+      document.getElementById("sumaTotalGral22").value = number_format(sumaTotalGral);
+      cantxmesTotalGral = sumaTotalGral/dataTotalGral.length;
+      document.getElementById("promxmesTotalGral22").value = number_format(parseInt(cantxmesTotalGral, 10));
+
+
+    // JR TOTAL
+    var ctx = document.getElementById("myAreaChartTotal22");
+    dataTotal = [741, 488, 505];
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+          {
+          label: "Pedidos", lineTension: 0.1, backgroundColor: "rgba(10, 145, 0, 0.05)", borderColor: "rgba(10, 145, 0, 1)", pointRadius: 3, pointBackgroundColor: "rgba(10, 145, 0, 1)",
+          pointBorderColor: "rgba(10, 145, 0, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(10, 145, 0, 1)", pointHoverBorderColor: "rgba(10, 145, 0, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataTotal,
+          }
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(parseInt(value, 10));
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+          display: false, position: 'bottom'
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      });
+      sumaTotal = 0;
+      dataTotal.forEach (function(numero){
+          sumaTotal += parseInt(numero, 10);
+      });
+      document.getElementById("sumaTotal22").value = number_format(sumaTotal);
+      cantxmesTotal = sumaTotal/dataTotal.length;
+      document.getElementById("promxmesTotal22").value = number_format(parseInt(cantxmesTotal, 10));
+
+
+      // AACC TOTAL
+    var ctx = document.getElementById("myAreaChartTotalAC22");
+    dataTotalAC = [79, 119, 139];
+      var myLineChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ["ENE", "FEB", "MAR", "ABR", "MAY", "JUN", "JUL", "AGO", "SEP", "OCT", "NOV", "DIC"],
+          datasets: [
+          {
+          label: "Pedidos", lineTension: 0.1, backgroundColor: "rgba(252, 3, 3, 0.05)", borderColor: "rgba(252, 3, 3, 1)", pointRadius: 3, pointBackgroundColor: "rgba(252, 3, 3, 1)",
+          pointBorderColor: "rgba(252, 3, 3, 1)", pointHoverRadius: 3, pointHoverBackgroundColor: "rgba(252, 3, 3, 1)", pointHoverBorderColor: "rgba(252, 3, 3, 1)",
+          pointHitRadius: 10, pointBorderWidth: 2,
+          data: dataTotalAC,
+          }
+        ],
+      },
+      options: {
+          maintainAspectRatio: false,
+          layout: {
+          padding: {
+              left: 10,
+              right: 25,
+              top: 25,
+              bottom: 0
+          }
+          },
+          scales: {
+          xAxes: [{
+              time: {
+              unit: 'date'
+              },
+              gridLines: {
+              display: false,
+              drawBorder: false
+              },
+              ticks: {
+              maxTicksLimit: 12
+              }
+          }],
+          yAxes: [{
+              ticks: {
+              maxTicksLimit: 8,
+              padding: 10,
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                  return '' + number_format(parseInt(value, 10));
+              }
+              },
+              gridLines: {
+              color: "rgb(234, 236, 244)",
+              zeroLineColor: "rgb(234, 236, 244)",
+              drawBorder: false,
+              borderDash: [2],
+              zeroLineBorderDash: [2]
+              }
+          }],
+          },
+          legend: {
+          display: false, position: 'bottom'
+          },
+          tooltips: {
+          backgroundColor: "rgb(255,255,255)",
+          bodyFontColor: "#858796",
+          titleMarginBottom: 10,
+          titleFontColor: '#6e707e',
+          titleFontSize: 14,
+          borderColor: '#dddfeb',
+          borderWidth: 1,
+          xPadding: 15,
+          yPadding: 15,
+          displayColors: false,
+          intersect: false,
+          mode: 'index',
+          caretPadding: 10,
+          callbacks: {
+              label: function(tooltipItem, chart) {
+              var datasetLabel = chart.datasets[tooltipItem.datasetIndex].label || '';
+              return datasetLabel + ': ' + number_format(tooltipItem.yLabel);
+              }
+          }
+          }
+      }
+      }); 
+      sumaTotalAC = 0;
+      dataTotalAC.forEach (function(numero){
+          sumaTotalAC += parseInt(numero, 10);
+      });
+      document.getElementById("sumaTotalAC22").value = number_format(sumaTotalAC);
+      cantxmesAc = sumaTotalAC/dataTotalAC.length;
+      document.getElementById("promxmesTotalAC22").value = number_format(parseInt(cantxmesAc, 10));
+
+    // Proporcion sobre total
+    var ctx = document.getElementById("myPieChart_3");
+      var myPieChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: {
+              labels: ["RESMAS: 30,61%", "UTILES: 50,03%", "COVID: 10,96%", "OBRAS: 4,62%", "UNIFORME: 2,89%", "COMUNICACIONES: 0,69%", "IMPRENTA: 0,01%", "MUEBLES: 0,05%", "SUSTENTABLE: 0,05%", "SISTEMAS: 0,01%"],
+              datasets: [{
+              data: [30.611, 50.039, 10.996, 4.624, 2.896, 0.690, 0.019, 0.059, 0.054, 0.013],
+              backgroundColor: ['#1cc88a', '#f2160f', '#4287f5', '#00edfa', '#ff700a', '#8217fc', '#e607fa', '#706c70', '#000000'],
+                hoverBackgroundColor: ['#20a877', '#d1110a', '#7599d1', '#a7f8fc', '#facaa7', '#bf90f5', '#f3a7fa', '#d9cad9', '#000000'],
+              hoverBorderColor: "rgba(234, 236, 244, 1)"
+              }],
+          },
+          options: {
+              maintainAspectRatio: true,
+              tooltips: {
+              enabled: false,
+              backgroundColor: "rgb(255,255,255)",
+              bodyFontColor: "#858796",
+              borderColor: '#dddfeb',
+              borderWidth: 1,
+              xPadding: 15,
+              yPadding: 15,
+              displayColors: true,
+              caretPadding: 10,
+              },
+              legend: {
+              display: true, position: 'bottom'
+              },
+              cutoutPercentage: 20,
+          },
+      });
+
+  </script>
+
+<!-- Page level plugins -->
+<script src="vendor/datatables/jquery.dataTables.min.js"></script>
+<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="js/demo/datatables-demo.js"></script>
+
+<!-- dataTable -->
+<script>
+    $(document).ready(function() {
+    $('table.display').DataTable();
+    } );
+</script>
+
+<script>
+    $('#dataTable').dataTable( {
+        // dom: '<"dt-top-container"<l><"dt-center-in-div"B><f>r>t<ip>',
+        //         buttons: [ 'copy', 'excel', 'pdf'
+        //   ],
+        columnDefs: [
+        {
+            targets: 1,
+            render: $.fn.dataTable.render.number('.', ',')
+        },
+        {
+            targets: 2,
+            render: $.fn.dataTable.render.number('.', ',')
+        }
+        ],
+    "order": [[1, 'desc']],
+    "pageLength": 10
+    },
+   );
+</script>
+
+
+</body>
+
+</html>
